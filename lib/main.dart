@@ -9,7 +9,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
   "high_importance_channel", //id
-  "High Importance Notification", //title
+  "BTS Related Notification Channel", //title
   importance: Importance.high,
   playSound: true
 );
@@ -83,15 +83,13 @@ class _BTSLyricsState extends State<BTSLyrics> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
           body: Stack(
             children: [
               DrawerScreen(),
               HomeScreen()
             ],
           ),
-        ),
-      );
+        );
   }
 }
