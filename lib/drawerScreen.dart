@@ -1,10 +1,8 @@
-import 'dart:convert';
-import 'dart:io';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:native_updater/native_updater.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,6 +18,26 @@ class _DrawerScreenState extends State<DrawerScreen> {
     version: 'Unknown',
     buildNumber: 'Unknown',
   );
+  /*AppUpdateInfo? _updateInfo;
+
+  Future<void> checkForUpdate() async {
+    InAppUpdate.checkForUpdate().then((info) {
+      _updateInfo = info;
+      if(_updateInfo?.updateAvailability == UpdateAvailability.updateAvailable) {
+        InAppUpdate.performImmediateUpdate()
+            .catchError((e) => log(e.toString()));
+      } else if(_updateInfo?.updateAvailability == UpdateAvailability.updateNotAvailable) {
+        Fluttertoast.showToast(
+          msg: "You are already using the latest version",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+    }).catchError((e) {
+      //FirebaseCrashlytics.instance.log(e.toString());
+      //FirebaseCrashlytics.instance.recordError(e.toString(), StackTrace.current);
+      log("IN-APP_UPDATER: "+e.toString());
+    });
+  }*/
 
   @override
   void initState() {
@@ -65,7 +83,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       ),
                       SizedBox(height: 20),
                       ///check for updates
-                      /*Container(
+                      Container(
                         width: MediaQuery.of(context).size.width * 0.6,
                         child: Material(
                           borderRadius: BorderRadius.circular(20),
@@ -97,185 +115,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                   child: Material(
                                     color: Colors.transparent,
                                     child: InkWell(
-                                      onTap: () async {
-                                        try{
-                                          final result = await InternetAddress.lookup("www.google.com");
-                                          if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
-                                            var url = Uri.parse('https://kimvinod.github.io/bts-lyrics/checkForUpdates.json');
-                                            Future getData() async {
-                                              final req = await http.get(url);
-                                              if (req.statusCode == 200) {
-                                                final body = req.body;
-                                                final res = json.decode(body);
-                                                return res;
-                                              } else {
-                                                return json.decode(req.body);
-                                              }
-                                            }
-                                            showDialog(
-                                              context: context,
-                                              builder: (BuildContext context) => Center(
-                                                child: Container(
-                                                  height: MediaQuery.of(context).size.height * 0.4,
-                                                  width: MediaQuery.of(context).size.width * 0.75,
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(180, 136, 212, 1),
-                                                    borderRadius:
-                                                    BorderRadius.circular(20),
-                                                  ),
-                                                  child: FutureBuilder(
-                                                    future: getData(),
-                                                    builder: (context, AsyncSnapshot snapshot) {
-                                                      if (!snapshot.hasData) {
-                                                        return Center(
-                                                          child: Container(
-                                                            height: 60,
-                                                            width: 60,
-                                                            child: CircularProgressIndicator(
-                                                              valueColor: AlwaysStoppedAnimation<Color>(Color.fromRGBO(91, 50, 120, 1)),
-                                                              strokeWidth: 6,
-                                                            ),
-                                                          ),
-                                                        );
-                                                      } else {
-                                                        final data = snapshot.data[0];
-                                                        final int versionCode = data["versionCode"];
-                                                        if (int.parse(_packageInfo.buildNumber) < versionCode) {
-                                                          return Container(
-                                                            padding: EdgeInsets.all(8),
-                                                            height: MediaQuery.of(context).size.height * 0.4,
-                                                            width: MediaQuery.of(context).size.width * 0.75,
-                                                            decoration: BoxDecoration(
-                                                              color: Color.fromRGBO(180, 136, 212, 1),
-                                                              borderRadius:
-                                                              BorderRadius.circular(20),
-                                                            ),
-                                                            child: Column(
-                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                              children: [
-                                                                Container(
-                                                                  child: Text("New Update Available",
-                                                                    style: GoogleFonts.openSans(
-                                                                        color: Colors.black,
-                                                                        fontWeight: FontWeight.bold,
-                                                                        fontSize: 24
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Container(
-                                                                  child: Text(
-                                                                    data["notes"],
-                                                                    textAlign: TextAlign.center,
-                                                                    style: GoogleFonts.openSans(
-                                                                        color: Colors.black,
-                                                                        fontWeight: FontWeight.w600,
-                                                                        fontSize: 17
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(
-                                                                  height: 45,
-                                                                  width: 100,
-                                                                  child: TextButton(
-                                                                    onPressed: () async {
-                                                                      Navigator.of(context).pop();
-                                                                      final url = data["updateUrl"];
-                                                                      print(url);
-                                                                      if(await canLaunch(url))
-                                                                        launch(url);
-                                                                      else {
-                                                                        Fluttertoast.showToast(
-                                                                          msg: "Error occurred. Your phone doesn't support opening links",
-                                                                          toastLength: Toast.LENGTH_SHORT,
-                                                                          fontSize: 15,
-                                                                        );
-                                                                      }
-                                                                    },
-                                                                    child: Text(
-                                                                        "UPDATE",
-                                                                        style: GoogleFonts.openSans(color: Colors.white, fontSize: 16)
-                                                                    ),
-                                                                    style: ButtonStyle(
-                                                                      backgroundColor: MaterialStateProperty.all(Color.fromRGBO(91, 50, 120, 1)),
-                                                                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-                                                                      overlayColor: MaterialStateProperty.all(Color.fromRGBO(180, 136, 212, 0.4)),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          );
-                                                        } else {
-                                                          return Container(
-                                                            padding: EdgeInsets.all(8),
-                                                            height: MediaQuery.of(context).size.height * 0.4,
-                                                            width: MediaQuery.of(context).size.width * 0.75,
-                                                            decoration: BoxDecoration(
-                                                              color: Color.fromRGBO(180, 136, 212, 1),
-                                                              borderRadius:
-                                                              BorderRadius.circular(20),
-                                                            ),
-                                                            child: Column(
-                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                              children: [
-                                                                Container(
-                                                                  child: Text("No Update Found",
-                                                                    style: GoogleFonts.openSans(
-                                                                        color: Colors.black,
-                                                                        fontWeight: FontWeight.bold,
-                                                                        fontSize: 24
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Container(
-                                                                  child: Text(
-                                                                    "You are currently running the latest version.",
-                                                                    textAlign: TextAlign.center,
-                                                                    style: GoogleFonts.openSans(
-                                                                        color: Colors.black,
-                                                                        fontWeight: FontWeight.w600,
-                                                                        fontSize: 20
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(
-                                                                  height: 45,
-                                                                  width: 100,
-                                                                  child: TextButton(
-                                                                    onPressed: () => Navigator.of(context).pop(),
-                                                                    child: Text(
-                                                                        "DISCARD",
-                                                                        style: GoogleFonts.openSans(color: Colors.white, fontSize: 16)),
-                                                                    style: ButtonStyle(
-                                                                      backgroundColor: MaterialStateProperty.all(Color.fromRGBO(91, 50, 120, 1)),
-                                                                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-                                                                      overlayColor: MaterialStateProperty.all(Color.fromRGBO(180, 136, 212, 0.4)),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          );
-                                                        }
-                                                      }
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                            );
-
-                                          }
-                                        } on SocketException catch (_) {
-                                          Fluttertoast.showToast(
-                                            msg: "You are not connected to internet.\nTry again later.",
-                                            toastLength: Toast.LENGTH_SHORT,
-                                            //gravity: ToastGravity.BOTTOM,
-                                            //backgroundColor: Color.fromRGBO(180, 136, 212, 1),
-                                            //textColor: Colors.black,
-                                            fontSize: 15,
-                                          );
-                                        }
-
+                                      onTap: () {
+                                        //checkForUpdate();
+                                        NativeUpdater.displayUpdateAlert(
+                                          context,
+                                          forceUpdate: false,
+                                        );
                                       },
                                     ),
                                   ),
@@ -285,7 +130,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 15),*/
+                      SizedBox(height: 15),
                       ///help
                       Container(
                         width: MediaQuery.of(context).size.width * 0.6,
@@ -333,7 +178,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                           builder: (BuildContext context) => Center(
                                             child: Container(
                                               padding: EdgeInsets.only(top: 8),
-                                              height: MediaQuery.of(context).size.height * 0.7,
+                                              height: MediaQuery.of(context).size.height * 0.75,
                                               width: MediaQuery.of(context).size.width * 0.85,
                                               decoration: BoxDecoration(
                                                 color: Color.fromRGBO(180, 136, 212, 1),
@@ -409,7 +254,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                       fontSize: 15
                                                                   ),
                                                                 ),
-                                                                SizedBox(height: 15),
+                                                                SizedBox(height: 10),
                                                                 Center(
                                                                   child: Padding(
                                                                     padding: const EdgeInsets.only(left: 20, right: 20),
@@ -425,7 +270,128 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                SizedBox(height: 5),
+                                                                SizedBox(height: 20),
+                                                                Center(
+                                                                  child: Padding(
+                                                                    padding: const EdgeInsets.only(left: 20, right: 20),
+                                                                    child: Wrap(
+                                                                      children: [
+                                                                        Text(
+                                                                          "App source code available on\t",
+                                                                          textAlign: TextAlign.center,
+                                                                          style: GoogleFonts.openSans(
+                                                                              color: Colors.black,
+                                                                              //fontStyle: FontStyle.italic,
+                                                                              //fontWeight: FontWeight.w600,
+                                                                              fontSize: 14
+                                                                          ),
+                                                                        ),
+                                                                        GestureDetector(
+                                                                          onTap: () async {
+                                                                            final String url = "https://github.com/KimVinod/bts-lyricz";
+                                                                            if(await canLaunch(url))
+                                                                            launch(url);
+                                                                            else {
+                                                                            Fluttertoast.showToast(
+                                                                            msg: "Error occurred. Your phone doesn't support opening links",
+                                                                            toastLength: Toast.LENGTH_SHORT,
+                                                                            );
+                                                                            }
+                                                                          },
+                                                                          child: Text(
+                                                                            "GitHub",
+                                                                            textAlign: TextAlign.center,
+                                                                            style: GoogleFonts.openSans(
+                                                                                color: Colors.black,
+                                                                                //fontStyle: FontStyle.italic,
+                                                                                fontWeight: FontWeight.w600,
+                                                                                fontSize: 14
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                SizedBox(height: 20),
+                                                                Center(
+                                                                  child: Wrap(
+                                                                    children: [
+                                                                      Text(
+                                                                        "Found a bug? dm me on\t",
+                                                                        textAlign: TextAlign.center,
+                                                                        style: GoogleFonts.openSans(
+                                                                            color: Colors.black,
+                                                                            //fontWeight: FontWeight.w600,
+                                                                            fontSize: 13
+                                                                        ),
+                                                                      ),
+                                                                      GestureDetector(
+                                                                        onTap: () async {
+                                                                          //await launch("https://twitter.com/vinod3344");
+                                                                          final String url = "https://twitter.com/vinod3344";
+                                                                          if(await canLaunch(url))
+                                                                            launch(url);
+                                                                          else {
+                                                                            Fluttertoast.showToast(
+                                                                              msg: "Error occurred. Your phone doesn't support opening links",
+                                                                              toastLength: Toast.LENGTH_SHORT,
+                                                                            );
+                                                                          }
+                                                                        },
+                                                                        child: Text(
+                                                                          "Twitter",
+                                                                          textAlign: TextAlign.center,
+                                                                          style: GoogleFonts.openSans(
+                                                                              color: Colors.black,
+                                                                              fontWeight: FontWeight.w600,
+                                                                              fontSize: 13
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      Text(
+                                                                        "\tor\t",
+                                                                        textAlign: TextAlign.center,
+                                                                        style: GoogleFonts.openSans(
+                                                                            color: Colors.black,
+                                                                            //fontWeight: FontWeight.w600,
+                                                                            fontSize: 13
+                                                                        ),
+                                                                      ),
+                                                                      GestureDetector(
+                                                                        onTap: () async {
+                                                                          final Uri emailLaunchUri = Uri(
+                                                                            scheme: 'mailto',
+                                                                            path: 'vinoddevendran34@gmail.com',
+                                                                            query: encodeQueryParameters(<String, String>{
+                                                                              'subject': '[${_packageInfo.appName}] [Bug] [v${_packageInfo.version}]'
+                                                                            }),
+                                                                          );
+                                                                          //await launch(emailLaunchUri.toString());
+                                                                          if(!await canLaunch(emailLaunchUri.toString()))
+                                                                            launch(emailLaunchUri.toString());
+                                                                          else {
+                                                                            Fluttertoast.showToast(
+                                                                              msg: "Error occurred. Your phone doesn't support opening links",
+                                                                              toastLength: Toast.LENGTH_SHORT,
+
+                                                                            );
+                                                                          }
+                                                                        },
+                                                                        child: Text(
+                                                                          "Email",
+                                                                          textAlign: TextAlign.center,
+                                                                          style: GoogleFonts.openSans(
+                                                                              color: Colors.black,
+                                                                              fontWeight: FontWeight.w600,
+                                                                              fontSize: 13
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                                SizedBox(height: 4),
                                                               ],
                                                             ),
                                                           ),
@@ -433,85 +399,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                       ),
                                                     ),
                                                   ),
-                                                  Center(
-                                                    child: Wrap(
-                                                      children: [
-                                                        Text(
-                                                          "Found a bug? dm me on\t",
-                                                          textAlign: TextAlign.center,
-                                                          style: GoogleFonts.openSans(
-                                                              color: Colors.black,
-                                                              //fontWeight: FontWeight.w600,
-                                                              fontSize: 13
-                                                          ),
-                                                        ),
-                                                        GestureDetector(
-                                                          onTap: () async {
-                                                           //await launch("https://twitter.com/vinod3344");
-                                                            final String url = "https://twitter.com/vinod3344";
-                                                            if(await canLaunch(url))
-                                                              launch(url);
-                                                            else {
-                                                              Fluttertoast.showToast(
-                                                                msg: "Error occurred. Your phone doesn't support opening links",
-                                                                toastLength: Toast.LENGTH_SHORT,
-                                                                fontSize: 15,
-                                                              );
-                                                            }
-                                                          },
-                                                          child: Text(
-                                                            "Twitter",
-                                                            textAlign: TextAlign.center,
-                                                            style: GoogleFonts.openSans(
-                                                                color: Colors.black,
-                                                                fontWeight: FontWeight.w600,
-                                                                fontSize: 13
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Text(
-                                                          "\tor\t",
-                                                          textAlign: TextAlign.center,
-                                                          style: GoogleFonts.openSans(
-                                                              color: Colors.black,
-                                                              //fontWeight: FontWeight.w600,
-                                                              fontSize: 13
-                                                          ),
-                                                        ),
-                                                        GestureDetector(
-                                                          onTap: () async {
-                                                            final Uri emailLaunchUri = Uri(
-                                                              scheme: 'mailto',
-                                                              path: 'vinoddevendran34@gmail.com',
-                                                              query: encodeQueryParameters(<String, String>{
-                                                                'subject': '[${_packageInfo.appName}] [Bug] [v${_packageInfo.version}]'
-                                                              }),
-                                                            );
-                                                            //await launch(emailLaunchUri.toString());
-                                                            if(await canLaunch(emailLaunchUri.toString()))
-                                                              launch(emailLaunchUri.toString());
-                                                            else {
-                                                              Fluttertoast.showToast(
-                                                                msg: "Error occurred. Your phone doesn't support opening links",
-                                                                toastLength: Toast.LENGTH_SHORT,
-                                                                fontSize: 15,
-                                                              );
-                                                            }
-                                                          },
-                                                          child: Text(
-                                                            "Email",
-                                                            textAlign: TextAlign.center,
-                                                            style: GoogleFonts.openSans(
-                                                                color: Colors.black,
-                                                                fontWeight: FontWeight.w600,
-                                                                fontSize: 13
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  SizedBox(height: 4),
+
 
                                                 ],
                                               ),
