@@ -4683,6 +4683,21 @@ class _SearchSongsState extends State<SearchSongs> {
                                               );
                                             }
                                             break;
+                                          case "With You (Jimin x Ha Sung Woon)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "WITH YOU",
+                                                        songLyrics: AlbumData().jiminWithYou,
+                                                        songTabs: AlbumData().jiminOtherSongsTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                   ),

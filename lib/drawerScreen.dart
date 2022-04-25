@@ -106,7 +106,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                           style: GoogleFonts.openSans(
                                               color: Colors.black,
                                               fontWeight: FontWeight.w600,
-                                              fontSize: 18),
+                                              fontSize: 17),
                                       ),
                                     ],
                                   ),
@@ -156,7 +156,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                           style: GoogleFonts.openSans(
                                               color: Colors.black,
                                               fontWeight: FontWeight.w600,
-                                              fontSize: 18
+                                              fontSize: 17
                                           ),
                                       ),
                                     ],
@@ -209,8 +209,9 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                       child: Container(
                                                         padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
                                                         child: RawScrollbar(
+                                                          isAlwaysShown: true,
                                                           radius: Radius.circular(20),
-                                                          thumbColor: Color.fromRGBO(130, 70, 190, 1),
+                                                          thumbColor: Color.fromRGBO(130, 70, 190, 0.6),
                                                           child: SingleChildScrollView(
                                                             scrollDirection: Axis.vertical,
                                                             child: Column(
@@ -368,7 +369,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                             }),
                                                                           );
                                                                           //await launch(emailLaunchUri.toString());
-                                                                          if(!await canLaunch(emailLaunchUri.toString()))
+                                                                          if(await canLaunch(emailLaunchUri.toString()))
                                                                             launch(emailLaunchUri.toString());
                                                                           else {
                                                                             Fluttertoast.showToast(
@@ -441,7 +442,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                           style: GoogleFonts.openSans(
                                               color: Colors.black,
                                               fontWeight: FontWeight.w600,
-                                              fontSize: 18)),
+                                              fontSize: 17)),
                                     ],
                                   ),
                                 ),

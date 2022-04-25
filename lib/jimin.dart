@@ -123,6 +123,21 @@ class Jimin extends StatelessWidget {
                                                 );
                                               }
                                               break;
+                                            case "With You (Jimin x Ha Sung Woon)":
+                                              {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        LyricsKR(
+                                                          songName: "CHRISTMAS LOVE",
+                                                          songLyrics: AlbumData().jiminWithYou,
+                                                          songTabs: AlbumData().jiminOtherSongsTabs,
+                                                        ),
+                                                  ),
+                                                );
+                                              }
+                                              break;
                                           }
                                         },
                                       ),

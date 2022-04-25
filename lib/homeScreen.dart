@@ -176,6 +176,53 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(width: 5),
                                       ///digital singles
 
+                                      /// with you
+                                      Column(
+                                        children: <Widget>[
+                                          Material(
+                                              elevation: 3,
+                                              shadowColor: Colors.purple.shade700,
+                                              borderRadius: BorderRadius.circular(10),
+                                              child: Ink(
+                                                width: 150,
+                                                height: 170,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(10),
+                                                    image: DecorationImage(image: AssetImage("images/albums-solo/jimin/jimin-withyou.jpg"), fit: BoxFit.fill)
+                                                ),
+                                                child: InkWell(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                                                  onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsKR(
+                                                        songName: "WITH YOU",
+                                                        songLyrics: AlbumData().jiminWithYou,
+                                                        songTabs: AlbumData().jiminOtherSongsTabs,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )),
+                                          SizedBox(height: 4),
+                                          SizedBox(
+                                            height: 20,
+                                            width: 150,
+                                            child: FittedBox(
+                                              child: Text(
+                                                "With You",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.openSans(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 10),
                                       /// stay alive
                                       Column(
                                         children: <Widget>[
@@ -211,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             width: 150,
                                             child: FittedBox(
                                               child: Text(
-                                                "Stay Alive (Prod. SUGA)",
+                                                "Stay Alive",
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.openSans(
                                                   fontSize: 16.0,
@@ -317,52 +364,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ],
                                       ),
                                       SizedBox(width: 10),
-                                      /// super tuna
-                                      Column(
-                                        children: <Widget>[
-                                          Material(
-                                              elevation: 3,
-                                              shadowColor: Colors.purple.shade700,
-                                              borderRadius: BorderRadius.circular(10),
-                                              child: Ink(
-                                                width: 150,
-                                                height: 170,
-                                                decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/albums-solo/jin/jin-super-tuna.jpg"), fit: BoxFit.fill)
-                                                ),
-                                                child: InkWell(
-                                                  borderRadius: BorderRadius.circular(10),
-                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                                                  onTap: () => Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsKR(
-                                                        songName: "슈퍼 참치 (SUPER TUNA)",
-                                                        songLyrics: AlbumData().jinSuperTuna,
-                                                        songTabs: AlbumData().jinOtherSongsTabs,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
-                                          SizedBox(height: 4),
-                                          SizedBox(
-                                            height: 20,
-                                            width: 150,
-                                            child: FittedBox(
-                                              child: Text(
-                                                "슈퍼 참치 (Super Tuna)",
-                                                textAlign: TextAlign.center,
-                                                style: GoogleFonts.openSans(
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
 
                                     ],
                                   ),

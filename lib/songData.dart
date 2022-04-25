@@ -716,6 +716,9 @@ final allSongs = <Song>[
     name: "With Seoul",
   ),
   Song(
+    name: "With You (Jimin x Ha Sung Woon)",
+  ),
+  Song(
     name: "You Are Here by Lee Hyun",
   ),
   Song(
