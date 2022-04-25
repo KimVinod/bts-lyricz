@@ -54,7 +54,7 @@ class LyricsENG extends StatelessWidget {
                                       songName!,
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
-                                          letterSpacing: 1.0,
+                                          
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold),
                                     ),
