@@ -1379,7 +1379,7 @@ class Songs extends StatelessWidget {
                                       MaterialPageRoute(
                                         builder: (context) => LyricsKR(
                                           songLyrics: AlbumData().lyHerBesOfMe,
-                                          songName: "BEST OF Me",
+                                          songName: "BEST OF ME",
                                           songTabs: AlbumData().lyHerTabs,
                                         ),
                                       ),
@@ -1436,7 +1436,7 @@ class Songs extends StatelessWidget {
                                       MaterialPageRoute(
                                         builder: (context) => LyricsKR(
                                           songLyrics: AlbumData().lyHerGoGo,
-                                          songName: "고민보다 Go (GO GO)",
+                                          songName: "고민보다 GO (GO GO)",
                                           songTabs: AlbumData().lyHerTabs,
                                         ),
                                       ),
@@ -3553,6 +3553,20 @@ class Songs extends StatelessWidget {
                                         builder: (context) => LyricsKR(
                                           songLyrics: AlbumData().d2WhatDoYouThink,
                                           songName: "어떻게 생각해? (WHAT DO YOU THINK?)",
+                                          songTabs: AlbumData().d2Tabs,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "이상하지 않은가 (Strange) (ft. RM)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => LyricsKR(
+                                          songLyrics: AlbumData().d2Strange,
+                                          songName: "이상하지 않은가 (STRANGE)",
                                           songTabs: AlbumData().d2Tabs,
                                         ),
                                       ),

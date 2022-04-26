@@ -39,7 +39,7 @@ class Yoongi extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  /// rm
+                  /// agust d
                   Column(
                     children: <Widget>[
                       Material(
@@ -86,40 +86,48 @@ class Yoongi extends StatelessWidget {
                     ],
                   ),
 
-
-
+                  /// d2
                   Column(
                     children: <Widget>[
-                      Builder(
-                        builder: (context) => Container(
-                          height: 180,
-                          child: Card(
-                            child: Ink.image(
-                              width: 160,
-                              image:
-                              AssetImage("images/albums-solo/suga/suga-d2.jpg"),
-                              fit: BoxFit.fill,
-                              child: InkWell(
-                                onTap: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Songs(
-                                      albumName: AlbumData().d2AlbumName,
-                                      songNames: AlbumData().d2AlbumSongs,
-                                      albumArt: AlbumData().d2Art,
-                                    ),
+                      Material(
+                          elevation: 3,
+                          shadowColor: Colors.purple.shade700,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Ink(
+                            width: 150,
+                            height: 170,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(image: AssetImage("images/albums-solo/suga/suga-d2.jpg"), fit: BoxFit.fill)
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(10),
+                              //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Songs(
+                                    albumName: AlbumData().d2AlbumName,
+                                    songNames: AlbumData().d2AlbumSongs,
+                                    albumArt: AlbumData().d2Art,
                                   ),
                                 ),
                               ),
                             ),
+                          )),
+                      SizedBox(height: 4),
+                      SizedBox(
+                        height: 20,
+                        width: 150,
+                        child: FittedBox(
+                          child: Text(
+                            "D2",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ),
-                      Text(
-                        "D2",
-                        style: GoogleFonts.openSans(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],

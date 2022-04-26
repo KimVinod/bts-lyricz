@@ -4031,6 +4031,20 @@ class _SearchSongsState extends State<SearchSongs> {
                                               );
                                             }
                                             break;
+                                          case "이상하지 않은가 (Strange) (ft. RM)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => LyricsKR(
+                                                    songLyrics: AlbumData().d2Strange,
+                                                    songName: "이상하지 않은가 (STRANGE)",
+                                                    songTabs: AlbumData().d2Tabs,
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                           case "점점 어른이 되나봐 (28) (Ft. NiiHWA)":
                                             {
                                               Navigator.push(
