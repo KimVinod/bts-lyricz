@@ -62,7 +62,7 @@ class LyricsENG extends StatelessWidget {
                                     Text(
                                       songLyrics![0],
                                       style: GoogleFonts.openSans(
-                                        fontSize: 17.0,
+                                        fontSize: 16.0,
                                       ),
                                     ),
                                     SizedBox(height: 10.0),

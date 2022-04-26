@@ -67,7 +67,7 @@ class LyricsJP extends StatelessWidget {
                               Text(
                                 songLyrics![3],
                                 style: GoogleFonts.openSans(
-                                  fontSize: 17.0,
+                                  fontSize: 16.0,
                                 ),
                               ),
                               SizedBox(height: 10.0),
@@ -131,7 +131,7 @@ class LyricsJP extends StatelessWidget {
                                     ),
                                     SizedBox(height: 12.0),
                                     Text(songLyrics![0],
-                                        style: GoogleFonts.openSans(fontSize: 17.0)),
+                                        style: GoogleFonts.openSans(fontSize: 16.0)),
                                     SizedBox(height: 10.0),
                                   ],
                                 )
@@ -195,7 +195,7 @@ class LyricsJP extends StatelessWidget {
                               Text(
                                 songLyrics![1],
                                 style: GoogleFonts.openSans(
-                                  fontSize: 17.0,
+                                  fontSize: 16.0,
                                 ),
                               ),
                               SizedBox(height: 10.0),
