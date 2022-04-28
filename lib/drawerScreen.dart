@@ -490,7 +490,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                         height: 140,
                                                         width: 140,
                                                         decoration: BoxDecoration(
-                                                            image: DecorationImage(image: AssetImage("images/app-icon-new.png")),
+                                                            image: DecorationImage(image: AssetImage("images/app-icon-new2.png")),
                                                             borderRadius: BorderRadius.circular(20)
                                                         ),
                                                       ),
