@@ -478,7 +478,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                   Column(
                                                     children: [
                                                       Text(
-                                                        "BTS Lyricz",
+                                                        "Bangtan Lyricz",
                                                         style: GoogleFonts.openSans(
                                                             color: Colors.black,
                                                             fontWeight: FontWeight.w600,
@@ -490,7 +490,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                         height: 140,
                                                         width: 140,
                                                         decoration: BoxDecoration(
-                                                            image: DecorationImage(image: AssetImage("images/bts-logo.png")),
+                                                            image: DecorationImage(image: AssetImage("images/app-icon-new.png")),
                                                             borderRadius: BorderRadius.circular(20)
                                                         ),
                                                       ),

@@ -47,11 +47,11 @@ dependencies:
 
 flutter_icons:
   android: true
-  image_path: "images/bts-icon.png"
+  image_path: "images/app-icon-new.png"
 
 flutter_native_splash:
   color: "#B488D4"
-  image: images/bts-logo.png
+  image: images/splashLogo.png
   android: true
   ios: true
 

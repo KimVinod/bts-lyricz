@@ -15,7 +15,7 @@
     </queries>
 
    <application
-        android:label="BTS Lyricz"
+        android:label="Bangtan Lyricz"
         android:icon="@mipmap/ic_launcher">
 
        <!--<meta-data

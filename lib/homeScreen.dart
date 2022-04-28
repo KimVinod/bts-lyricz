@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                           ),
                       Text(
-                        "BTS Lyricz",
+                        "Bangtan Lyricz",
                         style: GoogleFonts.openSans(
                           color: Colors.black,
                           fontSize: 21,
