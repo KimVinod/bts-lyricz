@@ -1,4 +1,4 @@
-# BTS Lyricz
+# Bangtan Lyricz
 
 ## Description
 An android application using flutter framework which shows song lyrics of the biggest band BTS.
@@ -25,7 +25,8 @@ An android application using flutter framework which shows song lyrics of the bi
 Link: https://sites.google.com/view/bts-lyricz/home
 
 ## Credits
-Special thanks to translator armys and genius.com for the lyrics :)
+Special thanks to translator armys and genius.com for the lyrics :)<br>
+I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC
 
 <p align = "center">
  <br>
