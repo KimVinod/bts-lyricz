@@ -1,5 +1,7 @@
 # Bangtan Lyricz
 
+<a href='https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80" /></a>
+
 ## Description
 An android application using flutter framework which shows song lyrics of the biggest band BTS.
 
@@ -26,7 +28,8 @@ Link: https://sites.google.com/view/bts-lyricz/home
 
 ## Credits
 Special thanks to translator armys and genius.com for the lyrics :)<br>
-I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC
+I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC<br>
+App icon credit: <a href="https://in.pinterest.com/pin/807340670713498489/">Lola</a>
 
 <p align = "center">
  <br>
