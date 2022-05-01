@@ -4712,6 +4712,20 @@ class _SearchSongsState extends State<SearchSongs> {
                                               );
                                             }
                                             break;
+                                          case "PSY - That That (prod. & ft. SUGA of BTS)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => LyricsKR(
+                                                    songName: "THAT THAT",
+                                                    songLyrics: AlbumData().sugaThatThat,
+                                                    songTabs: AlbumData().sugaOtherSongsTabs,
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                   ),
