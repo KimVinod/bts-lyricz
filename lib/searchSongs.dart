@@ -4726,6 +4726,96 @@ class _SearchSongsState extends State<SearchSongs> {
                                               );
                                             }
                                             break;
+                                          case "Yet To Come":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "YET TO COME",
+                                                        songLyrics: AlbumData().proofYetToCome,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "달려라 방탄 (Run BTS)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "달려라 방탄 (RUN BTS)",
+                                                        songLyrics: AlbumData().proofRunBTS,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "For Youth":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "FOR YOUTH",
+                                                        songLyrics: AlbumData().proofForYouth,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "애매한 사이 (Young Love)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "애매한 사이 (YOUNG LOVE)",
+                                                        songLyrics: AlbumData().proofYoungLove,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "따옴표 (Quotation Mark)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "따옴표 (QUOTATION MARK)",
+                                                        songLyrics: AlbumData().proofQuotationMark,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "Tony Montana (with Jimin)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "TONY MONTANA",
+                                                        songLyrics: AlbumData().proofTonyMontanaWithJimin,
+                                                        songTabs: AlbumData().proofTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                   ),

@@ -175,6 +175,54 @@ class _HomeScreenState extends State<HomeScreen> {
                                     children: <Widget>[
                                       SizedBox(width: 5),
 
+                                      /// proof
+                                      Column(
+                                        children: <Widget>[
+                                          Material(
+                                              elevation: 3,
+                                              shadowColor: Colors.purple.shade700,
+                                              borderRadius: BorderRadius.circular(10),
+                                              child: Ink(
+                                                width: 150,
+                                                height: 170,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(10),
+                                                    image: DecorationImage(image: AssetImage("images/proof.jpg"), fit: BoxFit.fill)
+                                                ),
+                                                child: InkWell(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                                                  onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => Songs(
+                                                        albumName: AlbumData().proofAlbumName,
+                                                        songNames: AlbumData().proofAlbumSongs,
+                                                        albumArt: AlbumData().proofArt,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )),
+                                          SizedBox(height: 4),
+                                          SizedBox(
+                                            height: 20,
+                                            width: 150,
+                                            child: FittedBox(
+                                              child: Text(
+                                                "Proof",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.openSans(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 10),
+
                                       /// that that
                                       Column(
                                         children: <Widget>[
@@ -316,53 +364,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                         ],
                                       ),
-                                      SizedBox(width: 10),
-                                      /// christmas tree
-                                      Column(
-                                        children: <Widget>[
-                                          Material(
-                                              elevation: 3,
-                                              shadowColor: Colors.purple.shade700,
-                                              borderRadius: BorderRadius.circular(10),
-                                              child: Ink(
-                                                width: 150,
-                                                height: 170,
-                                                decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/albums-solo/v/v-christmas-tree.jpg"), fit: BoxFit.fill)
-                                                ),
-                                                child: InkWell(
-                                                  borderRadius: BorderRadius.circular(10),
-                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                                                  onTap: () => Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsKR(
-                                                        songName: "CHRISTMAS TREE",
-                                                        songLyrics: AlbumData().vChristmasTree,
-                                                        songTabs: AlbumData().vOtherSongsTabs,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
-                                          SizedBox(height: 4),
-                                          SizedBox(
-                                            height: 20,
-                                            width: 150,
-                                            child: FittedBox(
-                                              child: Text(
-                                                "Christmas Tree",
-                                                textAlign: TextAlign.center,
-                                                style: GoogleFonts.openSans(
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+
 
 
                                     ],
@@ -531,7 +533,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 170,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      image: DecorationImage(image: AssetImage("images/members/joon2.jpg"), fit: BoxFit.fill)
+                                      image: DecorationImage(image: AssetImage("images/members/joon.jpg"), fit: BoxFit.cover)
                                     ),
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(10),
@@ -562,7 +564,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/jin2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/jin.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),
@@ -593,7 +595,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/yoongi2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/yoongi.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),
@@ -624,7 +626,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/hobi2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/hobi.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),
@@ -655,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/jimin2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/jimin.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),
@@ -686,7 +688,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/tae2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/tae.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),
@@ -717,7 +719,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 170,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/members/jk2.jpg"), fit: BoxFit.fill)
+                                                    image: DecorationImage(image: AssetImage("images/members/jk.jpg"), fit: BoxFit.cover)
                                                 ),
                                                 child: InkWell(
                                                   borderRadius: BorderRadius.circular(10),

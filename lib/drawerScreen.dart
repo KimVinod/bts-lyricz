@@ -119,7 +119,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                         //checkForUpdate();
                                         NativeUpdater.displayUpdateAlert(
                                           context,
-                                          forceUpdate: false,
+                                          forceUpdate: true,
                                         );
                                       },
                                     ),

@@ -257,6 +257,9 @@ final allSongs = <Song>[
     name: "For You",
   ),
   Song(
+    name: "For Youth",
+  ),
+  Song(
     name: "forever rain",
   ),
   Song(
@@ -668,6 +671,9 @@ final allSongs = <Song>[
     name: "Tony Montana (Ft. Yankie)",
   ),
   Song(
+    name: "Tony Montana (with Jimin)",
+  ),
+  Song(
     name: "Trivia 承: Love",
   ),
   Song(
@@ -720,6 +726,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "With You (Jimin x Ha Sung Woon)",
+  ),
+  Song(
+    name: "Yet To Come",
   ),
   Song(
     name: "You Are Here by Lee Hyun",
@@ -779,6 +788,12 @@ final allSongs = <Song>[
     name: "대취타 (Daechwita)",
   ),
   Song(
+    name: "따옴표 (Quotation Mark)",
+  ),
+  Song(
+    name: "달려라 방탄 (Run BTS)",
+  ),
+  Song(
     name: "둘! 셋! (2! 3!)",
   ),
   Song(
@@ -831,6 +846,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "알아요 (I Know) by Rap Monster and Jungkook",
+  ),
+  Song(
+    name: "애매한 사이 (Young Love)",
   ),
   Song(
     name: "약속 (Promise)",
