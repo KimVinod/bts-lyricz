@@ -175,6 +175,54 @@ class _HomeScreenState extends State<HomeScreen> {
                                     children: <Widget>[
                                       SizedBox(width: 5),
 
+                                      /// my you
+                                      Column(
+                                        children: <Widget>[
+                                          Material(
+                                              elevation: 3,
+                                              shadowColor: Colors.purple.shade700,
+                                              borderRadius: BorderRadius.circular(10),
+                                              child: Ink(
+                                                width: 150,
+                                                height: 170,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(10),
+                                                    image: DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-myyou.jpg"), fit: BoxFit.fill)
+                                                ),
+                                                child: InkWell(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                                                  onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsKR(
+                                                        songName: "MY YOU",
+                                                        songLyrics: AlbumData().jungkookMyYou,
+                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )),
+                                          SizedBox(height: 4),
+                                          SizedBox(
+                                            height: 20,
+                                            width: 150,
+                                            child: FittedBox(
+                                              child: Text(
+                                                "My You",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.openSans(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 10),
+
                                       /// proof
                                       Column(
                                         children: <Widget>[
@@ -307,53 +355,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                             child: FittedBox(
                                               child: Text(
                                                 "With You",
-                                                textAlign: TextAlign.center,
-                                                style: GoogleFonts.openSans(
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(width: 10),
-                                      /// stay alive
-                                      Column(
-                                        children: <Widget>[
-                                          Material(
-                                              elevation: 3,
-                                              shadowColor: Colors.purple.shade700,
-                                              borderRadius: BorderRadius.circular(10),
-                                              child: Ink(
-                                                width: 150,
-                                                height: 170,
-                                                decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-stayalive.jpg"), fit: BoxFit.fill)
-                                                ),
-                                                child: InkWell(
-                                                  borderRadius: BorderRadius.circular(10),
-                                                  //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                                                  onTap: () => Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsKR(
-                                                        songName: "STAY ALIVE",
-                                                        songLyrics: AlbumData().jungkookStayAlive,
-                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
-                                          SizedBox(height: 4),
-                                          SizedBox(
-                                            height: 20,
-                                            width: 150,
-                                            child: FittedBox(
-                                              child: Text(
-                                                "Stay Alive",
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.openSans(
                                                   fontSize: 16.0,

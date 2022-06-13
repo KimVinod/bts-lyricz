@@ -491,6 +491,9 @@ final allSongs = <Song>[
     name: "My Universe",
   ),
   Song(
+    name: "My You",
+  ),
+  Song(
     name: "N.O (Japanese Ver.)",
   ),
   Song(

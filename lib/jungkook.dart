@@ -138,6 +138,21 @@ class Jungkook extends StatelessWidget {
                                                 );
                                               }
                                               break;
+                                            case "My You":
+                                              {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        LyricsKR(
+                                                          songName: "MY YOU",
+                                                          songLyrics: AlbumData().jungkookMyYou,
+                                                          songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        ),
+                                                  ),
+                                                );
+                                              }
+                                              break;
                                           }
                                         },
                                       ),
