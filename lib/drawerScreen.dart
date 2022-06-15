@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:native_updater/native_updater.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class DrawerScreen extends StatefulWidget {
   @override
@@ -119,7 +120,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                         //checkForUpdate();
                                         NativeUpdater.displayUpdateAlert(
                                           context,
-                                          forceUpdate: false,
+                                          forceUpdate: true,
                                         );
                                       },
                                     ),
@@ -209,7 +210,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                       child: Container(
                                                         padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
                                                         child: RawScrollbar(
-                                                          isAlwaysShown: true,
+                                                          thumbVisibility: true,
                                                           radius: Radius.circular(20),
                                                           thumbColor: Color.fromRGBO(130, 70, 190, 0.6),
                                                           child: SingleChildScrollView(
@@ -290,8 +291,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                         GestureDetector(
                                                                           onTap: () async {
                                                                             final String url = "https://github.com/KimVinod/bts-lyricz";
-                                                                            if(await canLaunch(url))
-                                                                            launch(url);
+                                                                            if(await canLaunchUrlString(url))
+                                                                            launchUrlString(url, mode: LaunchMode.externalApplication);
                                                                             else {
                                                                             Fluttertoast.showToast(
                                                                             msg: "Error occurred. Your phone doesn't support opening links",
@@ -331,8 +332,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                         onTap: () async {
                                                                           //await launch("https://twitter.com/vinod3344");
                                                                           final String url = "https://twitter.com/vinod3344";
-                                                                          if(await canLaunch(url))
-                                                                            launch(url);
+                                                                          if(await canLaunchUrlString(url))
+                                                                            launchUrlString(url,mode: LaunchMode.externalApplication);
                                                                           else {
                                                                             Fluttertoast.showToast(
                                                                               msg: "Error occurred. Your phone doesn't support opening links",
@@ -351,7 +352,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                         ),
                                                                       ),
                                                                       Text(
-                                                                        "\tor\t",
+                                                                        "or\t",
                                                                         textAlign: TextAlign.center,
                                                                         style: GoogleFonts.openSans(
                                                                             color: Colors.black,
@@ -369,8 +370,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                                                             }),
                                                                           );
                                                                           //await launch(emailLaunchUri.toString());
-                                                                          if(await canLaunch(emailLaunchUri.toString()))
-                                                                            launch(emailLaunchUri.toString());
+                                                                          if(await canLaunchUrlString(emailLaunchUri.toString()))
+                                                                            launchUrlString(emailLaunchUri.toString(), mode: LaunchMode.externalApplication);
                                                                           else {
                                                                             Fluttertoast.showToast(
                                                                               msg: "Error occurred. Your phone doesn't support opening links",

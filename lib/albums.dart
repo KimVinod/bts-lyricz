@@ -715,6 +715,47 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
+              /// butter and ptd
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(image: AssetImage("images/proof.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().proofAlbumName,
+                                songNames: AlbumData().proofAlbumSongs,
+                                albumArt: AlbumData().proofArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  SizedBox(height: 4),
+                  Text(
+                    "Proof",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.openSans(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+
 
 
 
