@@ -59903,17 +59903,89 @@ class AlbumData {
 
   //jungkook other songs
   final List<int> jungkookOtherSongsTabs = [1, 1, 1, 0];
+  final List<int> jungkookEngTabs = [1, 0, 0, 0];
   final List<String> jungkookOtherSongs = [
     "일하는중 (Working)",
     "Still With You",
     "Stay Alive (Prod. SUGA of BTS)",
     "My You",
+    "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
   ];
   final List<String> jungkookOtherSongsArt = [
     "images/songs-uo/bts-wab1.jpg",
     "images/albums-solo/jungkook/jungkook-stillwithyou.jpg",
     "images/albums-solo/jungkook/jungkook-stayalive.jpg",
     "images/albums-solo/jungkook/jungkook-myyou.jpg",
+    "images/albums-solo/jungkook/jungkook-leftandright.jpg",
+  ];
+
+  final List<String> jungkookLeftAndRight = [
+    "[Chorus: Charlie Puth]\n"
+        "Memories follow me left and right\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind\n"
+        "(What ya gon' do now?)\n"
+        "\n"
+        "[Verse 1: Charlie Puth]\n"
+        "Ever since the-the day you-you went away\n"
+        "(No, I don't know how)\n"
+        "How to erase your body from out my brain\n"
+        "(What ya gon' do now?)\n"
+        "Maybe I should just focus on me instead\n"
+        "(But all I think about)\n"
+        "Are the nights we were tangled up in your bed\n"
+        "[Pre-Chorus: Charlie Puth]\n"
+        "Oh, no (Oh, no)\n"
+        "Oh, no (Oh, no)\n"
+        "You're goin' 'round in circles\n"
+        "Got you stuck up in my head, yeah\n\n"
+        "[Chorus: Charlie Puth]\n"
+        "Memories follow me left and right\n"
+        "I can feel you over here, I can feel you ovеr here\n"
+        "You take up еvery corner of my mind\n"
+        "Your love stays with me day and night\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind\n"
+        "What ya gon' do now?\n\n"
+        "[Verse 2: Jung Kook, Charlie Puth]\n"
+        "Ever since the-the day that you went away\n"
+        "(Someone tell me how)\n"
+        "How much more do I gotta drink for the pain?\n"
+        "(What ya gon' do now?)\n"
+        "You do things to me that I just can't forget\n"
+        "(Now all I think about)\n"
+        "Are the nights we were tangled up in your bed\n\n"
+        "[Pre-Chorus: Jung Kook, Charlie Puth]\n"
+        "Oh, no (Oh, no)\n"
+        "Oh, no (Oh, no)\n"
+        "You're goin' 'round in circles\n"
+        "Got you stuck up in my head, yeah\n\n"
+        "[Chorus: Jung Kook]\n"
+        "Memories follow me left and right\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind (Of my mind)\n"
+        "Your love stays with me day and night\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind\n"
+        "What ya gon' do now?\n\n"
+        "[Bridge: Charlie Puth]\n"
+        "Did you know you're the one that got away?\n"
+        "And even now, baby, I'm still not okay\n"
+        "Did you know that my dreams, they're all the same?\n"
+        "Every time I close my eyes\n\n"
+        "[Chorus: Charlie Puth, Jung Kook, Charlie Puth & Jung Kook]\n"
+        "Memories follow me left and right\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind (What ya gon' do now?)\n"
+        "Your love stays with me day and night\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind (What ya gon' do now?)\n\n"
+        "[Outro: Charlie Puth, Jung Kook]\n"
+        "I can feel you over here, I can feel you over here\n"
+        "You take up every corner of my mind (What ya gon' do now?)",
+    "",
+    "",
+    "",
   ];
 
   final List<String> jungkookMyYou = [

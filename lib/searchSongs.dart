@@ -76,7 +76,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                         ),
                                       ),
                                     ),
-                                    SizedBox(width: 4),
+                                    SizedBox(width: 5),
                                   ],
                                 ),
                               ),
@@ -4826,6 +4826,21 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "MY YOU",
                                                         songLyrics: AlbumData().jungkookMyYou,
                                                         songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
+                                          case "Charlie Puth - Left And Right (ft. Jungkook of BTS)":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsENG(
+                                                        songName: "Left and Right",
+                                                        songLyrics: AlbumData().jungkookLeftAndRight,
+                                                        songTabs: AlbumData().jungkookEngTabs,
                                                       ),
                                                 ),
                                               );

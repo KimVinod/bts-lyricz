@@ -1,4 +1,5 @@
 import 'package:bts_lyrics_app/albumdata.dart';
+import 'package:bts_lyrics_app/lyricsENG.dart';
 import 'package:bts_lyrics_app/lyricsKR.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -148,6 +149,21 @@ class Jungkook extends StatelessWidget {
                                                           songName: "MY YOU",
                                                           songLyrics: AlbumData().jungkookMyYou,
                                                           songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        ),
+                                                  ),
+                                                );
+                                              }
+                                              break;
+                                            case "Charlie Puth - Left And Right (ft. Jungkook of BTS)":
+                                              {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        LyricsENG(
+                                                          songName: "Left and Right",
+                                                          songLyrics: AlbumData().jungkookLeftAndRight,
+                                                          songTabs: AlbumData().jungkookEngTabs,
                                                         ),
                                                   ),
                                                 );
