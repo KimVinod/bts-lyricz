@@ -152,6 +152,9 @@ final allSongs = <Song>[
     name: "Change (RM & Wale)",
   ),
   Song(
+    name: "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
+  ),
+  Song(
     name: "Chicken Noodle Soup (ft. Becky G)",
   ),
   Song(

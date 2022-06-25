@@ -26,6 +26,9 @@ An android application using flutter framework which shows song lyrics of the bi
 ## Privacy Policy
 Link: https://sites.google.com/view/bts-lyricz/home
 
+## Version History
+Link: https://sites.google.com/view/bts-lyricz/version-history
+
 ## Credits
 Special thanks to translator armys and genius.com for the lyrics :)<br>
 I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC<br>
