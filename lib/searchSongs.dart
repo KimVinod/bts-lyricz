@@ -4846,6 +4846,21 @@ class _SearchSongsState extends State<SearchSongs> {
                                               );
                                             }
                                             break;
+                                          case "MORE":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsKR(
+                                                        songName: "MORE",
+                                                        songLyrics: AlbumData().jhopeMore,
+                                                        songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                   ),

@@ -203,6 +203,20 @@ class Hoseok extends StatelessWidget {
                                                   );
                                                 }
                                                 break;
+                                              case "MORE":
+                                                {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsKR(
+                                                        songName: "MORE",
+                                                        songLyrics: AlbumData().jhopeMore,
+                                                        songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+                                                break;
                                             }
                                           },
                                         ),
