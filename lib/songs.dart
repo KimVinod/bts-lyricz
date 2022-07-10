@@ -111,8 +111,8 @@ class Songs extends StatelessWidget {
                                         builder: (context) => LyricsENG(
                                           songLyrics: AlbumData().ptdLyrics,
                                           songName: "PERMISSION TO DANCE",
-                                          songTabs:
-                                              AlbumData().butterPtdAlbumTabs,
+                                          songTabs: AlbumData().butterPtdAlbumTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -127,6 +127,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().butterLyrics,
                                           songName: "BUTTER",
                                           songTabs: AlbumData().butterAlbumTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -228,6 +229,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().dynamiteLyrics,
                                           songName: "DYNAMITE",
                                           songTabs: AlbumData().dynamiteTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2143,6 +2145,7 @@ class Songs extends StatelessWidget {
                                               .noMoreDreamNoMoreDream,
                                           songName: "NO MORE DREAM",
                                           songTabs: AlbumData().noMoreDreamTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2158,6 +2161,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().noMoreDreamILikeIt,
                                           songName: "いいね! (I LIKE IT)",
                                           songTabs: AlbumData().noMoreDreamTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2173,6 +2177,7 @@ class Songs extends StatelessWidget {
                                               .noMoreDreamAttackOnBangtan,
                                           songName: "進撃の防弾 (ATTACK ON BANGTAN)",
                                           songTabs: AlbumData().noMoreDreamTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2188,6 +2193,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().boyInLuvBoyInLuv,
                                           songName: "BOY IN LUV",
                                           songTabs: AlbumData().boyInLuvTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2202,6 +2208,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().boyInLuvNO,
                                           songName: "N.O",
                                           songTabs: AlbumData().boyInLuvTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2217,6 +2224,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().boyInLuvJustOneDay,
                                           songName: "JUST ONE DAY",
                                           songTabs: AlbumData().boyInLuvTabs,
+                                           songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2231,6 +2239,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().dangerDanger,
                                           songName: "DANGER",
                                           songTabs: AlbumData().dangerTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2246,6 +2255,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().dangerMissRight,
                                           songName: "MISS RIGHT",
                                           songTabs: AlbumData().dangerTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2260,6 +2270,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().wakeUpIntro,
                                           songName: "INTRO.",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2275,6 +2286,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().wakeUpTheStars,
                                           songName: "THE STARS",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2289,6 +2301,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().wakeUpJump,
                                           songName: "JUMP",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2305,6 +2318,7 @@ class Songs extends StatelessWidget {
                                           songName:
                                               "いいね! PT.2 ～あの場所で～ (I LIKE IT PT.2)",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2321,6 +2335,7 @@ class Songs extends StatelessWidget {
                                           songName:
                                               "JUST ONE DAY (EXTENDED VER.)",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2335,6 +2350,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().wakeUpWakeUp,
                                           songName: "WAKE UP",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2349,6 +2365,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().wakeUpOutro,
                                           songName: "OUTRO.",
                                           songTabs: AlbumData().wakeUpTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2363,6 +2380,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().forYouForYou,
                                           songName: "FOR YOU",
                                           songTabs: AlbumData().forYouTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2378,6 +2396,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().forYouWarOfHormone,
                                           songName: "ホルモン戦争 (WAR OF HORMONE)",
                                           songTabs: AlbumData().forYouTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2393,6 +2412,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().forYouLetMeKnow,
                                           songName: "LET ME KNOW",
                                           songTabs: AlbumData().forYouTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2407,6 +2427,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().iNeedUINeedU,
                                           songName: "I NEED U",
                                           songTabs: AlbumData().iNeedUTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2421,6 +2442,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().iNeedUDope,
                                           songName: "DOPE -超ヤベー!-",
                                           songTabs: AlbumData().iNeedUTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2436,6 +2458,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().iNeedUBoyzWithFun,
                                           songName: "フンタン少年団 (BOYZ WITH FUN)",
                                           songTabs: AlbumData().iNeedUTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2450,6 +2473,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().runRun,
                                           songName: "RUN",
                                           songTabs: AlbumData().runTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2464,6 +2488,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().runButterfly,
                                           songName: "BUTTERFLY",
                                           songTabs: AlbumData().runTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2478,6 +2503,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().runGoodDay,
                                           songName: "GOOD DAY",
                                           songTabs: AlbumData().runTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2492,6 +2518,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().youthIntro,
                                           songName: "INTRODUCTION: YOUTH",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2507,6 +2534,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().youthSilverSpoon,
                                           songName: "ペップセ (SILVER SPOON)",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2522,6 +2550,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().youthWishingOnAStar,
                                           songName: "WISHING ON A STAR",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2536,6 +2565,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().youthEpilogue,
                                           songName: "EPILOGUE: YOUNG FOREVER",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2550,6 +2580,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().youthFire,
                                           songName: "FIRE",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2564,6 +2595,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().youthSaveMe,
                                           songName: "SAVE ME",
                                           songTabs: AlbumData().youthTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2579,6 +2611,7 @@ class Songs extends StatelessWidget {
                                           songName:
                                               "血、汗、淚 (Blood Sweat & Tears)",
                                           songTabs: AlbumData().bstTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2593,6 +2626,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().bstNotToday,
                                           songName: "NOT TODAY",
                                           songTabs: AlbumData().bstTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2607,6 +2641,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().bstSpringDay,
                                           songName: "SPRING DAY",
                                           songTabs: AlbumData().bstTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2622,6 +2657,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().crystalSnowMICDrop,
                                           songName: "MIC DROP",
                                           songTabs: AlbumData().crystalSnowTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2637,6 +2673,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().crystalSnowDNA,
                                           songName: "DNA",
                                           songTabs: AlbumData().crystalSnowTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2652,6 +2689,7 @@ class Songs extends StatelessWidget {
                                               .crystalSnowCrystalSnow,
                                           songName: "CRYSTAL SNOW",
                                           songTabs: AlbumData().crystalSnowTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2668,6 +2706,7 @@ class Songs extends StatelessWidget {
                                           songName: "INTRO: RINGWANDERUNG",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2684,6 +2723,7 @@ class Songs extends StatelessWidget {
                                           songName: "DON'T LEAVE ME",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2700,6 +2740,7 @@ class Songs extends StatelessWidget {
                                           songName: "GO GO",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2716,6 +2757,7 @@ class Songs extends StatelessWidget {
                                           songName: "LET GO",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2732,6 +2774,7 @@ class Songs extends StatelessWidget {
                                           songName: "OUTRO: CRACK",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2747,6 +2790,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().fakeLoveFakeLove,
                                           songName: "FAKE LOVE",
                                           songTabs: AlbumData().fakeLoveTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2762,6 +2806,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().fakeLoveAirplanePt2,
                                           songName: "AIRPLANE PT.2",
                                           songTabs: AlbumData().fakeLoveTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2776,6 +2821,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().lightsLights,
                                           songName: "LIGHTS",
                                           songTabs: AlbumData().lightsTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2791,6 +2837,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().lightsBoyWithLuv,
                                           songName: "BOY WITH LUV",
                                           songTabs: AlbumData().lightsTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2805,6 +2852,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().lightsIdol,
                                           songName: "IDOL",
                                           songTabs: AlbumData().lightsTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2820,6 +2868,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().motsJourneyIntro,
                                           songName: "INTRO: CALLING",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2835,6 +2884,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().motsJourneyStayGold,
                                           songName: "STAY GOLD",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2850,6 +2900,7 @@ class Songs extends StatelessWidget {
                                               .motsJourneyMakeItRight,
                                           songName: "MAKE IT RIGHT",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2865,6 +2916,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().motsJourneyDionysus,
                                           songName: "DIONYSUS",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2880,6 +2932,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().motsJourneyBlackSwan,
                                           songName: "BLACK SWAN",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2894,6 +2947,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().motsJourneyOn,
                                           songName: "ON",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2909,6 +2963,7 @@ class Songs extends StatelessWidget {
                                               .motsJourneyYourEyesTell,
                                           songName: "YOUR EYES TELL",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -2924,6 +2979,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().motsJourneyOutro,
                                           songName: "OUTRO: THE JOURNEY",
                                           songTabs: AlbumData().motsJourneyTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -3029,6 +3085,7 @@ class Songs extends StatelessWidget {
                                           songName: "BEST OF ME",
                                           songTabs:
                                               AlbumData().faceYourselfTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -3044,6 +3101,7 @@ class Songs extends StatelessWidget {
                                               AlbumData().btsTheBestFilmOut,
                                           songName: "FILM OUT",
                                           songTabs: AlbumData().btsTheBestTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -3302,6 +3360,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().monoTokyo,
                                           songName: "TOKYO",
                                           songTabs: AlbumData().monoTokyoTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -3498,6 +3557,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().agustdInterlude,
                                           songName: "INTERLUDE: DREAM, REALITY",
                                           songTabs: AlbumData().agustdTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );
@@ -3764,6 +3824,7 @@ class Songs extends StatelessWidget {
                                           songLyrics: AlbumData().butterRemix,
                                           songName: "BUTTER (FT. MEGAN THE STALLION)",
                                           songTabs: AlbumData().butterRemixAlbumTabs,
+                                          songFullName: songNames![index],
                                         ),
                                       ),
                                     );

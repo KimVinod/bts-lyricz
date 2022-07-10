@@ -1,13 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 
-class LyricsJP extends StatelessWidget {
+class LyricsJP extends StatefulWidget {
   final List<String>? songLyrics;
-  final String? songName;
+  final String? songName, songFullName;
   final List<int>? songTabs;
 
-  LyricsJP({this.songLyrics, this.songName, this.songTabs});
+  LyricsJP({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+
+  @override
+  State<LyricsJP> createState() => _LyricsJPState();
+}
+
+class _LyricsJPState extends State<LyricsJP> {
+
+  late Box userFavLyricsBox;
+  List userFavLyrics = [];
+  bool isFav = false;
+
+  loadData() async {
+    userFavLyricsBox = await Hive.openBox('userFavourites');
+    //userFavLyricsBox.clear();
+    userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
+    if(userFavLyrics.contains(widget.songFullName)) {
+      setState(() {
+        isFav = true;
+      });
+    }
+    print("load favList: $userFavLyrics");
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +63,27 @@ class LyricsJP extends StatelessWidget {
                 icon: Icon(Icons.arrow_back),
                 tooltip: "Back",
                 onPressed: () => Navigator.pop(context)),
+            actions: [
+              IconButton(onPressed: () {
+                if(userFavLyrics.contains(widget.songFullName)) {
+                  userFavLyrics.remove(widget.songFullName);
+                  setState(() {
+                    isFav = false;
+                  });
+                } else {
+                  userFavLyrics.add(widget.songFullName);
+                  setState(() {
+                    isFav = true;
+                  });
+                }
+                userFavLyricsBox.put("favouritesList", userFavLyrics);
+                print("current favList: $userFavLyrics");
+              }, icon: Icon(isFav ? Icons.favorite :Icons.favorite_outline), tooltip: "Add to favorites",)
+            ],
           ),
           body: TabBarView(
             children: [
-              songTabs![3] == 1 //JP
+              widget.songTabs![3] == 1 //JP
                   ? Container(
                       color: Color.fromRGBO(180, 136, 212, 1),
                       width: double.infinity,
@@ -50,22 +97,22 @@ class LyricsJP extends StatelessWidget {
                             overScroll.disallowIndicator();
                             return true;
                           },
-                          child: songLyrics![3] != ""
+                          child: widget.songLyrics![3] != ""
                               ? ListView(
                             scrollDirection: Axis.vertical,
                             children: <Widget>[
                               SizedBox(height: 20.0),
                               Text(
-                                songName!,
+                                widget.songName!,
                                 style: GoogleFonts.openSans(
                                     color: Colors.black,
-                                    
+
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(height: 12.0),
                               Text(
-                                songLyrics![3],
+                                widget.songLyrics![3],
                                 style: GoogleFonts.openSans(
                                   fontSize: 16.0,
                                 ),
@@ -102,7 +149,7 @@ class LyricsJP extends StatelessWidget {
                         ),
                       ),
                     ),
-              songTabs![0] == 1 //ENG
+              widget.songTabs![0] == 1 //ENG
                   ? Container(
                       color: Color.fromRGBO(180, 136, 212, 1),
                       width: double.infinity,
@@ -116,21 +163,21 @@ class LyricsJP extends StatelessWidget {
                             overScroll.disallowIndicator();
                             return true;
                           },
-                          child: songLyrics![0] != ""
+                          child: widget.songLyrics![0] != ""
                               ? ListView(
                                   scrollDirection: Axis.vertical,
                                   children: <Widget>[
                                     SizedBox(height: 20.0),
                                     Text(
-                                      songName!,
+                                      widget.songName!,
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
-                                          
+
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     SizedBox(height: 12.0),
-                                    Text(songLyrics![0],
+                                    Text(widget.songLyrics![0],
                                         style: GoogleFonts.openSans(fontSize: 16.0)),
                                     SizedBox(height: 10.0),
                                   ],
@@ -164,7 +211,7 @@ class LyricsJP extends StatelessWidget {
                         ),
                       ),
                     ),
-              songTabs![1] == 1 //ROM
+              widget.songTabs![1] == 1 //ROM
                   ? Container(
                       color: Color.fromRGBO(180, 136, 212, 1),
                       width: double.infinity,
@@ -178,22 +225,22 @@ class LyricsJP extends StatelessWidget {
                             overScroll.disallowIndicator();
                             return true;
                           },
-                          child: songLyrics![1] != ""
+                          child: widget.songLyrics![1] != ""
                               ? ListView(
                             scrollDirection: Axis.vertical,
                             children: <Widget>[
                               SizedBox(height: 20.0),
                               Text(
-                                songName!,
+                                widget.songName!,
                                 style: GoogleFonts.openSans(
                                     color: Colors.black,
-                                    
+
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(height: 12.0),
                               Text(
-                                songLyrics![1],
+                                widget.songLyrics![1],
                                 style: GoogleFonts.openSans(
                                   fontSize: 16.0,
                                 ),

@@ -45,7 +45,7 @@ class Jungkook extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                       itemCount: AlbumData().jungkookOtherSongs.length,
                       itemBuilder: (context, index) {
@@ -164,6 +164,7 @@ class Jungkook extends StatelessWidget {
                                                           songName: "Left and Right",
                                                           songLyrics: AlbumData().jungkookLeftAndRight,
                                                           songTabs: AlbumData().jungkookEngTabs,
+                                                          songFullName: AlbumData().jungkookOtherSongs[index],
                                                         ),
                                                   ),
                                                 );

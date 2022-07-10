@@ -45,7 +45,7 @@ class Taehyung extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                       itemCount: AlbumData().vOtherSongs.length,
                       itemBuilder: (context, index) {
@@ -119,6 +119,7 @@ class Taehyung extends StatelessWidget {
                                                           songName: "WINTER BEAR",
                                                           songLyrics: AlbumData().vWinterBear,
                                                           songTabs: AlbumData().vSongsEngTab,
+                                                          songFullName: AlbumData().vOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -134,6 +135,7 @@ class Taehyung extends StatelessWidget {
                                                           songName: "SWEET NIGHT",
                                                           songLyrics: AlbumData().vSweetNight,
                                                           songTabs: AlbumData().vSongsEngTab,
+                                                          songFullName: AlbumData().vOtherSongs[index],
                                                         ),
                                                   ),
                                                 );

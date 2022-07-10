@@ -1,13 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 
-class LyricsENG extends StatelessWidget {
+class LyricsENG extends StatefulWidget {
   final List<String>? songLyrics;
-  final String? songName;
+  final String? songName, songFullName;
   final List<int>? songTabs;
 
-  LyricsENG({this.songLyrics, this.songName, this.songTabs});
+  LyricsENG({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+
+  @override
+  State<LyricsENG> createState() => _LyricsENGState();
+}
+
+class _LyricsENGState extends State<LyricsENG> {
+
+  late Box userFavLyricsBox;
+  List userFavLyrics = [];
+  bool isFav = false;
+
+  loadData() async {
+    userFavLyricsBox = await Hive.openBox('userFavourites');
+    //userFavLyricsBox.clear();
+    userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
+    if(userFavLyrics.contains(widget.songFullName)) {
+      setState(() {
+        isFav = true;
+      });
+    }
+    print("load favList: $userFavLyrics");
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +58,27 @@ class LyricsENG extends StatelessWidget {
                 icon: Icon(Icons.arrow_back),
                 tooltip: "Back",
                 onPressed: () => Navigator.pop(context)),
+            actions: [
+              IconButton(onPressed: () {
+                if(userFavLyrics.contains(widget.songFullName)) {
+                  userFavLyrics.remove(widget.songFullName);
+                  setState(() {
+                    isFav = false;
+                  });
+                } else {
+                  userFavLyrics.add(widget.songFullName);
+                  setState(() {
+                    isFav = true;
+                  });
+                }
+                userFavLyricsBox.put("favouritesList", userFavLyrics);
+                print("current favList: $userFavLyrics");
+              }, icon: Icon(isFav ? Icons.favorite :Icons.favorite_outline), tooltip: "Add to favorites",)
+            ],
           ),
           body: TabBarView(
             children: [
-              songTabs![0] == 1 //ENG
+              widget.songTabs![0] == 1 //ENG
                   ? Container(
                       color: Color.fromRGBO(180, 136, 212, 1),
                       width: double.infinity,
@@ -45,22 +92,22 @@ class LyricsENG extends StatelessWidget {
                             overScroll.disallowIndicator();
                             return true;
                           },
-                          child: songLyrics![0] != ""
+                          child: widget.songLyrics![0] != ""
                               ? ListView(
                                   scrollDirection: Axis.vertical,
                                   children: <Widget>[
                                     SizedBox(height: 20.0),
                                     Text(
-                                      songName!,
+                                      widget.songName!,
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
-                                          
+
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     SizedBox(height: 12.0),
                                     Text(
-                                      songLyrics![0],
+                                      widget.songLyrics![0],
                                       style: GoogleFonts.openSans(
                                         fontSize: 16.0,
                                       ),

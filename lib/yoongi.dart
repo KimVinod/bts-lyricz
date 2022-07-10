@@ -157,7 +157,7 @@ class Yoongi extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                         itemCount: AlbumData().sugaOtherSongs.length,
                         itemBuilder: (context, index) {
@@ -271,6 +271,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "YOU",
                                                         songLyrics: AlbumData().sugaYou,
                                                         songTabs: AlbumData().sugaYouTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );

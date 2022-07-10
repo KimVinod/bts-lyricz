@@ -247,6 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         songName: "Left and Right",
                                                         songLyrics: AlbumData().jungkookLeftAndRight,
                                                         songTabs: AlbumData().jungkookEngTabs,
+                                                        songFullName: "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
                                                       ),
                                                     ),
                                                   ),

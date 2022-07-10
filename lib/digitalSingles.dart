@@ -43,7 +43,7 @@ class DigitalSingles extends StatelessWidget {
               child: Expanded(
                 child: Container(
                   child: RawScrollbar(
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
@@ -105,6 +105,7 @@ class DigitalSingles extends StatelessWidget {
                                                       AlbumData().dynamiteLyrics,
                                                       songName: "DYNAMITE",
                                                       songTabs: AlbumData().dynamiteTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -119,6 +120,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().butterLyrics,
                                                       songName: "BUTTER",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -133,6 +135,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().butterRemix,
                                                       songName: "BUTTER (FT. MEGAN THE STALLION)",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -161,6 +164,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().btsWasteItOnMe,
                                                       songName: "WASTE IT ON ME",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -205,6 +209,7 @@ class DigitalSingles extends StatelessWidget {
                                                       AlbumData().btsWho,
                                                       songName: "WHO",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -220,6 +225,7 @@ class DigitalSingles extends StatelessWidget {
                                                       AlbumData().btsTheBestFilmOut,
                                                       songName: "FILM OUT",
                                                       songTabs: AlbumData().btsJPSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -235,6 +241,7 @@ class DigitalSingles extends StatelessWidget {
                                                       AlbumData().btsSavageLove,
                                                       songName: "SAVAGE LOVE",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );

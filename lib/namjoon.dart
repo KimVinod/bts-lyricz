@@ -157,7 +157,7 @@ class Namjoon extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                         itemCount: AlbumData().rmOtherSongs.length,
                         itemBuilder: (context, index) {
@@ -261,6 +261,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "CHANGE",
                                                             songLyrics: AlbumData().rmChange,
                                                             songTabs: AlbumData().rmChangeTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -291,6 +292,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "CHAMPION (REMIX)",
                                                             songLyrics: AlbumData().rmChampion,
                                                             songTabs: AlbumData().rmChampionTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -306,6 +308,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "MONTERLUDE",
                                                             songLyrics: AlbumData().rmMonterlude,
                                                             songTabs: AlbumData().rmMonterludeTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -366,6 +369,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "CRYING OVER YOU ◐ (REMIX)",
                                                             songLyrics: AlbumData().rmCryingOverYou,
                                                             songTabs: AlbumData().rmCryingOverYouTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -381,6 +385,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "OLD TOWN ROAD (SEOUL TOWN ROAD REMIX)",
                                                             songLyrics: AlbumData().rmSeoulTownRoad,
                                                             songTabs: AlbumData().rmSeoulTownRoadTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
