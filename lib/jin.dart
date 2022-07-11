@@ -45,7 +45,7 @@ class Jin extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                       itemCount: AlbumData().jinOtherSongs.length,
                       itemBuilder: (context, index) {
@@ -104,6 +104,7 @@ class Jin extends StatelessWidget {
                                                       songName: "이 밤 (TONIGHT)",
                                                       songLyrics: AlbumData().jinTonight,
                                                       songTabs: AlbumData().jinOtherSongsTabs,
+                                                          songFullName: AlbumData().jinOtherSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -119,6 +120,7 @@ class Jin extends StatelessWidget {
                                                           songName: "ABYSS",
                                                           songLyrics: AlbumData().jinAbyss,
                                                           songTabs: AlbumData().jinOtherSongsTabs,
+                                                          songFullName: AlbumData().jinOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -133,6 +135,7 @@ class Jin extends StatelessWidget {
                                                       songName: "YOURS",
                                                       songLyrics: AlbumData().jinYours,
                                                       songTabs: AlbumData().jinOtherSongsTabs,
+                                                      songFullName: AlbumData().jinOtherSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -147,6 +150,7 @@ class Jin extends StatelessWidget {
                                                       songName: "슈퍼 참치 (SUPER TUNA)",
                                                       songLyrics: AlbumData().jinSuperTuna,
                                                       songTabs: AlbumData().jinOtherSongsTabs,
+                                                      songFullName: AlbumData().jinOtherSongs[index],
                                                     ),
                                                   ),
                                                 );

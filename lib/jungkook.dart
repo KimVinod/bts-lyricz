@@ -104,6 +104,7 @@ class Jungkook extends StatelessWidget {
                                                           songName: "STILL WITH YOU",
                                                           songLyrics: AlbumData().jungkookStillWithYou,
                                                           songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                          songFullName: AlbumData().jungkookOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -119,6 +120,7 @@ class Jungkook extends StatelessWidget {
                                                           songName: "일하는중 (WORKING)",
                                                           songLyrics: AlbumData().jungkookWorking,
                                                           songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                          songFullName: AlbumData().jungkookOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -134,6 +136,7 @@ class Jungkook extends StatelessWidget {
                                                           songName: "STAY ALIVE",
                                                           songLyrics: AlbumData().jungkookStayAlive,
                                                           songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                          songFullName: AlbumData().jungkookOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -149,6 +152,7 @@ class Jungkook extends StatelessWidget {
                                                           songName: "MY YOU",
                                                           songLyrics: AlbumData().jungkookMyYou,
                                                           songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                          songFullName: AlbumData().jungkookOtherSongs[index],
                                                         ),
                                                   ),
                                                 );

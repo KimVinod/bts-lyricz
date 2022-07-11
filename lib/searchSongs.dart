@@ -98,6 +98,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "STILL WITH YOU",
                                                         songLyrics: AlbumData().jungkookStillWithYou,
                                                         songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -158,6 +159,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().btsMICDropDesiigner,
                                                     songName: "MIC DROP",
                                                     songTabs: AlbumData().btsSinglesTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -187,6 +189,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().btsMakeItRightLauv,
                                                     songName: "MAKE IT RIGHT",
                                                     songTabs: AlbumData().btsSinglesTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -202,6 +205,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().mots7BlackSwan,
                                                     songName: "BLACK SWAN",
                                                     songTabs: AlbumData().btsSinglesTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -264,6 +268,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().jhope1Verse,
                                                     songName: "1 VERSE",
                                                     songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -278,6 +283,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().jhopeCNS,
                                                     songName: "CHICKEN NOODLE SOUP",
                                                     songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -292,6 +298,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().jhopeBlueSide,
                                                     songName: "BLUE SIDE",
                                                     songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -307,6 +314,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "약속 (PROMISE)",
                                                         songLyrics: AlbumData().jiminPromise,
                                                         songTabs: AlbumData().jiminOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -322,6 +330,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "CHRISTMAS LOVE",
                                                         songLyrics: AlbumData().jiminChristmasLove,
                                                         songTabs: AlbumData().jiminOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -337,6 +346,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "이 밤 (TONIGHT)",
                                                         songLyrics: AlbumData().jinTonight,
                                                         songTabs: AlbumData().jinOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -352,6 +362,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "ABYSS",
                                                         songLyrics: AlbumData().jinAbyss,
                                                         songTabs: AlbumData().jinOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -367,6 +378,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "P.D.D",
                                                         songLyrics: AlbumData().rmPDD,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -382,6 +394,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "부끄부끄 (Buckubucku)",
                                                         songLyrics: AlbumData().rmBuckubucku,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -397,6 +410,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "U",
                                                         songLyrics: AlbumData().rmU,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -428,6 +442,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "GAJAH (코끼리)",
                                                         songLyrics: AlbumData().rmGajah,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -475,6 +490,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "UNPACK YOUR BAGS",
                                                         songLyrics: AlbumData().rmUnpackYourBags,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -490,6 +506,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "ALWAYS",
                                                         songLyrics: AlbumData().rmAlways,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -505,6 +522,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "TIMELESS",
                                                         songLyrics: AlbumData().rmTimeless,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -552,6 +570,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "WINTER FLOWER (雪中梅)",
                                                         songLyrics: AlbumData().rmWinterFlower,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -567,6 +586,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "그러지 마 (DON’T)",
                                                         songLyrics: AlbumData().rmDont,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -582,6 +602,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "BICYCLE",
                                                         songLyrics: AlbumData().rmBicycle,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -627,6 +648,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().beLgoLyrics,
                                                     songName: "LIFE GOES ON",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -641,6 +663,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().beFtmrLyrics,
                                                     songName: "FLY TO MY ROOM",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -655,6 +678,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().beBgLyrics,
                                                     songName: "BLUE & GREY",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -670,6 +694,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().beTelepathyLyrics,
                                                     songName: "TELEPATHY",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -685,6 +710,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().beDiseaseLyrics,
                                                     songName: "DIS-EASE",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -699,6 +725,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().beStayLyrics,
                                                     songName: "STAY",
                                                     songTabs: AlbumData().beAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -714,6 +741,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().dynamiteLyrics,
                                                     songName: "DYNAMITE",
                                                     songTabs: AlbumData().dynamiteTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -730,6 +758,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "INTRO: 2 COOL 4 SKOOL",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -746,6 +775,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "WE ARE BULLETPROOF PT.2",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -762,6 +792,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "NO MORE DREAM",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -778,6 +809,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "좋아요 (LIKE)",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -794,6 +826,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "OUTRO: CIRCLE ROOM CYPHER",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -810,6 +843,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "길 (ROAD/PATH)",
                                                     songTabs:
                                                     AlbumData().twoCool4SkoolTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -824,6 +858,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().orul82Intro,
                                                     songName: "INTRO: O!RUL8,2?",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -838,6 +873,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().orul82No,
                                                     songName: "N.O",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -852,6 +888,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().orul82WeOn,
                                                     songName: "WE ON",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -867,6 +904,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .orul82IfiRuledTheWorld,
                                                     songName: "IF RULED THE WORLD",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -881,6 +919,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().orul82Coffee,
                                                     songName: "COFFEE",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -896,6 +935,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().orul82CypherPt1,
                                                     songName: "BTS CYPHER PT.1",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -912,6 +952,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "진격의 방탄 (ATTACK ON BANGTAN)",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -927,6 +968,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().orul82Paldogangsan,
                                                     songName: "팔도강산 (PALDOGANGSAN)",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -941,6 +983,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().orul82Outro,
                                                     songName: "OUTRO: LUV IN SKOOL",
                                                     songTabs: AlbumData().orul82Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -957,6 +1000,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "INTRO: SKOOL LUV AFFAIR",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -973,6 +1017,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "상남자 (BOY IN LUV)",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -989,6 +1034,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "어디에서 왔는지 (WHERE YOU FROM)",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1005,6 +1051,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "하루만 (JUST ONE DAY)",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1021,6 +1068,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "TOMORROW",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1037,6 +1085,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "BTS CYPHER PT.2: TRIPTYCH",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1053,6 +1102,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "등골브레이커 (SPINE BREAKER)",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1069,6 +1119,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "JUMP",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1085,6 +1136,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "OUTRO: PURPOSE",
                                                     songTabs:
                                                     AlbumData().skoolLuvAffairTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1100,6 +1152,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildIntro,
                                                     songName: "INTRO: WHAT AM I TO YOU",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1115,6 +1168,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildDanger,
                                                     songName: "DANGER",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1130,6 +1184,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .darkAndWildWarOfHormone,
                                                     songName: "호르몬 전쟁 (WAR OF HORMONE)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1145,6 +1200,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .darkAndWildHipHopePhile,
                                                     songName: "힙합성애자 (HIP HOP PHILE)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1160,6 +1216,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildLetMeKnow,
                                                     songName: "LET ME KNOW",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1175,6 +1232,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildCypher3,
                                                     songName: "BTS CYPHER PT. 3: KILLER",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1191,6 +1249,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "핸드폰 좀 꺼줄래 (COULD YOU TURN OFF YOUR CELLPHONE)?)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1206,6 +1265,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .darkAndWildEmbarrassed,
                                                     songName: "이불킥 (EMBARRASSED)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1221,6 +1281,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildHeaven,
                                                     songName: "24/7=HEAVEN",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1236,6 +1297,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .darkAndWildSecondGrade,
                                                     songName: "2학년 (SECOND GRADE)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1252,6 +1314,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "OUTRO: 그게 말이 돼? (DO YOU THINK IT MAKES SENSE?)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1267,6 +1330,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "Intro: 화양연화 (THE MOST BEAUTIFUL MOMENT IN LIFE)",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1281,6 +1345,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh1INeedU,
                                                     songName: "I NEED U",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1296,6 +1361,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh1HoldMeTight,
                                                     songName: "잡아줘 (HOLD ME TIGHT)",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1310,6 +1376,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh1Dope,
                                                     songName: "쩔어 (DOPE)",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1325,6 +1392,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh1BoyzWithFun,
                                                     songName: "흥탄소년단 (BOYZ WITH FUN)",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1340,6 +1408,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh1ConverseHigh,
                                                     songName: "CONVERSE HIGH",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1354,6 +1423,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh1MovingOn,
                                                     songName: "이사 (MOVING ON)",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1368,6 +1438,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh1Outro,
                                                     songName: "OUTRO: LOVE IS NOT OVER",
                                                     songTabs: AlbumData().hyyh1Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1382,6 +1453,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh2Intro,
                                                     songName: "INTRO: NEVER MIND",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1396,6 +1468,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh2Run,
                                                     songName: "RUN",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1411,6 +1484,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh2Whalien52,
                                                     songName: "WHALIEN 52",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1425,6 +1499,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh2MaCity,
                                                     songName: "MA CITY",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1440,6 +1515,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh2SilverSpoon,
                                                     songName: "뱁새 (SILVER SPOON)",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1455,6 +1531,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh2AutumnLeaves,
                                                     songName: "고엽 (AUTUMN LEAVES)",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1469,6 +1546,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hyyh2Outro,
                                                     songName: "OUTRO: HOUSE OF CARDS",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1485,6 +1563,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "FIRE (불타오르네)",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1501,6 +1580,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "EPILOGUE: YOUNG FOREVER",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1517,6 +1597,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "BUTTERFLY (PROLOGUE MIX)",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1534,6 +1615,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     "HOUSE OF CARDS (FULL LENGTH EDITION)",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1551,6 +1633,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     "LOVE IS NOT OVER (FULL LENGTH EDITION)",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1565,6 +1648,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsIntro,
                                                     songName: "INTRO: BOY MEETS EVIL",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1580,6 +1664,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "피 땀 눈물 (BLOOD SWEAT & TEARS)",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1594,6 +1679,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsBegin,
                                                     songName: "BEGIN",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1608,6 +1694,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsLie,
                                                     songName: "LIE",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1622,6 +1709,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsStigma,
                                                     songName: "STIGMA",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1637,6 +1725,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().wingsFirstlove,
                                                     songName: "FIRST LOVE",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1652,6 +1741,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().wingsReflection,
                                                     songName: "REFLECTION",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1666,6 +1756,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsMama,
                                                     songName: "MAMA",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1680,6 +1771,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsAwake,
                                                     songName: "AWAKE",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1694,6 +1786,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsLost,
                                                     songName: "LOST",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1708,6 +1801,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsCypher4,
                                                     songName: "BTS CYPHER 4",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1722,6 +1816,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wingsAmIWrong,
                                                     songName: "AM I WRONG",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1738,6 +1833,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "21세기 소녀 (21ST CENTURY GIRL)",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1752,6 +1848,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().wings23,
                                                     songName: "둘! 셋! (2! 3!)",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1767,6 +1864,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().wingsInterlude,
                                                     songName: "Interlude: Wings",
                                                     songTabs: AlbumData().wingsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1781,6 +1879,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().ynwaSpringDay,
                                                     songName: "봄날 (SPRING DAY)",
                                                     songTabs: AlbumData().ynwaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1795,6 +1894,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().ynwaNotToday,
                                                     songName: "NOT TODAY",
                                                     songTabs: AlbumData().ynwaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1809,6 +1909,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().ynwaOutro,
                                                     songName: "OUTRO: WINGS",
                                                     songTabs: AlbumData().ynwaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1824,6 +1925,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "A SUPPLEMENTARY STORY: YOU NEVER WALK ALONE",
                                                     songTabs: AlbumData().ynwaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1839,6 +1941,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "INTRO: SERENDIPITY (세렌디피티)",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1853,6 +1956,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerDNA,
                                                     songName: "DNA",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1867,6 +1971,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerBesOfMe,
                                                     songName: "BEST OF Me",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1881,6 +1986,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerDimple,
                                                     songName: "보조개 (DIMPLE)",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1896,6 +2002,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyHerPiedPiper,
                                                     songName: "PIED PIPER",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1910,6 +2017,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerMICDrop,
                                                     songName: "MIC DROP",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1924,6 +2032,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerGoGo,
                                                     songName: "고민보다 Go (GO GO)",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1938,6 +2047,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerSea,
                                                     songName: "바다 (SEA)",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1952,6 +2062,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerOutro,
                                                     songName: "OUTRO: HER",
                                                     songTabs: AlbumData().lyHerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1966,6 +2077,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTearIntro,
                                                     songName: "INTRO: SINGULARITY",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1981,6 +2093,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearFakeLove,
                                                     songName: "FAKE LOVE",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -1996,6 +2109,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "전하지 못한 진심 (THE TRUTH UNTOLD)",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2010,6 +2124,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTear134340,
                                                     songName: "134340",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2025,6 +2140,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearParadise,
                                                     songName: "낙원 (PARADISE)",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2040,6 +2156,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearLoveMaze,
                                                     songName: "LOVE MAZE",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2055,6 +2172,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearMagicShop,
                                                     songName: "MAGIC SHOP",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2070,6 +2188,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearAirplanePt2,
                                                     songName: "AIRPLANE PT.2",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2085,6 +2204,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyTearAnpanman,
                                                     songName: "ANPANMAN",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2099,6 +2219,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTearSoWhat,
                                                     songName: "SO WHAT",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2113,6 +2234,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTearOutro,
                                                     songName: "OUTRO: TEAR",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2128,6 +2250,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerEuphoria,
                                                     songName: "EUPHORIA",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2143,6 +2266,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerJustDance,
                                                     songName: "TRIVIA 起: JUST DANCE",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2159,6 +2283,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "SERENDIPITY (FULL LENGTH EDITION)",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2173,6 +2298,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyAnswerLove,
                                                     songName: "TRIVIA 承: LOVE",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2187,6 +2313,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyHerOutro,
                                                     songName: "HER",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2201,6 +2328,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTearIntro,
                                                     songName: "SINGULARITY",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2216,6 +2344,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerSeesaw,
                                                     songName: "TRIVIA 轉: SEESAW",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2231,6 +2360,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerEpiphany,
                                                     songName: "EPIPHANY",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2246,6 +2376,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerImFine,
                                                     songName: "I'M FINE",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2261,6 +2392,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerLoveMyself,
                                                     songName: "ANSWER: LOVE MYSELF",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2277,6 +2409,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "MIC DROP (FULL LENGTH EDITION)",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2292,6 +2425,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().lyAnswerIdolRemix,
                                                     songName: "IDOL (FT. NICKI MINAJ)",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2307,6 +2441,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().motsPersonaIntro,
                                                     songName: "INTRO: PERSONA",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2323,6 +2458,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "작은 것들을 위한 시 (BOY WITH LUV)",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2338,6 +2474,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         .motsPersonaMikrokosmos,
                                                     songName: "소우주 (MIKROKOSMOS)",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2353,6 +2490,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().motsPersonaMIR,
                                                     songName: "MAKE IT RIGHT",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2368,6 +2506,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().motsPersonaHome,
                                                     songName: "HOME",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2383,6 +2522,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().motsPersonaJamaisVu,
                                                     songName: "JAMAIS VU",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2398,6 +2538,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().motsPersonaDionysus,
                                                     songName: "DIONYSUS",
                                                     songTabs: AlbumData().motsPersonaTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2413,6 +2554,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().mots7Interlude,
                                                     songName: "INTERLUDE: SHADOW",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2428,6 +2570,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().mots7BlackSwan,
                                                     songName: "BLACK SWAN",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2442,6 +2585,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Filter,
                                                     songName: "Filter",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2456,6 +2600,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7MyTime,
                                                     songName: "시차 (MY TIME)",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2470,6 +2615,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7LDR,
                                                     songName: "LOUDER THAN BOMBS",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2484,6 +2630,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7ON,
                                                     songName: "ON",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2498,6 +2645,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Ugh,
                                                     songName: "욱 (UGH!)",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2513,6 +2661,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().mots7ZeroOClock,
                                                     songName: "00:00 (ZERO O'CLOCK)",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2528,6 +2677,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().mots7InnerChild,
                                                     songName: "INNER CHILD",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2542,6 +2692,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Friends,
                                                     songName: "친구 (FRIENDS)",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2556,6 +2707,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Moon,
                                                     songName: "MOON",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2570,6 +2722,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Respect,
                                                     songName: "RESPECT",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2586,6 +2739,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName:
                                                     "WE ARE BULLETPROOF: THE ETERNAL",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2600,6 +2754,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7Outro,
                                                     songName: "OUTRO: EGO",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -2614,6 +2769,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().mots7OnSia,
                                                     songName: "ON (FT. SIA)",
                                                     songTabs: AlbumData().mots7Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3479,6 +3635,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildLookHere,
                                                     songName: "여기 봐 (LOOK HERE)",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3494,6 +3651,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().darkAndWildRain,
                                                     songName: "RAIN",
                                                     songTabs: AlbumData().darkAndWildTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3509,6 +3667,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().hyyh2Butterfly,
                                                     songName: "BUTTERFLY",
                                                     songTabs: AlbumData().hyyh2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3525,6 +3684,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "SAVE ME",
                                                     songTabs:
                                                     AlbumData().youngForeverTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3539,6 +3699,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyTearOutro,
                                                     songName: "TEAR",
                                                     songTabs: AlbumData().lyTearTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3553,6 +3714,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().lyAnswerIdol,
                                                     songName: "IDOL",
                                                     songTabs: AlbumData().lyAnswerTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3601,6 +3763,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldHeartbeat,
                                                     songName: "HEARTBEAT",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3616,6 +3779,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldDreamGlow,
                                                     songName: "DREAM GLOW",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3631,6 +3795,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldABrandNewDay,
                                                     songName: "A BRAND NEW DAY",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3646,6 +3811,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldAllNight,
                                                     songName: "ALL NIGHT",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3661,6 +3827,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldLaLaLa,
                                                     songName: "LALALA",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3676,6 +3843,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     AlbumData().btsWorldYouAreHere,
                                                     songName: "YOU ARE HERE",
                                                     songTabs: AlbumData().btsWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3690,6 +3858,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmVoice,
                                                     songName: "목소리 (VOICE)",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3704,6 +3873,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmDoYou,
                                                     songName: "DO YOU",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3718,6 +3888,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmAwakening,
                                                     songName: "각성 (AWAKENING)",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3732,6 +3903,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmMonster,
                                                     songName: "MONSTER",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3746,6 +3918,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmThrowAway,
                                                     songName: "버려 (THROW AWAY)",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3760,6 +3933,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmJoke,
                                                     songName: "농담 (JOKE)",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3774,6 +3948,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmGodRap,
                                                     songName: "GOD RAP",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3788,6 +3963,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmRush,
                                                     songName: "RUSH",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3802,6 +3978,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmLife,
                                                     songName: "LIFE",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3816,6 +3993,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmAdrift,
                                                     songName: "표류 (ADRIFT)",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3830,6 +4008,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().rmIBelieve,
                                                     songName: "I BELIEVE",
                                                     songTabs: AlbumData().rmTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3859,6 +4038,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoSeoul,
                                                     songName: "SEOUL",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3873,6 +4053,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoMoonchild,
                                                     songName: "MOONCHILD",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3887,6 +4068,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoBadbye,
                                                     songName: "BADBYE",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3901,6 +4083,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoUhgood,
                                                     songName: "어긋 (UHGOOD)",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3915,6 +4098,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoEverythingoes,
                                                     songName: "지나가 (EVERYTHINGOES)",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3929,6 +4113,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().monoForeverRain,
                                                     songName: "FOREEVR RAIN",
                                                     songTabs: AlbumData().monoTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3943,6 +4128,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdIntro,
                                                     songName: "INTRO: DT SUGA",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3957,6 +4143,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdAgustd,
                                                     songName: "AGUST D",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3971,6 +4158,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdGiveItToMe,
                                                     songName: "GIVE IT TO ME",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3985,6 +4173,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustd724148,
                                                     songName: "치리사일사팔 (724148)",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -3999,6 +4188,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustd140503AtDawn,
                                                     songName: "140503 새벽에 (140503 AT DAWN)",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4013,6 +4203,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdTheLast,
                                                     songName: "마지막 (THE LAST)",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4027,6 +4218,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdTonyMontana,
                                                     songName: "TONY MONTANA",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4056,6 +4248,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().agustdSoFarAway,
                                                     songName: "SO FAR AWAY",
                                                     songTabs: AlbumData().agustdTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4070,6 +4263,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2MoonLight,
                                                     songName: "저 달 (MOONLIGHT)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4084,6 +4278,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2Daechwita,
                                                     songName: "대취타 (DAECHWITA)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4098,6 +4293,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2WhatDoYouThink,
                                                     songName: "어떻게 생각해? (WHAT DO YOU THINK?)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4112,6 +4308,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2Strange,
                                                     songName: "이상하지 않은가 (STRANGE)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4126,6 +4323,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d228,
                                                     songName: "점점 어른이 되나봐 (28)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4140,6 +4338,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2BurnIt,
                                                     songName: "BURN",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4154,6 +4353,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2People,
                                                     songName: "사람 (PEOPLE)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4168,6 +4368,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2Honsool,
                                                     songName: "혼술 (HONSOOL)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4182,6 +4383,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2SetMeFree,
                                                     songName: "INTERLUDE: SET ME FREE",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4196,6 +4398,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().d2SetMeFree,
                                                     songName: "어땠을까 (DEAR MY FRIEND)",
                                                     songTabs: AlbumData().d2Tabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4210,6 +4413,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldHopeWorld,
                                                     songName: "HOPE WORLD",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4224,6 +4428,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldPOPPt1,
                                                     songName: "P.O.P (PEACE OF PIECE) PT.1",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4238,6 +4443,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldDaydream,
                                                     songName: "DAYDREAM (백일몽)",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4252,6 +4458,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldBaseLine,
                                                     songName: "BASE LINE",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4266,6 +4473,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldHangSang,
                                                     songName: "항상 (HANGSANG)",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4280,6 +4488,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldAirplane,
                                                     songName: "AIRPLANE",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4294,6 +4503,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().hopeWorldAirplane,
                                                     songName: "BLUE SIDE (OUTRO)",
                                                     songTabs: AlbumData().hopeWorldTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4324,6 +4534,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "WE ARE BULLETPROOF PT. 1",
                                                         songLyrics: AlbumData().btsWAB1,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4339,6 +4550,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "알아요 (I KNOW)",
                                                         songLyrics: AlbumData().btsIKnow,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4354,6 +4566,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "FAMILY SONG (WEDNESDAY)",
                                                         songLyrics: AlbumData().btsWednesday,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4369,6 +4582,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "BTS x JESSI",
                                                         songLyrics: AlbumData().btsBtsJessi,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4384,6 +4598,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "SO FAR AWAY",
                                                         songLyrics: AlbumData().btsSoFarAway,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4399,6 +4614,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "WITH SEOUL",
                                                         songLyrics: AlbumData().btsWithSeoul,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4414,6 +4630,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "땡 (DDAENG)",
                                                         songLyrics: AlbumData().btsDdaeng,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4429,6 +4646,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "YOU'RE SO BEAUTIFUL",
                                                         songLyrics: AlbumData().btsLdf,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4444,6 +4662,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "IONIQ: I'M ON IT",
                                                         songLyrics: AlbumData().btsIoniq,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4459,6 +4678,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "IN THE SOOP",
                                                         songLyrics: AlbumData().btsinTheSoop,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4474,6 +4694,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "풍경 (SCENERY)",
                                                         songLyrics: AlbumData().vScenery,
                                                         songTabs: AlbumData().vOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4521,6 +4742,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "SNOW FLOWER",
                                                         songLyrics: AlbumData().vSnowFlower,
                                                         songTabs: AlbumData().vOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4535,6 +4757,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "신청곡 (SONG REQUEST)",
                                                     songLyrics: AlbumData().sugaSongRequest,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4549,6 +4772,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "SUGA’s INTERLUDE",
                                                     songLyrics: AlbumData().sugaSugasInterlude,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4563,6 +4787,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "EIGHT (에잇)",
                                                     songLyrics: AlbumData().sugaEight,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4577,6 +4802,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "BLUEBERRY EYES",
                                                     songLyrics: AlbumData().sugaEight,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4592,6 +4818,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "BORN SINGER",
                                                         songLyrics: AlbumData().btsBornSinger,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4607,6 +4834,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "BEAUTIFUL",
                                                         songLyrics: AlbumData().btsBeautiful,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4622,6 +4850,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "95 GRADUATION",
                                                         songLyrics: AlbumData().bts95Graduation,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4637,6 +4866,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "SO 4 MORE",
                                                         songLyrics: AlbumData().btsSo4More,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4652,6 +4882,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "일하는중 (WORKING)",
                                                         songLyrics: AlbumData().jungkookWorking,
                                                         songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4667,6 +4898,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "CHRISTMAS DAY",
                                                         songLyrics: AlbumData().btsChristmasDay,
                                                         songTabs: AlbumData().btsOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4681,6 +4913,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songLyrics: AlbumData().myUniverse,
                                                     songName: "MY UNIVERSE",
                                                     songTabs: AlbumData().myUniverseAlbumTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4710,6 +4943,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "YOURS",
                                                     songLyrics: AlbumData().jinYours,
                                                     songTabs: AlbumData().jinOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4724,6 +4958,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "슈퍼 참치 (SUPER TUNA)",
                                                     songLyrics: AlbumData().jinSuperTuna,
                                                     songTabs: AlbumData().jinOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4738,6 +4973,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "JUICE WRLD - GIRL OF MY DREAMS",
                                                     songLyrics: AlbumData().sugaGirlOfMyDreams,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4753,6 +4989,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "CHRISTMAS TREE",
                                                         songLyrics: AlbumData().vChristmasTree,
                                                         songTabs: AlbumData().vOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4768,6 +5005,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "STAY ALIVE",
                                                         songLyrics: AlbumData().jungkookStayAlive,
                                                         songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4783,6 +5021,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "WITH YOU",
                                                         songLyrics: AlbumData().jiminWithYou,
                                                         songTabs: AlbumData().jiminOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4797,6 +5036,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     songName: "THAT THAT",
                                                     songLyrics: AlbumData().sugaThatThat,
                                                     songTabs: AlbumData().sugaOtherSongsTabs,
+                                                    songFullName: song.name,
                                                   ),
                                                 ),
                                               );
@@ -4812,6 +5052,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "YET TO COME",
                                                         songLyrics: AlbumData().proofYetToCome,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4827,6 +5068,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "달려라 방탄 (RUN BTS)",
                                                         songLyrics: AlbumData().proofRunBTS,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4842,6 +5084,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "FOR YOUTH",
                                                         songLyrics: AlbumData().proofForYouth,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4857,6 +5100,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "애매한 사이 (YOUNG LOVE)",
                                                         songLyrics: AlbumData().proofYoungLove,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4872,6 +5116,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "따옴표 (QUOTATION MARK)",
                                                         songLyrics: AlbumData().proofQuotationMark,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4887,6 +5132,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "TONY MONTANA",
                                                         songLyrics: AlbumData().proofTonyMontanaWithJimin,
                                                         songTabs: AlbumData().proofTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4902,6 +5148,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "MY YOU",
                                                         songLyrics: AlbumData().jungkookMyYou,
                                                         songTabs: AlbumData().jungkookOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );
@@ -4933,6 +5180,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                         songName: "MORE",
                                                         songLyrics: AlbumData().jhopeMore,
                                                         songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: song.name,
                                                       ),
                                                 ),
                                               );

@@ -215,6 +215,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "신청곡 (SONG REQUEST)",
                                                         songLyrics: AlbumData().sugaSongRequest,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -229,6 +230,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "SUGA’s INTERLUDE",
                                                         songLyrics: AlbumData().sugaSugasInterlude,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -243,6 +245,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "EIGHT (에잇)",
                                                         songLyrics: AlbumData().sugaEight,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -257,6 +260,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "BLUEBERRY EYES",
                                                         songLyrics: AlbumData().sugaEight,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -286,6 +290,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "JUICE WRLD - GIRL OF MY DREAMS",
                                                         songLyrics: AlbumData().sugaGirlOfMyDreams,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -300,6 +305,7 @@ class Yoongi extends StatelessWidget {
                                                         songName: "THAT THAT",
                                                         songLyrics: AlbumData().sugaThatThat,
                                                         songTabs: AlbumData().sugaOtherSongsTabs,
+                                                        songFullName: AlbumData().sugaOtherSongs[index],
                                                       ),
                                                     ),
                                                   );

@@ -150,6 +150,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().btsMICDropDesiigner,
                                                       songName: "MIC DROP",
                                                       songTabs: AlbumData().btsSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -179,6 +180,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().btsMakeItRightLauv,
                                                       songName: "MAKE IT RIGHT",
                                                       songTabs: AlbumData().btsSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -194,6 +196,7 @@ class DigitalSingles extends StatelessWidget {
                                                       AlbumData().mots7BlackSwan,
                                                       songName: "BLACK SWAN",
                                                       songTabs: AlbumData().btsSinglesTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );
@@ -242,6 +245,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songName: "SAVAGE LOVE",
                                                       songTabs: AlbumData().btsENGSinglesTabs,
                                                       songFullName: AlbumData().btsSinglesSongs[index],
+
                                                     ),
                                                   ),
                                                 );
@@ -256,6 +260,7 @@ class DigitalSingles extends StatelessWidget {
                                                       songLyrics: AlbumData().myUniverse,
                                                       songName: "MY UNIVERSE",
                                                       songTabs: AlbumData().myUniverseAlbumTabs,
+                                                      songFullName: AlbumData().btsSinglesSongs[index],
                                                     ),
                                                   ),
                                                 );

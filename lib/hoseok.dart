@@ -112,7 +112,7 @@ class Hoseok extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                         itemCount: AlbumData().jhopeOtherSongs.length,
                         itemBuilder: (context, index) {
@@ -170,6 +170,7 @@ class Hoseok extends StatelessWidget {
                                                         songLyrics: AlbumData().jhope1Verse,
                                                         songName: "1 VERSE",
                                                         songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: AlbumData().jhopeOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -184,6 +185,7 @@ class Hoseok extends StatelessWidget {
                                                         songLyrics: AlbumData().jhopeCNS,
                                                         songName: "CHICKEN NOODLE SOUP",
                                                         songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: AlbumData().jhopeOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -198,6 +200,7 @@ class Hoseok extends StatelessWidget {
                                                         songLyrics: AlbumData().jhopeBlueSide,
                                                         songName: "BLUE SIDE",
                                                         songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: AlbumData().jhopeOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -212,6 +215,7 @@ class Hoseok extends StatelessWidget {
                                                         songName: "MORE",
                                                         songLyrics: AlbumData().jhopeMore,
                                                         songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: AlbumData().jhopeOtherSongs[index],
                                                       ),
                                                     ),
                                                   );

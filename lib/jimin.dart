@@ -44,7 +44,7 @@ class Jimin extends StatelessWidget {
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     child: ListView.builder(
                       itemCount: AlbumData().jiminOtherSongs.length,
                       itemBuilder: (context, index) {
@@ -103,6 +103,7 @@ class Jimin extends StatelessWidget {
                                                           songName: "약속 (PROMISE)",
                                                           songLyrics: AlbumData().jiminPromise,
                                                           songTabs: AlbumData().jiminOtherSongsTabs,
+                                                          songFullName: AlbumData().jiminOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -118,6 +119,7 @@ class Jimin extends StatelessWidget {
                                                           songName: "CHRISTMAS LOVE",
                                                           songLyrics: AlbumData().jiminChristmasLove,
                                                           songTabs: AlbumData().jiminOtherSongsTabs,
+                                                          songFullName: AlbumData().jiminOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -133,6 +135,7 @@ class Jimin extends StatelessWidget {
                                                           songName: "CHRISTMAS LOVE",
                                                           songLyrics: AlbumData().jiminWithYou,
                                                           songTabs: AlbumData().jiminOtherSongsTabs,
+                                                          songFullName: AlbumData().jiminOtherSongs[index],
                                                         ),
                                                   ),
                                                 );

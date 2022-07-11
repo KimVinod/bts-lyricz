@@ -104,6 +104,7 @@ class Taehyung extends StatelessWidget {
                                                           songName: "풍경 (SCENERY)",
                                                           songLyrics: AlbumData().vScenery,
                                                           songTabs: AlbumData().vOtherSongsTabs,
+                                                          songFullName: AlbumData().vOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -151,6 +152,7 @@ class Taehyung extends StatelessWidget {
                                                           songName: "SNOW FLOWER",
                                                           songLyrics: AlbumData().vSnowFlower,
                                                           songTabs: AlbumData().vOtherSongsTabs,
+                                                          songFullName: AlbumData().vOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -166,6 +168,7 @@ class Taehyung extends StatelessWidget {
                                                           songName: "CHRISTMAS TREE",
                                                           songLyrics: AlbumData().vChristmasTree,
                                                           songTabs: AlbumData().vOtherSongsTabs,
+                                                          songFullName: AlbumData().vOtherSongs[index],
                                                         ),
                                                   ),
                                                 );

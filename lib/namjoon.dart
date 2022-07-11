@@ -216,6 +216,7 @@ class Namjoon extends StatelessWidget {
                                                         songName: "P.D.D",
                                                         songLyrics: AlbumData().rmPDD,
                                                         songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                       ),
                                                     ),
                                                   );
@@ -231,6 +232,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "부끄부끄 (Buckubucku)",
                                                             songLyrics: AlbumData().rmBuckubucku,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -246,6 +248,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "U",
                                                             songLyrics: AlbumData().rmU,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -277,6 +280,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "GAJAH (코끼리)",
                                                             songLyrics: AlbumData().rmGajah,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -324,6 +328,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "UNPACK YOUR BAGS",
                                                             songLyrics: AlbumData().rmUnpackYourBags,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -339,6 +344,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "ALWAYS",
                                                             songLyrics: AlbumData().rmAlways,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -354,6 +360,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "TIMELESS",
                                                             songLyrics: AlbumData().rmTimeless,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -401,6 +408,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "WINTER FLOWER (雪中梅)",
                                                             songLyrics: AlbumData().rmWinterFlower,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -416,6 +424,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "그러지 마 (DON’T)",
                                                             songLyrics: AlbumData().rmDont,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );
@@ -431,6 +440,7 @@ class Namjoon extends StatelessWidget {
                                                             songName: "BICYCLE",
                                                             songLyrics: AlbumData().rmBicycle,
                                                             songTabs: AlbumData().rmOtherSongsTabs,
+                                                            songFullName: AlbumData().rmOtherSongs[index],
                                                           ),
                                                     ),
                                                   );

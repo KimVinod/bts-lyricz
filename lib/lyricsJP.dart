@@ -62,7 +62,8 @@ class _LyricsJPState extends State<LyricsJP> {
             leading: IconButton(
                 icon: Icon(Icons.arrow_back),
                 tooltip: "Back",
-                onPressed: () => Navigator.pop(context)),
+                onPressed: () => Navigator.pop(context),
+            ),
             actions: [
               IconButton(onPressed: () {
                 if(userFavLyrics.contains(widget.songFullName)) {

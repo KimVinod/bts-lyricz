@@ -41,7 +41,7 @@ class SongsUO extends StatelessWidget {
               child: Expanded(
                 child: Container(
                   child: RawScrollbar(
-                    isAlwaysShown: true,
+                    thumbVisibility: true,
                     thumbColor: Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
                     radius: Radius.circular(15.0),
@@ -103,6 +103,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "WE ARE BULLETPROOF PT. 1",
                                                           songLyrics: AlbumData().btsWAB1,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -118,6 +119,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "알아요 (I KNOW)",
                                                           songLyrics: AlbumData().btsIKnow,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -133,6 +135,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "FAMILY SONG (WEDNESDAY)",
                                                           songLyrics: AlbumData().btsWednesday,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -148,6 +151,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "BTS x JESSI",
                                                           songLyrics: AlbumData().btsBtsJessi,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -163,6 +167,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "SO FAR AWAY",
                                                           songLyrics: AlbumData().btsSoFarAway,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -178,6 +183,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "WITH SEOUL",
                                                           songLyrics: AlbumData().btsWithSeoul,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -193,6 +199,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "땡 (DDAENG)",
                                                           songLyrics: AlbumData().btsDdaeng,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -208,6 +215,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "YOU'RE SO BEAUTIFUL",
                                                           songLyrics: AlbumData().btsLdf,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -223,6 +231,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "IONIQ: I'M ON IT",
                                                           songLyrics: AlbumData().btsIoniq,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -238,6 +247,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "IN THE SOOP",
                                                           songLyrics: AlbumData().btsinTheSoop,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -253,6 +263,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "BORN SINGER",
                                                           songLyrics: AlbumData().btsBornSinger,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -268,6 +279,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "BEAUTIFUL",
                                                           songLyrics: AlbumData().btsBeautiful,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -283,6 +295,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "95 GRADUATION",
                                                           songLyrics: AlbumData().bts95Graduation,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -298,6 +311,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "SO 4 MORE",
                                                           songLyrics: AlbumData().btsSo4More,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
@@ -313,6 +327,7 @@ class SongsUO extends StatelessWidget {
                                                           songName: "CHRISTMAS DAY",
                                                           songLyrics: AlbumData().btsChristmasDay,
                                                           songTabs: AlbumData().btsOtherSongsTabs,
+                                                          songFullName: AlbumData().btsOtherSongs[index],
                                                         ),
                                                   ),
                                                 );
