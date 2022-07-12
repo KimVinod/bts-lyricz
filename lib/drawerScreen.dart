@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:native_updater/native_updater.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -19,26 +18,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
     version: 'Unknown',
     buildNumber: 'Unknown',
   );
-  /*AppUpdateInfo? _updateInfo;
 
-  Future<void> checkForUpdate() async {
-    InAppUpdate.checkForUpdate().then((info) {
-      _updateInfo = info;
-      if(_updateInfo?.updateAvailability == UpdateAvailability.updateAvailable) {
-        InAppUpdate.performImmediateUpdate()
-            .catchError((e) => log(e.toString()));
-      } else if(_updateInfo?.updateAvailability == UpdateAvailability.updateNotAvailable) {
-        Fluttertoast.showToast(
-          msg: "You are already using the latest version",
-          toastLength: Toast.LENGTH_SHORT,
-        );
-      }
-    }).catchError((e) {
-      //FirebaseCrashlytics.instance.log(e.toString());
-      //FirebaseCrashlytics.instance.recordError(e.toString(), StackTrace.current);
-      log("IN-APP_UPDATER: "+e.toString());
-    });
-  }*/
 
   @override
   void initState() {
