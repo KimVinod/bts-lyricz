@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/settings_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
@@ -112,7 +113,52 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      ///help
+                      ///Favorites
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20),
+                          elevation: 3,
+                          color: Colors.transparent,
+                          shadowColor: Colors.purple.shade700,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(left: 14),
+                                  height: 56,
+                                  color: Color.fromRGBO(180, 136, 212, 1),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.favorite_outline, color: Colors.black),
+                                      SizedBox(width: 14),
+                                      Text("Favorites",
+                                        style: GoogleFonts.openSans(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 17),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned.fill(
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: InkWell(
+                                      onTap: () {
+
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      /*///help
                       Container(
                         width: MediaQuery.of(context).size.width * 0.6,
                         child: Material(
@@ -500,6 +546,50 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                             ),
                                           ),
                                         );
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),*/
+                      ///settings
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20),
+                          elevation: 3,
+                          color: Colors.transparent,
+                          shadowColor: Colors.purple.shade700,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(left: 14),
+                                  height: 56,
+                                  color: Color.fromRGBO(180, 136, 212, 1),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.settings, color: Colors.black),
+                                      SizedBox(width: 14),
+                                      Text("Settings",
+                                        style: GoogleFonts.openSans(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 17),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned.fill(
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsScreen()));
                                       },
                                     ),
                                   ),
