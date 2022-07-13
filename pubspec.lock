@@ -212,6 +212,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_zoom_drawer:
+    dependency: "direct main"
+    description:
+      name: flutter_zoom_drawer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.2"
   fluttertoast:
     dependency: "direct main"
     description:
@@ -443,6 +450,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  settings_ui:
+    dependency: "direct main"
+    description:
+      name: settings_ui
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
