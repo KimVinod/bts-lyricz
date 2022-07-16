@@ -15,6 +15,8 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:native_updater/native_updater.dart';
 
+import 'favorites_screen.dart';
+
 final ZoomDrawerController z = ZoomDrawerController();
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
@@ -122,6 +124,7 @@ class _BTSLyricsState extends State<BTSLyrics> {
         mainScreenTapClose: true,
         mainScreenAbsorbPointer: true,
         disableDragGesture: false,
+        androidCloseOnBackTap: true,
         menuBackgroundColor: Color.fromRGBO(91, 50, 120, 1),
         menuScreen: DrawerBody(),
         mainScreen: Body(),
@@ -153,83 +156,73 @@ class _BodyState extends State<Body> {
         }
     );
 
-    return WillPopScope(
-      onWillPop: () {
-        if(z.isOpen!()) {
-          z.close!();
-          return Future.value(false);
-        } else {
-          return Future.value(true);
-        }
-      },
-      child: Scaffold(
-        backgroundColor: Color.fromRGBO(180, 136, 212, 1),
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Container(
-                color: Color.fromRGBO(180, 136, 212, 1),
-                //color: Color.fromRGBO(150, 86, 190, 1),
-                width: MediaQuery.of(context).size.width,
-                //height: MediaQuery.of(context).size.height * 0.07,
-                padding: EdgeInsets.only(top: 2, bottom: 2),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Builder(
-                        builder: (context) {
-                          return Material(
-                            color: Color.fromRGBO(180, 136, 212, 1),
-                            child: IconButton(
-                              onPressed: () {
-                                z.open!();
-                              },
-                              tooltip: "Menu",
-                              icon: Icon(Icons.menu),
-                            ),
-                          );
-                        }
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Container(
+              color: Color.fromRGBO(180, 136, 212, 1),
+              //color: Color.fromRGBO(150, 86, 190, 1),
+              width: MediaQuery.of(context).size.width,
+              //height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 2, bottom: 2),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Builder(
+                      builder: (context) {
+                        return Material(
+                          color: Color.fromRGBO(180, 136, 212, 1),
+                          child: IconButton(
+                            onPressed: () {
+                              z.open!();
+                            },
+                            tooltip: "Menu",
+                            icon: Icon(Icons.menu),
+                          ),
+                        );
+                      }
+                  ),
+                  Text(
+                    "Bangtan Lyricz",
+                    style: GoogleFonts.openSans(
+                      color: Colors.black,
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      "Bangtan Lyricz",
-                      style: GoogleFonts.openSans(
-                        color: Colors.black,
-                        fontSize: 21,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  ),
+                  Material(
+                    color: Color.fromRGBO(180, 136, 212, 1),
+                    child: IconButton(
+                      icon: Icon(Icons.search, color: Colors.black),
+                      tooltip: "Search",
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SearchSongs()));
+                      },
                     ),
-                    Material(
-                      color: Color.fromRGBO(180, 136, 212, 1),
-                      child: IconButton(
-                        icon: Icon(Icons.search, color: Colors.black),
-                        tooltip: "Search",
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => SearchSongs()));
-                        },
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  //color: Color.fromRGBO(155, 107, 202, 1),
-                  //color: Color.fromRGBO(175, 144, 206, 1),
-                  child: NotificationListener<OverscrollIndicatorNotification>(
-                    onNotification: (OverscrollIndicatorNotification overScroll) {
-                      overScroll.disallowIndicator();
-                      return true;
-                    },
-                    child: SingleChildScrollView(
-                      controller: _controller,
-                      child: HomeScreen(),
-                    ),
+            ),
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                //color: Color.fromRGBO(155, 107, 202, 1),
+                //color: Color.fromRGBO(175, 144, 206, 1),
+                child: NotificationListener<OverscrollIndicatorNotification>(
+                  onNotification: (OverscrollIndicatorNotification overScroll) {
+                    overScroll.disallowIndicator();
+                    return true;
+                  },
+                  child: SingleChildScrollView(
+                    controller: _controller,
+                    child: HomeScreen(),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -350,7 +343,8 @@ class DrawerBody extends StatelessWidget {
                                   color: Colors.transparent,
                                   child: InkWell(
                                     onTap: () {
-
+                                      z.close!();
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesScreen()));
                                     },
                                   ),
                                 ),
