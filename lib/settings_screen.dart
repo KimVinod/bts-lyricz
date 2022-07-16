@@ -227,7 +227,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                      },
                      leading: Icon(Icons.notifications_none, color: Color.fromRGBO(91, 50, 120, 1),),
                      title: Text('Turn ON/OFF BTS related notifications', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Btw I rarely send those  ~.~", style: GoogleFonts.openSans(color: Colors.black87)),
+                     description: Text("Btw I rarely send these  ~.~", style: GoogleFonts.openSans(color: Colors.black87)),
                    ),
                    div,
                    SettingsTile(
@@ -239,20 +239,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                    div,
                    SettingsTile(
                      onPressed: (context) {
-                       showDialogBox(context);
-                     },
-                     leading: Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Found a Bug? Suggestions?', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Feel free to give your inputs as it helps a lot!", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
                        versionNotes();
                      },
                      leading: Icon(Icons.notes, color: Color.fromRGBO(91, 50, 120, 1),),
                      title: Text('Version Notes', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                      description: Text("Check out upcoming features and previous version notes", style: GoogleFonts.openSans(color: Colors.black87)),
+                   ),
+                   div,
+                   SettingsTile(
+                     onPressed: (context) {
+                       showDialogBox(context);
+                     },
+                     leading: Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
+                     title: Text('Found a Bug? Suggestions?', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                     description: Text("Feel free to give your inputs as it helps a lot!", style: GoogleFonts.openSans(color: Colors.black87)),
                    ),
                    div,
                    SettingsTile(
