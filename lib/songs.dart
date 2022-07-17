@@ -18,7 +18,7 @@ class Songs extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text("Songs"),
+        title: Text("Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Material(
@@ -4139,6 +4139,150 @@ class Songs extends StatelessWidget {
                                               songName: "TONY MONTANA",
                                               songLyrics: AlbumData().proofTonyMontanaWithJimin,
                                               songTabs: AlbumData().proofTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Intro":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsENG(
+                                              songName: "INTRO",
+                                              songLyrics: AlbumData().jackInTheBoxIntro,
+                                              songTabs: [1, 0, 0, 0],
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Pandora's Box":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "PANDORA'S BOX",
+                                              songLyrics: AlbumData().jackInTheBoxPandorasBox,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "MORE":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "MORE",
+                                              songLyrics: AlbumData().jhopeMore,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "STOP (세상에 나쁜 사람은 없다)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "STOP (세상에 나쁜 사람은 없다)",
+                                              songLyrics: AlbumData().jackInTheBoxStop,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "= (Equal Sign)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "= (EQUAL SIGN)",
+                                              songLyrics: AlbumData().jackInTheBoxEqualSign,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "What if...":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "WHAT IF...",
+                                              songLyrics: AlbumData().jackInTheBoxWhatIf,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Safety Zone":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "SAFETY ZONE",
+                                              songLyrics: AlbumData().jackInTheBoxSafetyZone,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Future":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "FUTURE",
+                                              songLyrics: AlbumData().jackInTheBoxFuture,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "방화 (Arson)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "방화 (ARSON)",
+                                              songLyrics: AlbumData().jackInTheBoxArson,
+                                              songTabs: AlbumData().jackInTheBoxTabs,
                                               songFullName: songNames![index],
                                             ),
                                       ),

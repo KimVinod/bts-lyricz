@@ -12,7 +12,7 @@ class Hoseok extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title),
+        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Container(
@@ -34,10 +34,9 @@ class Hoseok extends StatelessWidget {
             ),
             SizedBox(height: 14.0),
             Container(
-              padding: EdgeInsets.only(left: 20),
               height: 210,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   /// hope world
                   Column(
@@ -75,6 +74,53 @@ class Hoseok extends StatelessWidget {
                         child: FittedBox(
                           child: Text(
                             "Hope World",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  /// jack in the box
+                  Column(
+                    children: <Widget>[
+                      Material(
+                          elevation: 3,
+                          shadowColor: Colors.purple.shade700,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Ink(
+                            width: 150,
+                            height: 170,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-jackInTheBox.jpg"), fit: BoxFit.fill)
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(10),
+                              //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Songs(
+                                    albumName: AlbumData().jackInTheBoxAlbumName,
+                                    songNames: AlbumData().jackInTheBoxAlbumSongs,
+                                    albumArt: AlbumData().jackInTheBoxArt,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )),
+                      SizedBox(height: 4),
+                      SizedBox(
+                        height: 20,
+                        width: 150,
+                        child: FittedBox(
+                          child: Text(
+                            "Jack In The Box",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.openSans(
                               fontSize: 16.0,
