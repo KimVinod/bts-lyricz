@@ -133,14 +133,9 @@ class _BTSLyricsState extends State<BTSLyrics> {
   }
 }
 
-class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+class Body extends StatelessWidget {
+  Body({Key? key}) : super(key: key);
 
-  @override
-  State<Body> createState() => _BodyState();
-}
-
-class _BodyState extends State<Body> {
 
   final _controller = ScrollController();
 

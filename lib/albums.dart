@@ -13,7 +13,7 @@ class AlbumsKR extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         //backgroundColor: Colors.purple[400],
         backgroundColor: Color.fromRGBO(150, 86, 190, 1),
-        title: Text(title),
+        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,

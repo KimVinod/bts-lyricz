@@ -14,7 +14,7 @@ class DigitalSingles extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title),
+        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Container(

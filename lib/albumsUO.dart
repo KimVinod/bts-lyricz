@@ -12,7 +12,7 @@ class AlbumsUO extends StatelessWidget {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: Color.fromRGBO(150, 86, 190, 1),
-        title: Text(title),
+        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
