@@ -214,105 +214,98 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Color.fromRGBO(180, 136, 212, 1),
-        appBar: AppBar(
-          title: Text("Settings"),
-          backgroundColor: Color.fromRGBO(150, 86, 190, 1),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            tooltip: "Back",
-            onPressed: () => Navigator.pop(context),
-          ),
-        ),
-        body: SafeArea(
-          child: SettingsList(
-            physics: BouncingScrollPhysics(),
-            brightness: Brightness.light,
-            contentPadding: EdgeInsets.zero,
-            lightTheme: const SettingsThemeData(tileHighlightColor: Color.fromRGBO(150, 86, 190, 1), settingsListBackground: Color.fromRGBO(180, 136, 212, 1),),
-            darkTheme: const SettingsThemeData(settingsListBackground: Color.fromRGBO(180, 136, 212, 1),),
-            sections: [
-             CustomSettingsSection(
-               child: Column(
-                 children: [
-                   SettingsTile(
-                     onPressed: (context) {
-                       AppSettings.openNotificationSettings();
-                     },
-                     leading: Icon(Icons.notifications_none, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Turn ON/OFF BTS related notifications', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Btw I rarely send these  ~.~", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
-                     },
-                     leading: Icon(Icons.question_mark, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('FAQ', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Got stuck somewhere? This might help you", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       versionNotes();
-                     },
-                     leading: Icon(Icons.notes, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Version Notes', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Check out upcoming features and previous version notes", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       showDialogBox(context);
-                     },
-                     leading: Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Found a Bug? Suggestions?', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Feel free to give your inputs as it helps a lot!", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       showSourceCode();
-                     },
-                     leading: Icon(Icons.code, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Source Code', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Get to see all the coding work here", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       Share.share("Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\nhttps://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz");
-                     },
-                     leading: Icon(Icons.share, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Share', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Share to other armys as well  >.<", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       rateMe();
-                     },
-                     leading: Icon(Icons.star_rate_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('Rate on Google Play', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Thankuuu in advance :')", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                   div,
-                   SettingsTile(
-                     onPressed: (context) {
-                       showMore(context);
-                     },
-                     leading: Icon(Icons.apps, color: Color.fromRGBO(91, 50, 120, 1),),
-                     title: Text('App info', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-                     description: Text("Some extra stuff", style: GoogleFonts.openSans(color: Colors.black87)),
-                   ),
-                 ],
-               ),
-             )
-            ],
-          ),
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+      appBar: AppBar(
+        title: Text("Settings", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+      ),
+      body: SafeArea(
+        child: SettingsList(
+          physics: BouncingScrollPhysics(),
+          brightness: Brightness.light,
+          contentPadding: EdgeInsets.zero,
+          lightTheme: const SettingsThemeData(tileHighlightColor: Color.fromRGBO(150, 86, 190, 1), settingsListBackground: Color.fromRGBO(180, 136, 212, 1),),
+          darkTheme: const SettingsThemeData(settingsListBackground: Color.fromRGBO(180, 136, 212, 1),),
+          sections: [
+            CustomSettingsSection(
+              child: Column(
+                children: [
+                  SettingsTile(
+                    onPressed: (context) {
+                      AppSettings.openNotificationSettings();
+                    },
+                    leading: Icon(Icons.notifications_none, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Turn ON/OFF BTS related notifications', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Btw I rarely send these  ~.~", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
+                    },
+                    leading: Icon(Icons.question_mark, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('FAQ', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Got stuck somewhere? This might help you", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      versionNotes();
+                    },
+                    leading: Icon(Icons.notes, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Version Notes', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Check out upcoming features and previous version notes", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      showDialogBox(context);
+                    },
+                    leading: Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Found a Bug? Suggestions?', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Feel free to give your inputs as it helps a lot!", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      showSourceCode();
+                    },
+                    leading: Icon(Icons.code, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Source Code', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Get to see all the coding work here", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      Share.share("Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\nhttps://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz");
+                    },
+                    leading: Icon(Icons.share, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Share', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Share to other armys as well  >.<", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      rateMe();
+                    },
+                    leading: Icon(Icons.star_rate_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('Rate on Google Play', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Thankuuu in advance :')", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                  div,
+                  SettingsTile(
+                    onPressed: (context) {
+                      showMore(context);
+                    },
+                    leading: Icon(Icons.apps, color: Color.fromRGBO(91, 50, 120, 1),),
+                    title: Text('App info', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+                    description: Text("Some extra stuff", style: GoogleFonts.openSans(color: Colors.black87)),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
