@@ -1,4 +1,5 @@
 import 'package:app_settings/app_settings.dart';
+import 'package:bts_lyrics_app/faq_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -64,7 +65,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             div,
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                twitter();
+              },
               title: Text("DM me on Twitter", style: TextStyle(color: Colors.black)),
             ),
           ],
@@ -158,6 +162,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  void twitter() async {
+    final String url = "https://twitter.com/vinod3344";
+    if(await canLaunchUrlString(url))
+      launchUrlString(url, mode: LaunchMode.externalApplication);
+    else {
+      Fluttertoast.showToast(
+        msg: "Error occurred. Your phone doesn't support opening links",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+  }
+
   void rateMe() async {
     final String url = "https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz";
     if(await canLaunchUrlString(url))
@@ -231,7 +247,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                    ),
                    div,
                    SettingsTile(
-                     onPressed: (context) {},
+                     onPressed: (context) {
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
+                     },
                      leading: Icon(Icons.question_mark, color: Color.fromRGBO(91, 50, 120, 1),),
                      title: Text('FAQ', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                      description: Text("Got stuck somewhere? This might help you", style: GoogleFonts.openSans(color: Colors.black87)),
