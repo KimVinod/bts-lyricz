@@ -59,8 +59,8 @@ Future<void> main() async {
       home: BTSLyrics(),
     theme: ThemeData(
       textTheme: GoogleFonts.openSansTextTheme(),
-      primaryColor: Color.fromRGBO(180, 136, 212, 1),
-        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color.fromRGBO(180, 136, 212, 1))
+      primaryColor: const Color.fromRGBO(180, 136, 212, 1),
+        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color.fromRGBO(180, 136, 212, 1))
     ),
   ));
 }
@@ -76,7 +76,7 @@ class _BTSLyricsState extends State<BTSLyrics> {
   @override
   void initState() {
     super.initState();
-    var initializationSettingsAndroid = AndroidInitializationSettings("@mipmap/ic_launcher");
+    var initializationSettingsAndroid = const AndroidInitializationSettings("@mipmap/ic_launcher");
     var initializationSettings = InitializationSettings(android: initializationSettingsAndroid);
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
@@ -125,8 +125,8 @@ class _BTSLyricsState extends State<BTSLyrics> {
         mainScreenAbsorbPointer: true,
         disableDragGesture: false,
         androidCloseOnBackTap: true,
-        menuBackgroundColor: Color.fromRGBO(91, 50, 120, 1),
-        menuScreen: DrawerBody(),
+        menuBackgroundColor: const Color.fromRGBO(91, 50, 120, 1),
+        menuScreen: const DrawerBody(),
         mainScreen: Body(),
       ),
     );
@@ -143,38 +143,39 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
 
     Timer(
-        Duration(seconds: 1),
+        const Duration(seconds: 1),
             () {
-          if(!z.isOpen!()){
-            _controller.animateTo(_controller.position.maxScrollExtent, duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
-          }
+          if(!z.isOpen!())
+            if (_controller.hasClients) {
+              _controller.animateTo(_controller.position.maxScrollExtent, duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+            }
         }
     );
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
       body: SafeArea(
         child: Column(
           children: <Widget>[
             Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               //color: Color.fromRGBO(150, 86, 190, 1),
               width: MediaQuery.of(context).size.width,
               //height: MediaQuery.of(context).size.height * 0.07,
-              padding: EdgeInsets.only(top: 2, bottom: 2),
+              padding: const EdgeInsets.only(top: 2, bottom: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Builder(
                       builder: (context) {
                         return Material(
-                          color: Color.fromRGBO(180, 136, 212, 1),
+                          color: const Color.fromRGBO(180, 136, 212, 1),
                           child: IconButton(
                             onPressed: () {
                               z.open!();
                             },
                             tooltip: "Menu",
-                            icon: Icon(Icons.menu),
+                            icon: const Icon(Icons.menu),
                           ),
                         );
                       }
@@ -188,9 +189,9 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   Material(
-                    color: Color.fromRGBO(180, 136, 212, 1),
+                    color: const Color.fromRGBO(180, 136, 212, 1),
                     child: IconButton(
-                      icon: Icon(Icons.search, color: Colors.black),
+                      icon: const Icon(Icons.search, color: Colors.black),
                       tooltip: "Search",
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => SearchSongs()));
@@ -201,7 +202,7 @@ class Body extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 //color: Color.fromRGBO(155, 107, 202, 1),
                 //color: Color.fromRGBO(175, 144, 206, 1),
@@ -212,7 +213,7 @@ class Body extends StatelessWidget {
                   },
                   child: SingleChildScrollView(
                     controller: _controller,
-                    child: HomeScreen(),
+                    child: const HomeScreen(),
                   ),
                 ),
               ),
@@ -233,7 +234,7 @@ class DrawerBody extends StatelessWidget {
     return Container(
       width: double.infinity,
       //color: Color.fromRGBO(125, 60, 152, 1),
-      color: Color.fromRGBO(91, 50, 120, 1),
+      color: const Color.fromRGBO(91, 50, 120, 1),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 12, bottom: 10),
@@ -241,7 +242,7 @@ class DrawerBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
               ///menu
               Container(
                 child: Column(
@@ -254,9 +255,9 @@ class DrawerBody extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 24),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     ///check for updates
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.6,
                       child: Material(
                         borderRadius: BorderRadius.circular(18),
@@ -268,13 +269,13 @@ class DrawerBody extends StatelessWidget {
                           child: Stack(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 14),
+                                padding: const EdgeInsets.only(left: 14),
                                 height: 55,
-                                color: Color.fromRGBO(180, 136, 212, 1),
+                                color: const Color.fromRGBO(180, 136, 212, 1),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.system_update_sharp, color: Colors.black),
-                                    SizedBox(width: 12),
+                                    const Icon(Icons.system_update_sharp, color: Colors.black),
+                                    const SizedBox(width: 12),
                                     Text("Check for updates",
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
@@ -303,9 +304,9 @@ class DrawerBody extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     ///Favorites
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.6,
                       child: Material(
                         borderRadius: BorderRadius.circular(18),
@@ -317,13 +318,13 @@ class DrawerBody extends StatelessWidget {
                           child: Stack(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 14),
+                                padding: const EdgeInsets.only(left: 14),
                                 height: 55,
-                                color: Color.fromRGBO(180, 136, 212, 1),
+                                color: const Color.fromRGBO(180, 136, 212, 1),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.favorite_outline, color: Colors.black),
-                                    SizedBox(width: 12),
+                                    const Icon(Icons.favorite_outline, color: Colors.black),
+                                    const SizedBox(width: 12),
                                     Text("Favorites",
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
@@ -339,7 +340,7 @@ class DrawerBody extends StatelessWidget {
                                   child: InkWell(
                                     onTap: () {
                                       z.close!();
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesScreen()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const FavoritesScreen()));
                                     },
                                   ),
                                 ),
@@ -349,7 +350,7 @@ class DrawerBody extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     /*///help
                     Container(
                       width: MediaQuery.of(context).size.width * 0.6,
@@ -748,7 +749,7 @@ class DrawerBody extends StatelessWidget {
                       ),
                     ),*/
                     ///settings
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.6,
                       child: Material(
                         borderRadius: BorderRadius.circular(18),
@@ -760,13 +761,13 @@ class DrawerBody extends StatelessWidget {
                           child: Stack(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 14),
+                                padding: const EdgeInsets.only(left: 14),
                                 height: 55,
-                                color: Color.fromRGBO(180, 136, 212, 1),
+                                color: const Color.fromRGBO(180, 136, 212, 1),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.settings, color: Colors.black),
-                                    SizedBox(width: 12),
+                                    const Icon(Icons.settings, color: Colors.black),
+                                    const SizedBox(width: 12),
                                     Text("Settings",
                                       style: GoogleFonts.openSans(
                                           color: Colors.black,
@@ -782,7 +783,7 @@ class DrawerBody extends StatelessWidget {
                                   child: InkWell(
                                     onTap: () {
                                       z.close!();
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsScreen()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsScreen()));
                                     },
                                   ),
                                 ),
@@ -795,7 +796,7 @@ class DrawerBody extends StatelessWidget {
                   ],
                 ),
               ),
-              Spacer()
+              const Spacer()
             ],
           ),
         ),
