@@ -8,7 +8,7 @@ class LyricsENG extends StatefulWidget {
   final String? songName, songFullName;
   final List<int>? songTabs;
 
-  LyricsENG({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+  const LyricsENG({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
 
   @override
   State<LyricsENG> createState() => _LyricsENGState();
@@ -41,17 +41,17 @@ class _LyricsENGState extends State<LyricsENG> {
 
   @override
   Widget build(BuildContext context) {
-    final title = "Lyrics";
+    const title = "Lyrics";
     return DefaultTabController(
       length: 1,
       child: Scaffold(
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
           title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-          backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+          backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
           bottom: TabBar(
             indicatorColor: Colors.purple[100],
-            tabs: [Tab(text: "ENG")],
+            tabs: const [Tab(text: "ENG")],
           ),
           actions: [
             IconButton(onPressed: () {
@@ -75,11 +75,11 @@ class _LyricsENGState extends State<LyricsENG> {
           children: [
             widget.songTabs![0] == 1 //ENG
                 ? Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Padding(
                 padding:
-                EdgeInsets.only(left: 12, right: 5, bottom: 10),
+                const EdgeInsets.only(left: 12, right: 5, bottom: 10),
                 child: NotificationListener<
                     OverscrollIndicatorNotification>(
                   onNotification:
@@ -91,7 +91,7 @@ class _LyricsENGState extends State<LyricsENG> {
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       Text(
                         widget.songName!,
                         style: GoogleFonts.openSans(
@@ -100,18 +100,18 @@ class _LyricsENGState extends State<LyricsENG> {
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       Text(
                         widget.songLyrics![0],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                     ],
                   )
                       : Container(
-                    color: Color.fromRGBO(180, 136, 212, 1),
+                    color: const Color.fromRGBO(180, 136, 212, 1),
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -127,7 +127,7 @@ class _LyricsENGState extends State<LyricsENG> {
               ),
             )
                 : Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Center(
                 child: Text(

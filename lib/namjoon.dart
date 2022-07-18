@@ -9,16 +9,16 @@ import 'package:google_fonts/google_fonts.dart';
 class Namjoon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = "RM Albums and Songs";
+    const title = "RM Albums and Songs";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Container(
         width: double.infinity,
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -33,8 +33,8 @@ class Namjoon extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 14.0),
-            Container(
+            const SizedBox(height: 14.0),
+            SizedBox(
               height: 210,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -51,7 +51,7 @@ class Namjoon extends StatelessWidget {
                             height: 170,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(image: AssetImage("images/albums-solo/rm/rm-mixtape.jpg"), fit: BoxFit.fill)
+                                image: const DecorationImage(image: AssetImage("images/albums-solo/rm/rm-mixtape.jpg"), fit: BoxFit.fill)
                             ),
                             child: InkWell(
                               borderRadius: BorderRadius.circular(10),
@@ -68,7 +68,7 @@ class Namjoon extends StatelessWidget {
                               ),
                             ),
                           )),
-                      SizedBox(height: 4),
+                      const SizedBox(height: 4),
                       SizedBox(
                         height: 20,
                         width: 150,
@@ -97,7 +97,7 @@ class Namjoon extends StatelessWidget {
                             height: 170,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(image: AssetImage("images/albums-solo/rm/rm-mono.jpg"), fit: BoxFit.fill)
+                                image: const DecorationImage(image: AssetImage("images/albums-solo/rm/rm-mono.jpg"), fit: BoxFit.fill)
                             ),
                             child: InkWell(
                               borderRadius: BorderRadius.circular(10),
@@ -114,7 +114,7 @@ class Namjoon extends StatelessWidget {
                               ),
                             ),
                           )),
-                      SizedBox(height: 4),
+                      const SizedBox(height: 4),
                       SizedBox(
                         height: 20,
                         width: 150,
@@ -145,7 +145,7 @@ class Namjoon extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             NotificationListener<OverscrollIndicatorNotification>(
               onNotification: (OverscrollIndicatorNotification overScroll) {
                 overScroll.disallowIndicator();
@@ -154,15 +154,15 @@ class Namjoon extends StatelessWidget {
               child: Expanded(
                 child: Container(
                   child: RawScrollbar(
-                    thumbColor: Color.fromRGBO(130, 70, 190, 1),
+                    thumbColor: const Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
-                    radius: Radius.circular(15.0),
+                    radius: const Radius.circular(15.0),
                     thumbVisibility: true,
                     child: ListView.builder(
                         itemCount: AlbumData().rmOtherSongs.length,
                         itemBuilder: (context, index) {
                           return Padding(
-                            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                             child: Material(
                               borderRadius: BorderRadius.circular(20),
                               elevation: 3,
@@ -175,17 +175,17 @@ class Namjoon extends StatelessWidget {
                                     Container(
                                       height: 85,
                                       decoration: BoxDecoration(
-                                          color: Color.fromRGBO(152, 105, 190, 1),
+                                          color: const Color.fromRGBO(152, 105, 190, 1),
                                           borderRadius: BorderRadius.circular(20)
                                       ),
                                       child: Row(
                                         children: <Widget>[
-                                          Container(
+                                          SizedBox(
                                             width: 85,
                                             height: 85,
                                             child: Image.asset(AlbumData().rmOtherSongsArt[index]),
                                           ),
-                                          SizedBox(width: 10),
+                                          const SizedBox(width: 10),
                                           Expanded(
                                             child: Text(
                                               AlbumData().rmOtherSongs[index],
@@ -195,7 +195,7 @@ class Namjoon extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(width: 4),
+                                          const SizedBox(width: 4),
                                         ],
                                       ),
                                     ),

@@ -8,7 +8,7 @@ class LyricsKR extends StatefulWidget {
   final String? songName, songFullName;
   final List<int>? songTabs;
 
-  LyricsKR({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+  const LyricsKR({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
 
   @override
   State<LyricsKR> createState() => _LyricsKRState();
@@ -41,7 +41,7 @@ class _LyricsKRState extends State<LyricsKR> {
 
   @override
   Widget build(BuildContext context) {
-    final title = "Lyrics";
+    const title = "Lyrics";
 
     return DefaultTabController(
       length: 3,
@@ -49,10 +49,10 @@ class _LyricsKRState extends State<LyricsKR> {
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
           title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-          backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+          backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
           bottom: TabBar(
             indicatorColor: Colors.purple[100],
-            tabs: [
+            tabs: const [
               Tab(text: "KOR"),
               Tab(text: "ENG"),
               Tab(text: "ROM"),
@@ -80,11 +80,11 @@ class _LyricsKRState extends State<LyricsKR> {
           children: [
             widget.songTabs![2] == 1 // KOR
                 ? Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Padding(
                 padding:
-                EdgeInsets.only(left: 12, right: 5, bottom: 10),
+                const EdgeInsets.only(left: 12, right: 5, bottom: 10),
                 child: NotificationListener<
                     OverscrollIndicatorNotification>(
                   onNotification:
@@ -96,7 +96,7 @@ class _LyricsKRState extends State<LyricsKR> {
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       Text(
                         widget.songName!,
                         style: GoogleFonts.openSans(
@@ -105,18 +105,18 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       Text(
                         widget.songLyrics![2],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                     ],
                   )
                       : Container(
-                    color: Color.fromRGBO(180, 136, 212, 1),
+                    color: const Color.fromRGBO(180, 136, 212, 1),
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -132,7 +132,7 @@ class _LyricsKRState extends State<LyricsKR> {
               ),
             )
                 : Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Center(
                 child: Text(
@@ -146,11 +146,11 @@ class _LyricsKRState extends State<LyricsKR> {
             ),
             widget.songTabs![0] == 1 //ENG
                 ? Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Padding(
                 padding:
-                EdgeInsets.only(left: 12, right: 5, bottom: 10),
+                const EdgeInsets.only(left: 12, right: 5, bottom: 10),
                 child: NotificationListener<
                     OverscrollIndicatorNotification>(
                   onNotification:
@@ -162,7 +162,7 @@ class _LyricsKRState extends State<LyricsKR> {
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       Text(
                         widget.songName!,
                         style: GoogleFonts.openSans(
@@ -171,18 +171,18 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       Text(
                         widget.songLyrics![0],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                     ],
                   )
                       : Container(
-                    color: Color.fromRGBO(180, 136, 212, 1),
+                    color: const Color.fromRGBO(180, 136, 212, 1),
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -198,7 +198,7 @@ class _LyricsKRState extends State<LyricsKR> {
               ),
             )
                 : Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Center(
                 child: Text(
@@ -212,11 +212,11 @@ class _LyricsKRState extends State<LyricsKR> {
             ),
             widget.songTabs![1] == 1 //ROM
                 ? Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Padding(
                 padding:
-                EdgeInsets.only(left: 12, right: 5, bottom: 10),
+                const EdgeInsets.only(left: 12, right: 5, bottom: 10),
                 child: NotificationListener<
                     OverscrollIndicatorNotification>(
                   onNotification:
@@ -228,7 +228,7 @@ class _LyricsKRState extends State<LyricsKR> {
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       Text(
                         widget.songName!,
                         style: GoogleFonts.openSans(
@@ -237,18 +237,18 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       Text(
                         widget.songLyrics![1],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                     ],
                   )
                       : Container(
-                    color: Color.fromRGBO(180, 136, 212, 1),
+                    color: const Color.fromRGBO(180, 136, 212, 1),
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -264,7 +264,7 @@ class _LyricsKRState extends State<LyricsKR> {
               ),
             )
                 : Container(
-              color: Color.fromRGBO(180, 136, 212, 1),
+              color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
               child: Center(
                 child: Text(

@@ -7,18 +7,18 @@ class FAQScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Divider div = Divider(height: 25, thickness: 1, color: Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
+    Divider div = Divider(height: 25, thickness: 1, color: const Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
       appBar: AppBar(
         title: Text("FAQ", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
       ),
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 20),
-          physics: BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          physics: const BouncingScrollPhysics(),
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),

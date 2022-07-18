@@ -7,27 +7,27 @@ import 'package:google_fonts/google_fonts.dart';
 class AlbumsKR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = "BTS Albums";
+    const title = "BTS Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         //backgroundColor: Colors.purple[400],
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
         //color: Colors.purple[200],
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (OverscrollIndicatorNotification overScroll) {
             overScroll.disallowIndicator();
             return true;
           },
           child: GridView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.only(top: 15),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.only(top: 15),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, childAspectRatio: 0.73),
             children: <Widget>[
               /// 2 cool 4 skool
@@ -42,7 +42,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/2cool4skool.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/2cool4skool.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -61,7 +61,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -90,7 +90,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/o!rul8,2.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/o!rul8,2.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -108,7 +108,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -137,7 +137,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/skoolluvaffair.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/skoolluvaffair.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -154,7 +154,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -183,7 +183,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/darkandwild.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/darkandwild.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -200,7 +200,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -229,7 +229,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/hyyh1.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/hyyh1.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -246,7 +246,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "The most beautiful moment in life pt.1",
                     textAlign: TextAlign.center,
@@ -269,7 +269,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/hyyh2.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/hyyh2.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -286,7 +286,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "The most beautiful moment in life pt.2",
                     textAlign: TextAlign.center,
@@ -309,7 +309,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/youngforever.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/youngforever.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -326,7 +326,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "The most beautiful moment in life :\nYoung Forever",
                     textAlign: TextAlign.center,
@@ -349,7 +349,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/wings.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/wings.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -366,7 +366,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Wings",
                     textAlign: TextAlign.center,
@@ -389,7 +389,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/ynwa.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/ynwa.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -406,7 +406,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -435,7 +435,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/lyher.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/lyher.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -452,7 +452,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Love Yourself 承\n'HER'",
                     textAlign: TextAlign.center,
@@ -475,7 +475,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/lytear.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/lytear.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -492,7 +492,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Love Yourself 轉\n'TEAR'",
                     textAlign: TextAlign.center,
@@ -515,7 +515,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/lyanswer.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/lyanswer.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -532,7 +532,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Love Yourself 結 'ANSWER'",
                     textAlign: TextAlign.center,
@@ -555,7 +555,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/motspersona.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/motspersona.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -572,7 +572,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Map Of The Soul : PERSONA",
                     textAlign: TextAlign.center,
@@ -595,7 +595,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/mots7.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/mots7.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -612,7 +612,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -641,7 +641,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/be.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/be.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -658,7 +658,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,
@@ -687,7 +687,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/butter-ptd.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/butter-ptd.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -704,7 +704,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Butter / Permission\nto Dance",
                     textAlign: TextAlign.center,
@@ -727,7 +727,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/proof.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/proof.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -744,7 +744,7 @@ class AlbumsKR extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "Proof",
                     textAlign: TextAlign.center,

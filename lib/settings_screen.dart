@@ -24,7 +24,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     buildNumber: 'Unknown',
   );
 
-  Divider div = Divider(height: 0, thickness: 1, color: Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
+  Divider div = Divider(height: 0, thickness: 1, color: const Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
 
   void emailMe() async {
     String? encodeQueryParameters(Map<String, String> params) {
@@ -39,9 +39,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
         'subject': '[${_packageInfo.appName}] [Bug] [v${_packageInfo.version}]'
       }),
     );
-    if(await canLaunchUrlString(emailLaunchUri.toString()))
+    if(await canLaunchUrlString(emailLaunchUri.toString())) {
       launchUrlString(emailLaunchUri.toString(), mode: LaunchMode.externalApplication);
-    else {
+    } else {
       Fluttertoast.showToast(
         msg: "Error occurred. Your phone doesn't support opening links",
         toastLength: Toast.LENGTH_SHORT,
@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void showDialogBox(BuildContext context) {
     showDialog(context: context, builder: (context) {
       return Dialog(
-        backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+        backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -61,7 +61,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 Navigator.pop(context);
                 emailMe();
               },
-              title: Text("Email me", style: TextStyle(color: Colors.black)),
+              title: const Text("Email me", style: TextStyle(color: Colors.black)),
             ),
             div,
             ListTile(
@@ -69,7 +69,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 Navigator.pop(context);
                 twitter();
               },
-              title: Text("DM me on Twitter", style: TextStyle(color: Colors.black)),
+              title: const Text("DM me on Twitter", style: TextStyle(color: Colors.black)),
             ),
           ],
         ),
@@ -82,11 +82,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
       context: context,
       builder: (BuildContext context) => Center(
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           height: MediaQuery.of(context).size.height * 0.5,
           width: MediaQuery.of(context).size.width * 0.75,
           decoration: BoxDecoration(
-            color: Color.fromRGBO(180, 136, 212, 1),
+            color: const Color.fromRGBO(180, 136, 212, 1),
             borderRadius:
             BorderRadius.circular(20),
           ),
@@ -109,7 +109,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       height: 140,
                       width: 140,
                       decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage("images/app-icon-new2.png")),
+                          image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
                           borderRadius: BorderRadius.circular(20)
                       ),
                     ),
@@ -151,10 +151,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   void showSourceCode() async {
-    final String url = "https://github.com/KimVinod/bts-lyricz";
-    if(await canLaunchUrlString(url))
+    const String url = "https://github.com/KimVinod/bts-lyricz";
+    if(await canLaunchUrlString(url)) {
       launchUrlString(url, mode: LaunchMode.externalApplication);
-    else {
+    } else {
       Fluttertoast.showToast(
         msg: "Error occurred. Your phone doesn't support opening links",
         toastLength: Toast.LENGTH_SHORT,
@@ -163,10 +163,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   void twitter() async {
-    final String url = "https://twitter.com/vinod3344";
-    if(await canLaunchUrlString(url))
+    const String url = "https://twitter.com/vinod3344";
+    if(await canLaunchUrlString(url)) {
       launchUrlString(url, mode: LaunchMode.externalApplication);
-    else {
+    } else {
       Fluttertoast.showToast(
         msg: "Error occurred. Your phone doesn't support opening links",
         toastLength: Toast.LENGTH_SHORT,
@@ -175,10 +175,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   void rateMe() async {
-    final String url = "https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz";
-    if(await canLaunchUrlString(url))
+    const String url = "https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz";
+    if(await canLaunchUrlString(url)) {
       launchUrlString(url, mode: LaunchMode.externalApplication);
-    else {
+    } else {
       Fluttertoast.showToast(
         msg: "Error occurred. Your phone doesn't support opening links",
         toastLength: Toast.LENGTH_SHORT,
@@ -187,10 +187,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   void versionNotes() async {
-    final String url = "https://sites.google.com/view/bts-lyricz-ver";
-    if(await canLaunchUrlString(url))
+    const String url = "https://sites.google.com/view/bts-lyricz-ver";
+    if(await canLaunchUrlString(url)) {
       launchUrlString(url);
-    else {
+    } else {
       Fluttertoast.showToast(
         msg: "Error occurred. Your phone doesn't support opening links",
         toastLength: Toast.LENGTH_SHORT,
@@ -205,7 +205,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     _initPackageInfo();
   }
 
-  Future<Null> _initPackageInfo() async {
+  Future<void> _initPackageInfo() async {
     final PackageInfo info = await PackageInfo.fromPlatform();
     setState(() {
       _packageInfo = info;
@@ -215,14 +215,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
       appBar: AppBar(
         title: Text("Settings", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
       ),
       body: SafeArea(
         child: SettingsList(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           brightness: Brightness.light,
           contentPadding: EdgeInsets.zero,
           lightTheme: const SettingsThemeData(tileHighlightColor: Color.fromRGBO(150, 86, 190, 1), settingsListBackground: Color.fromRGBO(180, 136, 212, 1),),
@@ -235,16 +235,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       AppSettings.openNotificationSettings();
                     },
-                    leading: Icon(Icons.notifications_none, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.notifications_none, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Turn ON/OFF BTS related notifications', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Btw I rarely send these  ~.~", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
                   div,
                   SettingsTile(
                     onPressed: (context) {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => FAQScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const FAQScreen()));
                     },
-                    leading: Icon(Icons.question_mark, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.question_mark, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('FAQ', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Got stuck somewhere? This might help you", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -253,7 +253,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       versionNotes();
                     },
-                    leading: Icon(Icons.notes, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.notes, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Version Notes', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Check out upcoming features and previous version notes", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -262,7 +262,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       showDialogBox(context);
                     },
-                    leading: Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.bug_report_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Found a Bug? Suggestions?', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Feel free to give your inputs as it helps a lot!", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -271,7 +271,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       showSourceCode();
                     },
-                    leading: Icon(Icons.code, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.code, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Source Code', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Get to see all the coding work here", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -280,7 +280,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       Share.share("Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\nhttps://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz");
                     },
-                    leading: Icon(Icons.share, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.share, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Share', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Share to other armys as well  >.<", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -289,7 +289,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       rateMe();
                     },
-                    leading: Icon(Icons.star_rate_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.star_rate_outlined, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('Rate on Google Play', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Thankuuu in advance :')", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),
@@ -298,7 +298,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     onPressed: (context) {
                       showMore(context);
                     },
-                    leading: Icon(Icons.apps, color: Color.fromRGBO(91, 50, 120, 1),),
+                    leading: const Icon(Icons.apps, color: Color.fromRGBO(91, 50, 120, 1),),
                     title: Text('App info', style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
                     description: Text("Some extra stuff", style: GoogleFonts.openSans(color: Colors.black87)),
                   ),

@@ -11,7 +11,7 @@ class Songs extends StatelessWidget {
   final String? albumName;
   final String? albumArt;
 
-  Songs({this.songNames, this.albumName, this.albumArt});
+  const Songs({this.songNames, this.albumName, this.albumArt});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +19,15 @@ class Songs extends StatelessWidget {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text("Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Material(
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Center(
               child: Column(
                 children: <Widget>[
@@ -43,7 +43,7 @@ class Songs extends StatelessWidget {
                             image: DecorationImage(image: AssetImage(albumArt!), fit: BoxFit.fill)
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     albumName!,
                     textAlign: TextAlign.center,
@@ -55,7 +55,7 @@ class Songs extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
@@ -66,7 +66,7 @@ class Songs extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             NotificationListener<OverscrollIndicatorNotification>(
               onNotification: (OverscrollIndicatorNotification overScroll) {
                 overScroll.disallowIndicator();
@@ -81,13 +81,13 @@ class Songs extends StatelessWidget {
                     shadowColor: Colors.purple.shade700,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    color: Color.fromRGBO(152, 105, 190, 1),
+                    color: const Color.fromRGBO(152, 105, 190, 1),
                     child: RawScrollbar(
-                      thumbColor: Color.fromRGBO(130, 70, 190, 1),
+                      thumbColor: const Color.fromRGBO(130, 70, 190, 1),
                       thickness: 5.0,
-                      radius: Radius.circular(15.0),
+                      radius: const Radius.circular(15.0),
                       child: ListView.separated(
-                        separatorBuilder: (context, index) => Divider(
+                        separatorBuilder: (context, index) => const Divider(
                             color: Colors.black, height: 1, thickness: 0.6),
                         itemCount: songNames!.length,
                         itemBuilder: (context, index) {
@@ -4154,7 +4154,7 @@ class Songs extends StatelessWidget {
                                             LyricsENG(
                                               songName: "INTRO",
                                               songLyrics: AlbumData().jackInTheBoxIntro,
-                                              songTabs: [1, 0, 0, 0],
+                                              songTabs: const [1, 0, 0, 0],
                                               songFullName: songNames![index],
                                             ),
                                       ),

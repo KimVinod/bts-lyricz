@@ -1,988 +1,988 @@
 import 'songModel.dart';
 
 final allSongs = <Song>[
-  Song(
+  const Song(
     name: "= (Equal Sign)",
   ),
-  Song(
+  const Song(
     name: "00:00 (Zero O’Clock)",
   ),
-  Song(
+  const Song(
     name: "1 Verse",
   ),
-  Song(
+  const Song(
     name: "134340",
   ),
-  Song(
+  const Song(
     name: "140503 새벽에 (140503 At Dawn)",
   ),
-  Song(
+  const Song(
     name: "21세기 소녀 (21st Century Girl)",
   ),
-  Song(
+  const Song(
     name: "24/7=Heaven",
   ),
-  Song(
+  const Song(
     name: "2학년 (Second Grade)",
   ),
-  Song(
+  const Song(
     name: "95 Graduation by V and Jimin",
   ),
-  Song(
+  const Song(
     name: "A Brand New Day by BTS & Zara Larsson",
   ),
-  Song(
+  const Song(
     name: "A Supplementary Story: You Never Walk Alone",
   ),
-  Song(
+  const Song(
     name: "Abyss",
   ),
-  Song(
+  const Song(
     name: "Agust D",
   ),
-  Song(
+  const Song(
     name: "Airplane pt.2 (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "Airplane pt.2",
   ),
-  Song(
+  const Song(
     name: "Airplane",
   ),
-  Song(
+  const Song(
     name: "All Night by BTS & Juice WRLD",
   ),
-  Song(
+  const Song(
     name: "Always",
   ),
-  Song(
+  const Song(
     name: "Am I Wrong",
   ),
-  Song(
+  const Song(
     name: "Anpanman",
   ),
-  Song(
+  const Song(
     name: "Answer: Love Myself",
   ),
-  Song(
+  const Song(
     name: "Awake",
   ),
-  Song(
+  const Song(
     name: "badbye(Ft. eAeon)",
   ),
-  Song(
+  const Song(
     name: "Base Line",
   ),
-  Song(
+  const Song(
     name: "Beautiful",
   ),
-  Song(
+  const Song(
     name: "Begin",
   ),
-  Song(
+  const Song(
     name: "Best Of Me (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Best Of Me",
   ),
-  Song(
+  const Song(
     name: "Bicycle",
   ),
-  Song(
+  const Song(
     name: "Black Swan (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "Black Swan",
   ),
-  Song(
+  const Song(
     name: "Blue & Grey",
   ),
-  Song(
+  const Song(
     name: "Blue Side (Outro)",
   ),
-  Song(
+  const Song(
     name: "Blue Side",
   ),
-  Song(
+  const Song(
     name: "Blueberry Eyes (MAX ft. SUGA)",
   ),
-  Song(
+  const Song(
     name: "Born Singer",
   ),
-  Song(
+  const Song(
     name: "Boy In Luv (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Boy With Luv (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "BTS Cypher 4",
   ),
-  Song(
+  const Song(
     name: "BTS Cypher Pt. 2: Triptych",
   ),
-  Song(
+  const Song(
     name: "BTS Cypher Pt. 3: KILLER",
   ),
-  Song(
+  const Song(
     name: "BTS Cypher Pt.1",
   ),
-  Song(
+  const Song(
     name: "BTS x JESSI",
   ),
-  Song(
+  const Song(
     name: "Burn It (ft. MAX)",
   ),
-  Song(
+  const Song(
     name: "Butter (ft. Megan Thee Stallion)",
   ),
-  Song(
+  const Song(
     name: "Butter",
   ),
-  Song(
+  const Song(
     name: "Butterfly (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Butterfly (Prologue Mix)",
   ),
-  Song(
+  const Song(
     name: "Butterfly",
   ),
-  Song(
+  const Song(
     name: "Champion (Remix) (Fall Out Boy ft. RM)",
   ),
-  Song(
+  const Song(
     name: "Change (RM & Wale)",
   ),
-  Song(
+  const Song(
     name: "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
   ),
-  Song(
+  const Song(
     name: "Chicken Noodle Soup (ft. Becky G)",
   ),
-  Song(
+  const Song(
     name: "Christmas Day by Jimin and Jungkook",
   ),
-  Song(
+  const Song(
     name: "Christmas Love",
   ),
-  Song(
+  const Song(
     name: "Christmas Tree",
   ),
-  Song(
+  const Song(
     name: "Coffee",
   ),
-  Song(
+  const Song(
     name: "Converse High",
   ),
-  Song(
+  const Song(
     name: "Crying Over You ◐ (Remix) (HONNE ft. RM & BEKA)",
   ),
-  Song(
+  const Song(
     name: "Crystal Snow",
   ),
-  Song(
+  const Song(
     name: "Danger (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Danger",
   ),
-  Song(
+  const Song(
     name: "Daydream (백일몽)",
   ),
-  Song(
+  const Song(
     name: "Dionysus (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "Dionysus",
   ),
-  Song(
+  const Song(
     name: "Dis-ease",
   ),
-  Song(
+  const Song(
     name: "DNA (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "DNA",
   ),
-  Song(
+  const Song(
     name: "Do You",
   ),
-  Song(
+  const Song(
     name: "Don't Leave Me",
   ),
-  Song(
+  const Song(
     name: "Dope -超ヤベー!- (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Dream Glow by BTS & Charli XCX",
   ),
-  Song(
+  const Song(
     name: "Dynamite",
   ),
-  Song(
+  const Song(
     name: "Epilogue : Young Forever (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Epilogue: Young Forever",
   ),
-  Song(
+  const Song(
     name: "Epiphany",
   ),
-  Song(
+  const Song(
     name: "Euphoria",
   ),
-  Song(
+  const Song(
     name: "FAKE LOVE (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "FAKE LOVE",
   ),
-  Song(
+  const Song(
     name: "Family Song (Wednesday) by BTS and GFRIEND",
   ),
-  Song(
+  const Song(
     name: "Film Out",
   ),
-  Song(
+  const Song(
     name: "Filter",
   ),
-  Song(
+  const Song(
     name: "Fire (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Fire (불타오르네)",
   ),
-  Song(
+  const Song(
     name: "First Love",
   ),
-  Song(
+  const Song(
     name: "Fly To My Room",
   ),
-  Song(
+  const Song(
     name: "For You",
   ),
-  Song(
+  const Song(
     name: "For Youth",
   ),
-  Song(
+  const Song(
     name: "forever rain",
   ),
-  Song(
+  const Song(
     name: "Future",
   ),
-  Song(
+  const Song(
     name: "Gajah (코끼리) (Gaeko (개코) ft. Rap Monster)",
   ),
-  Song(
+  const Song(
     name: "Give It To Me",
   ),
-  Song(
+  const Song(
     name: "Go Go (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "God Rap",
   ),
-  Song(
+  const Song(
     name: "Good Day",
   ),
-  Song(
+  const Song(
     name: "Halsey, SUGA - SUGA’s Interlude",
   ),
-  Song(
+  const Song(
     name: "Heartbeat",
   ),
-  Song(
+  const Song(
     name: "Her",
   ),
-  Song(
+  const Song(
     name: "HOME",
   ),
-  Song(
+  const Song(
     name: "Hope World",
   ),
-  Song(
+  const Song(
     name: "House of Cards (Full Length Edition)",
   ),
-  Song(
+  const Song(
     name: "I Believe",
   ),
-  Song(
+  const Song(
     name: "I Need U (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "I Need U",
   ),
-  Song(
+  const Song(
     name: "I'm Fine",
   ),
-  Song(
+  const Song(
     name: "Idol (ft. Nicki Minaj)",
   ),
-  Song(
+  const Song(
     name: "Idol (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "Idol",
   ),
-  Song(
+  const Song(
     name: "If I Ruled the World",
   ),
-  Song(
+  const Song(
     name: "In The SOOP",
   ),
-  Song(
+  const Song(
     name: "Inner Child",
   ),
-  Song(
+  const Song(
     name: "Interlude: Dream, Reality",
   ),
-  Song(
+  const Song(
     name: "Interlude: Set me free",
   ),
-  Song(
+  const Song(
     name: "Interlude: Shadow",
   ),
-  Song(
+  const Song(
     name: "Interlude: Wings",
   ),
-  Song(
+  const Song(
     name: "Intro",
   ),
-  Song(
+  const Song(
     name: "Intro.",
   ),
-  Song(
+  const Song(
     name: "Intro: 2 Cool 4 Skool",
   ),
-  Song(
+  const Song(
     name: "Intro: Boy Meets Evil",
   ),
-  Song(
+  const Song(
     name: "INTRO: Calling",
   ),
-  Song(
+  const Song(
     name: "Intro: Dt sugA (Ft. DJ Friz)",
   ),
-  Song(
+  const Song(
     name: "Intro: Never Mind",
   ),
-  Song(
+  const Song(
     name: "Intro: O!RUL8,2?",
   ),
-  Song(
+  const Song(
     name: "Intro: Persona",
   ),
-  Song(
+  const Song(
     name: "INTRO: Ringwanderung",
   ),
-  Song(
+  const Song(
     name: "Intro: Serendipity (세렌디피티)",
   ),
-  Song(
+  const Song(
     name: "Intro: Singularity",
   ),
-  Song(
+  const Song(
     name: "Intro: Skool Luv Affair",
   ),
-  Song(
+  const Song(
     name: "Intro: What Am I to You",
   ),
-  Song(
+  const Song(
     name: "Intro: 화양연화 (The Most Beautiful Moment in Life)",
   ),
-  Song(
+  const Song(
     name: "Introduction: Youth",
   ),
-  Song(
+  const Song(
     name: "IONIQ: I'm On It (Hyundai x BTS)",
   ),
-  Song(
+  const Song(
     name: "IU (아이유) - eight (에잇) (Prod. & ft. SUGA)",
   ),
-  Song(
+  const Song(
     name: "Juice WRLD - Girl Of My Dreams (with Suga from BTS)",
   ),
-  Song(
+  const Song(
     name: "Jamais Vu",
   ),
-  Song(
+  const Song(
     name: "Jump (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Jump",
   ),
-  Song(
+  const Song(
     name: "Just One Day (Japanese Ver. Extended)",
   ),
-  Song(
+  const Song(
     name: "Just One Day (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "LaLaLa by OKDAL",
   ),
-  Song(
+  const Song(
     name: "Let Go",
   ),
-  Song(
+  const Song(
     name: "Let Me Know (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Let Me Know",
   ),
-  Song(
+  const Song(
     name: "Lie",
   ),
-  Song(
+  const Song(
     name: "Life Goes On",
   ),
-  Song(
+  const Song(
     name: "Life",
   ),
-  Song(
+  const Song(
     name: "Lights",
   ),
-  Song(
+  const Song(
     name: "Lost",
   ),
-  Song(
+  const Song(
     name: "Louder than Bombs",
   ),
-  Song(
+  const Song(
     name: "Love Is Not Over (Full Length Edition)",
   ),
-  Song(
+  const Song(
     name: "Love Maze",
   ),
-  Song(
+  const Song(
     name: "Ma City",
   ),
-  Song(
+  const Song(
     name: "Magic Shop",
   ),
-  Song(
+  const Song(
     name: "Make It Right (ft. Lauv)",
   ),
-  Song(
+  const Song(
     name: "Make It Right (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "Make It Right",
   ),
-  Song(
+  const Song(
     name: "Mama",
   ),
-  Song(
+  const Song(
     name: "MIC Drop (Full Length Edition)",
   ),
-  Song(
+  const Song(
     name: "MIC Drop (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "MIC Drop (Steve Aoki Remix) (ft. Desiigner)",
   ),
-  Song(
+  const Song(
     name: "MIC Drop",
   ),
-  Song(
+  const Song(
     name: "Miss Right (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Monster",
   ),
-  Song(
+  const Song(
     name: "Monterlude",
   ),
-  Song(
+  const Song(
     name: "Moon",
   ),
-  Song(
+  const Song(
     name: "moonchild",
   ),
-  Song(
+  const Song(
     name: "MORE",
   ),
-  Song(
+  const Song(
     name: "My Universe",
   ),
-  Song(
+  const Song(
     name: "My You",
   ),
-  Song(
+  const Song(
     name: "N.O (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "N.O",
   ),
-  Song(
+  const Song(
     name: "No More Dream (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "No More Dream",
   ),
-  Song(
+  const Song(
     name: "Not Today (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Not Today",
   ),
-  Song(
+  const Song(
     name: "Old Town Road (Seoul Town Road Remix) (Lil Nas ft. RM)",
   ),
-  Song(
+  const Song(
     name: "ØMI - You (Prod. SUGA of BTS)",
   ),
-  Song(
+  const Song(
     name: "ON (Ft. Sia)",
   ),
-  Song(
+  const Song(
     name: "ON (Japanese ver.)",
   ),
-  Song(
+  const Song(
     name: "ON",
   ),
-  Song(
+  const Song(
     name: "Outro.",
   ),
-  Song(
+  const Song(
     name: "Outro: Circle Room Cypher",
   ),
-  Song(
+  const Song(
     name: "OUTRO: Crack",
   ),
-  Song(
+  const Song(
     name: "Outro: Ego",
   ),
-  Song(
+  const Song(
     name: "Outro: Her",
   ),
-  Song(
+  const Song(
     name: "Outro: House of Cards",
   ),
-  Song(
+  const Song(
     name: "Outro: Love is Not Over",
   ),
-  Song(
+  const Song(
     name: "Outro: LUV IN SKOOL",
   ),
-  Song(
+  const Song(
     name: "Outro: Purpose",
   ),
-  Song(
+  const Song(
     name: "Outro: tear",
   ),
-  Song(
+  const Song(
     name: "OUTRO: The Journey",
   ),
-  Song(
+  const Song(
     name: "Outro: Wings",
   ),
-  Song(
+  const Song(
     name: "Outro: 그게 말이 돼? (Do You Think It Makes Sense?)",
   ),
-  Song(
+  const Song(
     name: "Pandora's Box",
   ),
-  Song(
+  const Song(
     name: "P.D.D (Please Don't Die) (Rap Monster x Warren G)",
   ),
-  Song(
+  const Song(
     name: "P.O.P (Peace of Piece) Pt.1",
   ),
-  Song(
+  const Song(
     name: "Permission to Dance",
   ),
-  Song(
+  const Song(
     name: "Pied Piper",
   ),
-  Song(
+  const Song(
     name: "PSY - That That (prod. & ft. SUGA of BTS)",
   ),
-  Song(
+  const Song(
     name: "Rain",
   ),
-  Song(
+  const Song(
     name: "Reflection",
   ),
-  Song(
+  const Song(
     name: "Respect",
   ),
-  Song(
+  const Song(
     name: "Run (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Run",
   ),
-  Song(
+  const Song(
     name: "Rush (Ft. Krizz Kaliko)",
   ),
-  Song(
+  const Song(
     name: "Savage Love (Laxed - Siren Beat) (BTS Remix)",
   ),
-  Song(
+  const Song(
     name: "Save Me (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Save Me",
   ),
-  Song(
+  const Song(
     name: "seoul",
   ),
-  Song(
+  const Song(
     name: "Serendipity (Full Length Edition)",
   ),
-  Song(
+  const Song(
     name: "Safety Zone",
   ),
-  Song(
+  const Song(
     name: "Singularity",
   ),
-  Song(
+  const Song(
     name: "Snow Flower (ft. Peakboy)",
   ),
-  Song(
+  const Song(
     name: "So 4 More",
   ),
-  Song(
+  const Song(
     name: "So Far Away (Ft. SURAN (수란))",
   ),
-  Song(
+  const Song(
     name: "So Far Away (SUGA, Jin & Jungkook Ver.)",
   ),
-  Song(
+  const Song(
     name: "So What",
   ),
-  Song(
+  const Song(
     name: "Spring Day (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "Stay Alive (Prod. SUGA of BTS)",
   ),
-  Song(
+  const Song(
     name: "Stay Gold",
   ),
-  Song(
+  const Song(
     name: "Stay",
   ),
-  Song(
+  const Song(
     name: "Stigma",
   ),
-  Song(
+  const Song(
     name: "Still With You",
   ),
-  Song(
+  const Song(
     name: "STOP (세상에 나쁜 사람은 없다)",
   ),
-  Song(
+  const Song(
     name: "Sweet Night",
   ),
-  Song(
+  const Song(
     name: "Tear",
   ),
-  Song(
+  const Song(
     name: "Telepathy",
   ),
-  Song(
+  const Song(
     name: "The Stars",
   ),
-  Song(
+  const Song(
     name: "Timeless (Drunken Tiger ft. RM)",
   ),
-  Song(
+  const Song(
     name: "tokyo",
   ),
-  Song(
+  const Song(
     name: "Tomorrow",
   ),
-  Song(
+  const Song(
     name: "Tony Montana (Ft. Yankie)",
   ),
-  Song(
+  const Song(
     name: "Tony Montana (with Jimin)",
   ),
-  Song(
+  const Song(
     name: "Trivia 承: Love",
   ),
-  Song(
+  const Song(
     name: "Trivia 起: Just Dance",
   ),
-  Song(
+  const Song(
     name: "Trivia 轉: Seesaw",
   ),
-  Song(
+  const Song(
     name: "U (Primary ft. 권진아 Kwon Jin Ah, Rap Monster)",
   ),
-  Song(
+  const Song(
     name: "Unpack your Bags (SOULSCAPE x Rap Monster)",
   ),
-  Song(
+  const Song(
     name: "Wake Up",
   ),
-  Song(
+  const Song(
     name: "Waste It On Me",
   ),
-  Song(
+  const Song(
     name: "We Are Bulletproof Pt. 1 (4 BEGINS Ruff)",
   ),
-  Song(
+  const Song(
     name: "We Are Bulletproof Pt.2",
   ),
-  Song(
+  const Song(
     name: "We Are Bulletproof: The Eternal",
   ),
-  Song(
+  const Song(
     name: "We On",
   ),
-  Song(
+  const Song(
     name: "What if...",
   ),
-  Song(
+  const Song(
     name: "Whalien 52",
   ),
-  Song(
+  const Song(
     name: "Who (Lauv ft. BTS)",
   ),
-  Song(
+  const Song(
     name: "Winter Bear",
   ),
-  Song(
+  const Song(
     name: "Winter Flower (雪中梅) (YOUNHA (윤하) ft. RM)",
   ),
-  Song(
+  const Song(
     name: "Wishing On a Star",
   ),
-  Song(
+  const Song(
     name: "With Seoul",
   ),
-  Song(
+  const Song(
     name: "With You (Jimin x Ha Sung Woon)",
   ),
-  Song(
+  const Song(
     name: "Yet To Come",
   ),
-  Song(
+  const Song(
     name: "You Are Here by Lee Hyun",
   ),
-  Song(
+  const Song(
     name: "Your eyes tell",
   ),
-  Song(
+  const Song(
     name: "Yours",
   ),
-  Song(
+  const Song(
     name: "You’re so Beautiful (LOTTE DUTY FREE x BTS)",
   ),
-  Song(
+  const Song(
     name: "いいね! (I Like It) (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "いいね! Pt.2 ～あの場所で～ (I Like It Pt.2)",
   ),
-  Song(
+  const Song(
     name: "フンタン少年団 (Boyz With Fun) (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "ペップセ (Silver Spoon) (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "ホルモン戦争 (War of Hormone) (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "血、汗、淚 (Blood Sweat & Tears (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "進撃の防弾 (Attack on Bangtan) (Japanese Ver.)",
   ),
-  Song(
+  const Song(
     name: "각성 (Awakening)",
   ),
-  Song(
+  const Song(
     name: "고민보다 Go (Go Go)",
   ),
-  Song(
+  const Song(
     name: "고엽 (Autumn Leaves)",
   ),
-  Song(
+  const Song(
     name: "그러지 마 (Don’t) (eAeon (이이언) ft. RM)",
   ),
-  Song(
+  const Song(
     name: "길 (Road/Path)",
   ),
-  Song(
+  const Song(
     name: "낙원 (Paradise)",
   ),
-  Song(
+  const Song(
     name: "농담 (Joke)",
   ),
-  Song(
+  const Song(
     name: "대취타 (Daechwita)",
   ),
-  Song(
+  const Song(
     name: "따옴표 (Quotation Mark)",
   ),
-  Song(
+  const Song(
     name: "달려라 방탄 (Run BTS)",
   ),
-  Song(
+  const Song(
     name: "둘! 셋! (2! 3!)",
   ),
-  Song(
+  const Song(
     name: "등골브레이커 (Spine Breaker)",
   ),
-  Song(
+  const Song(
     name: "땡 (Ddaeng)",
   ),
-  Song(
+  const Song(
     name: "마지막 (The Last)",
   ),
-  Song(
+  const Song(
     name: "목소리 (Voice)",
   ),
-  Song(
+  const Song(
     name: "바다 (Sea)",
   ),
-  Song(
+  const Song(
     name: "방화 (Arson)",
   ),
-  Song(
+  const Song(
     name: "뱁새 (Silver Spoon)",
   ),
-  Song(
+  const Song(
     name: "버려 (Throw Away)",
   ),
-  Song(
+  const Song(
     name: "보조개 (dimple)",
   ),
-  Song(
+  const Song(
     name: "봄날 (Spring Day)",
   ),
-  Song(
+  const Song(
     name: "부끄부끄 (Buckubucku) (MFBTY ft. EE, RM and Dino-J)",
   ),
-  Song(
+  const Song(
     name: "사람 (People)",
   ),
-  Song(
+  const Song(
     name: "상남자 (Boy in Luv)",
   ),
-  Song(
+  const Song(
     name: "소우주 (Mikrokosmos)",
   ),
-  Song(
+  const Song(
     name: "슈퍼 참치 (Super Tuna)",
   ),
-  Song(
+  const Song(
     name: "시차 (My Time)",
   ),
-  Song(
+  const Song(
     name: "신청곡 (Song Request) (Lee Sora ft. SUGA)",
   ),
-  Song(
+  const Song(
     name: "알아요 (I Know) by Rap Monster and Jungkook",
   ),
-  Song(
+  const Song(
     name: "애매한 사이 (Young Love)",
   ),
-  Song(
+  const Song(
     name: "약속 (Promise)",
   ),
-  Song(
+  const Song(
     name: "어긋 (uhgood)",
   ),
-  Song(
+  const Song(
     name: "어디에서 왔는지 (Where You From)",
   ),
-  Song(
+  const Song(
     name: "어땠을까 (Dear my friend) (Ft. Kim Jong Wan (김종완))",
   ),
-  Song(
+  const Song(
     name: "어떻게 생각해? (What do you think?)",
   ),
-  Song(
+  const Song(
     name: "여기 봐 (Look Here)",
   ),
-  Song(
+  const Song(
     name: "욱 (UGH!)",
   ),
-  Song(
+  const Song(
     name: "일하는중 (Working)",
   ),
-  Song(
+  const Song(
     name: "이 밤 (Tonight)",
   ),
-  Song(
+  const Song(
     name: "이불킥 (Embarrassed)",
   ),
-  Song(
+  const Song(
     name: "이사 (Moving On)",
   ),
-  Song(
+  const Song(
     name: "이상하지 않은가 (Strange) (ft. RM)",
   ),
-  Song(
+  const Song(
     name: "작은 것들을 위한 시 (Boy With Luv)",
   ),
-  Song(
+  const Song(
     name: "잡아줘 (Hold Me Tight)",
   ),
-  Song(
+  const Song(
     name: "저 달 (Moonlight)",
   ),
-  Song(
+  const Song(
     name: "전하지 못한 진심 (The Truth Untold)",
   ),
-  Song(
+  const Song(
     name: "점점 어른이 되나봐 (28) (Ft. NiiHWA)",
   ),
-  Song(
+  const Song(
     name: "좋아요 (Like)",
   ),
-  Song(
+  const Song(
     name: "지나가 (everythingoes) (Ft. NELL)",
   ),
-  Song(
+  const Song(
     name: "진격의 방탄 (Attack on Bangtan)",
   ),
-  Song(
+  const Song(
     name: "쩔어 (Dope)",
   ),
-  Song(
+  const Song(
     name: "치리사일사팔 (724148)",
   ),
-  Song(
+  const Song(
     name: "친구 (Friends)",
   ),
-  Song(
+  const Song(
     name: "팔도강산 (Paldogangsan)",
   ),
-  Song(
+  const Song(
     name: "표류 (Adrift)",
   ),
-  Song(
+  const Song(
     name: "풍경 (Scenery)",
   ),
-  Song(
+  const Song(
     name: "피 땀 눈물 (Blood Sweat & Tears)",
   ),
-  Song(
+  const Song(
     name: "하루만 (Just One Day)",
   ),
-  Song(
+  const Song(
     name: "항상 (HANGSANG) (Ft. Supreme Boi)",
   ),
-  Song(
+  const Song(
     name: "핸드폰 좀 꺼줄래 (Could You Turn off Your Cell Phone?)",
   ),
-  Song(
+  const Song(
     name: "호르몬 전쟁 (War of Hormone)",
   ),
-  Song(
+  const Song(
     name: "혼술 (Honsool)",
   ),
-  Song(
+  const Song(
     name: "흥탄소년단 (Boyz with Fun)",
   ),
-  Song(
+  const Song(
     name: "힙합성애자 (Hip Hop Phile)",
   ),
 ];

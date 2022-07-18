@@ -8,17 +8,17 @@ import 'package:google_fonts/google_fonts.dart';
 class Taehyung extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = "V Songs";
+    const title = "V Songs";
 
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -33,7 +33,7 @@ class Taehyung extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             NotificationListener<OverscrollIndicatorNotification>(
               onNotification: (OverscrollIndicatorNotification overScroll) {
                 overScroll.disallowIndicator();
@@ -42,9 +42,9 @@ class Taehyung extends StatelessWidget {
               child: Expanded(
                 child: Container(
                   child: RawScrollbar(
-                    thumbColor: Color.fromRGBO(130, 70, 190, 1),
+                    thumbColor: const Color.fromRGBO(130, 70, 190, 1),
                     thickness: 7.0,
-                    radius: Radius.circular(15.0),
+                    radius: const Radius.circular(15.0),
                     thumbVisibility: true,
                     child: ListView.builder(
                       itemCount: AlbumData().vOtherSongs.length,
@@ -63,16 +63,16 @@ class Taehyung extends StatelessWidget {
                                   Container(
                                     height: 85,
                                     decoration: BoxDecoration(
-                                        color: Color.fromRGBO(152, 105, 190, 1),
+                                        color: const Color.fromRGBO(152, 105, 190, 1),
                                         borderRadius: BorderRadius.circular(20)),
                                     child: Row(
                                       children: <Widget>[
-                                        Container(
+                                        SizedBox(
                                           width: 85,
                                           height: 85,
                                           child: Image.asset(AlbumData().vOtherSongsArt[index]),
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Expanded(
                                           child: Text(
                                             AlbumData().vOtherSongs[index],
@@ -82,7 +82,7 @@ class Taehyung extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(width: 4),
+                                        const SizedBox(width: 4),
                                       ],
                                     ),
                                   ),

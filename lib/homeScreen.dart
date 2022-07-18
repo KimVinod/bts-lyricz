@@ -36,15 +36,15 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 14.0),
-          Container(
+          const SizedBox(height: 14.0),
+          SizedBox(
             height: 210,
             child: ListView(
-              padding: EdgeInsets.only(right: 10.0),
+              padding: const EdgeInsets.only(right: 10.0),
               scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               children: <Widget>[
-                SizedBox(width: 5),
+                const SizedBox(width: 5),
 
                 /// jack in the box
                 Column(
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-jackInTheBox.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-jackInTheBox.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     SizedBox(
                       height: 20,
                       width: 150,
@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 /// MORE
                 Column(
                   children: <Widget>[
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-more.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-more.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -123,7 +123,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     SizedBox(
                       height: 20,
                       width: 150,
@@ -140,7 +140,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
 
                 /// left and right
                 Column(
@@ -154,7 +154,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-leftandright.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-leftandright.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -172,7 +172,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     SizedBox(
                       height: 20,
                       width: 150,
@@ -189,7 +189,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
 
                 /// my you
                 Column(
@@ -203,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-myyou.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-myyou.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -221,7 +221,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     SizedBox(
                       height: 20,
                       width: 150,
@@ -242,7 +242,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10.0), // space above albums
+          const SizedBox(height: 10.0), // space above albums
           Text(
             "Discography",
             style: GoogleFonts.openSans(
@@ -250,15 +250,15 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 14.0),
-          Container(
+          const SizedBox(height: 14.0),
+          SizedBox(
             height: 190,
             child: ListView(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.only(right: 10.0),
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(right: 10.0),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                SizedBox(width: 5),
+                const SizedBox(width: 5),
                 ///digital singles
                 Column(
                   children: <Widget>[
@@ -271,7 +271,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/digital-singles.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/digital-singles.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -281,7 +281,7 @@ class HomeScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///kr albums
                 Column(
                   children: <Widget>[
@@ -294,7 +294,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/kr-albums.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/kr-albums.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -304,7 +304,7 @@ class HomeScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///jp albums
                 Column(
                   children: <Widget>[
@@ -317,7 +317,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/jp-albums.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/jp-albums.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -327,7 +327,7 @@ class HomeScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///uo albums
                 Column(
                   children: <Widget>[
@@ -340,7 +340,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/uo-albums.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/uo-albums.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -350,7 +350,7 @@ class HomeScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///uo albums
                 Column(
                   children: <Widget>[
@@ -363,7 +363,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/uo-songs2.jpg"), fit: BoxFit.fill)
+                              image: const DecorationImage(image: AssetImage("images/uo-songs2.jpg"), fit: BoxFit.fill)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -376,7 +376,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10.0), // space above solo
+          const SizedBox(height: 10.0), // space above solo
           Text(
             "Solo Projects",
             style: GoogleFonts.openSans(
@@ -384,15 +384,15 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 14.0), //space below solo
-          Container(
+          const SizedBox(height: 14.0), //space below solo
+          SizedBox(
             height: 208,
             child: ListView(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.only(right: 10.0),
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(right: 10.0),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                SizedBox(width: 5),
+                const SizedBox(width: 5),
                 ///joon
                 Column(
                   children: <Widget>[
@@ -405,7 +405,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/joon.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/joon.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -413,7 +413,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Namjoon())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "RM",
                       style: GoogleFonts.openSans(
@@ -423,7 +423,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///jin
                 Column(
                   children: <Widget>[
@@ -436,7 +436,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/jin.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/jin.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -444,7 +444,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jin())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "Jin",
                       style: GoogleFonts.openSans(
@@ -454,7 +454,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///yoongi
                 Column(
                   children: <Widget>[
@@ -467,7 +467,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/yoongi.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/yoongi.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -475,7 +475,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Yoongi())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "SUGA / Agust D",
                       style: GoogleFonts.openSans(
@@ -485,7 +485,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///hobi
                 Column(
                   children: <Widget>[
@@ -498,7 +498,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/hobi.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/hobi.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -506,7 +506,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Hoseok())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "j-hope",
                       style: GoogleFonts.openSans(
@@ -516,7 +516,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///jimin
                 Column(
                   children: <Widget>[
@@ -529,7 +529,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/jimin.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/jimin.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -537,7 +537,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jimin())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "Jimin",
                       style: GoogleFonts.openSans(
@@ -547,7 +547,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///tae
                 Column(
                   children: <Widget>[
@@ -560,7 +560,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/tae.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/tae.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -568,7 +568,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Taehyung())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "V",
                       style: GoogleFonts.openSans(
@@ -578,7 +578,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 ///jk
                 Column(
                   children: <Widget>[
@@ -591,7 +591,7 @@ class HomeScreen extends StatelessWidget {
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(image: AssetImage("images/members/jk.jpg"), fit: BoxFit.cover)
+                              image: const DecorationImage(image: AssetImage("images/members/jk.jpg"), fit: BoxFit.cover)
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
@@ -599,7 +599,7 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jungkook())),
                           ),
                         )),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Text(
                       "Jungkook",
                       style: GoogleFonts.openSans(
@@ -612,7 +612,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
         ],
       ),
     );

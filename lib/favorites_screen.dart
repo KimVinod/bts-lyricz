@@ -42,26 +42,26 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
           title: Text("Favorites", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-          backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+          backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
           actions: [
             IconButton(
-              icon: Icon(Icons.close),
+              icon: const Icon(Icons.close),
               tooltip: "Remove all",
               onPressed: () {
                 showDialog(context: context, builder: (context) {
                   return AlertDialog(
-                    backgroundColor: Color.fromRGBO(180, 136, 212, 1),
-                    title: Text("Do you want to remove all songs?", style: TextStyle(fontSize: 16),),
+                    backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+                    title: const Text("Do you want to remove all songs?", style: TextStyle(fontSize: 16),),
                     actions: [
                       TextButton(onPressed: () {
                         Navigator.pop(context);
-                      }, child: Text("NO", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),), style: ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.white30))),
+                      }, style: ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.white30)), child: const Text("NO", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),)),
                       TextButton(onPressed: () {
                         Navigator.pop(context);
                         userFavLyrics = [];
                         userFavLyricsBox.put("favouritesList", userFavLyrics);
                         setState(() {});
-                      }, child: Text("YES", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),), style: ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.white30))),
+                      }, style: ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.white30)), child: const Text("YES", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),)),
                     ]
                   );
                 });
@@ -69,7 +69,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             ),
           ],
         ),
-        backgroundColor: Color.fromRGBO(180, 136, 212, 1),
+        backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
         body: SafeArea(
           child: NotificationListener<OverscrollIndicatorNotification> (
             onNotification: (OverscrollIndicatorNotification overScroll){
@@ -79,21 +79,21 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             child: userFavLyrics.isNotEmpty
                 ? Column(
                   children: [
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text("Swipe to remove songs  >.<",style: GoogleFonts.openSans(
                       fontSize: 16,
                       fontStyle: FontStyle.italic
                     ),),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Expanded(
                       child: RawScrollbar(
-                        thumbColor: Color.fromRGBO(130, 70, 190, 1),
+                        thumbColor: const Color.fromRGBO(130, 70, 190, 1),
                         thickness: 7.0,
-                        radius: Radius.circular(15.0),
+                        radius: const Radius.circular(15.0),
                         thumbVisibility: false,
                         child: ListView.builder(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.only(bottom: 15),
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(bottom: 15),
               itemCount: userFavLyrics.length,
               itemBuilder: (context, index) {
                         final item = userFavLyrics[index];
@@ -118,11 +118,11 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                     Container(
                                       height: 70,
                                       decoration: BoxDecoration(
-                                          color: Color.fromRGBO(152, 105, 190, 1),
+                                          color: const Color.fromRGBO(152, 105, 190, 1),
                                           borderRadius: BorderRadius.circular(20)),
                                       child: Row(
                                         children: <Widget>[
-                                          SizedBox(width: 10),
+                                          const SizedBox(width: 10),
                                           Expanded(
                                             child: Text(
                                               userFavLyrics[index],
@@ -132,7 +132,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(width: 5),
+                                          const SizedBox(width: 5),
                                         ],
                                       ),
                                     ),
@@ -680,21 +680,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
-                                              case "Butter":
-                                                {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsENG(
-                                                        songLyrics: AlbumData().butterLyrics,
-                                                        songName: "BUTTER",
-                                                        songTabs: AlbumData().butterAlbumTabs,
-                                                        songFullName: item,
-                                                      ),
-                                                    ),
-                                                  ).then((value) => setState(() {}));
-                                                }
-                                                break;
                                               case "Life Goes On":
                                                 {
                                                   Navigator.push(
@@ -781,22 +766,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                         songLyrics: AlbumData().beStayLyrics,
                                                         songName: "STAY",
                                                         songTabs: AlbumData().beAlbumTabs,
-                                                        songFullName: item,
-                                                      ),
-                                                    ),
-                                                  ).then((value) => setState(() {}));
-                                                }
-                                                break;
-                                              case "Dynamite":
-                                                {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsKR(
-                                                        songLyrics:
-                                                        AlbumData().dynamiteLyrics,
-                                                        songName: "DYNAMITE",
-                                                        songTabs: AlbumData().dynamiteTabs,
                                                         songFullName: item,
                                                       ),
                                                     ),
@@ -2616,22 +2585,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
-                                              case "Black Swan":
-                                                {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsKR(
-                                                        songLyrics:
-                                                        AlbumData().mots7BlackSwan,
-                                                        songName: "BLACK SWAN",
-                                                        songTabs: AlbumData().mots7Tabs,
-                                                        songFullName: item,
-                                                      ),
-                                                    ),
-                                                  ).then((value) => setState(() {}));
-                                                }
-                                                break;
                                               case "Filter":
                                                 {
                                                   Navigator.push(
@@ -3793,22 +3746,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
-                                              case "Film Out":
-                                                {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsJP(
-                                                        songLyrics:
-                                                        AlbumData().btsTheBestFilmOut,
-                                                        songName: "FILM OUT",
-                                                        songTabs: AlbumData().btsTheBestTabs,
-                                                        songFullName: item,
-                                                      ),
-                                                    ),
-                                                  ).then((value) => setState(() {}));
-                                                }
-                                                break;
                                               case "Heartbeat":
                                                 {
                                                   Navigator.push(
@@ -4565,21 +4502,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
-                                              case "Butter (ft. Megan Thee Stallion)":
-                                                {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) => LyricsENG(
-                                                        songLyrics: AlbumData().butterRemix,
-                                                        songName: "BUTTER (FT. MEGAN THE STALLION)",
-                                                        songTabs: AlbumData().butterRemixAlbumTabs,
-                                                        songFullName: item,
-                                                      ),
-                                                    ),
-                                                  ).then((value) => setState(() {}));
-                                                }
-                                                break;
                                               case "We Are Bulletproof Pt. 1 (4 BEGINS Ruff)":
                                                 {
                                                   Navigator.push(
@@ -5251,7 +5173,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                           LyricsENG(
                                                             songName: "INTRO",
                                                             songLyrics: AlbumData().jackInTheBoxIntro,
-                                                            songTabs: [1, 0, 0, 0],
+                                                            songTabs: const [1, 0, 0, 0],
                                                             songFullName: item,
                                                           ),
                                                     ),
@@ -5394,9 +5316,9 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text("Nothing here  ~.~", style: GoogleFonts.openSans(fontSize: 18, fontStyle: FontStyle.italic),),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text("Add your favorite songs by clicking on the heart icon in lyrics screen", textAlign: TextAlign.center, style: GoogleFonts.openSans(fontSize: 18, fontStyle: FontStyle.italic),),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       ClipRRect(borderRadius: BorderRadius.circular(12), child: Image.asset("images/fav_hint.jpg"))
                     ],
 

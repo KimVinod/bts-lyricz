@@ -7,25 +7,25 @@ import 'package:google_fonts/google_fonts.dart';
 class AlbumsUO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = "BTS Unofficial Albums";
+    const title = "BTS Unofficial Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (OverscrollIndicatorNotification overScroll) {
             overScroll.disallowIndicator();
             return true;
           },
           child: GridView(
-            physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.only(top: 15),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.only(top: 15),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, childAspectRatio: 0.73),
             children: <Widget>[
               /// bts world
@@ -40,7 +40,7 @@ class AlbumsUO extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage("images/bts-world.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/bts-world.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -58,7 +58,7 @@ class AlbumsUO extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 20,
                     width: 150,

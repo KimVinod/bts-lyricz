@@ -28,7 +28,7 @@ dependencies:
   #http: ^0.13.4
   package_info_plus: ^1.4.2
   fluttertoast: ^8.0.9
-  flutter_native_splash: ^2.2.4
+  flutter_native_splash: ^2.2.5
   flutter_launcher_icons: ^0.9.3
   url_launcher: ^6.1.5
   firebase_core: ^1.19.2

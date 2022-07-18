@@ -31,11 +31,11 @@ class _SearchSongsState extends State<SearchSongs> {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text("Search songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
 
       ),
       body: Material(
-        color: Color.fromRGBO(180, 136, 212, 1),
+        color: const Color.fromRGBO(180, 136, 212, 1),
         child: Column(
           children: [
             buildSearch(),
@@ -63,11 +63,11 @@ class _SearchSongsState extends State<SearchSongs> {
                               Container(
                                 height: 70,
                                 decoration: BoxDecoration(
-                                    color: Color.fromRGBO(152, 105, 190, 1),
+                                    color: const Color.fromRGBO(152, 105, 190, 1),
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Row(
                                   children: <Widget>[
-                                    SizedBox(width: 10),
+                                    const SizedBox(width: 10),
                                     Expanded(
                                       child: Text(
                                         song.name,
@@ -77,7 +77,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                         ),
                                       ),
                                     ),
-                                    SizedBox(width: 5),
+                                    const SizedBox(width: 5),
                                   ],
                                 ),
                               ),
@@ -625,21 +625,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
-                                        case "Butter":
-                                          {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => LyricsENG(
-                                                  songLyrics: AlbumData().butterLyrics,
-                                                  songName: "BUTTER",
-                                                  songTabs: AlbumData().butterAlbumTabs,
-                                                  songFullName: song.name,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          break;
                                         case "Life Goes On":
                                           {
                                             Navigator.push(
@@ -726,22 +711,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                                   songLyrics: AlbumData().beStayLyrics,
                                                   songName: "STAY",
                                                   songTabs: AlbumData().beAlbumTabs,
-                                                  songFullName: song.name,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          break;
-                                        case "Dynamite":
-                                          {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => LyricsKR(
-                                                  songLyrics:
-                                                  AlbumData().dynamiteLyrics,
-                                                  songName: "DYNAMITE",
-                                                  songTabs: AlbumData().dynamiteTabs,
                                                   songFullName: song.name,
                                                 ),
                                               ),
@@ -2561,22 +2530,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
-                                        case "Black Swan":
-                                          {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => LyricsKR(
-                                                  songLyrics:
-                                                  AlbumData().mots7BlackSwan,
-                                                  songName: "BLACK SWAN",
-                                                  songTabs: AlbumData().mots7Tabs,
-                                                  songFullName: song.name,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          break;
                                         case "Filter":
                                           {
                                             Navigator.push(
@@ -3738,22 +3691,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
-                                        case "Film Out":
-                                          {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => LyricsJP(
-                                                  songLyrics:
-                                                  AlbumData().btsTheBestFilmOut,
-                                                  songName: "FILM OUT",
-                                                  songTabs: AlbumData().btsTheBestTabs,
-                                                  songFullName: song.name,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          break;
                                         case "Heartbeat":
                                           {
                                             Navigator.push(
@@ -4510,21 +4447,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
-                                        case "Butter (ft. Megan Thee Stallion)":
-                                          {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) => LyricsENG(
-                                                  songLyrics: AlbumData().butterRemix,
-                                                  songName: "BUTTER (FT. MEGAN THE STALLION)",
-                                                  songTabs: AlbumData().butterRemixAlbumTabs,
-                                                  songFullName: song.name,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          break;
                                         case "We Are Bulletproof Pt. 1 (4 BEGINS Ruff)":
                                           {
                                             Navigator.push(
@@ -5196,7 +5118,7 @@ class _SearchSongsState extends State<SearchSongs> {
                                                     LyricsENG(
                                                       songName: "INTRO",
                                                       songLyrics: AlbumData().jackInTheBoxIntro,
-                                                      songTabs: [1, 0, 0, 0],
+                                                      songTabs: const [1, 0, 0, 0],
                                                       songFullName: song.name,
                                                     ),
                                               ),
