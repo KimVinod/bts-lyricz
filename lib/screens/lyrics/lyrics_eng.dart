@@ -1,5 +1,5 @@
 import 'dart:developer';
-
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,7 +50,7 @@ class _LyricsENGState extends State<LyricsENG> {
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
           title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-          backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+          backgroundColor: appBarColor,
           bottom: TabBar(
             indicatorColor: Colors.purple[100],
             tabs: const [Tab(text: "ENG")],
@@ -77,7 +77,7 @@ class _LyricsENGState extends State<LyricsENG> {
           children: [
             widget.songTabs![0] == 1 //ENG
                 ? Container(
-              color: const Color.fromRGBO(180, 136, 212, 1),
+              color: appUILightColor,
               width: double.infinity,
               child: Padding(
                 padding:
@@ -113,7 +113,7 @@ class _LyricsENGState extends State<LyricsENG> {
                     ],
                   )
                       : Container(
-                    color: const Color.fromRGBO(180, 136, 212, 1),
+                    color: appUILightColor,
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -129,7 +129,7 @@ class _LyricsENGState extends State<LyricsENG> {
               ),
             )
                 : Container(
-              color: const Color.fromRGBO(180, 136, 212, 1),
+              color: appUILightColor,
               width: double.infinity,
               child: Center(
                 child: Text(

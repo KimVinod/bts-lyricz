@@ -8,6 +8,7 @@ import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class SearchSongs extends StatefulWidget {
   const SearchSongs({Key? key}) : super(key: key);
@@ -33,11 +34,11 @@ class SearchSongsState extends State<SearchSongs> {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text("Search songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
 
       ),
       body: Material(
-        color: const Color.fromRGBO(180, 136, 212, 1),
+        color: appUILightColor,
         child: Column(
           children: [
             buildSearch(),

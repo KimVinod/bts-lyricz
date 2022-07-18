@@ -1,5 +1,5 @@
 import 'dart:developer';
-
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,7 +44,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
           title: Text("Favorites", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-          backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+          backgroundColor: appBarColor,
           actions: [
             IconButton(
               icon: const Icon(Icons.close),
@@ -52,7 +52,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               onPressed: () {
                 showDialog(context: context, builder: (context) {
                   return AlertDialog(
-                    backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+                    backgroundColor: appUILightColor,
                     title: const Text("Do you want to remove all songs?", style: TextStyle(fontSize: 16),),
                     actions: [
                       TextButton(onPressed: () {
@@ -71,7 +71,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             ),
           ],
         ),
-        backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+        backgroundColor: appUILightColor,
         body: SafeArea(
           child: NotificationListener<OverscrollIndicatorNotification> (
             onNotification: (OverscrollIndicatorNotification overScroll){

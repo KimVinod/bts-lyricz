@@ -1,5 +1,6 @@
 import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,13 +15,13 @@ class AlbumsJP extends StatelessWidget {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         //backgroundColor: Colors.purple[400],
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
         //color: Colors.purple[200],
-        color: const Color.fromRGBO(180, 136, 212, 1),
+        color: appUILightColor,
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (OverscrollIndicatorNotification overScroll) {
             overScroll.disallowIndicator();

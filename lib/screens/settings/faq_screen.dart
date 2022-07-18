@@ -1,19 +1,20 @@
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class FAQScreen extends StatelessWidget {
   const FAQScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Divider div = Divider(height: 25, thickness: 1, color: const Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
+    Divider div = Divider(height: 25, thickness: 1, color: appUIDarkColor.withOpacity(0.3));
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: appUILightColor,
       appBar: AppBar(
         title: Text("FAQ", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
       ),
       body: SafeArea(
         child: ListView(

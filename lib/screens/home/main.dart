@@ -14,7 +14,7 @@ import 'package:bts_lyrics_app/screens/search/search_songs.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:native_updater/native_updater.dart';
-
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
 
 final ZoomDrawerController z = ZoomDrawerController();
@@ -59,8 +59,8 @@ Future<void> main() async {
       home: const BTSLyrics(),
     theme: ThemeData(
       textTheme: GoogleFonts.openSansTextTheme(),
-      primaryColor: const Color.fromRGBO(180, 136, 212, 1),
-        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color.fromRGBO(180, 136, 212, 1))
+      primaryColor: appUILightColor,
+        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: appUILightColor)
     ),
   ));
 }
@@ -127,7 +127,7 @@ class BTSLyricsState extends State<BTSLyrics> {
         mainScreenAbsorbPointer: true,
         disableDragGesture: false,
         androidCloseOnBackTap: true,
-        menuBackgroundColor: const Color.fromRGBO(91, 50, 120, 1),
+        menuBackgroundColor: appUIDarkColor,
         menuScreen: const DrawerBody(),
         mainScreen: Body(),
       ),
@@ -156,12 +156,12 @@ class Body extends StatelessWidget {
     );
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: appUILightColor,
       body: SafeArea(
         child: Column(
           children: <Widget>[
             Container(
-              color: const Color.fromRGBO(180, 136, 212, 1),
+              color: appUILightColor,
               //color: Color.fromRGBO(150, 86, 190, 1),
               width: MediaQuery.of(context).size.width,
               //height: MediaQuery.of(context).size.height * 0.07,
@@ -172,7 +172,7 @@ class Body extends StatelessWidget {
                   Builder(
                       builder: (context) {
                         return Material(
-                          color: const Color.fromRGBO(180, 136, 212, 1),
+                          color: appUILightColor,
                           child: IconButton(
                             onPressed: () {
                               z.open!();
@@ -192,7 +192,7 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   Material(
-                    color: const Color.fromRGBO(180, 136, 212, 1),
+                    color: appUILightColor,
                     child: IconButton(
                       icon: const Icon(Icons.search, color: Colors.black),
                       tooltip: "Search",
@@ -237,7 +237,7 @@ class DrawerBody extends StatelessWidget {
     return Container(
       width: double.infinity,
       //color: Color.fromRGBO(125, 60, 152, 1),
-      color: const Color.fromRGBO(91, 50, 120, 1),
+      color: appUIDarkColor,
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 12, bottom: 10),
@@ -273,7 +273,7 @@ class DrawerBody extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.only(left: 14),
                               height: 55,
-                              color: const Color.fromRGBO(180, 136, 212, 1),
+                              color: appUILightColor,
                               child: Row(
                                 children: [
                                   const Icon(Icons.system_update_sharp, color: Colors.black),
@@ -322,7 +322,7 @@ class DrawerBody extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.only(left: 14),
                               height: 55,
-                              color: const Color.fromRGBO(180, 136, 212, 1),
+                              color: appUILightColor,
                               child: Row(
                                 children: [
                                   const Icon(Icons.favorite_outline, color: Colors.black),
@@ -765,7 +765,7 @@ class DrawerBody extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.only(left: 14),
                               height: 55,
-                              color: const Color.fromRGBO(180, 136, 212, 1),
+                              color: appUILightColor,
                               child: Row(
                                 children: [
                                   const Icon(Icons.settings, color: Colors.black),

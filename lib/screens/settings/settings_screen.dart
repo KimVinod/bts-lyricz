@@ -7,6 +7,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     buildNumber: 'Unknown',
   );
 
-  Divider div = Divider(height: 0, thickness: 1, color: const Color.fromRGBO(91, 50, 120, 1).withOpacity(0.3));
+  Divider div = Divider(height: 0, thickness: 1, color: appUIDarkColor.withOpacity(0.3));
 
   void emailMe() async {
     String? encodeQueryParameters(Map<String, String> params) {
@@ -52,7 +53,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void showDialogBox(BuildContext context) {
     showDialog(context: context, builder: (context) {
       return Dialog(
-        backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+        backgroundColor: appUILightColor,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -86,7 +87,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           height: MediaQuery.of(context).size.height * 0.5,
           width: MediaQuery.of(context).size.width * 0.75,
           decoration: BoxDecoration(
-            color: const Color.fromRGBO(180, 136, 212, 1),
+            color: appUILightColor,
             borderRadius:
             BorderRadius.circular(20),
           ),
@@ -213,10 +214,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(180, 136, 212, 1),
+      backgroundColor: appUILightColor,
       appBar: AppBar(
         title: Text("Settings", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
       ),
       body: SafeArea(
         child: SettingsList(

@@ -3,6 +3,7 @@ import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class AlbumsUO extends StatelessWidget {
   const AlbumsUO({Key? key}) : super(key: key);
@@ -13,12 +14,12 @@ class AlbumsUO extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
-        color: const Color.fromRGBO(180, 136, 212, 1),
+        color: appUILightColor,
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (OverscrollIndicatorNotification overScroll) {
             overScroll.disallowIndicator();

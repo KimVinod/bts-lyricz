@@ -4,6 +4,7 @@ import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class Taehyung extends StatelessWidget {
   const Taehyung({Key? key}) : super(key: key);
@@ -16,11 +17,11 @@ class Taehyung extends StatelessWidget {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
-        backgroundColor: const Color.fromRGBO(150, 86, 190, 1),
+        backgroundColor: appBarColor,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color: const Color.fromRGBO(180, 136, 212, 1),
+        color: appUILightColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
