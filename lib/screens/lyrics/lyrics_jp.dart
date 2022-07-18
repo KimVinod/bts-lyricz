@@ -1,20 +1,22 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
-class LyricsKR extends StatefulWidget {
+class LyricsJP extends StatefulWidget {
   final List<String>? songLyrics;
   final String? songName, songFullName;
   final List<int>? songTabs;
 
-  const LyricsKR({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+  const LyricsJP({Key? key ,required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName}) : super(key: key);
 
   @override
-  State<LyricsKR> createState() => _LyricsKRState();
+  State<LyricsJP> createState() => _LyricsJPState();
 }
 
-class _LyricsKRState extends State<LyricsKR> {
+class _LyricsJPState extends State<LyricsJP> {
 
   late Box userFavLyricsBox;
   List userFavLyrics = [];
@@ -29,7 +31,7 @@ class _LyricsKRState extends State<LyricsKR> {
         isFav = true;
       });
     }
-    print("load favList: $userFavLyrics");
+    log("load favList: $userFavLyrics");
   }
 
   @override
@@ -53,7 +55,7 @@ class _LyricsKRState extends State<LyricsKR> {
           bottom: TabBar(
             indicatorColor: Colors.purple[100],
             tabs: const [
-              Tab(text: "KOR"),
+              Tab(text: "JP"),
               Tab(text: "ENG"),
               Tab(text: "ROM"),
             ],
@@ -72,13 +74,13 @@ class _LyricsKRState extends State<LyricsKR> {
                 });
               }
               userFavLyricsBox.put("favouritesList", userFavLyrics);
-              print("current favList: $userFavLyrics");
+              log("current favList: $userFavLyrics");
             }, icon: Icon(isFav ? Icons.favorite :Icons.favorite_outline), tooltip: "Add to favorites",)
           ],
         ),
         body: TabBarView(
           children: [
-            widget.songTabs![2] == 1 // KOR
+            widget.songTabs![3] == 1 //JP
                 ? Container(
               color: const Color.fromRGBO(180, 136, 212, 1),
               width: double.infinity,
@@ -92,7 +94,7 @@ class _LyricsKRState extends State<LyricsKR> {
                     overScroll.disallowIndicator();
                     return true;
                   },
-                  child: widget.songLyrics![2] != ""
+                  child: widget.songLyrics![3] != ""
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -107,7 +109,7 @@ class _LyricsKRState extends State<LyricsKR> {
                       ),
                       const SizedBox(height: 12.0),
                       Text(
-                        widget.songLyrics![2],
+                        widget.songLyrics![3],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
@@ -172,12 +174,8 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
-                        widget.songLyrics![0],
-                        style: GoogleFonts.openSans(
-                          fontSize: 16.0,
-                        ),
-                      ),
+                      Text(widget.songLyrics![0],
+                          style: GoogleFonts.openSans(fontSize: 16.0)),
                       const SizedBox(height: 10.0),
                     ],
                   )

@@ -1,7 +1,7 @@
-import 'package:bts_lyrics_app/albumdata.dart';
-import 'package:bts_lyrics_app/lyricsENG.dart';
-import 'package:bts_lyrics_app/lyricsJP.dart';
-import 'package:bts_lyrics_app/lyricsKR.dart';
+import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,7 +11,7 @@ class Songs extends StatelessWidget {
   final String? albumName;
   final String? albumArt;
 
-  const Songs({this.songNames, this.albumName, this.albumArt});
+  const Songs({Key? key ,this.songNames, this.albumName, this.albumArt}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,6 @@ class Songs extends StatelessWidget {
                               ),
                             ),
                             onTap: () {
-                              print(songNames![index]);
                               switch (songNames![index]) {
                                 case "Permission to Dance":
                                   {

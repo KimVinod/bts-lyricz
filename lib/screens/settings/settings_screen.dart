@@ -1,5 +1,5 @@
 import 'package:app_settings/app_settings.dart';
-import 'package:bts_lyrics_app/faq_screen.dart';
+import 'package:bts_lyrics_app/screens/settings/faq_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -102,27 +102,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     fontSize: 19
                 ),
               ),
-              Container(
-                child: Column(
-                  children: [
-                    Container(
-                      height: 140,
-                      width: 140,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
-                          borderRadius: BorderRadius.circular(20)
-                      ),
+              Column(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 140,
+                    decoration: BoxDecoration(
+                        image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
+                        borderRadius: BorderRadius.circular(20)
                     ),
-                    Text(
-                      "Version: ${_packageInfo.version} (${_packageInfo.buildNumber})",
-                      style: GoogleFonts.openSans(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16
-                      ),
+                  ),
+                  Text(
+                    "Version: ${_packageInfo.version} (${_packageInfo.buildNumber})",
+                    style: GoogleFonts.openSans(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               Text(
                 "Special thanks to translator armys & genius.com for the lyrics :)",

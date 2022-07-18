@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +10,7 @@ class LyricsENG extends StatefulWidget {
   final String? songName, songFullName;
   final List<int>? songTabs;
 
-  const LyricsENG({required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName});
+  const LyricsENG({Key? key , required this.songLyrics, required this.songName, required this.songTabs, required this.songFullName}) : super(key: key);
 
   @override
   State<LyricsENG> createState() => _LyricsENGState();
@@ -29,7 +31,7 @@ class _LyricsENGState extends State<LyricsENG> {
         isFav = true;
       });
     }
-    print("load favList: $userFavLyrics");
+    log("load favList: $userFavLyrics");
   }
 
   @override
@@ -67,7 +69,7 @@ class _LyricsENGState extends State<LyricsENG> {
                 });
               }
               userFavLyricsBox.put("favouritesList", userFavLyrics);
-              print("current favList: $userFavLyrics");
+              log("current favList: $userFavLyrics");
             }, icon: Icon(isFav ? Icons.favorite :Icons.favorite_outline), tooltip: "Add to favorites",)
           ],
         ),

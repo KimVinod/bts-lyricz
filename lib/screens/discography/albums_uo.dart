@@ -1,10 +1,12 @@
-import 'package:bts_lyrics_app/albumdata.dart';
-import 'package:bts_lyrics_app/songs.dart';
+import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AlbumsUO extends StatelessWidget {
+  const AlbumsUO({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     const title = "BTS Unofficial Albums";

@@ -1,21 +1,23 @@
-import 'package:bts_lyrics_app/lyricsENG.dart';
-import 'package:bts_lyrics_app/lyricsJP.dart';
-import 'package:bts_lyrics_app/lyricsKR.dart';
-import 'package:bts_lyrics_app/searchWidget.dart';
-import 'package:bts_lyrics_app/songData.dart';
+import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import 'package:bts_lyrics_app/screens/search/search_widget.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'songModel.dart';
-import 'albumdata.dart';
 
 class SearchSongs extends StatefulWidget {
+  const SearchSongs({Key? key}) : super(key: key);
+
 
   @override
-  _SearchSongsState createState() => _SearchSongsState();
+  SearchSongsState createState() => SearchSongsState();
 }
 
-class _SearchSongsState extends State<SearchSongs> {
+class SearchSongsState extends State<SearchSongs> {
   late List<Song> songs;
   String query = "";
 
@@ -87,7 +89,6 @@ class _SearchSongsState extends State<SearchSongs> {
                                   child: InkWell(
                                     borderRadius: BorderRadius.circular(20),
                                     onTap: () {
-                                      print(song.name);
                                       switch (song.name) {
                                         case "Still With You":
                                           {

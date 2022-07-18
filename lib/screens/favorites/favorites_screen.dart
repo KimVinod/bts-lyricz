@@ -1,11 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
-import 'package:bts_lyrics_app/lyricsENG.dart';
-import 'package:bts_lyrics_app/lyricsJP.dart';
-import 'package:bts_lyrics_app/lyricsKR.dart';
-import 'albumdata.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import '../../data/album_data.dart';
 
 class FavoritesScreen extends StatefulWidget {
   const FavoritesScreen({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     setState(() {
       userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
     });
-    print("load favList: $userFavLyrics");
+    log("load favList: $userFavLyrics");
   }
 
   @override
@@ -142,7 +144,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                         child: InkWell(
                                           borderRadius: BorderRadius.circular(20),
                                           onTap: () {
-                                            print(item);
                                             switch (item) {
                                               case "Still With You":
                                                 {

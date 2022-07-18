@@ -1,13 +1,15 @@
-import 'package:bts_lyrics_app/albumdata.dart';
-import 'package:bts_lyrics_app/songs.dart';
+import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AlbumsKR extends StatelessWidget {
+class AlbumsJP extends StatelessWidget {
+  const AlbumsJP({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    const title = "BTS Albums";
+    const title = "BTS Japanese Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
@@ -28,9 +30,9 @@ class AlbumsKR extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.only(top: 15),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, childAspectRatio: 0.73),
+                crossAxisCount: 2, childAspectRatio: 0.77),
             children: <Widget>[
-              /// 2 cool 4 skool
+              /// no more dream
               Column(
                 children: <Widget>[
                   Material(
@@ -42,7 +44,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/2cool4skool.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/nomoredream.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -51,11 +53,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName:
-                                AlbumData().twoCool4SkoolAlbumName,
-                                songNames: AlbumData()
-                                    .twoCool4SkoolAlbumSongs,
-                                albumArt: AlbumData().twoCool4SkoolArt,
+                                albumName: AlbumData().noMoreDreamAlbumName,
+                                songNames: AlbumData().noMoreDreamAlbumSongs,
+                                albumArt: AlbumData().noMoreDreamArt,
                               ),
                             ),
                           ),
@@ -67,7 +67,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "2 Cool 4 Skool",
+                        "No More Dream",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -78,7 +78,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// o!rul8,2?
+              /// boy in luv
               Column(
                 children: <Widget>[
                   Material(
@@ -90,7 +90,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/o!rul8,2.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/boyinluv.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -99,10 +99,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName:
-                                AlbumData().orul82AlbumName,
-                                songNames: AlbumData().orul82AlbumSongs,
-                                albumArt: AlbumData().orul82Art,
+                                albumName: AlbumData().boyInLuvAlbumName,
+                                songNames: AlbumData().boyInLuvAlbumSongs,
+                                albumArt: AlbumData().boyInLuvArt,
                               ),
                             ),
                           ),
@@ -114,7 +113,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "O!RUL8,2?",
+                        "Boy In Luv",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -125,7 +124,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// skool luv affair
+              /// danger
               Column(
                 children: <Widget>[
                   Material(
@@ -137,7 +136,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/skoolluvaffair.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/danger.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -146,9 +145,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().skoolLuvAffairAlbumName,
-                                songNames: AlbumData().skoolLuvAffairAlbumSongs,
-                                albumArt: AlbumData().skoolLuvAffairArt,
+                                albumName: AlbumData().dangerAlbumName,
+                                songNames: AlbumData().dangerAlbumSongs,
+                                albumArt: AlbumData().dangerArt,
                               ),
                             ),
                           ),
@@ -160,7 +159,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "Skool Luv Affair",
+                        "Danger",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -171,7 +170,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// dark and wild
+              /// wake up
               Column(
                 children: <Widget>[
                   Material(
@@ -183,7 +182,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/darkandwild.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/wakeup.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -192,9 +191,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().darkAndWildAlbumName,
-                                songNames: AlbumData().darkAndWildAlbumSongs,
-                                albumArt: AlbumData().darkAndWildArt,
+                                albumName: AlbumData().wakeUpAlbumName,
+                                songNames: AlbumData().wakeUpAlbumSongs,
+                                albumArt: AlbumData().wakeUpArt,
                               ),
                             ),
                           ),
@@ -206,7 +205,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "Dark & Wild",
+                        "Wake Up",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -217,7 +216,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// hyyh1
+              /// for you
               Column(
                 children: <Widget>[
                   Material(
@@ -229,7 +228,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/hyyh1.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/foryou.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -238,169 +237,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().hyyh1AlbumName,
-                                songNames: AlbumData().hyyh1AlbumSongs,
-                                albumArt: AlbumData().hyyh1Art,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "The most beautiful moment in life pt.1",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// hyyh2
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/hyyh2.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().hyyh2AlbumName,
-                                songNames: AlbumData().hyyh2AlbumSongs,
-                                albumArt: AlbumData().hyyh2Art,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "The most beautiful moment in life pt.2",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// young forever
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/youngforever.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().youngForeverAlbumName,
-                                songNames: AlbumData().youngForeverAlbumSongs,
-                                albumArt: AlbumData().youngForeverArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "The most beautiful moment in life :\nYoung Forever",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// wings
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/wings.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().wingsAlbumName,
-                                songNames: AlbumData().wingsAlbumSongs,
-                                albumArt: AlbumData().wingsArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "Wings",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// ynwa
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/ynwa.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().ynwaAlbumName,
-                                songNames: AlbumData().ynwaAlbumSongs,
-                                albumArt: AlbumData().ynwaArt,
+                                albumName: AlbumData().forYouAlbumName,
+                                songNames: AlbumData().forYouAlbumSongs,
+                                albumArt: AlbumData().forYouArt,
                               ),
                             ),
                           ),
@@ -412,7 +251,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "You Never Walk Alone",
+                        "For You",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -423,7 +262,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// ly her
+              /// inu
               Column(
                 children: <Widget>[
                   Material(
@@ -435,7 +274,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/lyher.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/ineedu.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -444,169 +283,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().lyHerAlbumName,
-                                songNames: AlbumData().lyHerAlbumSongs,
-                                albumArt: AlbumData().lyHerArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "Love Yourself 承\n'HER'",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// ly tear
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/lytear.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lyTearAlbumName,
-                                songNames: AlbumData().lyTearAlbumSongs,
-                                albumArt: AlbumData().lyTearArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "Love Yourself 轉\n'TEAR'",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// ly answer
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/lyanswer.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lyAnswerAlbumName,
-                                songNames: AlbumData().lyAnswerAlbumSongs,
-                                albumArt: AlbumData().lyAnswerArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "Love Yourself 結 'ANSWER'",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// mots persona
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/motspersona.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().motsPersonaAlbumName,
-                                songNames: AlbumData().motsPersonaAlbumSongs,
-                                albumArt: AlbumData().motsPersonaArt,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    "Map Of The Soul : PERSONA",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              /// mots 7
-              Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Ink(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/mots7.jpg"), fit: BoxFit.fill)
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().mots7AlbumName,
-                                songNames: AlbumData().mots7AlbumSongs,
-                                albumArt: AlbumData().mots7Art,
+                                albumName: AlbumData().iNeedUAlbumName,
+                                songNames: AlbumData().iNeedUAlbumSongs,
+                                albumArt: AlbumData().iNeedUArt,
                               ),
                             ),
                           ),
@@ -618,7 +297,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "Map Of The Soul : 7",
+                        "I NEED U",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -629,7 +308,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// be
+              /// run
               Column(
                 children: <Widget>[
                   Material(
@@ -641,7 +320,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/be.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/run.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -650,9 +329,9 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().beAlbumName,
-                                songNames: AlbumData().beAlbumSongs,
-                                albumArt: AlbumData().beArt,
+                                albumName: AlbumData().runAlbumName,
+                                songNames: AlbumData().runAlbumSongs,
+                                albumArt: AlbumData().runArt,
                               ),
                             ),
                           ),
@@ -664,7 +343,7 @@ class AlbumsKR extends StatelessWidget {
                     width: 150,
                     child: FittedBox(
                       child: Text(
-                        "BE",
+                        "Run",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -675,7 +354,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// butter and ptd
+              /// youth
               Column(
                 children: <Widget>[
                   Material(
@@ -687,7 +366,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/butter-ptd.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/youth.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -696,26 +375,32 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().butterPtdAlbumName,
-                                songNames: AlbumData().butterPtdAlbumSongs,
-                                albumArt: AlbumData().butterPtdArt,
+                                albumName: AlbumData().youthAlbumName,
+                                songNames: AlbumData().youthAlbumSongs,
+                                albumArt: AlbumData().youthArt,
                               ),
                             ),
                           ),
                         ),
                       )),
                   const SizedBox(height: 4),
-                  Text(
-                    "Butter / Permission\nto Dance",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 20,
+                    width: 150,
+                    child: FittedBox(
+                      child: Text(
+                        "Youth",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
-              /// butter and ptd
+              /// bst
               Column(
                 children: <Widget>[
                   Material(
@@ -727,7 +412,7 @@ class AlbumsKR extends StatelessWidget {
                         height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(image: AssetImage("images/proof.jpg"), fit: BoxFit.fill)
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/bst.jpg"), fit: BoxFit.fill)
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular(10),
@@ -736,9 +421,55 @@ class AlbumsKR extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Songs(
-                                albumName: AlbumData().proofAlbumName,
-                                songNames: AlbumData().proofAlbumSongs,
-                                albumArt: AlbumData().proofArt,
+                                albumName: AlbumData().bstAlbumName,
+                                songNames: AlbumData().bstAlbumSongs,
+                                albumArt: AlbumData().bstArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  SizedBox(
+                    height: 20,
+                    width: 150,
+                    child: FittedBox(
+                      child: Text(
+                        "Blood Sweat & Tears",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              /// crystal snow
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/crystalsnow.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().crystalSnowAlbumName,
+                                songNames: AlbumData().crystalSnowAlbumSongs,
+                                albumArt: AlbumData().crystalSnowArt,
                               ),
                             ),
                           ),
@@ -746,7 +477,7 @@ class AlbumsKR extends StatelessWidget {
                       )),
                   const SizedBox(height: 4),
                   Text(
-                    "Proof",
+                    "MIC DROP / DNA /\nCrystal Snow",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.openSans(
                       fontSize: 16.0,
@@ -755,8 +486,224 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-
-
+              /// face yourself
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/faceyourself.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().faceYourselfAlbumName,
+                                songNames: AlbumData().faceYourselfAlbumSongs,
+                                albumArt: AlbumData().faceYourselfArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  SizedBox(
+                    height: 20,
+                    width: 150,
+                    child: FittedBox(
+                      child: Text(
+                        "Face Yourself",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              /// fl airplane pt2
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/fl-airplane2.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().fakeLoveAlbumName,
+                                songNames: AlbumData().fakeLoveAlbumSongs,
+                                albumArt: AlbumData().fakeLoveArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  Text(
+                    "FAKE LOVE /\nAirplane pt.2",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.openSans(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              /// lights bwl
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/lights.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().lightsAlbumName,
+                                songNames: AlbumData().lightsAlbumSongs,
+                                albumArt: AlbumData().lightsArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  SizedBox(
+                    height: 20,
+                    width: 150,
+                    child: FittedBox(
+                      child: Text(
+                        "Lights / Boy With Luv",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              /// mots7 the journey
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/mots7thejourney.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().motsJourneyAlbumName,
+                                songNames: AlbumData().motsJourneyAlbumSongs,
+                                albumArt: AlbumData().motsJourneyArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  Text(
+                    "Map Of The Soul: 7\n~ The Journey ~",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.openSans(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              /// bts the best
+              Column(
+                children: <Widget>[
+                  Material(
+                      elevation: 3,
+                      shadowColor: Colors.purple.shade700,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Ink(
+                        width: 150,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(image: AssetImage("images/albums-jp/btsthebest.jpg"), fit: BoxFit.fill)
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs(
+                                albumName: AlbumData().btsTheBestAlbumName,
+                                songNames: AlbumData().btsTheBestAlbumSongs,
+                                albumArt: AlbumData().btsTheBestArt,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 4),
+                  SizedBox(
+                    height: 20,
+                    width: 150,
+                    child: FittedBox(
+                      child: Text(
+                        "BTS, THE BEST",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
 
 
             ],

@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:bts_lyrics_app/albumdata.dart';
-import 'package:bts_lyrics_app/albumsJP.dart';
-import 'package:bts_lyrics_app/albums.dart';
-import 'package:bts_lyrics_app/albumsUO.dart';
-import 'package:bts_lyrics_app/hoseok.dart';
-import 'package:bts_lyrics_app/jimin.dart';
-import 'package:bts_lyrics_app/jin.dart';
-import 'package:bts_lyrics_app/jungkook.dart';
-import 'package:bts_lyrics_app/namjoon.dart';
-import 'package:bts_lyrics_app/songs.dart';
-import 'package:bts_lyrics_app/songsUO.dart';
-import 'package:bts_lyrics_app/taehyung.dart';
-import 'package:bts_lyrics_app/yoongi.dart';
-import 'package:bts_lyrics_app/digitalSingles.dart';
+import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/screens/discography/albums_jp.dart';
+import 'package:bts_lyrics_app/screens/discography/albums_kr.dart';
+import 'package:bts_lyrics_app/screens/discography/albums_uo.dart';
+import 'package:bts_lyrics_app/screens/members/jin.dart';
+import 'package:bts_lyrics_app/screens/members/jungkook.dart';
+import 'package:bts_lyrics_app/screens/members/namjoon.dart';
+import 'package:bts_lyrics_app/screens/songs/songs.dart';
+import 'package:bts_lyrics_app/screens/discography/songs_uo.dart';
+import 'package:bts_lyrics_app/screens/members/taehyung.dart';
+import 'package:bts_lyrics_app/screens/members/yoongi.dart';
+import 'package:bts_lyrics_app/screens/members/hoseok.dart';
+import 'package:bts_lyrics_app/screens/members/jimin.dart';
+import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'lyricsENG.dart';
-import 'lyricsKR.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 14.0, top: 10.0),
+      padding: const EdgeInsets.only(left: 14.0, top: 6.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -276,7 +275,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DigitalSingles())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const DigitalSingles())),
                           ),
                         )),
                   ],
@@ -299,7 +298,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumsKR())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsKR())),
                           ),
                         )),
                   ],
@@ -322,7 +321,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumsJP())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsJP())),
                           ),
                         )),
                   ],
@@ -345,7 +344,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumsUO())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsUO())),
                           ),
                         )),
                   ],
@@ -368,7 +367,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SongsUO())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SongsUO())),
                           ),
                         )),
                   ],
@@ -410,7 +409,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Namjoon())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Namjoon())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -441,7 +440,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jin())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jin())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -472,7 +471,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Yoongi())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Yoongi())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -503,7 +502,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Hoseok())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Hoseok())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -534,7 +533,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jimin())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jimin())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -565,7 +564,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Taehyung())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Taehyung())),
                           ),
                         )),
                     const SizedBox(height: 4),
@@ -596,7 +595,7 @@ class HomeScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Jungkook())),
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jungkook())),
                           ),
                         )),
                     const SizedBox(height: 4),

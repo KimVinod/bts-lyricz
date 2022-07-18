@@ -1,4 +1,4 @@
-import 'songModel.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
 
 final allSongs = <Song>[
   const Song(
