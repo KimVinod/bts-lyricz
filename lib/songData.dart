@@ -2,6 +2,9 @@ import 'songModel.dart';
 
 final allSongs = <Song>[
   Song(
+    name: "= (Equal Sign)",
+  ),
+  Song(
     name: "00:00 (Zero O’Clock)",
   ),
   Song(
@@ -266,6 +269,9 @@ final allSongs = <Song>[
     name: "forever rain",
   ),
   Song(
+    name: "Future",
+  ),
+  Song(
     name: "Gajah (코끼리) (Gaeko (개코) ft. Rap Monster)",
   ),
   Song(
@@ -339,6 +345,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "Interlude: Wings",
+  ),
+  Song(
+    name: "Intro",
   ),
   Song(
     name: "Intro.",
@@ -572,6 +581,9 @@ final allSongs = <Song>[
     name: "Outro: 그게 말이 돼? (Do You Think It Makes Sense?)",
   ),
   Song(
+    name: "Pandora's Box",
+  ),
+  Song(
     name: "P.D.D (Please Don't Die) (Rap Monster x Warren G)",
   ),
   Song(
@@ -620,6 +632,9 @@ final allSongs = <Song>[
     name: "Serendipity (Full Length Edition)",
   ),
   Song(
+    name: "Safety Zone",
+  ),
+  Song(
     name: "Singularity",
   ),
   Song(
@@ -654,6 +669,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "Still With You",
+  ),
+  Song(
+    name: "STOP (세상에 나쁜 사람은 없다)",
   ),
   Song(
     name: "Sweet Night",
@@ -714,6 +732,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "We On",
+  ),
+  Song(
+    name: "What if...",
   ),
   Song(
     name: "Whalien 52",
@@ -819,6 +840,9 @@ final allSongs = <Song>[
   ),
   Song(
     name: "바다 (Sea)",
+  ),
+  Song(
+    name: "방화 (Arson)",
   ),
   Song(
     name: "뱁새 (Silver Spoon)",
