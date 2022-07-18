@@ -24,10 +24,10 @@ An android application using flutter framework which shows song lyrics of the bi
 </ul>
 
 ## Privacy Policy
-Link: https://sites.google.com/view/bts-lyricz/home
+Link: https://sites.google.com/view/bts-lyricz
 
 ## Version History
-Link: https://sites.google.com/view/bts-lyricz/version-history
+Link: https://sites.google.com/view/bts-lyricz-ver
 
 ## Credits
 Special thanks to translator armys and genius.com for the lyrics :)<br>
