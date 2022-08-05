@@ -5249,7 +5249,7 @@ class SearchSongsState extends State<SearchSongs> {
                                                   AlbumData().btsBadDecisions,
                                                   songName: "BAD DECISIONS",
                                                   songTabs: AlbumData().btsENGSinglesTabs,
-                                                  songFullName: AlbumData().btsSinglesSongs[index],
+                                                  songFullName: song.name,
                                                 ),
                                               ),
                                             );
