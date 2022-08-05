@@ -268,6 +268,22 @@ class DigitalSingles extends StatelessWidget {
                                               );
                                             }
                                             break;
+                                          case "Bad Decisions":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => LyricsENG(
+                                                    songLyrics:
+                                                    AlbumData().btsBadDecisions,
+                                                    songName: "BAD DECISIONS",
+                                                    songTabs: AlbumData().btsENGSinglesTabs,
+                                                    songFullName: AlbumData().btsSinglesSongs[index],
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                     ),
