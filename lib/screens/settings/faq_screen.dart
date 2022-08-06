@@ -41,6 +41,21 @@ class FAQScreen extends StatelessWidget {
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text('4.\nCover songs are not listed.',
+                style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            div,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text('5.\nI won\'t upload offline songs because of few reasons:\n'
+                  '- Might get copyright claim.\n'
+                  '- This will increase app size drastically.\n'
+                  '- We should listen songs through official platforms to support our boys :)',
+                style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            div,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Text('4.\nNotifications not working?\n'
                   'Your phone can restrict notifications to extend battery life.\n'
                   'Try doing these following steps:\n'

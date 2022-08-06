@@ -5293,6 +5293,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
+                                              case "Bad Decisions":
+                                                {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsENG(
+                                                        songLyrics:
+                                                        AlbumData().btsBadDecisions,
+                                                        songName: "BAD DECISIONS",
+                                                        songTabs: AlbumData().btsENGSinglesTabs,
+                                                        songFullName: item,
+                                                      ),
+                                                    ),
+                                                  ).then((value) => setState(() {}));
+                                                }
+                                                break;
                                             }
                                           },
                                         ),

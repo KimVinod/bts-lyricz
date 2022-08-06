@@ -64342,6 +64342,7 @@ class AlbumData {
   final List<int> btsENGSinglesTabs = [1, 0, 0, 0];
   final List<int> btsSinglesTabs = [1, 1, 1, 0];
   final List<int> btsJPSinglesTabs = [1, 1, 0, 1];
+
   final List<String> btsSinglesSongs = [
     "MIC Drop (Steve Aoki Remix) (ft. Desiigner)",
     "Waste It On Me",
@@ -64354,6 +64355,7 @@ class AlbumData {
     "Butter",
     "Butter (ft. Megan Thee Stallion)",
     "My Universe",
+    "Bad Decisions",
   ];
   final List<String> btsSinglesSongsArt = [
     "images/singles/bts-micdropDesiigner.jpg",
@@ -64367,6 +64369,68 @@ class AlbumData {
     "images/butter.jpg",
     "images/butterRemix.jpg",
     "images/myuniverse.jpg",
+    "images/singles/bts-bad-decisions.jpg",
+  ];
+  final List<String> btsBadDecisions = [
+    "[Intro: Snoop Dogg]\n"
+        "Radio station B-T-S-N-double O-P\n\n"
+        "[Verse 1: Jung Kook & Jimin]\n"
+        "No makeup on, I love that sh—\n"
+        "You're so damn beautiful, I swear you make me sick\n"
+        "I want your love, I want your name\n"
+        "Inside my heart, there's nothin' but a burning flame\n\n"
+        "[Pre-Chorus: V]\n"
+        "If you want my love\n"
+        "Come a little bit closer\n"
+        "Don't make me wait\n\n"
+        "[Chorus: Jung Kook, Jimin, Jin & V]\n"
+        "Let's make some bad decisions\n"
+        "I want you, ooh, baby, all of the time\n"
+        "So give me all your kisses\n"
+        "I want you Monday, Tuesday, Wednesday, baby, every night\n"
+        "And it feels like (Ooh, ah)\n"
+        "I can't seem to ever get you out of my mind\n"
+        "And it feels like (Ooh, ah)\n"
+        "I want you, ooh, baby, all of the time\n\n"
+        "[Verse 2: Snoop Dogg & Jung Kook]\n"
+        "Everybody see me lookin' fly (Oh, yeah)\n"
+        "And I think I know the reason why (Oh, yeah)\n"
+        "'Cause I got you right here by my side (Oh, yeah)\n"
+        "And I can't let you just walk away\n"
+        "If I ain't with ya, I'm not okay\n\n"
+        "[Pre-Chorus: Jin & Snoop Dogg]\n"
+        "If you want my love (Yeah)\n"
+        "Come a little bit closer\n"
+        "Don't make me wait (Ooh)\n\n"
+        "[Chorus: Jimin, V, Snoop Dogg, Jung Kook & *Jin*]\n"
+        "Let's make some bad decisions\n"
+        "I want you, ooh, baby, all of the time\n"
+        "So give me all your kisses (Kisses)\n"
+        "I want you Monday, Tuesday, Wednesday, baby, every night (Every night)\n"
+        "And it feels like (Ooh, ah, yeah)\n"
+        "I can't seem to ever get you out of my mind\n"
+        "*And it feels like* (Ooh, ah)\n"
+        "*I want you, ooh, baby, all of the time*\n\n"
+        "[Verse 3: Snoop Dogg]\n"
+        "Let's do things you always wanted\n"
+        "Have some fun and live your life\n"
+        "Help me waste a day and find a place\n"
+        "That we can face to face\n"
+        "Let me show you 'round my hood\n"
+        "There's bad meaning bad like bad meaning good\n"
+        "When it comes to rules, I break 'em\n\n"
+        "[Chorus: Jung Kook, Jimin, Snoop Dogg & V]\n"
+        "Let's make some bad decisions\n"
+        "I want you, ooh, baby, all of the time\n"
+        "So give me (Give me) all your kisses (Kisses)\n"
+        "I want you Monday, Tuesday, Wednesday, baby, every night\n"
+        "And it feels like (Ooh, yes, ah, yes)\n"
+        "I can't seem to ever get you out of my mind\n"
+        "And it feels like (Ooh, say what? Ah)\n"
+        "I want you, ooh, baby, all of the time (Ooh)",
+    "",
+    "",
+    "",
   ];
   final List<String> btsMICDropDesiigner = [
     "Playing that basketball\n"

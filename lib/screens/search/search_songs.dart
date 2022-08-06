@@ -5239,6 +5239,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "Bad Decisions":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsENG(
+                                                  songLyrics:
+                                                  AlbumData().btsBadDecisions,
+                                                  songName: "BAD DECISIONS",
+                                                  songTabs: AlbumData().btsENGSinglesTabs,
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),

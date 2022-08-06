@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/firebase_options.dart';
 import 'package:bts_lyrics_app/screens/home/home_screen.dart';
 import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -29,14 +30,18 @@ const AndroidNotificationChannel channel = AndroidNotificationChannel(
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   //print("A BG msg just showed up: ${message.messageId}");
 }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   if(kDebugMode) {
     FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
     FirebaseCrashlytics.instance.deleteUnsentReports();

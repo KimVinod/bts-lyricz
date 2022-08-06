@@ -71,6 +71,9 @@ final allSongs = <Song>[
     name: "badbye(Ft. eAeon)",
   ),
   const Song(
+    name: "Bad Decisions",
+  ),
+  const Song(
     name: "Base Line",
   ),
   const Song(

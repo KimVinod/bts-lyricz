@@ -29,6 +29,13 @@
             {
               "client_id": "172681549260-f15shcs0tbfmp6rq1fg99dm1o4585sit.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "172681549260-6jsvcqo3ubckf0h94fma03gj5msrbb48.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kimvinod.btsLyricsApp"
+              }
             }
           ]
         }
