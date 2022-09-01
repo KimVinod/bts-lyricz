@@ -103,7 +103,7 @@ class _LyricsENGState extends State<LyricsENG> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![0],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,

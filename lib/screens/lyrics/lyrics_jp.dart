@@ -108,7 +108,7 @@ class _LyricsJPState extends State<LyricsJP> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![3],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -174,7 +174,7 @@ class _LyricsJPState extends State<LyricsJP> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(widget.songLyrics![0],
+                      SelectableText(widget.songLyrics![0],
                           style: GoogleFonts.openSans(fontSize: 16.0)),
                       const SizedBox(height: 10.0),
                     ],
@@ -236,7 +236,7 @@ class _LyricsJPState extends State<LyricsJP> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![1],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
