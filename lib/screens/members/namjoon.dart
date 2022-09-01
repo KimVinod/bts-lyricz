@@ -448,6 +448,22 @@ class Namjoon extends StatelessWidget {
                                                 );
                                               }
                                               break;
+                                            case "SEXY NUKIM (섹시느낌) (Balming Tiger ft. RM of BTS)":
+                                              {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        LyricsKR(
+                                                          songName: "SEXY NUKIM (섹시느낌)",
+                                                          songLyrics: AlbumData().rmSexyNukim,
+                                                          songTabs: AlbumData().rmOtherSongsTabs,
+                                                          songFullName: AlbumData().rmOtherSongs[index],
+                                                        ),
+                                                  ),
+                                                );
+                                              }
+                                              break;
                                           }
                                         },
                                       ),

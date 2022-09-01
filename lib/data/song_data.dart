@@ -620,6 +620,9 @@ final allSongs = <Song>[
     name: "Rush (Ft. Krizz Kaliko)",
   ),
   const Song(
+    name: "Safety Zone",
+  ),
+  const Song(
     name: "Savage Love (Laxed - Siren Beat) (BTS Remix)",
   ),
   const Song(
@@ -635,7 +638,7 @@ final allSongs = <Song>[
     name: "Serendipity (Full Length Edition)",
   ),
   const Song(
-    name: "Safety Zone",
+    name: "SEXY NUKIM (섹시느낌) (Balming Tiger ft. RM of BTS)",
   ),
   const Song(
     name: "Singularity",

@@ -45,6 +45,55 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(width: 5),
 
+                /// SEXY NUKIM
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/rm/rm-sexy-nukim.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LyricsKR(
+                                  songName: "SEXY NUKIM (섹시느낌)",
+                                  songLyrics: AlbumData().rmSexyNukim,
+                                  songTabs: AlbumData().rmOtherSongsTabs,
+                                  songFullName: "SEXY NUKIM (섹시느낌) (Balming Tiger ft. RM of BTS)",
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "SEXY NUKIM (섹시느낌)",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
                 /// bad decisions
                 Column(
                   children: <Widget>[
@@ -179,55 +228,6 @@ class HomeScreen extends StatelessWidget {
                       child: FittedBox(
                         child: Text(
                           "MORE",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// left and right
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/jungkook/jungkook-leftandright.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LyricsENG(
-                                  songName: "Left and Right",
-                                  songLyrics: AlbumData().jungkookLeftAndRight,
-                                  songTabs: AlbumData().jungkookEngTabs,
-                                  songFullName: "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Left and Right",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(
                             fontSize: 16.0,
