@@ -108,7 +108,7 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![2],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -174,7 +174,7 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![0],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
@@ -240,7 +240,7 @@ class _LyricsKRState extends State<LyricsKR> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      Text(
+                      SelectableText(
                         widget.songLyrics![1],
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,

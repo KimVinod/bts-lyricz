@@ -56,7 +56,7 @@ class FAQScreen extends StatelessWidget {
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text('4.\nNotifications not working?\n'
+              child: Text('6.\nNotifications not working?\n'
                   'Your phone can restrict notifications to extend battery life.\n'
                   'Try doing these following steps:\n'
                   '- Enable auto-start from phone settings.',

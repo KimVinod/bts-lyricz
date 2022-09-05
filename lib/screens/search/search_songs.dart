@@ -5255,6 +5255,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "SEXY NUKIM (섹시느낌) (Balming Tiger ft. RM of BTS)":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsKR(
+                                                  songLyrics:
+                                                  AlbumData().rmSexyNukim,
+                                                  songName: "SEXY NUKIM (섹시느낌)",
+                                                  songTabs: AlbumData().rmOtherSongsTabs,
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),
