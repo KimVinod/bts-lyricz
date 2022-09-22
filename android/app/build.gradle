@@ -70,7 +70,7 @@ flutter {
 dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
 }
 
 apply plugin: 'com.google.firebase.crashlytics'
