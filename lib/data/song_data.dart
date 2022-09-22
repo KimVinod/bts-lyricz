@@ -620,6 +620,9 @@ final allSongs = <Song>[
     name: "Rush (Ft. Krizz Kaliko)",
   ),
   const Song(
+    name: "Rush Hour (Crush (크러쉬) ft. j-hope of BTS)",
+  ),
+  const Song(
     name: "Safety Zone",
   ),
   const Song(

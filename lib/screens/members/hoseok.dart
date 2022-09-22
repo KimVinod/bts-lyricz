@@ -269,6 +269,21 @@ class Hoseok extends StatelessWidget {
                                                 );
                                               }
                                               break;
+                                            case "Rush Hour (Crush (크러쉬) ft. j-hope of BTS)":
+                                              {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) => LyricsKR(
+                                                      songName: "RUSH HOUR",
+                                                      songLyrics: AlbumData().jhopeRushHour,
+                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                      songFullName: AlbumData().jhopeOtherSongs[index],
+                                                    ),
+                                                  ),
+                                                );
+                                              }
+                                              break;
                                           }
                                         },
                                       ),
