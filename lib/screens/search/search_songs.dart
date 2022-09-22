@@ -5278,7 +5278,7 @@ class SearchSongsState extends State<SearchSongs> {
                                               MaterialPageRoute(
                                                 builder: (context) => LyricsKR(
                                                   songLyrics:
-                                                  AlbumData().rmSexyNukim,
+                                                  AlbumData().jhopeRushHour,
                                                   songName: "RUSH HOUR",
                                                   songTabs: AlbumData().jhopeOtherSongsTabs,
                                                   songFullName: song.name,
