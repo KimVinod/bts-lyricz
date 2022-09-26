@@ -1686,7 +1686,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                     context,
                                                     MaterialPageRoute(
                                                       builder: (context) => LyricsKR(
-                                                        songLyrics: AlbumData().wingsIntro,
+                                                        songLyrics: AlbumData().wingsBST,
                                                         songName:
                                                         "피 땀 눈물 (BLOOD SWEAT & TEARS)",
                                                         songTabs: AlbumData().wingsTabs,
