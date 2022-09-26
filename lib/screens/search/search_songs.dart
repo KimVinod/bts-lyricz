@@ -5271,6 +5271,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "Rush Hour (Crush (크러쉬) ft. j-hope of BTS)":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsKR(
+                                                  songLyrics:
+                                                  AlbumData().jhopeRushHour,
+                                                  songName: "RUSH HOUR",
+                                                  songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),

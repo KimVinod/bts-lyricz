@@ -5325,6 +5325,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
+                                              case "Rush Hour (Crush (크러쉬) ft. j-hope of BTS)":
+                                                {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsKR(
+                                                        songLyrics:
+                                                        AlbumData().jhopeRushHour,
+                                                        songName: "RUSH HOUR",
+                                                        songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                        songFullName: item,
+                                                      ),
+                                                    ),
+                                                  ).then((value) => setState(() {}));
+                                                }
+                                                break;
                                             }
                                           },
                                         ),
