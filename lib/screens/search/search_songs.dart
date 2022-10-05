@@ -1632,7 +1632,7 @@ class SearchSongsState extends State<SearchSongs> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) => LyricsKR(
-                                                  songLyrics: AlbumData().wingsIntro,
+                                                  songLyrics: AlbumData().wingsBST,
                                                   songName:
                                                   "피 땀 눈물 (BLOOD SWEAT & TEARS)",
                                                   songTabs: AlbumData().wingsTabs,
@@ -5281,6 +5281,22 @@ class SearchSongsState extends State<SearchSongs> {
                                                   AlbumData().jhopeRushHour,
                                                   songName: "RUSH HOUR",
                                                   songTabs: AlbumData().jhopeOtherSongsTabs,
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
+                                        case "Yet To Come (Hyundai Ver.)":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsKR(
+                                                  songLyrics:
+                                                  AlbumData().btsYetToComeHyundai,
+                                                  songName: "YET TO COME (HYUNDAI VER.)",
+                                                  songTabs: const [1, 1, 1, 0],
                                                   songFullName: song.name,
                                                 ),
                                               ),
