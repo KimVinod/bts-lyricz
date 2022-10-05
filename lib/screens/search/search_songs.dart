@@ -5287,6 +5287,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "Yet To Come (Hyundai Ver.)":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsKR(
+                                                  songLyrics:
+                                                  AlbumData().btsYetToComeHyundai,
+                                                  songName: "YET TO COME (HYUNDAI VER.)",
+                                                  songTabs: const [1, 1, 1, 0],
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),
