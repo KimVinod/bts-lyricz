@@ -692,6 +692,9 @@ final allSongs = <Song>[
     name: "Telepathy",
   ),
   const Song(
+    name: "The Astronaut",
+  ),
+  const Song(
     name: "The Stars",
   ),
   const Song(

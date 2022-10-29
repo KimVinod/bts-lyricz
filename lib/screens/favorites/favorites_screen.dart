@@ -5357,6 +5357,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
+                                              case "The Astronaut":
+                                                {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsKR(
+                                                        songLyrics:
+                                                        AlbumData().jinTheAstronaut,
+                                                        songName: "THE ASTRONAUT",
+                                                        songTabs: AlbumData().jinOtherSongsTabs,
+                                                        songFullName: item,
+                                                      ),
+                                                    ),
+                                                  ).then((value) => setState(() {}));
+                                                }
+                                                break;
                                             }
                                           },
                                         ),
