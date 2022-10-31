@@ -158,6 +158,21 @@ class Jin extends StatelessWidget {
                                               );
                                             }
                                             break;
+                                          case "The Astronaut":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => LyricsKR(
+                                                    songName: "THE ASTRONAUT",
+                                                    songLyrics: AlbumData().jinTheAstronaut,
+                                                    songTabs: AlbumData().jinOtherSongsTabs,
+                                                    songFullName: AlbumData().jinOtherSongs[index],
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                     ),

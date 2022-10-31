@@ -5303,6 +5303,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "The Astronaut":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsKR(
+                                                  songLyrics:
+                                                  AlbumData().jinTheAstronaut,
+                                                  songName: "THE ASTRONAUT",
+                                                  songTabs: AlbumData().jinOtherSongsTabs,
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),
