@@ -804,7 +804,7 @@ class Songs extends StatelessWidget {
                                       MaterialPageRoute(
                                         builder: (context) => LyricsKR(
                                           songLyrics: AlbumData()
-                                              .darkAndWildSecondGrade,
+                                              .darkAndWildOutro,
                                           songName:
                                               "OUTRO: 그게 말이 돼? (DO YOU THINK IT MAKES SENSE?)",
                                           songTabs: AlbumData().darkAndWildTabs,
