@@ -28,15 +28,15 @@ dependencies:
   #http: ^0.13.4
   package_info_plus: ^3.0.1
   fluttertoast: ^8.1.1
-  flutter_native_splash: ^2.2.12
+  flutter_native_splash: ^2.2.13
   flutter_launcher_icons: ^0.10.0
   url_launcher: ^6.1.6
   firebase_core: ^2.1.1
-  firebase_messaging: ^14.0.3
+  firebase_messaging: ^14.0.4
   flutter_local_notifications: ^12.0.3
   google_fonts: ^3.0.1
   #change_app_package_name: ^1.0.0
-  firebase_crashlytics: ^3.0.3
+  firebase_crashlytics: ^3.0.4
   #in_app_update: ^3.0.0
   #native_updater: ^0.1.1
   native_updater:
@@ -48,7 +48,7 @@ dependencies:
   flutter_zoom_drawer: ^3.0.3
   settings_ui: ^2.0.2
   app_settings: ^4.1.8
-  share_plus: ^6.1.0
+  share_plus: ^6.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
