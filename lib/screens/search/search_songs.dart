@@ -5319,6 +5319,22 @@ class SearchSongsState extends State<SearchSongs> {
                                             );
                                           }
                                           break;
+                                        case "Dreamers":
+                                          {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => LyricsENG(
+                                                  songLyrics:
+                                                  AlbumData().jungkookDreamers,
+                                                  songName: "DREAMERS",
+                                                  songTabs: const [1,0,0,0],
+                                                  songFullName: song.name,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          break;
                                       }
                                     },
                                   ),

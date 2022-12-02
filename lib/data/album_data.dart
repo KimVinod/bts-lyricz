@@ -62274,6 +62274,7 @@ class AlbumData {
     "Stay Alive (Prod. SUGA of BTS)",
     "My You",
     "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
+    "Dreamers",
   ];
   final List<String> jungkookOtherSongsArt = [
     "images/songs-uo/bts-wab1.jpg",
@@ -62281,6 +62282,70 @@ class AlbumData {
     "images/albums-solo/jungkook/jungkook-stayalive.jpg",
     "images/albums-solo/jungkook/jungkook-myyou.jpg",
     "images/albums-solo/jungkook/jungkook-leftandright.jpg",
+    "images/albums-solo/jungkook/jungkook-dreamers.jpg",
+  ];
+
+  final List<String> jungkookDreamers = [
+    "[Intro]\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n\n"
+        "[Chorus]\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we believe it\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we can see it\n\n"
+        "[Post-Chorus]\n"
+        "Here's to the ones that keep the passion\n"
+        "Respect, oh, yeah\n"
+        "Here's to the ones that can imagine\n"
+        "Respect, oh, yeah\n\n"
+        "[Refrain]\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n\n"
+        "[Verse]\n"
+        "Gather 'round now, look at me (هاييا هاييا) (Hayya, hayya)\n"
+        "Respect the love the only way (هاييا هاييا) (Hayya, hayya)\n"
+        "If you wanna come, come with me (هاييا هاييا) (Hayya, hayya)\n"
+        "The door is open now every day (هاييا هاييا) (Hayya, hayya)\n"
+        "This one plus two, rendezvous all invited\n"
+        "This what we do, how we do\n\n"
+        "[Chorus]\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we believe it\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we can see it\n\n"
+        "[Post-Chorus]\n"
+        "Here's to the ones that keep the passion\n"
+        "Respect, oh, yeah\n"
+        "Here's to the ones that can imagine\n"
+        "Respect, oh, yeah\n\n"
+        "[Refrain]\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n\n"
+        "[Chorus]\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we believe it\n"
+        "Look who we are, we are the dreamers\n"
+        "We make it happen, 'cause we can see it\n\n"
+        "[Post-Chorus]\n"
+        "Here's to the ones that keep the passion\n"
+        "Respect, oh, yeah\n"
+        "Here's to the ones that can imagine\n"
+        "Respect, oh, yeah\n\n"
+        "[Outro]\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)\n"
+        "الأ هو لا دان (Ala ho la dan)",
+    "",
+    "",
+    "",
   ];
 
   final List<String> jungkookLeftAndRight = [

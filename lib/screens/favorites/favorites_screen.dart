@@ -5373,6 +5373,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                                   ).then((value) => setState(() {}));
                                                 }
                                                 break;
+                                              case "Dreamers":
+                                                {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) => LyricsENG(
+                                                        songLyrics:
+                                                        AlbumData().jungkookDreamers,
+                                                        songName: "DREAMERS",
+                                                        songTabs: const [1,0,0,0],
+                                                        songFullName: item,
+                                                      ),
+                                                    ),
+                                                  ).then((value) => setState(() {}));
+                                                }
+                                                break;
                                             }
                                           },
                                         ),

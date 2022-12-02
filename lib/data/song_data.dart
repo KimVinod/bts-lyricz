@@ -218,6 +218,9 @@ final allSongs = <Song>[
     name: "Dope -超ヤベー!- (Japanese Ver.)",
   ),
   const Song(
+    name: "Dreamers",
+  ),
+  const Song(
     name: "Dream Glow by BTS & Charli XCX",
   ),
   const Song(

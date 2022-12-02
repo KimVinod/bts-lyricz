@@ -176,6 +176,22 @@ class Jungkook extends StatelessWidget {
                                               );
                                             }
                                             break;
+                                          case "Dreamers":
+                                            {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LyricsENG(
+                                                        songName: "DREAMERS",
+                                                        songLyrics: AlbumData().jungkookDreamers,
+                                                        songTabs: AlbumData().jungkookEngTabs,
+                                                        songFullName: AlbumData().jungkookOtherSongs[index],
+                                                      ),
+                                                ),
+                                              );
+                                            }
+                                            break;
                                         }
                                       },
                                     ),
