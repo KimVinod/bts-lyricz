@@ -31,6 +31,9 @@
 .pub/
 /build/
 
+# firebase credentials and keys
+/lib/firebase_options.dart
+
 # Web related
 lib/generated_plugin_registrant.dart
 
