@@ -4289,6 +4289,166 @@ class Songs extends StatelessWidget {
                                     );
                                   }
                                   break;
+                                case "Yun (with Erykah Badu)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "YUN",
+                                              songLyrics: AlbumData().indigoYun,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Still Life (with Anderson .Paak)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "STILL LIFE",
+                                              songLyrics: AlbumData().indigoStillLife,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "All Day (with Tablo)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "ALL DAY",
+                                              songLyrics: AlbumData().indigoAllDay,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "건망증 (Forg_tful) (with Kim Sawol (김사월))":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "건망증 (Forg_tful)",
+                                              songLyrics: AlbumData().indigoForgetful,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Closer (with Paul Blanco, Mahalia)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "CLOSER",
+                                              songLyrics: AlbumData().indigoCloser,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Change pt.2":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsENG(
+                                              songName: "CHANGE PT.2",
+                                              songLyrics: AlbumData().indigoChangePt2,
+                                              songTabs: const [1,0,0,0],
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Lonely":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "LONELY",
+                                              songLyrics: AlbumData().indigoLonely,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "Hectic (with Colde)":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "HECTIC",
+                                              songLyrics: AlbumData().indigoHectic,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "들꽃놀이 (Wild Flower) (with youjeen (조유진))":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "들꽃놀이 (WILD FLOWER)",
+                                              songLyrics: AlbumData().indigoWildFlower,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
+                                case "No.2 (with Park Ji Yoon (박지윤))":
+                                  {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LyricsKR(
+                                              songName: "NO.2",
+                                              songLyrics: AlbumData().indigoNo2,
+                                              songTabs: AlbumData().indigoTabs,
+                                              songFullName: songNames![index],
+                                            ),
+                                      ),
+                                    );
+                                  }
+                                  break;
                               }
                             },
                           );
