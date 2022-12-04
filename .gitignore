@@ -33,6 +33,8 @@
 
 # firebase credentials and keys
 /lib/firebase_options.dart
+/android/app/google-services.json
+/android/app/kim-vinod-upload-keystore.jks
 
 # Web related
 lib/generated_plugin_registrant.dart
