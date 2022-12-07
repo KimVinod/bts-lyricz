@@ -50,6 +50,9 @@ final allSongs = <Song>[
     name: "Airplane",
   ),
   const Song(
+    name: "All Day (with Tablo)",
+  ),
+  const Song(
     name: "All Night by BTS & Juice WRLD",
   ),
   const Song(
@@ -158,6 +161,9 @@ final allSongs = <Song>[
     name: "Change (RM & Wale)",
   ),
   const Song(
+    name: "Change pt.2",
+  ),
+  const Song(
     name: "Charlie Puth - Left And Right (ft. Jungkook of BTS)",
   ),
   const Song(
@@ -171,6 +177,9 @@ final allSongs = <Song>[
   ),
   const Song(
     name: "Christmas Tree",
+  ),
+  const Song(
+    name: "Closer (with Paul Blanco, Mahalia)",
   ),
   const Song(
     name: "Coffee",
@@ -216,6 +225,9 @@ final allSongs = <Song>[
   ),
   const Song(
     name: "Dope -超ヤベー!- (Japanese Ver.)",
+  ),
+  const Song(
+    name: "Dreamers",
   ),
   const Song(
     name: "Dream Glow by BTS & Charli XCX",
@@ -294,6 +306,9 @@ final allSongs = <Song>[
   ),
   const Song(
     name: "Heartbeat",
+  ),
+  const Song(
+    name: "Hectic (with Colde)",
   ),
   const Song(
     name: "Her",
@@ -446,6 +461,9 @@ final allSongs = <Song>[
     name: "Lights",
   ),
   const Song(
+    name: "Lonely",
+  ),
+  const Song(
     name: "Lost",
   ),
   const Song(
@@ -516,6 +534,9 @@ final allSongs = <Song>[
   ),
   const Song(
     name: "N.O",
+  ),
+  const Song(
+    name: "No.2 (with Park Ji Yoon (박지윤))",
   ),
   const Song(
     name: "No More Dream (Japanese Ver.)",
@@ -677,6 +698,9 @@ final allSongs = <Song>[
     name: "Stigma",
   ),
   const Song(
+    name: "Still Life (with Anderson .Paak)",
+  ),
+  const Song(
     name: "Still With You",
   ),
   const Song(
@@ -788,6 +812,9 @@ final allSongs = <Song>[
     name: "You’re so Beautiful (LOTTE DUTY FREE x BTS)",
   ),
   const Song(
+    name: "Yun (with Erykah Badu)",
+  ),
+  const Song(
     name: "いいね! (I Like It) (Japanese Ver.)",
   ),
   const Song(
@@ -818,6 +845,9 @@ final allSongs = <Song>[
     name: "고엽 (Autumn Leaves)",
   ),
   const Song(
+    name: "건망증 (Forg_tful) (with Kim Sawol (김사월))",
+  ),
+  const Song(
     name: "그러지 마 (Don’t) (eAeon (이이언) ft. RM)",
   ),
   const Song(
@@ -840,6 +870,9 @@ final allSongs = <Song>[
   ),
   const Song(
     name: "둘! 셋! (2! 3!)",
+  ),
+  const Song(
+    name: "들꽃놀이 (Wild Flower) (with youjeen (조유진))",
   ),
   const Song(
     name: "등골브레이커 (Spine Breaker)",

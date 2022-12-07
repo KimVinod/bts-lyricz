@@ -39,9 +39,13 @@ class Namjoon extends StatelessWidget {
             const SizedBox(height: 14.0),
             SizedBox(
               height: 210,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: ListView(
+                padding: const EdgeInsets.only(left: 20.0, right: 10.0),
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
                 children: <Widget>[
+                  const SizedBox(width: 5),
+
                   /// rm
                   Column(
                     children: <Widget>[
@@ -88,6 +92,8 @@ class Namjoon extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(width: 10),
+
                   /// mono
                   Column(
                     children: <Widget>[
@@ -134,8 +140,57 @@ class Namjoon extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(width: 10),
+
+                  /// indigo
+                  Column(
+                    children: <Widget>[
+                      Material(
+                          elevation: 3,
+                          shadowColor: Colors.purple.shade700,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Ink(
+                            width: 150,
+                            height: 170,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: const DecorationImage(image: AssetImage("images/albums-solo/rm/rm-indigo.jpg"), fit: BoxFit.fill)
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(10),
+                              //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Songs(
+                                    albumName: AlbumData().indigoAlbumName,
+                                    songNames: AlbumData().indigoAlbumSongs,
+                                    albumArt: AlbumData().indigoArt,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )),
+                      const SizedBox(height: 4),
+                      SizedBox(
+                        height: 20,
+                        width: 150,
+                        child: FittedBox(
+                          child: Text(
+                            "Indigo",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
 
                 ],
+
               ),
             ),
             Padding(
