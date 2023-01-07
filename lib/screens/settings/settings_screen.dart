@@ -217,6 +217,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       backgroundColor: appUILightColor,
       appBar: AppBar(
         title: Text("Settings", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
         backgroundColor: appBarColor,
       ),
       body: SafeArea(

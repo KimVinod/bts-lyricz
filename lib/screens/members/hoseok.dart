@@ -1,4 +1,7 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
@@ -6,16 +9,37 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Hoseok extends StatelessWidget {
+class Hoseok extends StatefulWidget {
   const Hoseok({Key? key}) : super(key: key);
 
   @override
+  State<Hoseok> createState() => _HoseokState();
+}
+
+class _HoseokState extends State<Hoseok> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "hoseok" && s.album == null).toList();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    const title = "j-hope Albums and Songs";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("j-hope Albums and Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -61,10 +85,9 @@ class Hoseok extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().hopeWorldAlbumName,
-                                    songNames: AlbumData().hopeWorldAlbumSongs,
-                                    albumArt: AlbumData().hopeWorldArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "Hope World",
+                                    albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
                                   ),
                                 ),
                               ),
@@ -108,10 +131,9 @@ class Hoseok extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().jackInTheBoxAlbumName,
-                                    songNames: AlbumData().jackInTheBoxAlbumSongs,
-                                    albumArt: AlbumData().jackInTheBoxArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "Jack In The Box",
+                                    albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
                                   ),
                                 ),
                               ),
@@ -162,8 +184,9 @@ class Hoseok extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                      itemCount: AlbumData().jhopeOtherSongs.length,
+                      itemCount: songs.length,
                       itemBuilder: (context, index) {
+                        final song = songs[index];
                         return Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                           child: Material(
@@ -186,12 +209,12 @@ class Hoseok extends StatelessWidget {
                                         SizedBox(
                                           width: 85,
                                           height: 85,
-                                          child: Image.asset(AlbumData().jhopeOtherSongsArt[index]),
+                                          child: Image.asset(song.albumArt),
                                         ),
                                         const SizedBox(width: 10),
                                         Expanded(
                                           child: Text(
-                                            AlbumData().jhopeOtherSongs[index],
+                                            song.name,
                                             style: GoogleFonts.openSans(
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.w600,
@@ -208,81 +231,30 @@ class Hoseok extends StatelessWidget {
                                       child: InkWell(
                                         borderRadius: BorderRadius.circular(20),
                                         onTap: () {
-                                          switch (AlbumData().jhopeOtherSongs[index]) {
-                                            case "1 Verse":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songLyrics: AlbumData().jhope1Verse,
-                                                      songName: "1 VERSE",
-                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
-                                                      songFullName: AlbumData().jhopeOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                          switch(song.lang) {
+                                            case "eng":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,0,0,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "Chicken Noodle Soup (ft. Becky G)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songLyrics: AlbumData().jhopeCNS,
-                                                      songName: "CHICKEN NOODLE SOUP",
-                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
-                                                      songFullName: AlbumData().jhopeOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                            case "kr":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,1,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "Blue Side":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songLyrics: AlbumData().jhopeBlueSide,
-                                                      songName: "BLUE SIDE",
-                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
-                                                      songFullName: AlbumData().jhopeOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "MORE":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "MORE",
-                                                      songLyrics: AlbumData().jhopeMore,
-                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
-                                                      songFullName: AlbumData().jhopeOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Rush Hour (Crush (크러쉬) ft. j-hope of BTS)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "RUSH HOUR",
-                                                      songLyrics: AlbumData().jhopeRushHour,
-                                                      songTabs: AlbumData().jhopeOtherSongsTabs,
-                                                      songFullName: AlbumData().jhopeOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                            case "jp":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,0,1],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
                                           }
                                         },

@@ -1,4 +1,6 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
@@ -7,16 +9,37 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Yoongi extends StatelessWidget {
+class Yoongi extends StatefulWidget {
   const Yoongi({Key? key}) : super(key: key);
 
   @override
+  State<Yoongi> createState() => _YoongiState();
+}
+
+class _YoongiState extends State<Yoongi> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "yoongi" && s.album == null).toList();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    const title = "SUGA/Agust D Albums and Songs";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("SUGA/Agust D Albums and Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -62,10 +85,9 @@ class Yoongi extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().agustdAlbumName,
-                                    songNames: AlbumData().agustdAlbumSongs,
-                                    albumArt: AlbumData().agustdArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "Agust D",
+                                    albumArt: "images/albums-solo/suga/suga-agustd.jpg",
                                   ),
                                 ),
                               ),
@@ -109,10 +131,9 @@ class Yoongi extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().d2AlbumName,
-                                    songNames: AlbumData().d2AlbumSongs,
-                                    albumArt: AlbumData().d2Art,
+                                  builder: (context) => const Songs(
+                                    albumName: "D2",
+                                    albumArt: "images/albums-solo/suga/suga-d2.jpg",
                                   ),
                                 ),
                               ),
@@ -161,8 +182,9 @@ class Yoongi extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                      itemCount: AlbumData().sugaOtherSongs.length,
+                      itemCount: songs.length,
                       itemBuilder: (context, index) {
+                        final song = songs[index];
                         return Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                           child: Material(
@@ -185,12 +207,12 @@ class Yoongi extends StatelessWidget {
                                         SizedBox(
                                           width: 85,
                                           height: 85,
-                                          child: Image.asset(AlbumData().sugaOtherSongsArt[index]),
+                                          child: Image.asset(song.albumArt),
                                         ),
                                         const SizedBox(width: 10),
                                         Expanded(
                                           child: Text(
-                                            AlbumData().sugaOtherSongs[index],
+                                            song.name,
                                             style: GoogleFonts.openSans(
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.w600,
@@ -207,113 +229,31 @@ class Yoongi extends StatelessWidget {
                                       child: InkWell(
                                         borderRadius: BorderRadius.circular(20),
                                         onTap: () {
-                                          switch (AlbumData().sugaOtherSongs[index]) {
-                                            case "신청곡 (Song Request) (Lee Sora ft. SUGA)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "신청곡 (SONG REQUEST)",
-                                                      songLyrics: AlbumData().sugaSongRequest,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                          switch(song.lang) {
+                                            case "eng":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,0,0,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "Halsey, SUGA - SUGA’s Interlude":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "SUGA’s INTERLUDE",
-                                                      songLyrics: AlbumData().sugaSugasInterlude,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                            case "kr":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,1,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "IU (아이유) - eight (에잇) (Prod. & ft. SUGA)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "EIGHT (에잇)",
-                                                      songLyrics: AlbumData().sugaEight,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                            case "jp":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,0,1],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "Blueberry Eyes (MAX ft. SUGA)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "BLUEBERRY EYES",
-                                                      songLyrics: AlbumData().sugaEight,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "ØMI - You (Prod. SUGA of BTS)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsJP(
-                                                      songName: "YOU",
-                                                      songLyrics: AlbumData().sugaYou,
-                                                      songTabs: AlbumData().sugaYouTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Juice WRLD - Girl Of My Dreams (with Suga from BTS)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "JUICE WRLD - GIRL OF MY DREAMS",
-                                                      songLyrics: AlbumData().sugaGirlOfMyDreams,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "PSY - That That (prod. & ft. SUGA of BTS)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => LyricsKR(
-                                                      songName: "THAT THAT",
-                                                      songLyrics: AlbumData().sugaThatThat,
-                                                      songTabs: AlbumData().sugaOtherSongsTabs,
-                                                      songFullName: AlbumData().sugaOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-
                                           }
                                         },
                                       ),

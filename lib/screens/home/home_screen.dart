@@ -1,5 +1,6 @@
+import 'package:bts_lyrics_app/data/lyrics_data.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
-import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_jp.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_kr.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_uo.dart';
@@ -14,7 +15,6 @@ import 'package:bts_lyrics_app/screens/members/hoseok.dart';
 import 'package:bts_lyrics_app/screens/members/jimin.dart';
 import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -65,10 +65,9 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Songs(
-                                  albumName: AlbumData().indigoAlbumName,
-                                  songNames: AlbumData().indigoAlbumSongs,
-                                  albumArt: AlbumData().indigoArt,
+                                builder: (context) => const Songs(
+                                  albumName: "Indigo",
+                                  albumArt: "images/albums-solo/rm/rm-indigo.jpg",
                                 ),
                               ),
                             ),
@@ -113,11 +112,11 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LyricsENG(
-                                  songName: "DREAMERS",
-                                  songLyrics: AlbumData().jungkookDreamers,
-                                  songTabs: const [1,0,0,0],
+                                builder: (context) => const LyricsENG(
                                   songFullName: "Dreamers",
+                                  songName: "DREAMERS",
+                                  songTabs: [1,0,0,0],
+                                  songLyrics: getJungkookDreamers,
                                 ),
                               ),
                             ),
@@ -162,11 +161,11 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LyricsKR(
-                                  songName: "THE ASTRONAUT",
-                                  songLyrics: AlbumData().jinTheAstronaut,
-                                  songTabs: AlbumData().jinOtherSongsTabs,
+                                builder: (context) => const LyricsKR(
                                   songFullName: "The Astronaut",
+                                  songName: "THE ASTRONAUT",
+                                  songLyrics: getSeokjinTheAstronaut,
+                                  songTabs: [1,1,1,0],
                                 ),
                               ),
                             ),
@@ -211,11 +210,11 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LyricsKR(
-                                  songName: "YET TO COME (HYUNDAI VER.)",
-                                  songLyrics: AlbumData().btsYetToComeHyundai,
-                                  songTabs: const [1, 1, 1, 0],
+                                builder: (context) => const LyricsKR(
                                   songFullName: "Yet To Come (Hyundai Ver.)",
+                                  songName: "YET TO COME (HYUNDAI VER.)",
+                                  songLyrics: getYetToComeHyundai,
+                                  songTabs: [1, 1, 1, 0],
                                 ),
                               ),
                             ),

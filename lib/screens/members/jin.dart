@@ -1,22 +1,44 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Jin extends StatelessWidget {
+class Jin extends StatefulWidget {
   const Jin({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "Jin Songs";
+  State<Jin> createState() => _JinState();
+}
 
+class _JinState extends State<Jin> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "seokjin" && s.album == null).toList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        //brightness: Brightness.dark,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("Jin Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -49,8 +71,9 @@ class Jin extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                    itemCount: AlbumData().jinOtherSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -72,12 +95,12 @@ class Jin extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().jinOtherSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().jinOtherSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -94,84 +117,30 @@ class Jin extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                            AlbumData().jinOtherSongs[index]) {
-                                          case "이 밤 (Tonight)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                    songName: "이 밤 (TONIGHT)",
-                                                    songLyrics: AlbumData().jinTonight,
-                                                    songTabs: AlbumData().jinOtherSongsTabs,
-                                                        songFullName: AlbumData().jinOtherSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Abyss":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "ABYSS",
-                                                        songLyrics: AlbumData().jinAbyss,
-                                                        songTabs: AlbumData().jinOtherSongsTabs,
-                                                        songFullName: AlbumData().jinOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Yours":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songName: "YOURS",
-                                                    songLyrics: AlbumData().jinYours,
-                                                    songTabs: AlbumData().jinOtherSongsTabs,
-                                                    songFullName: AlbumData().jinOtherSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "슈퍼 참치 (Super Tuna)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songName: "슈퍼 참치 (SUPER TUNA)",
-                                                    songLyrics: AlbumData().jinSuperTuna,
-                                                    songTabs: AlbumData().jinOtherSongsTabs,
-                                                    songFullName: AlbumData().jinOtherSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "The Astronaut":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songName: "THE ASTRONAUT",
-                                                    songLyrics: AlbumData().jinTheAstronaut,
-                                                    songTabs: AlbumData().jinOtherSongsTabs,
-                                                    songFullName: AlbumData().jinOtherSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
                                         }
                                       },

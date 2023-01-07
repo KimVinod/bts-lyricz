@@ -21,6 +21,12 @@ class SearchWidgetState extends State<SearchWidget> {
   final controller = TextEditingController();
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final styleActive = GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w600);
     final styleHint = GoogleFonts.openSans(color: Colors.black54, fontWeight: FontWeight.w600);
