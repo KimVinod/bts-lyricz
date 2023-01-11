@@ -2419,8 +2419,8 @@ const List<Song> allSongs = [
     lyrics: getSkoolLuvAffairJump,
   ),
   Song(
-    name: "Outro: Purpose",
-    displayName: "OUTRO: PURPOSE",
+    name: "Outro: Propose",
+    displayName: "OUTRO: PROPOSE",
     isSolo: IsSolo(isSolo: false),
     album: "Skool Luv Affair",
     albumArt: "images/skoolluvaffair.jpg",
