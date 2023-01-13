@@ -17,7 +17,7 @@ dependencies:
   # Enables In App Updates on Android using the official Android APIs.
   in_app_update: ^4.0.1
   # extras
-  fluttertoast: ^8.1.1
+  fluttertoast: ^8.1.2
 
 dev_dependencies:
   flutter_test:
