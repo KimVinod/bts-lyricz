@@ -929,6 +929,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getJiminWithYou,
   ),
+  Song(
+    name: "VIBE (TAEYANG ft. Jimin)",
+    displayName: "VIBE",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-vibe.jpg",
+    lang: "kr",
+    lyrics: getJiminVibe,
+  ),
 
 
   ///taehyung
