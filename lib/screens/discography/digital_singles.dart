@@ -1,4 +1,5 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
@@ -7,17 +8,37 @@ import 'package:flutter/services.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DigitalSingles extends StatelessWidget {
+class DigitalSingles extends StatefulWidget {
   const DigitalSingles({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "BTS Digital Singles";
+  State<DigitalSingles> createState() => _DigitalSinglesState();
+}
 
+class _DigitalSinglesState extends State<DigitalSingles> {
+
+  List<Song> songs = [];
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "bts").toList();
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("BTS Digital Singles", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -50,8 +71,9 @@ class DigitalSingles extends StatelessWidget {
                   thickness: 7.0,
                   radius: const Radius.circular(15.0),
                   child: ListView.builder(
-                    itemCount: AlbumData().btsSinglesSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -73,12 +95,12 @@ class DigitalSingles extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().btsSinglesSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().btsSinglesSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -95,210 +117,30 @@ class DigitalSingles extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                        AlbumData().btsSinglesSongs[index]) {
-                                          case "Dynamite":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics:
-                                                    AlbumData().dynamiteLyrics,
-                                                    songName: "DYNAMITE",
-                                                    songTabs: AlbumData().dynamiteTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Butter":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics: AlbumData().butterLyrics,
-                                                    songName: "BUTTER",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Butter (ft. Megan Thee Stallion)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics: AlbumData().butterRemix,
-                                                    songName: "BUTTER (FT. MEGAN THE STALLION)",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "MIC Drop (Steve Aoki Remix) (ft. Desiigner)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songLyrics: AlbumData().btsMICDropDesiigner,
-                                                    songName: "MIC DROP",
-                                                    songTabs: AlbumData().btsSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Waste It On Me":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics: AlbumData().btsWasteItOnMe,
-                                                    songName: "WASTE IT ON ME",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Make It Right (ft. Lauv)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songLyrics: AlbumData().btsMakeItRightLauv,
-                                                    songName: "MAKE IT RIGHT",
-                                                    songTabs: AlbumData().btsSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Black Swan":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songLyrics:
-                                                    AlbumData().mots7BlackSwan,
-                                                    songName: "BLACK SWAN",
-                                                    songTabs: AlbumData().btsSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Who (Lauv ft. BTS)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics:
-                                                    AlbumData().btsWho,
-                                                    songName: "WHO",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Film Out":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsJP(
-                                                    songLyrics:
-                                                    AlbumData().btsTheBestFilmOut,
-                                                    songName: "FILM OUT",
-                                                    songTabs: AlbumData().btsJPSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Savage Love (Laxed - Siren Beat) (BTS Remix)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics:
-                                                    AlbumData().btsSavageLove,
-                                                    songName: "SAVAGE LOVE",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "My Universe":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songLyrics: AlbumData().myUniverse,
-                                                    songName: "MY UNIVERSE",
-                                                    songTabs: AlbumData().myUniverseAlbumTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Bad Decisions":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsENG(
-                                                    songLyrics:
-                                                    AlbumData().btsBadDecisions,
-                                                    songName: "BAD DECISIONS",
-                                                    songTabs: AlbumData().btsENGSinglesTabs,
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Yet To Come (Hyundai Ver.)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => LyricsKR(
-                                                    songLyrics:
-                                                    AlbumData().btsYetToComeHyundai,
-                                                    songName: "YET TO COME (HYUNDAI VER.)",
-                                                    songTabs: const [1, 1, 1, 0],
-                                                    songFullName: AlbumData().btsSinglesSongs[index],
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
                                         }
                                       },

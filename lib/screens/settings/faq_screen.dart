@@ -14,6 +14,7 @@ class FAQScreen extends StatelessWidget {
       backgroundColor: appUILightColor,
       appBar: AppBar(
         title: Text("FAQ", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
         backgroundColor: appBarColor,
       ),
       body: SafeArea(

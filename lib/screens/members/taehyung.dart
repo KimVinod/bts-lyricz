@@ -1,22 +1,44 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Taehyung extends StatelessWidget {
+class Taehyung extends StatefulWidget {
   const Taehyung({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "V Songs";
+  State<Taehyung> createState() => _TaehyungState();
+}
 
+class _TaehyungState extends State<Taehyung> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "taehyung" && s.album == null).toList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("V Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -49,8 +71,9 @@ class Taehyung extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                    itemCount: AlbumData().vOtherSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -72,12 +95,12 @@ class Taehyung extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().vOtherSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().vOtherSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -94,87 +117,30 @@ class Taehyung extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                        AlbumData().vOtherSongs[index]) {
-                                          case "풍경 (Scenery)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "풍경 (SCENERY)",
-                                                        songLyrics: AlbumData().vScenery,
-                                                        songTabs: AlbumData().vOtherSongsTabs,
-                                                        songFullName: AlbumData().vOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Winter Bear":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsENG(
-                                                        songName: "WINTER BEAR",
-                                                        songLyrics: AlbumData().vWinterBear,
-                                                        songTabs: AlbumData().vSongsEngTab,
-                                                        songFullName: AlbumData().vOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Sweet Night":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsENG(
-                                                        songName: "SWEET NIGHT",
-                                                        songLyrics: AlbumData().vSweetNight,
-                                                        songTabs: AlbumData().vSongsEngTab,
-                                                        songFullName: AlbumData().vOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Snow Flower (ft. Peakboy)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "SNOW FLOWER",
-                                                        songLyrics: AlbumData().vSnowFlower,
-                                                        songTabs: AlbumData().vOtherSongsTabs,
-                                                        songFullName: AlbumData().vOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Christmas Tree":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "CHRISTMAS TREE",
-                                                        songLyrics: AlbumData().vChristmasTree,
-                                                        songTabs: AlbumData().vOtherSongsTabs,
-                                                        songFullName: AlbumData().vOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
                                         }
                                       },

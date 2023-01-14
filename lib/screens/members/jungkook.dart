@@ -1,22 +1,43 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Jungkook extends StatelessWidget {
+class Jungkook extends StatefulWidget {
   const Jungkook({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "Jungkook Songs";
+  State<Jungkook> createState() => _JungkookState();
+}
 
+class _JungkookState extends State<Jungkook> {
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "jungkook" && s.album == null).toList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("Jungkook Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -49,8 +70,9 @@ class Jungkook extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                    itemCount: AlbumData().jungkookOtherSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -72,12 +94,12 @@ class Jungkook extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().jungkookOtherSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().jungkookOtherSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -94,103 +116,30 @@ class Jungkook extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                        AlbumData().jungkookOtherSongs[index]) {
-                                          case "Still With You":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "STILL WITH YOU",
-                                                        songLyrics: AlbumData().jungkookStillWithYou,
-                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "일하는중 (Working)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "일하는중 (WORKING)",
-                                                        songLyrics: AlbumData().jungkookWorking,
-                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Stay Alive (Prod. SUGA of BTS)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "STAY ALIVE",
-                                                        songLyrics: AlbumData().jungkookStayAlive,
-                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "My You":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "MY YOU",
-                                                        songLyrics: AlbumData().jungkookMyYou,
-                                                        songTabs: AlbumData().jungkookOtherSongsTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Charlie Puth - Left And Right (ft. Jungkook of BTS)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsENG(
-                                                        songName: "Left and Right",
-                                                        songLyrics: AlbumData().jungkookLeftAndRight,
-                                                        songTabs: AlbumData().jungkookEngTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Dreamers":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsENG(
-                                                        songName: "DREAMERS",
-                                                        songLyrics: AlbumData().jungkookDreamers,
-                                                        songTabs: AlbumData().jungkookEngTabs,
-                                                        songFullName: AlbumData().jungkookOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
                                         }
                                       },

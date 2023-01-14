@@ -1,21 +1,44 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Jimin extends StatelessWidget {
+class Jimin extends StatefulWidget {
   const Jimin({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "Jimin Songs";
+  State<Jimin> createState() => _JiminState();
+}
 
+class _JiminState extends State<Jimin> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "jimin" && s.album == null).toList();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("Jimin Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -48,8 +71,9 @@ class Jimin extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                    itemCount: AlbumData().jiminOtherSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -71,12 +95,12 @@ class Jimin extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().jiminOtherSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().jiminOtherSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -93,55 +117,30 @@ class Jimin extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                        AlbumData().jiminOtherSongs[index]) {
-                                          case "약속 (Promise)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "약속 (PROMISE)",
-                                                        songLyrics: AlbumData().jiminPromise,
-                                                        songTabs: AlbumData().jiminOtherSongsTabs,
-                                                        songFullName: AlbumData().jiminOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Christmas Love":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "CHRISTMAS LOVE",
-                                                        songLyrics: AlbumData().jiminChristmasLove,
-                                                        songTabs: AlbumData().jiminOtherSongsTabs,
-                                                        songFullName: AlbumData().jiminOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "With You (Jimin x Ha Sung Woon)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "CHRISTMAS LOVE",
-                                                        songLyrics: AlbumData().jiminWithYou,
-                                                        songTabs: AlbumData().jiminOtherSongsTabs,
-                                                        songFullName: AlbumData().jiminOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
                                         }
                                       },

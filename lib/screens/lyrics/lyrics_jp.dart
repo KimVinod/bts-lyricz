@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -6,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class LyricsJP extends StatefulWidget {
-  final List<String>? songLyrics;
+  final Lyrics songLyrics;
   final String? songName, songFullName;
   final List<int>? songTabs;
 
@@ -50,6 +51,7 @@ class _LyricsJPState extends State<LyricsJP> {
       child: Scaffold(
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
+          titleSpacing: 0,
           title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
           backgroundColor: appBarColor,
           bottom: TabBar(
@@ -94,7 +96,7 @@ class _LyricsJPState extends State<LyricsJP> {
                     overScroll.disallowIndicator();
                     return true;
                   },
-                  child: widget.songLyrics![3] != ""
+                  child: widget.songLyrics.jp != null
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -109,7 +111,7 @@ class _LyricsJPState extends State<LyricsJP> {
                       ),
                       const SizedBox(height: 12.0),
                       SelectableText(
-                        widget.songLyrics![3],
+                        widget.songLyrics.jp!,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
@@ -120,14 +122,19 @@ class _LyricsJPState extends State<LyricsJP> {
                       : Container(
                     color: appUILightColor,
                     width: double.infinity,
-                    child: Center(
-                      child: Text(
-                        "not available >.<",
-                        style: GoogleFonts.openSans(
-                          fontSize: 20,
-                          fontStyle: FontStyle.italic,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                        const SizedBox(height: 10),
+                        Text(
+                          "not available >.<",
+                          style: GoogleFonts.openSans(
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
@@ -136,14 +143,19 @@ class _LyricsJPState extends State<LyricsJP> {
                 : Container(
               color: appUILightColor,
               width: double.infinity,
-              child: Center(
-                child: Text(
-                  "not available >.<",
-                  style: GoogleFonts.openSans(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                  const SizedBox(height: 10),
+                  Text(
+                    "not available >.<",
+                    style: GoogleFonts.openSans(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
             widget.songTabs![0] == 1 //ENG
@@ -160,7 +172,7 @@ class _LyricsJPState extends State<LyricsJP> {
                     overScroll.disallowIndicator();
                     return true;
                   },
-                  child: widget.songLyrics![0] != ""
+                  child: widget.songLyrics.eng != null
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -174,7 +186,7 @@ class _LyricsJPState extends State<LyricsJP> {
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 12.0),
-                      SelectableText(widget.songLyrics![0],
+                      SelectableText(widget.songLyrics.eng!,
                           style: GoogleFonts.openSans(fontSize: 16.0)),
                       const SizedBox(height: 10.0),
                     ],
@@ -182,14 +194,19 @@ class _LyricsJPState extends State<LyricsJP> {
                       : Container(
                     color: appUILightColor,
                     width: double.infinity,
-                    child: Center(
-                      child: Text(
-                        "not available >.<",
-                        style: GoogleFonts.openSans(
-                          fontSize: 20,
-                          fontStyle: FontStyle.italic,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                        const SizedBox(height: 10),
+                        Text(
+                          "not available >.<",
+                          style: GoogleFonts.openSans(
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
@@ -198,14 +215,19 @@ class _LyricsJPState extends State<LyricsJP> {
                 : Container(
               color: appUILightColor,
               width: double.infinity,
-              child: Center(
-                child: Text(
-                  "not available >.<",
-                  style: GoogleFonts.openSans(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                  const SizedBox(height: 10),
+                  Text(
+                    "not available >.<",
+                    style: GoogleFonts.openSans(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
             widget.songTabs![1] == 1 //ROM
@@ -222,7 +244,7 @@ class _LyricsJPState extends State<LyricsJP> {
                     overScroll.disallowIndicator();
                     return true;
                   },
-                  child: widget.songLyrics![1] != ""
+                  child: widget.songLyrics.rom != null
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -237,7 +259,7 @@ class _LyricsJPState extends State<LyricsJP> {
                       ),
                       const SizedBox(height: 12.0),
                       SelectableText(
-                        widget.songLyrics![1],
+                        widget.songLyrics.rom!,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
@@ -248,14 +270,19 @@ class _LyricsJPState extends State<LyricsJP> {
                       : Container(
                     color: appUILightColor,
                     width: double.infinity,
-                    child: Center(
-                      child: Text(
-                        "not available >.<",
-                        style: GoogleFonts.openSans(
-                          fontSize: 20,
-                          fontStyle: FontStyle.italic,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                        const SizedBox(height: 10),
+                        Text(
+                          "not available >.<",
+                          style: GoogleFonts.openSans(
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
@@ -264,14 +291,19 @@ class _LyricsJPState extends State<LyricsJP> {
                 : Container(
               color: appUILightColor,
               width: double.infinity,
-              child: Center(
-                child: Text(
-                  "not available >.<",
-                  style: GoogleFonts.openSans(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                  const SizedBox(height: 10),
+                  Text(
+                    "not available >.<",
+                    style: GoogleFonts.openSans(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],

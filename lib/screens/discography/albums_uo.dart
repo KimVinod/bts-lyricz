@@ -1,4 +1,3 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,12 +9,12 @@ class AlbumsUO extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const title = "BTS Unofficial Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: appBarColor,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("BTS Unofficial Albums", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
@@ -51,11 +50,9 @@ class AlbumsUO extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName:
-                                AlbumData().btsWorldAlbumName,
-                                songNames: AlbumData().btsWorldAlbumSongs,
-                                albumArt: AlbumData().btsWorldArt,
+                              builder: (context) => const Songs(
+                                albumName: "BTS World",
+                                albumArt: "images/bts-world.jpg",
                               ),
                             ),
                           ),

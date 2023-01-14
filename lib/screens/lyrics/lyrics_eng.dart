@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -6,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class LyricsENG extends StatefulWidget {
-  final List<String>? songLyrics;
+  final Lyrics songLyrics;
   final String? songName, songFullName;
   final List<int>? songTabs;
 
@@ -49,6 +50,7 @@ class _LyricsENGState extends State<LyricsENG> {
       child: Scaffold(
         appBar: AppBar(
           systemOverlayStyle: SystemUiOverlayStyle.light,
+          titleSpacing: 0,
           title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
           backgroundColor: appBarColor,
           bottom: TabBar(
@@ -89,7 +91,7 @@ class _LyricsENGState extends State<LyricsENG> {
                     overScroll.disallowIndicator();
                     return true;
                   },
-                  child: widget.songLyrics![0] != ""
+                  child: widget.songLyrics.eng != null
                       ? ListView(
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -104,7 +106,7 @@ class _LyricsENGState extends State<LyricsENG> {
                       ),
                       const SizedBox(height: 12.0),
                       SelectableText(
-                        widget.songLyrics![0],
+                        widget.songLyrics.eng!,
                         style: GoogleFonts.openSans(
                           fontSize: 16.0,
                         ),
@@ -115,14 +117,19 @@ class _LyricsENGState extends State<LyricsENG> {
                       : Container(
                     color: appUILightColor,
                     width: double.infinity,
-                    child: Center(
-                      child: Text(
-                        "not available >.<",
-                        style: GoogleFonts.openSans(
-                          fontSize: 20,
-                          fontStyle: FontStyle.italic,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                        const SizedBox(height: 10),
+                        Text(
+                          "not available >.<",
+                          style: GoogleFonts.openSans(
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
@@ -131,14 +138,19 @@ class _LyricsENGState extends State<LyricsENG> {
                 : Container(
               color: appUILightColor,
               width: double.infinity,
-              child: Center(
-                child: Text(
-                  "not available >.<",
-                  style: GoogleFonts.openSans(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+                  const SizedBox(height: 10),
+                  Text(
+                    "not available >.<",
+                    style: GoogleFonts.openSans(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],

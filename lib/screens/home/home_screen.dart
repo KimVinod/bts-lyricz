@@ -1,5 +1,6 @@
+import 'package:bts_lyrics_app/data/lyrics_data.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
-import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_jp.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_kr.dart';
 import 'package:bts_lyrics_app/screens/discography/albums_uo.dart';
@@ -14,7 +15,6 @@ import 'package:bts_lyrics_app/screens/members/hoseok.dart';
 import 'package:bts_lyrics_app/screens/members/jimin.dart';
 import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,6 +45,55 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(width: 5),
 
+                /// VIBE
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jimin/jimin-vibe.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LyricsKR(
+                                  songFullName: "VIBE (TAEYANG ft. Jimin)",
+                                  songName: "VIBE",
+                                  songTabs: [1,1,1,0],
+                                  songLyrics: getJiminVibe,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "VIBE",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
                 /// Indigo
                 Column(
                   children: <Widget>[
@@ -65,10 +114,9 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Songs(
-                                  albumName: AlbumData().indigoAlbumName,
-                                  songNames: AlbumData().indigoAlbumSongs,
-                                  albumArt: AlbumData().indigoArt,
+                                builder: (context) => const Songs(
+                                  albumName: "Indigo",
+                                  albumArt: "images/albums-solo/rm/rm-indigo.jpg",
                                 ),
                               ),
                             ),
@@ -113,11 +161,11 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LyricsENG(
-                                  songName: "DREAMERS",
-                                  songLyrics: AlbumData().jungkookDreamers,
-                                  songTabs: const [1,0,0,0],
+                                builder: (context) => const LyricsENG(
                                   songFullName: "Dreamers",
+                                  songName: "DREAMERS",
+                                  songTabs: [1,0,0,0],
+                                  songLyrics: getJungkookDreamers,
                                 ),
                               ),
                             ),
@@ -162,11 +210,11 @@ class HomeScreen extends StatelessWidget {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LyricsKR(
-                                  songName: "THE ASTRONAUT",
-                                  songLyrics: AlbumData().jinTheAstronaut,
-                                  songTabs: AlbumData().jinOtherSongsTabs,
+                                builder: (context) => const LyricsKR(
                                   songFullName: "The Astronaut",
+                                  songName: "THE ASTRONAUT",
+                                  songLyrics: getSeokjinTheAstronaut,
+                                  songTabs: [1,1,1,0],
                                 ),
                               ),
                             ),
@@ -179,55 +227,6 @@ class HomeScreen extends StatelessWidget {
                       child: FittedBox(
                         child: Text(
                           "The Astronaut",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// Yet to come hyundai
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/bts-yet-to-come-hyundai.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LyricsKR(
-                                  songName: "YET TO COME (HYUNDAI VER.)",
-                                  songLyrics: AlbumData().btsYetToComeHyundai,
-                                  songTabs: const [1, 1, 1, 0],
-                                  songFullName: "Yet To Come (Hyundai Ver.)",
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Yet To Come (Hyundai Ver.)",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(
                             fontSize: 16.0,

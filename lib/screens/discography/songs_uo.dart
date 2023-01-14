@@ -1,21 +1,44 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class SongsUO extends StatelessWidget {
+class SongsUO extends StatefulWidget {
   const SongsUO({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    const title = "BTS Unofficial Songs";
+  State<SongsUO> createState() => _SongsUOState();
+}
 
+class _SongsUOState extends State<SongsUO> {
+
+  List<Song> songs = [];
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.isUnofficial == true).toList();
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("BTS Unofficial Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -48,8 +71,9 @@ class SongsUO extends StatelessWidget {
                   thickness: 7.0,
                   radius: const Radius.circular(15.0),
                   child: ListView.builder(
-                    itemCount: AlbumData().btsOtherSongs.length,
+                    itemCount: songs.length,
                     itemBuilder: (context, index) {
+                      final song = songs[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                         child: Material(
@@ -71,12 +95,12 @@ class SongsUO extends StatelessWidget {
                                       SizedBox(
                                         width: 85,
                                         height: 85,
-                                        child: Image.asset(AlbumData().btsOtherSongsArt[index]),
+                                        child: Image.asset(song.albumArt),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
                                         child: Text(
-                                          AlbumData().btsOtherSongs[index],
+                                          song.name,
                                           style: GoogleFonts.openSans(
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w600,
@@ -93,249 +117,31 @@ class SongsUO extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(20),
                                       onTap: () {
-                                        switch (
-                                        AlbumData().btsOtherSongs[index]) {
-                                          case "We Are Bulletproof Pt. 1 (4 BEGINS Ruff)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "WE ARE BULLETPROOF PT. 1",
-                                                        songLyrics: AlbumData().btsWAB1,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                        switch(song.lang) {
+                                          case "eng":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,0,0,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "알아요 (I Know) by Rap Monster and Jungkook":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "알아요 (I KNOW)",
-                                                        songLyrics: AlbumData().btsIKnow,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "kr":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,1,0],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "Family Song (Wednesday) by BTS and GFRIEND":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "FAMILY SONG (WEDNESDAY)",
-                                                        songLyrics: AlbumData().btsWednesday,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
+                                          case "jp":
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                              songFullName: song.name,
+                                              songName: song.displayName,
+                                              songTabs: const [1,1,0,1],
+                                              songLyrics: song.lyrics,
+                                            )));
                                             break;
-                                          case "BTS x JESSI":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "BTS x JESSI",
-                                                        songLyrics: AlbumData().btsBtsJessi,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "So Far Away (SUGA, Jin & Jungkook Ver.)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "SO FAR AWAY",
-                                                        songLyrics: AlbumData().btsSoFarAway,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "With Seoul":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "WITH SEOUL",
-                                                        songLyrics: AlbumData().btsWithSeoul,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "땡 (Ddaeng)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "땡 (DDAENG)",
-                                                        songLyrics: AlbumData().btsDdaeng,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "You’re so Beautiful (LOTTE DUTY FREE x BTS)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "YOU'RE SO BEAUTIFUL",
-                                                        songLyrics: AlbumData().btsLdf,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "IONIQ: I'm On It (Hyundai x BTS)":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "IONIQ: I'M ON IT",
-                                                        songLyrics: AlbumData().btsIoniq,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "In The SOOP":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "IN THE SOOP",
-                                                        songLyrics: AlbumData().btsinTheSoop,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Born Singer":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "BORN SINGER",
-                                                        songLyrics: AlbumData().btsBornSinger,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Beautiful":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "BEAUTIFUL",
-                                                        songLyrics: AlbumData().btsBeautiful,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "95 Graduation by V and Jimin":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "95 GRADUATION",
-                                                        songLyrics: AlbumData().bts95Graduation,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "So 4 More":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "SO 4 MORE",
-                                                        songLyrics: AlbumData().btsSo4More,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-                                          case "Christmas Day by Jimin and Jungkook":
-                                            {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LyricsKR(
-                                                        songName: "CHRISTMAS DAY",
-                                                        songLyrics: AlbumData().btsChristmasDay,
-                                                        songTabs: AlbumData().btsOtherSongsTabs,
-                                                        songFullName: AlbumData().btsOtherSongs[index],
-                                                      ),
-                                                ),
-                                              );
-                                            }
-                                            break;
-
                                         }
                                       },
                                     ),

@@ -1,4 +1,3 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,13 +9,12 @@ class AlbumsKR extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const title = "BTS Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        //backgroundColor: Colors.purple[400],
+        titleSpacing: 0,
         backgroundColor: appBarColor,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        title: Text("BTS Albums", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
@@ -32,7 +30,7 @@ class AlbumsKR extends StatelessWidget {
             padding: const EdgeInsets.only(top: 15),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, childAspectRatio: 0.73),
-            children: <Widget>[
+            children: [
               /// 2 cool 4 skool
               Column(
                 children: <Widget>[
@@ -53,12 +51,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName:
-                                AlbumData().twoCool4SkoolAlbumName,
-                                songNames: AlbumData()
-                                    .twoCool4SkoolAlbumSongs,
-                                albumArt: AlbumData().twoCool4SkoolArt,
+                              builder: (context) => const Songs(
+                                albumName: "2 Cool 4 Skool",
+                                albumArt: "images/2cool4skool.jpg",
                               ),
                             ),
                           ),
@@ -101,11 +96,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName:
-                                AlbumData().orul82AlbumName,
-                                songNames: AlbumData().orul82AlbumSongs,
-                                albumArt: AlbumData().orul82Art,
+                              builder: (context) => const Songs(
+                                albumName: "O!RUL8,2?",
+                                albumArt: "images/o!rul8,2.jpg",
                               ),
                             ),
                           ),
@@ -148,10 +141,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().skoolLuvAffairAlbumName,
-                                songNames: AlbumData().skoolLuvAffairAlbumSongs,
-                                albumArt: AlbumData().skoolLuvAffairArt,
+                              builder: (context) => const Songs(
+                                albumName: "Skool Luv Affair",
+                                albumArt: "images/skoolluvaffair.jpg",
                               ),
                             ),
                           ),
@@ -194,10 +186,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().darkAndWildAlbumName,
-                                songNames: AlbumData().darkAndWildAlbumSongs,
-                                albumArt: AlbumData().darkAndWildArt,
+                              builder: (context) => const Songs(
+                                albumName: "Dark & Wild",
+                                albumArt: "images/darkandwild.jpg",
                               ),
                             ),
                           ),
@@ -240,10 +231,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().hyyh1AlbumName,
-                                songNames: AlbumData().hyyh1AlbumSongs,
-                                albumArt: AlbumData().hyyh1Art,
+                              builder: (context) => const Songs(
+                                albumName: "The most beautiful moment in life pt.1",
+                                albumArt: "images/hyyh1.jpg",
                               ),
                             ),
                           ),
@@ -280,10 +270,10 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().hyyh2AlbumName,
-                                songNames: AlbumData().hyyh2AlbumSongs,
-                                albumArt: AlbumData().hyyh2Art,
+                              builder: (context) => const Songs(
+                                albumName: "The most beautiful moment in life pt.2",
+                                //songNames: AlbumData().hyyh2AlbumSongs,
+                                albumArt: "images/hyyh2.jpg",
                               ),
                             ),
                           ),
@@ -320,10 +310,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().youngForeverAlbumName,
-                                songNames: AlbumData().youngForeverAlbumSongs,
-                                albumArt: AlbumData().youngForeverArt,
+                              builder: (context) => const Songs(
+                                albumName: 'The most beautiful moment in life:\nYoung Forever',
+                                albumArt: "images/youngforever.jpg",
                               ),
                             ),
                           ),
@@ -360,10 +349,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().wingsAlbumName,
-                                songNames: AlbumData().wingsAlbumSongs,
-                                albumArt: AlbumData().wingsArt,
+                              builder: (context) => const Songs(
+                                albumName: "Wings",
+                                albumArt: "images/wings.jpg",
                               ),
                             ),
                           ),
@@ -400,10 +388,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().ynwaAlbumName,
-                                songNames: AlbumData().ynwaAlbumSongs,
-                                albumArt: AlbumData().ynwaArt,
+                              builder: (context) => const Songs(
+                                albumName: "You Never Walk Alone",
+                                albumArt: "images/ynwa.jpg",
                               ),
                             ),
                           ),
@@ -446,10 +433,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lyHerAlbumName,
-                                songNames: AlbumData().lyHerAlbumSongs,
-                                albumArt: AlbumData().lyHerArt,
+                              builder: (context) => const Songs(
+                                albumName: "Love Yourself 承 'HER'",
+                                albumArt: "images/lyher.jpg",
                               ),
                             ),
                           ),
@@ -486,10 +472,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lyTearAlbumName,
-                                songNames: AlbumData().lyTearAlbumSongs,
-                                albumArt: AlbumData().lyTearArt,
+                              builder: (context) => const Songs(
+                                albumName: "Love Yourself 轉 'TEAR'",
+                                albumArt: "images/lytear.jpg",
                               ),
                             ),
                           ),
@@ -526,10 +511,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lyAnswerAlbumName,
-                                songNames: AlbumData().lyAnswerAlbumSongs,
-                                albumArt: AlbumData().lyAnswerArt,
+                              builder: (context) => const Songs(
+                                albumName: "Love Yourself 結 'ANSWER",
+                                albumArt: "images/lyanswer.jpg",
                               ),
                             ),
                           ),
@@ -566,10 +550,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().motsPersonaAlbumName,
-                                songNames: AlbumData().motsPersonaAlbumSongs,
-                                albumArt: AlbumData().motsPersonaArt,
+                              builder: (context) => const Songs(
+                                albumName: "Map Of The Soul : PERSONA",
+                                albumArt: "images/motspersona.jpg",
                               ),
                             ),
                           ),
@@ -606,10 +589,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().mots7AlbumName,
-                                songNames: AlbumData().mots7AlbumSongs,
-                                albumArt: AlbumData().mots7Art,
+                              builder: (context) => const Songs(
+                                albumName: "Map Of The Soul : 7",
+                                albumArt: "images/mots7.jpg",
                               ),
                             ),
                           ),
@@ -652,10 +634,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().beAlbumName,
-                                songNames: AlbumData().beAlbumSongs,
-                                albumArt: AlbumData().beArt,
+                              builder: (context) => const Songs(
+                                albumName: "BE",
+                                albumArt: "images/be.jpg",
                               ),
                             ),
                           ),
@@ -698,10 +679,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().butterPtdAlbumName,
-                                songNames: AlbumData().butterPtdAlbumSongs,
-                                albumArt: AlbumData().butterPtdArt,
+                              builder: (context) => const Songs(
+                                albumName: "Butter/Permission to Dance",
+                                albumArt: "images/butter-ptd.jpg",
                               ),
                             ),
                           ),
@@ -718,7 +698,7 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-              /// butter and ptd
+              /// proof
               Column(
                 children: <Widget>[
                   Material(
@@ -738,10 +718,9 @@ class AlbumsKR extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().proofAlbumName,
-                                songNames: AlbumData().proofAlbumSongs,
-                                albumArt: AlbumData().proofArt,
+                              builder: (context) => const Songs(
+                                albumName: "Proof",
+                                albumArt: "images/proof.jpg",
                               ),
                             ),
                           ),
@@ -758,9 +737,6 @@ class AlbumsKR extends StatelessWidget {
                   ),
                 ],
               ),
-
-
-
 
             ],
           ),

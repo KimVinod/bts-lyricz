@@ -1,5 +1,7 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
+import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
@@ -7,16 +9,37 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
-class Namjoon extends StatelessWidget {
+class Namjoon extends StatefulWidget {
   const Namjoon({Key? key}) : super(key: key);
 
   @override
+  State<Namjoon> createState() => _NamjoonState();
+}
+
+class _NamjoonState extends State<Namjoon> {
+
+  List<Song> songs = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadSongs();
+  }
+
+  void loadSongs() {
+    setState(() {
+      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "namjoon" && s.album == null).toList();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    const title = "RM Albums and Songs";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        titleSpacing: 0,
+        title: Text("RM Albums and Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         backgroundColor: appBarColor,
       ),
       body: Container(
@@ -66,10 +89,9 @@ class Namjoon extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().rmAlbumName,
-                                    songNames: AlbumData().rmAlbumSongs,
-                                    albumArt: AlbumData().rmArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "RM",
+                                    albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
                                   ),
                                 ),
                               ),
@@ -114,10 +136,9 @@ class Namjoon extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().monoAlbumName,
-                                    songNames: AlbumData().monoAlbumSongs,
-                                    albumArt: AlbumData().monoArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "mono.",
+                                    albumArt: "images/albums-solo/rm/rm-mono.jpg",
                                   ),
                                 ),
                               ),
@@ -162,10 +183,9 @@ class Namjoon extends StatelessWidget {
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Songs(
-                                    albumName: AlbumData().indigoAlbumName,
-                                    songNames: AlbumData().indigoAlbumSongs,
-                                    albumArt: AlbumData().indigoArt,
+                                  builder: (context) => const Songs(
+                                    albumName: "Indigo",
+                                    albumArt: "images/albums-solo/rm/rm-indigo.jpg",
                                   ),
                                 ),
                               ),
@@ -216,8 +236,9 @@ class Namjoon extends StatelessWidget {
                   radius: const Radius.circular(15.0),
                   thumbVisibility: true,
                   child: ListView.builder(
-                      itemCount: AlbumData().rmOtherSongs.length,
+                      itemCount: songs.length,
                       itemBuilder: (context, index) {
+                        final song = songs[index];
                         return Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                           child: Material(
@@ -240,12 +261,12 @@ class Namjoon extends StatelessWidget {
                                         SizedBox(
                                           width: 85,
                                           height: 85,
-                                          child: Image.asset(AlbumData().rmOtherSongsArt[index]),
+                                          child: Image.asset(song.albumArt),
                                         ),
                                         const SizedBox(width: 10),
                                         Expanded(
                                           child: Text(
-                                            AlbumData().rmOtherSongs[index],
+                                            song.name,
                                             style: GoogleFonts.openSans(
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.w600,
@@ -262,262 +283,30 @@ class Namjoon extends StatelessWidget {
                                       child: InkWell(
                                         borderRadius: BorderRadius.circular(20),
                                         onTap: () {
-                                          switch (AlbumData().rmOtherSongs[index]) {
-                                            case "P.D.D (Please Don't Die) (Rap Monster x Warren G)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                      songName: "P.D.D",
-                                                      songLyrics: AlbumData().rmPDD,
-                                                      songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
+                                          switch(song.lang) {
+                                            case "eng":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,0,0,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "부끄부끄 (Buckubucku) (MFBTY ft. EE, RM and Dino-J)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "부끄부끄 (Buckubucku)",
-                                                          songLyrics: AlbumData().rmBuckubucku,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
+                                            case "kr":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,1,0],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
-                                            case "U (Primary ft. 권진아 Kwon Jin Ah, Rap Monster)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "U",
-                                                          songLyrics: AlbumData().rmU,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Change (RM & Wale)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsENG(
-                                                          songName: "CHANGE",
-                                                          songLyrics: AlbumData().rmChange,
-                                                          songTabs: AlbumData().rmChangeTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Gajah (코끼리) (Gaeko (개코) ft. Rap Monster)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "GAJAH (코끼리)",
-                                                          songLyrics: AlbumData().rmGajah,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Champion (Remix) (Fall Out Boy ft. RM)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsENG(
-                                                          songName: "CHAMPION (REMIX)",
-                                                          songLyrics: AlbumData().rmChampion,
-                                                          songTabs: AlbumData().rmChampionTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Monterlude":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsENG(
-                                                          songName: "MONTERLUDE",
-                                                          songLyrics: AlbumData().rmMonterlude,
-                                                          songTabs: AlbumData().rmMonterludeTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Unpack your Bags (SOULSCAPE x Rap Monster)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "UNPACK YOUR BAGS",
-                                                          songLyrics: AlbumData().rmUnpackYourBags,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Always":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "ALWAYS",
-                                                          songLyrics: AlbumData().rmAlways,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Timeless (Drunken Tiger ft. RM)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "TIMELESS",
-                                                          songLyrics: AlbumData().rmTimeless,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Crying Over You ◐ (Remix) (HONNE ft. RM & BEKA)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsENG(
-                                                          songName: "CRYING OVER YOU ◐ (REMIX)",
-                                                          songLyrics: AlbumData().rmCryingOverYou,
-                                                          songTabs: AlbumData().rmCryingOverYouTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Old Town Road (Seoul Town Road Remix) (Lil Nas ft. RM)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsENG(
-                                                          songName: "OLD TOWN ROAD (SEOUL TOWN ROAD REMIX)",
-                                                          songLyrics: AlbumData().rmSeoulTownRoad,
-                                                          songTabs: AlbumData().rmSeoulTownRoadTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Winter Flower (雪中梅) (YOUNHA (윤하) ft. RM)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "WINTER FLOWER (雪中梅)",
-                                                          songLyrics: AlbumData().rmWinterFlower,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "그러지 마 (Don’t) (eAeon (이이언) ft. RM)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "그러지 마 (DON’T)",
-                                                          songLyrics: AlbumData().rmDont,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "Bicycle":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "BICYCLE",
-                                                          songLyrics: AlbumData().rmBicycle,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
-                                              break;
-                                            case "SEXY NUKIM (섹시느낌) (Balming Tiger ft. RM of BTS)":
-                                              {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        LyricsKR(
-                                                          songName: "SEXY NUKIM (섹시느낌)",
-                                                          songLyrics: AlbumData().rmSexyNukim,
-                                                          songTabs: AlbumData().rmOtherSongsTabs,
-                                                          songFullName: AlbumData().rmOtherSongs[index],
-                                                        ),
-                                                  ),
-                                                );
-                                              }
+                                            case "jp":
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
+                                                songFullName: song.name,
+                                                songName: song.displayName,
+                                                songTabs: const [1,1,0,1],
+                                                songLyrics: song.lyrics,
+                                              )));
                                               break;
                                           }
                                         },

@@ -1,4 +1,3 @@
-import 'package:bts_lyrics_app/data/album_data.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
@@ -10,13 +9,12 @@ class AlbumsJP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const title = "BTS Japanese Albums";
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        //backgroundColor: Colors.purple[400],
+        titleSpacing: 0,
         backgroundColor: appBarColor,
-        title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
+        title: Text("BTS Japanese Albums", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
       ),
       body: Container(
         width: double.infinity,
@@ -53,10 +51,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().noMoreDreamAlbumName,
-                                songNames: AlbumData().noMoreDreamAlbumSongs,
-                                albumArt: AlbumData().noMoreDreamArt,
+                              builder: (context) => const Songs(
+                                albumName: "No More Dream",
+                                albumArt: "images/albums-jp/nomoredream.jpg",
                               ),
                             ),
                           ),
@@ -99,10 +96,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().boyInLuvAlbumName,
-                                songNames: AlbumData().boyInLuvAlbumSongs,
-                                albumArt: AlbumData().boyInLuvArt,
+                              builder: (context) => const Songs(
+                                albumName: "Boy In Luv",
+                                albumArt: "images/albums-jp/boyinluv.jpg",
                               ),
                             ),
                           ),
@@ -145,10 +141,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().dangerAlbumName,
-                                songNames: AlbumData().dangerAlbumSongs,
-                                albumArt: AlbumData().dangerArt,
+                              builder: (context) => const Songs(
+                                albumName: "Danger",
+                                albumArt: "images/albums-jp/danger.jpg",
                               ),
                             ),
                           ),
@@ -191,10 +186,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().wakeUpAlbumName,
-                                songNames: AlbumData().wakeUpAlbumSongs,
-                                albumArt: AlbumData().wakeUpArt,
+                              builder: (context) => const Songs(
+                                albumName: "Wake Up",
+                                albumArt: "images/albums-jp/wakeup.jpg",
                               ),
                             ),
                           ),
@@ -237,10 +231,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().forYouAlbumName,
-                                songNames: AlbumData().forYouAlbumSongs,
-                                albumArt: AlbumData().forYouArt,
+                              builder: (context) => const Songs(
+                                albumName: "For You",
+                                albumArt: "images/albums-jp/foryou.jpg",
                               ),
                             ),
                           ),
@@ -283,10 +276,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().iNeedUAlbumName,
-                                songNames: AlbumData().iNeedUAlbumSongs,
-                                albumArt: AlbumData().iNeedUArt,
+                              builder: (context) => const Songs(
+                                albumName: "I Need U",
+                                albumArt: "images/albums-jp/ineedu.jpg",
                               ),
                             ),
                           ),
@@ -329,10 +321,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().runAlbumName,
-                                songNames: AlbumData().runAlbumSongs,
-                                albumArt: AlbumData().runArt,
+                              builder: (context) => const Songs(
+                                albumName: "Run",
+                                albumArt: "images/albums-jp/run.jpg",
                               ),
                             ),
                           ),
@@ -375,10 +366,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().youthAlbumName,
-                                songNames: AlbumData().youthAlbumSongs,
-                                albumArt: AlbumData().youthArt,
+                              builder: (context) => const Songs(
+                                albumName: "Youth",
+                                albumArt: "images/albums-jp/youth.jpg",
                               ),
                             ),
                           ),
@@ -421,10 +411,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().bstAlbumName,
-                                songNames: AlbumData().bstAlbumSongs,
-                                albumArt: AlbumData().bstArt,
+                              builder: (context) => const Songs(
+                                albumName: "Blood Sweat & Tears",
+                                albumArt: "images/albums-jp/bst.jpg",
                               ),
                             ),
                           ),
@@ -467,10 +456,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().crystalSnowAlbumName,
-                                songNames: AlbumData().crystalSnowAlbumSongs,
-                                albumArt: AlbumData().crystalSnowArt,
+                              builder: (context) => const Songs(
+                                albumName: "MIC DROP/DNA/Crystal Snow",
+                                albumArt: "images/albums-jp/crystalsnow.jpg",
                               ),
                             ),
                           ),
@@ -507,10 +495,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().faceYourselfAlbumName,
-                                songNames: AlbumData().faceYourselfAlbumSongs,
-                                albumArt: AlbumData().faceYourselfArt,
+                              builder: (context) => const Songs(
+                                albumName: "Face Yourself",
+                                albumArt: "images/albums-jp/faceyourself.jpg",
                               ),
                             ),
                           ),
@@ -553,10 +540,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().fakeLoveAlbumName,
-                                songNames: AlbumData().fakeLoveAlbumSongs,
-                                albumArt: AlbumData().fakeLoveArt,
+                              builder: (context) => const Songs(
+                                albumName: "FAKE LOVE/Airplane pt.2",
+                                albumArt: "images/albums-jp/fl-airplane2.jpg",
                               ),
                             ),
                           ),
@@ -593,10 +579,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().lightsAlbumName,
-                                songNames: AlbumData().lightsAlbumSongs,
-                                albumArt: AlbumData().lightsArt,
+                              builder: (context) => const Songs(
+                                albumName: "Lights/Boy With Luv",
+                                albumArt: "images/albums-jp/lights.jpg",
                               ),
                             ),
                           ),
@@ -639,10 +624,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().motsJourneyAlbumName,
-                                songNames: AlbumData().motsJourneyAlbumSongs,
-                                albumArt: AlbumData().motsJourneyArt,
+                              builder: (context) => const Songs(
+                                albumName: "Map Of The Soul: 7 ~ The Journey ~",
+                                albumArt: "images/albums-jp/mots7thejourney.jpg",
                               ),
                             ),
                           ),
@@ -679,10 +663,9 @@ class AlbumsJP extends StatelessWidget {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Songs(
-                                albumName: AlbumData().btsTheBestAlbumName,
-                                songNames: AlbumData().btsTheBestAlbumSongs,
-                                albumArt: AlbumData().btsTheBestArt,
+                              builder: (context) => const Songs(
+                                albumName: "BTS, THE BEST",
+                                albumArt: "images/albums-jp/btsthebest.jpg",
                               ),
                             ),
                           ),
