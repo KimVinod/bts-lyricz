@@ -3956,7 +3956,7 @@ const List<Song> allSongs = [
     isSolo: IsSolo(isSolo: true, soloName: "bts"),
     album: null,
     albumArt: "images/singles/bts-savagelove.jpg",
-    lang: "eng",
+    lang: "kr",
     lyrics: getSavageLove,
   ),
 
