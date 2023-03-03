@@ -898,6 +898,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getHoseokRushHour,
   ),
+  Song(
+    name: "on the street (with J. Cole)",
+    displayName: "ON THE STREET",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-onTheStreet.jpg",
+    lang: "kr",
+    lyrics: getHoseokOnTheStreet,
+  ),
 
 
   ///jimin
@@ -1196,6 +1205,15 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-sofaraway.jpg",
     lang: "kr",
     lyrics: getSoFarAway,
+  ),
+  Song(
+    name: "네시 (4 O'CLOCK)",
+    displayName: "네시 (4 O'CLOCK)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-4oclock.jpg",
+    lang: "kr",
+    lyrics: get4oClock,
   ),
   Song(
     name: "With Seoul",
@@ -2235,6 +2253,15 @@ const List<Song> allSongs = [
     lyrics: get2Cool4SkoolWabPt2,
   ),
   Song(
+    name: "Skit: Circle Room Talk",
+    displayName: "SKIT: CIRCLE ROOM TALK",
+    isSolo: IsSolo(isSolo: false),
+    album: "2 Cool 4 Skool",
+    albumArt: "images/2cool4skool.jpg",
+    lang: "kr",
+    lyrics: get2Cool4SkoolSkit,
+  ),
+  Song(
     name: "No More Dream",
     displayName: "NO MORE DREAM",
     isSolo: IsSolo(isSolo: false),
@@ -2298,6 +2325,15 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     lyrics: getorul82WeOn,
+  ),
+  Song(
+    name: "Skit: R U Happy Now?",
+    displayName: "SKIT: R U HAPPY NOW?",
+    isSolo: IsSolo(isSolo: false),
+    album: "O!RUL8,2?",
+    albumArt: "images/o!rul8,2.jpg",
+    lang: "kr",
+    lyrics: getorul82Skit,
   ),
   Song(
     name: "If I Ruled the World",
@@ -2372,6 +2408,15 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     lyrics: getSkoolLuvAffairBoyInLuv,
+  ),
+  Song(
+    name: "Skit: Soulmate",
+    displayName: "SKIT: SOULMATE",
+    isSolo: IsSolo(isSolo: false),
+    album: "Skool Luv Affair",
+    albumArt: "images/skoolluvaffair.jpg",
+    lang: "kr",
+    lyrics: getSkoolLuvAffairSkit,
   ),
   Song(
     name: "어디에서 왔는지 (Where You From)",
@@ -2585,6 +2630,15 @@ const List<Song> allSongs = [
     lyrics: getHyyh1HoldMeTight,
   ),
   Song(
+    name: "Skit: Expectation!",
+    displayName: "SKIT: EXPECTATION!",
+    isSolo: IsSolo(isSolo: false),
+    album: "The most beautiful moment in life pt.1",
+    albumArt: "images/hyyh1.jpg",
+    lang: "kr",
+    lyrics: getHyyh1Skit,
+  ),
+  Song(
     name: "쩔어 (Dope)",
     displayName: "쩔어 (DOPE)",
     isSolo: IsSolo(isSolo: false),
@@ -2684,6 +2738,15 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     lyrics: getHyyh2SilverSpoon,
+  ),
+  Song(
+    name: "Skit: One Night in a Strange City",
+    displayName: "SKIT: ONE NIGHT IN A STRANGE CITY",
+    isSolo: IsSolo(isSolo: false),
+    album: "The most beautiful moment in life pt.2",
+    albumArt: "images/hyyh2.jpg",
+    lang: "kr",
+    lyrics: getHyyh2Skit,
   ),
   Song(
     name: "고엽 (Autumn Leaves)",
@@ -3216,6 +3279,15 @@ const List<Song> allSongs = [
     lyrics: getLyHerPiedPiper,
   ),
   Song(
+    name: "Skit: Billboard Music Awards Speech",
+    displayName: "SKIT: BILLBOARD MUSIC AWARDS SPEECH",
+    isSolo: IsSolo(isSolo: false),
+    album: "Love Yourself 承 'HER'",
+    albumArt: "images/lyher.jpg",
+    lang: "eng",
+    lyrics: getLyHerSkit1,
+  ),
+  Song(
     name: "MIC Drop",
     displayName: "MIC DROP",
     isSolo: IsSolo(isSolo: false),
@@ -3232,6 +3304,15 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     lyrics: getLyHerGoGo,
+  ),
+  Song(
+    name: "Skit: 망설임과 두려움 (Hesitation and Fear)",
+    displayName: "SKIT: 망설임과 두려움 (HESITATION and FEAR)",
+    isSolo: IsSolo(isSolo: false),
+    album: "Love Yourself 承 'HER'",
+    albumArt: "images/lyher.jpg",
+    lang: "eng",
+    lyrics: getLyHerSkit2,
   ),
   Song(
     name: "바다 (Sea)",
@@ -3911,6 +3992,15 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     lyrics: getBeBlueAndGrey,
+  ),
+  Song(
+    name: "Skit",
+    displayName: "SKIT",
+    isSolo: IsSolo(isSolo: false),
+    album: "BE",
+    albumArt: "images/be.jpg",
+    lang: "kr",
+    lyrics: getBeSkit,
   ),
   Song(
     name: "Telepathy",
