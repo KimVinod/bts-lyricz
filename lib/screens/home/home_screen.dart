@@ -45,6 +45,55 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(width: 5),
 
+                /// on the street
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/jhope/jhope-onTheStreet.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LyricsKR(
+                                  songFullName: "on the street (with J. Cole)",
+                                  songName: "ON THE STREET",
+                                  songTabs: [1,1,1,0],
+                                  songLyrics: getHoseokOnTheStreet,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "on the street",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
                 /// VIBE
                 Column(
                   children: <Widget>[
@@ -178,55 +227,6 @@ class HomeScreen extends StatelessWidget {
                       child: FittedBox(
                         child: Text(
                           "Dreamers",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// The Astronaut
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/jin/jin-the-astronaut.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsKR(
-                                  songFullName: "The Astronaut",
-                                  songName: "THE ASTRONAUT",
-                                  songLyrics: getSeokjinTheAstronaut,
-                                  songTabs: [1,1,1,0],
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "The Astronaut",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(
                             fontSize: 16.0,
