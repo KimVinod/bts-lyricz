@@ -410,6 +410,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getNamjoonSexyNukim,
   ),
+  Song(
+    name: "Smoke Sprite (So!YoON! (황소윤) ft. RM of BTS)",
+    displayName: "SMOKE SPRITE",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-smoke-sprite.jpg",
+    lang: "kr",
+    lyrics: getNamjoonSmokeSprite,
+  ),
 
   ///seokjin
   //songs
