@@ -956,6 +956,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getJiminVibe,
   ),
+  Song(
+    name: "Set Me Free Pt.2",
+    displayName: "SET ME FREE PT.2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-set-me-free-pt2.jpg",
+    lang: "kr",
+    lyrics: getJiminSetMeFreePt2,
+  ),
 
 
   ///taehyung
