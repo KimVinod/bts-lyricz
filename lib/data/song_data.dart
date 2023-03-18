@@ -410,6 +410,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getNamjoonSexyNukim,
   ),
+  Song(
+    name: "Smoke Sprite (So!YoON! (황소윤) ft. RM of BTS)",
+    displayName: "SMOKE SPRITE",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-smoke-sprite.jpg",
+    lang: "kr",
+    lyrics: getNamjoonSmokeSprite,
+  ),
 
   ///seokjin
   //songs
@@ -946,6 +955,15 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-vibe.jpg",
     lang: "kr",
     lyrics: getJiminVibe,
+  ),
+  Song(
+    name: "Set Me Free Pt.2",
+    displayName: "SET ME FREE PT.2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-set-me-free-pt2.jpg",
+    lang: "kr",
+    lyrics: getJiminSetMeFreePt2,
   ),
 
 

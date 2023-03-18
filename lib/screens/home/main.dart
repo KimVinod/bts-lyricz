@@ -349,8 +349,7 @@ class DrawerBody extends StatelessWidget {
                                 color: Colors.transparent,
                                 child: InkWell(
                                   onTap: () {
-                                    z.close!();
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const FavoritesScreen()));
+                                    z.close!()?.then((value) => Navigator.push(context, MaterialPageRoute(builder: (context) => const FavoritesScreen())));
                                   },
                                 ),
                               ),
@@ -395,8 +394,8 @@ class DrawerBody extends StatelessWidget {
                                 color: Colors.transparent,
                                 child: InkWell(
                                   onTap: () {
-                                    z.close!();
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsScreen()));
+                                    z.close!()?.then((value) => Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsScreen())));
+
                                   },
                                 ),
                               ),
