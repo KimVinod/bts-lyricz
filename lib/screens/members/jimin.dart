@@ -3,6 +3,7 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,6 +51,72 @@ class _JiminState extends State<Jimin> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(left: 10.0, top: 14.0),
+              child: Text(
+                "Albums",
+                style: GoogleFonts.openSans(
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(height: 14.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: SizedBox(
+                height: 210,
+                child: Row(
+                  children: <Widget>[
+                    ///face
+                    Column(
+                      children: <Widget>[
+                        Material(
+                            elevation: 3,
+                            shadowColor: Colors.purple.shade700,
+                            borderRadius: BorderRadius.circular(10),
+                            child: Ink(
+                              width: 150,
+                              height: 170,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: const DecorationImage(image: AssetImage("images/albums-solo/jimin/jimin-face.jpg"), fit: BoxFit.fill)
+                              ),
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(10),
+                                //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                                onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const Songs(
+                                      albumName: "FACE",
+                                      albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )),
+                        const SizedBox(height: 4),
+                        SizedBox(
+                          height: 20,
+                          width: 150,
+                          child: FittedBox(
+                            child: Text(
+                              "FACE",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.openSans(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0),
               child: Text(
                 "Songs",
                 style: GoogleFonts.openSans(

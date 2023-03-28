@@ -919,6 +919,72 @@ const List<Song> allSongs = [
 
 
   ///jimin
+  //albums
+  //face
+  Song(
+    name: "Face-off",
+    displayName: "FACE-OFF",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminFaceFaceOff,
+  ),
+  Song(
+    name: "Interlude : Dive",
+    displayName: "INTERLUDE : DIVE",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminFaceInterludeDive,
+  ),
+  Song(
+    name: "Like Crazy",
+    displayName: "LIKE CRAZY",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminFaceLikeCrazy,
+  ),
+  Song(
+    name: "Alone",
+    displayName: "ALONE",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminFaceAlone,
+  ),
+  Song(
+    name: "Set Me Free Pt.2",
+    displayName: "SET ME FREE PT.2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminSetMeFreePt2,
+  ),
+  Song(
+    name: "Like Crazy (English Version)",
+    displayName: "LIKE CRAZY (ENGLISH VERSION)",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "eng",
+    lyrics: getJiminFaceLikeCrazyEngVer,
+  ),
+  Song(
+    name: "편지 (Letter)",
+    displayName: "편지 (LETTER)",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: "FACE",
+    albumArt: "images/albums-solo/jimin/jimin-face.jpg",
+    lang: "kr",
+    lyrics: getJiminFaceLetter,
+  ),
+
   //songs
   Song(
     name: "약속 (Promise)",
