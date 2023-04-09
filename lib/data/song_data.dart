@@ -672,7 +672,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-eight.jpg",
     lang: "kr",
-    lyrics: getYoongiSugaEight,
+    lyrics: getYoongiEight,
   ),
   Song(
     name: "Blueberry Eyes (MAX ft. SUGA)",
@@ -681,7 +681,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-blueberryeyes.jpg",
     lang: "kr",
-    lyrics: getYoongiSugaBlueberryEyes,
+    lyrics: getYoongiBlueberryEyes,
   ),
   Song(
     name: "ØMI - You (Prod. SUGA of BTS)",
@@ -690,7 +690,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-you.jpg",
     lang: "jp",
-    lyrics: getYoongiSugaYou,
+    lyrics: getYoongiYou,
   ),
   Song(
     name: "Juice WRLD - Girl Of My Dreams (with Suga from BTS)",
@@ -699,7 +699,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-girl-of-my-dreams.jpg",
     lang: "kr",
-    lyrics: getYoongiSugaGirlOfMyDreams,
+    lyrics: getYoongiGirlOfMyDreams,
   ),
   Song(
     name: "PSY - That That (prod. & ft. SUGA of BTS)",
@@ -708,7 +708,16 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-that-that.jpg",
     lang: "kr",
-    lyrics: getYoongiSugaThatThat,
+    lyrics: getYoongiThatThat,
+  ),
+  Song(
+    name: "사람 (People) Pt.2 (feat. IU (아이유))",
+    displayName: "사람 (PEOPLE) PT.2",
+    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
+    album: null,
+    albumArt: "images/albums-solo/suga/suga-peoplept2.jpg",
+    lang: "kr",
+    lyrics: getYoongiPeoplePt2,
   ),
 
   ///hobi
