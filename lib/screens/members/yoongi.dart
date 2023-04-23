@@ -62,9 +62,13 @@ class _YoongiState extends State<Yoongi> {
             const SizedBox(height: 14.0),
             SizedBox(
               height: 210,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: ListView(
+                padding: const EdgeInsets.only(left: 20.0, right: 10.0),
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
                 children: <Widget>[
+                  const SizedBox(width: 5),
+
                   /// agust d
                   Column(
                     children: <Widget>[
@@ -110,6 +114,7 @@ class _YoongiState extends State<Yoongi> {
                       ),
                     ],
                   ),
+                  const SizedBox(width: 10),
 
                   /// d2
                   Column(
@@ -146,6 +151,53 @@ class _YoongiState extends State<Yoongi> {
                         child: FittedBox(
                           child: Text(
                             "D2",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 10),
+
+                  /// d-day
+                  Column(
+                    children: <Widget>[
+                      Material(
+                          elevation: 3,
+                          shadowColor: Colors.purple.shade700,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Ink(
+                            width: 150,
+                            height: 170,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                image: const DecorationImage(image: AssetImage("images/albums-solo/suga/suga-d-day.jpg"), fit: BoxFit.fill)
+                            ),
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(10),
+                              //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Songs(
+                                    albumName: "D-DAY",
+                                    albumArt: "images/albums-solo/suga/suga-d-day.jpg",
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )),
+                      const SizedBox(height: 4),
+                      SizedBox(
+                        height: 20,
+                        width: 150,
+                        child: FittedBox(
+                          child: Text(
+                            "D-DAY",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.openSans(
                               fontSize: 16.0,
