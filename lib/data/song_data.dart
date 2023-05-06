@@ -419,6 +419,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getNamjoonSmokeSprite,
   ),
+  Song(
+    name: "다시는 사랑한다 말하지 마 (Don’t ever say love me) (Colde feat. RM of BTS)",
+    displayName: "다시는 사랑한다 말하지 마 (Don’t ever say love me)",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-dont-ever-say-love-me.jpg",
+    lang: "kr",
+    lyrics: getNamjoonDontEverSayLoveMe,
+  ),
 
   ///seokjin
   //songs
