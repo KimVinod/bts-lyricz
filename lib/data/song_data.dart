@@ -1132,6 +1132,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getJiminSetMeFreePt2,
   ),
+  Song(
+    name: "Angel Pt. 1 (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
+    displayName: "ANGEL PT. 1",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt1,
+  ),
 
 
   ///taehyung
