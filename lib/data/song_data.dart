@@ -4663,7 +4663,16 @@ const List<Song> allSongs = [
     lyrics: getYetToComeHyundai,
   ),
 
-  
+  //the planet
+  Song(
+    name: "The Planet",
+    displayName: "THE PLANET",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-thePlanet.jpg",
+    lang: "kr",
+    lyrics: getThePlanet,
+  ),
 
 ];
 

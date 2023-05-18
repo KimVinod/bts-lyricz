@@ -44,6 +44,55 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(width: 5),
 
+                /// the planet
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/singles/bts-thePlanet.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LyricsKR(
+                                  songFullName: "The Planet",
+                                  songName: "THE PLANET",
+                                  songTabs: [1,1,1,0],
+                                  songLyrics: getThePlanet,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "The Planet",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
                 /// don't every say you love me
                 Column(
                   children: <Widget>[
@@ -177,53 +226,6 @@ class HomeScreen extends StatelessWidget {
                       child: FittedBox(
                         child: Text(
                           "사람 (People) Pt.2",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// face
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/jimin/jimin-face.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Songs(
-                                  albumName: "FACE",
-                                  albumArt: "images/albums-solo/jimin/jimin-face.jpg",
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "FACE",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(
                             fontSize: 16.0,
