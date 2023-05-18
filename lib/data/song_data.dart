@@ -1383,6 +1383,15 @@ const List<Song> allSongs = [
     lyrics: getBtsJessi,
   ),
   Song(
+    name: "죽어도 너야 (It’s Definitely You)",
+    displayName: "죽어도 너야 (IT'S DEFINITELY YOU)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-its-definitely-you.jpg",
+    lang: "kr",
+    lyrics: getItsDefinitelyYou,
+  ),
+  Song(
     name: "So Far Away (SUGA, Jin & Jungkook Ver.)",
     displayName: "SO FAR AWAY",
     isSolo: IsSolo(isSolo: true, isUnofficial: true),
@@ -4653,6 +4662,8 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getYetToComeHyundai,
   ),
+
+  
 
 ];
 
