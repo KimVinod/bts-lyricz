@@ -1132,6 +1132,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getJiminSetMeFreePt2,
   ),
+  Song(
+    name: "Angel Pt. 1 (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
+    displayName: "ANGEL PT. 1",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt1,
+  ),
 
 
   ///taehyung
@@ -1381,6 +1390,15 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-btsjessi.jpg",
     lang: "kr",
     lyrics: getBtsJessi,
+  ),
+  Song(
+    name: "죽어도 너야 (It’s Definitely You)",
+    displayName: "죽어도 너야 (IT'S DEFINITELY YOU)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-its-definitely-you.jpg",
+    lang: "kr",
+    lyrics: getItsDefinitelyYou,
   ),
   Song(
     name: "So Far Away (SUGA, Jin & Jungkook Ver.)",
@@ -4652,6 +4670,17 @@ const List<Song> allSongs = [
     albumArt: "images/bts-yet-to-come-hyundai.jpg",
     lang: "kr",
     lyrics: getYetToComeHyundai,
+  ),
+
+  //the planet
+  Song(
+    name: "The Planet",
+    displayName: "THE PLANET",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-thePlanet.jpg",
+    lang: "kr",
+    lyrics: getThePlanet,
   ),
 
 ];
