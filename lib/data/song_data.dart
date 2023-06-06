@@ -811,6 +811,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getYoongiPeoplePt2,
   ),
+  Song(
+    name: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
+    displayName: "LILITH",
+    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
+    album: null,
+    albumArt: "images/albums-solo/suga/suga-lilith.jpg",
+    lang: "eng",
+    lyrics: getYoongiLilith,
+  ),
 
   ///hobi
   //albuns
