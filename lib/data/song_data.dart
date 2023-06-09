@@ -4692,5 +4692,16 @@ const List<Song> allSongs = [
     lyrics: getThePlanet,
   ),
 
+  //take two
+  Song(
+    name: "Take Two",
+    displayName: "TAKE TWO",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-take-two.jpg",
+    lang: "kr",
+    lyrics: getTakeTwo,
+  ),
+
 ];
 
