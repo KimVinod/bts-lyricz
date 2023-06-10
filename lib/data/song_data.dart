@@ -811,6 +811,15 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getYoongiPeoplePt2,
   ),
+  Song(
+    name: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
+    displayName: "LILITH",
+    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
+    album: null,
+    albumArt: "images/albums-solo/suga/suga-lilith.jpg",
+    lang: "eng",
+    lyrics: getYoongiLilith,
+  ),
 
   ///hobi
   //albuns
@@ -4681,6 +4690,17 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-thePlanet.jpg",
     lang: "kr",
     lyrics: getThePlanet,
+  ),
+
+  //take two
+  Song(
+    name: "Take Two",
+    displayName: "TAKE TWO",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-take-two.jpg",
+    lang: "kr",
+    lyrics: getTakeTwo,
   ),
 
 ];

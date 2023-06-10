@@ -45,6 +45,104 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(width: 5),
 
+                /// take two
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/singles/bts-take-two.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LyricsKR(
+                                  songFullName: "Take Two",
+                                  songName: "TAKE TWO",
+                                  songTabs: [1,1,1,0],
+                                  songLyrics: getTakeTwo,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "Take Two",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
+                /// lilith
+                Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Ink(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(image: AssetImage("images/albums-solo/suga/suga-lilith.jpg"), fit: BoxFit.fill)
+                          ),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(10),
+                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LyricsENG(
+                                  songFullName: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
+                                  songName: "LILITH",
+                                  songTabs: [1,0,0,0],
+                                  songLyrics: getYoongiLilith,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 4),
+                    SizedBox(
+                      height: 20,
+                      width: 150,
+                      child: FittedBox(
+                        child: Text(
+                          "Lilith",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10),
+
                 /// Angel Pt. 1
                 Column(
                   children: <Widget>[
@@ -131,102 +229,6 @@ class HomeScreen extends StatelessWidget {
                       child: FittedBox(
                         child: Text(
                           "The Planet",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// don't ever say you love me
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/rm/rm-dont-ever-say-love-me.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsKR(
-                                  songFullName: "다시는 사랑한다 말하지 마 (Don’t ever say love me) (Colde feat. RM of BTS)",
-                                  songName: "다시는 사랑한다 말하지 마 (Don’t ever say love me)",
-                                  songTabs: [1,1,1,0],
-                                  songLyrics: getNamjoonDontEverSayLoveMe,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Don’t ever say love me",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// d-day
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/suga/suga-d-day.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Songs(
-                                  albumName: "D-DAY",
-                                  albumArt: "images/albums-solo/suga/suga-d-day.jpg",
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "D-DAY",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(
                             fontSize: 16.0,
