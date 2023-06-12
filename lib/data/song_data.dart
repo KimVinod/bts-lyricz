@@ -2,6 +2,53 @@
 import 'package:bts_lyrics_app/data/lyrics_data.dart';
 import 'package:bts_lyrics_app/data/song_model.dart';
 
+const List<Song> newReleaseSongs = [
+  //max 4 songs
+  //take two
+  Song(
+    name: "Take Two",
+    displayName: "Take Two",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-take-two.jpg",
+    lang: "kr",
+    lyrics: getTakeTwo,
+  ),
+
+  //lilith
+  Song(
+    name: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
+    displayName: "Lilith",
+    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
+    album: null,
+    albumArt: "images/albums-solo/suga/suga-lilith.jpg",
+    lang: "eng",
+    lyrics: getYoongiLilith,
+  ),
+
+  //angel pt1
+  Song(
+    name: "Angel Pt. 1 (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
+    displayName: "Angel Pt. 1",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt1,
+  ),
+
+  //the planet
+  Song(
+    name: "The Planet",
+    displayName: "The Planet",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-thePlanet.jpg",
+    lang: "kr",
+    lyrics: getThePlanet,
+  ),
+];
+
 const List<Song> allSongs = [
 
   ///solo projects
