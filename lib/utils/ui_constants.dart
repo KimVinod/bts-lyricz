@@ -13,7 +13,7 @@ const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
 
 const String shareText = "Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\n$playStoreUrl";
 const String versionNotesUrl = "https://sites.google.com/view/bts-lyricz-ver";
-const String twitterUrl = "https://twitter.com/vinod3344";
+const String twitterUrl = "https://twitter.com/intent/user?user_id=3249582416";
 const String playStoreUrl = "https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz";
 const String githubUrl = "https://github.com/KimVinod/bts-lyricz";
 const String email = "vinoddevendran34@gmail.com";
