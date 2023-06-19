@@ -80,21 +80,26 @@ class SearchSongsState extends State<SearchSongs> {
   }
 
   void searchSongs(String query) {
-
     final seen = <String>{};
     List<Song> uniqueList = allSongs.where((e) => seen.add(e.name)).toList();
     uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
 
-    final songs = uniqueList.where((song) {
+    final matchedSongs = uniqueList.where((song) {
       final songName = song.name.toLowerCase();
       final searchLower = query.toLowerCase();
+      final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
+      final lowercaseJpLyrics = song.lyrics.jp?.toLowerCase() ?? '';
+      final lowercaseKrLyrics = song.lyrics.kr?.toLowerCase() ?? '';
 
-      return songName.contains(searchLower);
+      return songName.contains(searchLower) ||
+          lowercaseEngLyrics.contains(searchLower) ||
+          lowercaseJpLyrics.contains(searchLower) ||
+          lowercaseKrLyrics.contains(searchLower);
     }).toList();
 
     setState(() {
       this.query = query;
-      this.songs = songs;
+      songs = matchedSongs;
     });
   }
 }
