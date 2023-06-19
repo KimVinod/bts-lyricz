@@ -1,7 +1,5 @@
 import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_jp.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
 import 'package:bts_lyrics_app/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
@@ -14,7 +12,7 @@ class CustomSongCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Bounceable(
-      onTap: () {},
+      onTap: () => onTap(context),
       child: Column(
         children: <Widget>[
           Material(
@@ -30,39 +28,7 @@ class CustomSongCard extends StatelessWidget {
                 ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12),
-                  onTap: () {
-                    if(song.album == null) {
-                      switch(song.lang) {
-                        case "eng":
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsENG(
-                            songFullName: song.name,
-                            songName: song.displayName,
-                            songTabs: const [1,0,0,0],
-                            songLyrics: song.lyrics,
-                          )));
-                          break;
-                        case "kr":
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsKR(
-                            songFullName: song.name,
-                            songName: song.displayName,
-                            songTabs: const [1,1,1,0],
-                            songLyrics: song.lyrics,
-                          )));
-                          break;
-                        case "jp":
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsJP(
-                            songFullName: song.name,
-                            songName: song.displayName,
-                            songTabs: const [1,1,0,1],
-                            songLyrics: song.lyrics,
-                          )));
-                          break;
-                      }
-                    } else {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Songs(albumName: song.album!, albumArt: song.albumArt)));
-                    }
-
-                  },
+                  onTap: () => onTap(context),
                 ),
               )),
           const SizedBox(height: 6),
@@ -83,5 +49,17 @@ class CustomSongCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void onTap(BuildContext context) {
+    if(song.album == null) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(
+        songFullName: song.name,
+        songName: song.displayName,
+        songLyrics: song.lyrics,
+      )));
+    } else {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Songs(albumName: song.album!, albumArt: song.albumArt)));
+    }
   }
 }

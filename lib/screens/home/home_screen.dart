@@ -1,4 +1,6 @@
+import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
+import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -104,61 +106,62 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: BottomBar(
-          borderRadius: BorderRadius.circular(500),
-          duration: Duration(milliseconds: 500),
-          curve: Curves.decelerate,
-          width: MediaQuery.of(context).size.width * 0.8,
-          barColor: appBarColor,
-          showIcon: false,
-          bottom: 16,
-          body: (context, controller) {
-            scrollController = controller;
-            return PageView(
-            physics: NeverScrollableScrollPhysics(),
+    return Scaffold(
+      backgroundColor: appUILightColor,
+      body: BottomBar(
+        borderRadius: BorderRadius.circular(500),
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.decelerate,
+        width: MediaQuery.of(context).size.width * 0.8,
+        barColor: appBarColor,
+        showIcon: false,
+        bottom: 16,
+        body: (context, controller) {
+          scrollController = controller;
+          return SafeArea(
+            child: PageView(
+            physics: const NeverScrollableScrollPhysics(),
             controller: _pageController,
             dragStartBehavior: DragStartBehavior.start,
             children: [
               HomeTab(controller: controller),
+              FavoritesScreen(controller: controller),
               ListView.builder(
                 controller: controller,
                 itemCount: 20,
-                itemBuilder: (context, index) => ListTile(title: Text("huhu"), onTap: () {}),
+                itemBuilder: (context, index) => ListTile(title: const Text("huhu"), onTap: () {}),
               ),
-              Container(),
-              Container(),
+              SettingsScreen(controller: controller),
             ],
+        ),
           );
-          },
-          child: TabBar(
-            onTap: (index) {
-              if(index == 0) {
-                if(scrollController.hasClients) {
-                  scrollController.animateTo(0, duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
-                }
+        },
+        child: TabBar(
+          onTap: (index) {
+            if(index == 0) {
+              if(scrollController.hasClients) {
+                scrollController.animateTo(0, duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
               }
-              _onItemTapped(index);
-            },
-            unselectedLabelColor: Colors.white54,
-            splashBorderRadius: BorderRadius.circular(500),
-            indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-            controller: tabController,
-            indicator: UnderlineTabIndicator(
-              borderRadius: BorderRadius.circular(6),
-                borderSide: BorderSide(
-                  color: Colors.white,
-                  width: 2.5,
-                ),
-                insets: EdgeInsets.fromLTRB(16, 0, 16, 8)),
-            tabs: const <Widget>[
-              Tooltip(message: "Home", child: Tab(icon: Icon(Icons.home))),
-              Tooltip(message: "Favorites", child: Tab(icon: Icon(Icons.favorite))),
-              Tooltip(message: "Mini Game", child: Tab(icon: Icon(Icons.videogame_asset_rounded))),
-              Tooltip(message: "Settings", child: Tab(icon: Icon(Icons.settings))),
-            ],
-          ),
+            }
+            _onItemTapped(index);
+          },
+          unselectedLabelColor: Colors.white54,
+          splashBorderRadius: BorderRadius.circular(500),
+          indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+          controller: tabController,
+          indicator: UnderlineTabIndicator(
+            borderRadius: BorderRadius.circular(6),
+              borderSide: const BorderSide(
+                color: Colors.white,
+                width: 2.5,
+              ),
+              insets: const EdgeInsets.fromLTRB(16, 0, 16, 8)),
+          tabs: const <Widget>[
+            Tooltip(message: "Home", child: Tab(icon: Icon(Icons.home))),
+            Tooltip(message: "Favorites", child: Tab(icon: Icon(Icons.favorite))),
+            Tooltip(message: "Mini Game", child: Tab(icon: Icon(Icons.videogame_asset_rounded))),
+            Tooltip(message: "Settings", child: Tab(icon: Icon(Icons.settings))),
+          ],
         ),
       ),
     );

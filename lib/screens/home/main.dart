@@ -2,6 +2,7 @@ import 'package:bts_lyrics_app/screens/home/home_screen.dart';
 import 'package:bts_lyrics_app/services/firebase_service.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/adapters.dart';
 
@@ -36,7 +37,16 @@ class _BTSLyricsAppState extends State<BTSLyricsApp> {
         primaryColor: appUILightColor,
         colorScheme: ColorScheme.fromSwatch().copyWith(secondary: appUILightColor),
       ),
-      home: const HomeScreen(),
+      home: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: NotificationListener<OverscrollIndicatorNotification>(
+          onNotification: (OverscrollIndicatorNotification overScroll){
+            overScroll.disallowIndicator();
+            return true;
+          },
+          child: const HomeScreen(),
+        ),
+      ),
     );
   }
 }

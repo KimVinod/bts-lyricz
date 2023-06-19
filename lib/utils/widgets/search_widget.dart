@@ -33,17 +33,15 @@ class SearchWidgetState extends State<SearchWidget> {
     final style = widget.text.isEmpty ? styleHint : styleActive;
 
     return Padding(
-      padding: const EdgeInsets.all(14.0),
+      padding: const EdgeInsets.all(16),
       child: Material(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(12),
         elevation: 3,
-        //color: Colors.transparent,
         shadowColor: Colors.purple.shade700,
         child: Container(
           height: 45,
-          //margin: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(12),
             color: Colors.white70,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 8),
