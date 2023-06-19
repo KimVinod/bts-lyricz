@@ -1,6 +1,5 @@
 import 'package:bts_lyrics_app/screens/discography/albums_screen.dart';
 import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
-import 'package:bts_lyrics_app/screens/discography/songs_uo.dart';
 import 'package:bts_lyrics_app/screens/member/member_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -35,11 +34,11 @@ String getBt21Pic() {
 }
 
 const Map<String, Widget> discography = {
-  'images/digital-singles.jpg': DigitalSingles(),
+  'images/digital-singles.jpg': DigitalSingles(isUnOfficial: false),
   'images/kr-albums.jpg': Albums(type: 'kr'),
   'images/jp-albums.jpg': Albums(type: 'jp'),
   'images/uo-albums.jpg': Albums(type: 'uo'),
-  'images/uo-songs2.jpg': SongsUO(),
+  'images/uo-songs2.jpg': DigitalSingles(isUnOfficial: true),
 };
 
 const List<Map<String, dynamic>> soloProjects = [

@@ -2,7 +2,6 @@ import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
@@ -36,74 +35,69 @@ class _SongsState extends State<Songs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
         title: Text("Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         titleSpacing: 0,
         backgroundColor: appBarColor,
       ),
       body: Material(
         color: appUILightColor,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const SizedBox(height: 15),
-            Center(
-              child: Column(
-                children: <Widget>[
-                  Material(
-                      elevation: 3,
-                      shadowColor: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        width: 150,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(image: AssetImage(widget.albumArt), fit: BoxFit.fill)
-                        ),
-                      )),
-                  const SizedBox(height: 4),
-                  Text(
-                    widget.albumName,
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.openSans(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Center(
+                child: Column(
+                  children: <Widget>[
+                    Material(
+                        elevation: 3,
+                        shadowColor: Colors.purple.shade700,
+                        borderRadius: BorderRadius.circular(12),
+                        child: Container(
+                          width: 150,
+                          height: 170,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              image: DecorationImage(image: AssetImage(widget.albumArt), fit: BoxFit.fill)
+                          ),
+                        )),
+                    const SizedBox(height: 6),
+                    Text(
+                      widget.albumName,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.openSans(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Text(
+              const SizedBox(height: 10),
+              Text(
                 "Songs",
                 style: GoogleFonts.openSans(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+              const SizedBox(height: 8),
+              Expanded(
                 child: Card(
                   elevation: 3,
                   shadowColor: Colors.purple.shade700,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  color: const Color.fromRGBO(152, 105, 190, 1),
+                  color: appCardColor,
                   child: RawScrollbar(
+                    padding: EdgeInsets.symmetric(vertical: 12),
                     thumbColor: appThumbBarColor,
                     thickness: 5.0,
                     radius: const Radius.circular(15.0),
                     child: ListView.separated(
                       separatorBuilder: (context, index) => const Divider(
-                          color: Colors.black, height: 1, thickness: 0.6),
+                          color: Colors.black54, height: 1, thickness: 0.6),
                       itemCount: songs.length,
                       itemBuilder: (context, index) {
                         return ListTile(
@@ -126,8 +120,8 @@ class _SongsState extends State<Songs> {
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
