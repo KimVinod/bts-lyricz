@@ -1,4 +1,5 @@
 import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
+import 'package:bts_lyrics_app/screens/game/game_screen.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
 import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
@@ -126,11 +127,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             children: [
               HomeTab(controller: controller),
               FavoritesScreen(controller: controller),
-              ListView.builder(
-                controller: controller,
-                itemCount: 20,
-                itemBuilder: (context, index) => ListTile(title: const Text("huhu"), onTap: () {}),
-              ),
+              GameScreen(controller: controller),
               SettingsScreen(controller: controller),
             ],
         ),
