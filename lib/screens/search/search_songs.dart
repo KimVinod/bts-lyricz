@@ -48,7 +48,7 @@ class SearchSongsState extends State<SearchSongs> {
             SearchWidget(
               text: query,
               onChanged: searchSongs,
-              hintText: 'Search by song name or lyrics...',
+              hintText: 'Search by song or lyrics',
             ),
             Expanded(
               child: AnimationLimiter(
