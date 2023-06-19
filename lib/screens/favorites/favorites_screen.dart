@@ -115,28 +115,35 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                       physics: const BouncingScrollPhysics(),
                       itemCount: userFavLyrics.length,
                       itemBuilder: (context, index) {
-                        final item = userFavLyrics[index];
-                        final song = allSongs.firstWhere((s) => s.name == item);
-                        return AnimationConfiguration.staggeredList(
-                          position: index,
-                          duration: const Duration(milliseconds: 500),
-                          child: SlideAnimation(
-                            child: FadeInAnimation(
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
-                                child: Dismissible(
-                                  key: Key(item),
-                                  onDismissed: (DismissDirection direction) {
-                                    userFavLyrics.remove(item);
-                                    userFavLyricsBox.put("favouritesList", userFavLyrics);
-                                    setState(() {});
-                                  },
-                                  child: CustomSongMiniCard(song: song),
+                        //using try catch so that if i incase change song name later, UI shouldn't throw error
+                        try{
+                          final item = userFavLyrics[index];
+                          final song = allSongs.firstWhere((s) => s.name == item);
+                          return AnimationConfiguration.staggeredList(
+                            position: index,
+                            duration: const Duration(milliseconds: 500),
+                            child: SlideAnimation(
+                              child: FadeInAnimation(
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
+                                  child: Dismissible(
+                                    key: Key(item),
+                                    onDismissed: (DismissDirection direction) {
+                                      userFavLyrics.remove(item);
+                                      userFavLyricsBox.put("favouritesList", userFavLyrics);
+                                      setState(() {});
+                                    },
+                                    child: CustomSongMiniCard(song: song),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        );
+                          );
+                        } catch(e) {
+                          userFavLyrics = [];
+                          userFavLyricsBox.put("favouritesList", userFavLyrics);
+                        }
+                        return null;
                       },
                     ),
                   ),
