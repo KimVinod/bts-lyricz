@@ -18,6 +18,14 @@ const String playStoreUrl = "https://play.google.com/store/apps/details?id=com.k
 const String githubUrl = "https://github.com/KimVinod/bts-lyricz";
 const String email = "vinoddevendran34@gmail.com";
 
+enum GameState {
+  notReady,
+  ready,
+  playing,
+  correct,
+  incorrect,
+}
+
 String getBt21Pic() {
   final List<String> bt21Pics = [
     "images/bt21/koya.png",
