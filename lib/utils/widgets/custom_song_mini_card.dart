@@ -1,5 +1,6 @@
 import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
+import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +25,7 @@ class CustomSongMiniCard extends StatelessWidget {
               Container(
                 height: 85,
                 decoration: BoxDecoration(
-                    color: const Color.fromRGBO(152, 105, 190, 1),
+                    color: appCardColor,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Row(
@@ -34,7 +35,7 @@ class CustomSongMiniCard extends StatelessWidget {
                       height: 85,
                       child: Image.asset(song.albumArt),
                     ),
-                    const SizedBox(width: 10),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Text(
                         song.name,
@@ -44,7 +45,7 @@ class CustomSongMiniCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 4),
+                    const SizedBox(width: 8),
                   ],
                 ),
               ),

@@ -1,8 +1,11 @@
+import 'dart:async';
+import 'dart:developer';
 import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
+import 'package:bts_lyrics_app/screens/game/game_screen.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
 import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
+import 'package:bts_lyrics_app/services/game_service.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,10 +26,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
 
   AppTheme _currentTheme = AppTheme.Bora;
-
+  int currentPage = 0;
   int _selectedIndex = 0;
+  Timer timer = Timer(const Duration(seconds: 0), () {});
+  late TabController tabController;
+  late AnimationController animationController;
+  ScrollController scrollController = ScrollController();
   final PageController _pageController = PageController();
-  late ScrollController scrollController;
 
   void _toggleTheme() {
     setState(() {
@@ -55,9 +61,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     }
   }
 
-  int currentPage = 0;
-  late TabController tabController;
-
   @override
   void dispose() {
     _pageController.dispose();
@@ -68,6 +71,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   void _onPageChanged(int index) {
     setState(() {
       _selectedIndex = index;
+      _pageController.jumpToPage(index);
+      tabController.animateTo(index);
     });
   }
 
@@ -88,80 +93,86 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     // TODO: implement initState
     super.initState();
     tabController = TabController(length: 4, vsync: this);
-    tabController.animation?.addListener(
-          () {
-        final value = tabController.animation!.value.round();
-        if (value != currentPage && mounted) {
-          changePage(value);
-        }
-      },
-    );
   }
 
-  void changePage(int newPage) {
-    setState(() {
-      currentPage = newPage;
-    });
+  void showBottomBar(ScrollController scrollController, AnimationController animationController, int timerSecs) {
+    if (scrollController.hasClients) {
+      if(timer.isActive) timer.cancel();
+      timer = Timer(Duration(seconds: timerSecs), () => (animationController.status == AnimationStatus.dismissed) ? animationController.forward() : {});
+    }
+  }
+
+  Future<bool> onWillPop() {
+    if(_selectedIndex != 0) {
+      _onPageChanged(0);
+      return Future.value(false);
+    } else {
+      return Future.value(true);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: appUILightColor,
-      body: BottomBar(
-        borderRadius: BorderRadius.circular(500),
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.decelerate,
-        width: MediaQuery.of(context).size.width * 0.8,
-        barColor: appBarColor,
-        showIcon: false,
-        bottom: 16,
-        body: (context, controller) {
-          scrollController = controller;
-          return SafeArea(
-            child: PageView(
-            physics: const NeverScrollableScrollPhysics(),
-            controller: _pageController,
-            dragStartBehavior: DragStartBehavior.start,
-            children: [
-              HomeTab(controller: controller),
-              FavoritesScreen(controller: controller),
-              ListView.builder(
-                controller: controller,
-                itemCount: 20,
-                itemBuilder: (context, index) => ListTile(title: const Text("huhu"), onTap: () {}),
-              ),
-              SettingsScreen(controller: controller),
-            ],
-        ),
-          );
-        },
-        child: TabBar(
-          onTap: (index) {
-            if(index == 0) {
-              if(scrollController.hasClients) {
-                scrollController.animateTo(0, duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
-              }
-            }
-            _onItemTapped(index);
+    return WillPopScope(
+      onWillPop: onWillPop,
+      child: Scaffold(
+        backgroundColor: appUILightColor,
+        body: BottomBar(
+          borderRadius: BorderRadius.circular(500),
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.decelerate,
+          width: MediaQuery.of(context).size.width * 0.8,
+          barColor: appBarColor,
+          showIcon: false,
+          bottom: 16,
+          onBottomBarHidden: () {
+            showBottomBar(scrollController, animationController, 5);
           },
-          unselectedLabelColor: Colors.white54,
-          splashBorderRadius: BorderRadius.circular(500),
-          indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-          controller: tabController,
-          indicator: UnderlineTabIndicator(
-            borderRadius: BorderRadius.circular(6),
-              borderSide: const BorderSide(
-                color: Colors.white,
-                width: 2.5,
-              ),
-              insets: const EdgeInsets.fromLTRB(16, 0, 16, 8)),
-          tabs: const <Widget>[
-            Tooltip(message: "Home", child: Tab(icon: Icon(Icons.home))),
-            Tooltip(message: "Favorites", child: Tab(icon: Icon(Icons.favorite))),
-            Tooltip(message: "Mini Game", child: Tab(icon: Icon(Icons.videogame_asset_rounded))),
-            Tooltip(message: "Settings", child: Tab(icon: Icon(Icons.settings))),
-          ],
+          body: (context, scrollController, animationController) {
+
+            this.scrollController = scrollController;
+            this.animationController = animationController;
+
+            return SafeArea(
+              child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: _pageController,
+              children: [
+                HomeTab(controller: scrollController),
+                FavoritesScreen(controller: scrollController),
+                GameScreen(controller: scrollController, onQuit: () => _onPageChanged(0)),
+                SettingsScreen(controller: scrollController),
+              ],
+          ),
+            );
+          },
+          child: TabBar(
+            onTap: (index) {
+              /*if(index == 0) {
+                if(scrollController.hasClients) {
+                  scrollController.animateTo(0, duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+                }
+              }*/
+              _onItemTapped(index);
+            },
+            unselectedLabelColor: Colors.white54,
+            splashBorderRadius: BorderRadius.circular(500),
+            indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+            controller: tabController,
+            indicator: UnderlineTabIndicator(
+              borderRadius: BorderRadius.circular(6),
+                borderSide: const BorderSide(
+                  color: Colors.white,
+                  width: 2.5,
+                ),
+                insets: const EdgeInsets.fromLTRB(16, 0, 16, 8)),
+            tabs: const <Widget>[
+              Tooltip(message: "Home", child: Tab(icon: Icon(Icons.home))),
+              Tooltip(message: "Favorites", child: Tab(icon: Icon(Icons.favorite))),
+              Tooltip(message: "Mini Game", child: Tab(icon: Icon(Icons.videogame_asset_rounded))),
+              Tooltip(message: "Settings", child: Tab(icon: Icon(Icons.settings))),
+            ],
+          ),
         ),
       ),
     );

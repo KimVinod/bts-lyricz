@@ -91,7 +91,7 @@ class _MemberState extends State<Member> {
                         horizontalOffset: 50,
                         child: FadeInAnimation(
                           child: Padding(
-                            padding: const EdgeInsets.only(right: 10),
+                            padding: const EdgeInsets.only(right: 12),
                             child: CustomAlbumCard(albumName: albums[index]['albumName'], imageAsset: albums[index]['imageAsset']),
                           ),
                         ),
@@ -131,7 +131,7 @@ class _MemberState extends State<Member> {
                         child: SlideAnimation(
                           child: FadeInAnimation(
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 4, bottom: 16, left: 16, right: 16),
+                              padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                               child: CustomSongMiniCard(song: song),
                             ),
                           ),

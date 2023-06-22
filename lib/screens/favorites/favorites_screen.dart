@@ -125,7 +125,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                             child: SlideAnimation(
                               child: FadeInAnimation(
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
+                                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                                   child: Dismissible(
                                     key: Key(item),
                                     onDismissed: (DismissDirection direction) {

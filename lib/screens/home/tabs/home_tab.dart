@@ -85,7 +85,7 @@ class HomeTab extends StatelessWidget {
                             horizontalOffset: 50,
                             child: FadeInAnimation(
                               child: Padding(
-                                padding: const EdgeInsets.only(right: 10),
+                                padding: const EdgeInsets.only(right: 12),
                                 child: CustomSongCard(song: newReleaseSongs[index]),
                               ),
                             ),
@@ -124,7 +124,7 @@ class HomeTab extends StatelessWidget {
                               horizontalOffset: 50,
                               child: FadeInAnimation(
                                 child: Padding(
-                                  padding: const EdgeInsets.only(right: 10),
+                                  padding: const EdgeInsets.only(right: 12),
                                   child: CustomCard(imageAsset: imageAsset, widget: widget),
                                 ),
                               ),
@@ -162,7 +162,7 @@ class HomeTab extends StatelessWidget {
                               horizontalOffset: 50,
                               child: FadeInAnimation(
                                 child: Padding(
-                                  padding: const EdgeInsets.only(right: 10),
+                                  padding: const EdgeInsets.only(right: 12),
                                   child: CustomCard(name: soloProjects[index]['name'], imageAsset: soloProjects[index]['imageAsset'], widget: soloProjects[index]['widget']),
                                 ),
                               ),
