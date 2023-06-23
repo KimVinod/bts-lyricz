@@ -17,10 +17,11 @@ class HomeTab extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 56,
-          color: appUILightColor,
+          color: Theme.of(context).colorScheme.secondary,
           width: MediaQuery.of(context).size.width,
           child: Material(
-            color: appUILightColor,
+            color: Theme.of(context).colorScheme.secondary,
+            shadowColor: Colors.black,
             elevation: 4,
             child: Stack(
               children: [
@@ -28,7 +29,6 @@ class HomeTab extends StatelessWidget {
                   child: Text(
                     "Bangtan Lyricz",
                     style: GoogleFonts.openSans(
-                      color: Colors.black,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -39,7 +39,7 @@ class HomeTab extends StatelessWidget {
                   top: 0,
                   right: 0,
                   child: IconButton(
-                    icon: const Icon(Icons.search, color: Colors.black),
+                    icon: const Icon(Icons.search),
                     tooltip: "Search",
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchSongs()));

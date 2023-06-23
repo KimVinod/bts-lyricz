@@ -39,10 +39,9 @@ class SearchSongsState extends State<SearchSongs> {
       appBar: AppBar(
         titleSpacing: 0,
         title: Text("Search songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),
-        backgroundColor: appBarColor,
       ),
-      body: Material(
-        color: appUILightColor,
+      body: Container(
+        color: Theme.of(context).colorScheme.surface,
         child: Column(
           children: [
             SearchWidget(

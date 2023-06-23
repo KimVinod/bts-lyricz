@@ -69,7 +69,6 @@ class FirebaseService {
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      //print("FG");
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
       if(notification != null && android != null) {
@@ -89,7 +88,6 @@ class FirebaseService {
     });
 
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      //print('A new onMessageOpenedApp event was published!');
     });
   }
 }

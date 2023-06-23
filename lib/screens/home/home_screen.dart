@@ -1,20 +1,10 @@
 import 'dart:async';
-import 'dart:developer';
 import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
 import 'package:bts_lyrics_app/screens/game/game_screen.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
 import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
-import 'package:bts_lyrics_app/services/game_service.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-enum AppTheme {
-  Light,
-  Dark,
-  Bora,
-}
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
 
-  AppTheme _currentTheme = AppTheme.Bora;
   int currentPage = 0;
   int _selectedIndex = 0;
   Timer timer = Timer(const Duration(seconds: 0), () {});
@@ -33,33 +22,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   late AnimationController animationController;
   ScrollController scrollController = ScrollController();
   final PageController _pageController = PageController();
-
-  void _toggleTheme() {
-    setState(() {
-      if (_currentTheme == AppTheme.Light) {
-        _currentTheme = AppTheme.Dark;
-      } else if (_currentTheme == AppTheme.Dark) {
-        _currentTheme = AppTheme.Bora;
-      } else {
-        _currentTheme = AppTheme.Light;
-      }
-    });
-  }
-
-  ThemeData _getThemeData() {
-    switch (_currentTheme) {
-      case AppTheme.Light:
-        return ThemeData.light(useMaterial3: true);
-      case AppTheme.Dark:
-        return ThemeData.dark(useMaterial3: true);
-      case AppTheme.Bora:
-        return ThemeData(
-          textTheme: GoogleFonts.openSansTextTheme(),
-          primaryColor: appUILightColor,
-          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: appUILightColor),
-        );
-    }
-  }
 
   @override
   void dispose() {
@@ -116,13 +78,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     return WillPopScope(
       onWillPop: onWillPop,
       child: Scaffold(
-        backgroundColor: appUILightColor,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: BottomBar(
           borderRadius: BorderRadius.circular(500),
           duration: const Duration(milliseconds: 500),
           curve: Curves.decelerate,
           width: MediaQuery.of(context).size.width * 0.8,
-          barColor: appBarColor,
+          barColor: Theme.of(context).cardColor,
           showIcon: false,
           bottom: 16,
           onBottomBarHidden: () {

@@ -10,6 +10,38 @@ const Color appUIDarkColor = Color.fromRGBO(91, 50, 120, 1);
 const Color appBarColor = Color.fromRGBO(150, 86, 190, 1);
 const Color appCardColor = Color.fromRGBO(152, 105, 190, 1);
 const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
+const Color appBlackColor = Color(0xff121212);
+const Color appOffBlackColor = Color(0xff2a2a2a);
+
+ThemeData lightTheme = ThemeData(
+  textTheme: GoogleFonts.openSansTextTheme(),
+  cardColor: appBarColor,  //home bottom bar, divider
+  appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
+  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.black), overlayColor: MaterialStateProperty.all(Colors.white30))),
+  radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.black)),
+  indicatorColor: Colors.purple[100],
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: appUILightColor,
+    brightness: Brightness.light,
+    shadow: Colors.purple.shade700,
+    surface: appUILightColor,  //background
+    secondary: appUILightColor, //home appbar
+    tertiary: appCardColor,  //card, scroller
+  ),
+);
+ThemeData darkTheme = ThemeData(
+  appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
+  textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
+  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.white), overlayColor: MaterialStateProperty.all(Colors.white30))),
+  radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.white)),
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: appOffBlackColor,
+    brightness: Brightness.dark,
+    surface: appBlackColor,  //background
+    secondary: appOffBlackColor, //home appbar
+    tertiary: appOffBlackColor,  //card, scroller
+  ),
+);
 
 const String shareText = "Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\n$playStoreUrl";
 const String versionNotesUrl = "https://sites.google.com/view/bts-lyricz-ver";
@@ -93,8 +125,6 @@ void showToastError() => Fluttertoast.showToast(
   toastLength: Toast.LENGTH_SHORT,
 );
 
-Divider div = Divider(height: 25, thickness: 1, color: appUIDarkColor.withOpacity(0.4));
-
 Container buildNA(BuildContext context) {
   return Container(
     color: appUILightColor,
@@ -118,7 +148,7 @@ Container buildNA(BuildContext context) {
 
 Widget buildTabContent({required BuildContext context, required String name, String? lyrics}) {
   return Container(
-    color: appUILightColor,
+    color: Theme.of(context).colorScheme.surface,
     width: double.infinity,
     child: Padding(
       padding:
@@ -130,8 +160,6 @@ Widget buildTabContent({required BuildContext context, required String name, Str
           Text(
             name,
             style: GoogleFonts.openSans(
-                color: Colors.black,
-
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold),
           ),

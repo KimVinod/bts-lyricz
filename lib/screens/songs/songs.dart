@@ -37,10 +37,9 @@ class _SongsState extends State<Songs> {
       appBar: AppBar(
         title: Text("Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w500),),
         titleSpacing: 0,
-        backgroundColor: appBarColor,
       ),
-      body: Material(
-        color: appUILightColor,
+      body: Container(
+        color: Theme.of(context).colorScheme.surface,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -52,7 +51,7 @@ class _SongsState extends State<Songs> {
                   children: <Widget>[
                     Material(
                         elevation: 3,
-                        shadowColor: Colors.purple.shade700,
+                        shadowColor: Theme.of(context).colorScheme.shadow,
                         borderRadius: BorderRadius.circular(12),
                         child: Container(
                           width: 150,
@@ -86,18 +85,18 @@ class _SongsState extends State<Songs> {
               Expanded(
                 child: Card(
                   elevation: 3,
-                  shadowColor: Colors.purple.shade700,
+                  shadowColor: Theme.of(context).colorScheme.shadow,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  color: appCardColor,
+                  color: Theme.of(context).colorScheme.tertiary,
                   child: RawScrollbar(
                     padding: EdgeInsets.symmetric(vertical: 12),
-                    thumbColor: appThumbBarColor,
+                    thumbColor: Theme.of(context).cardColor,
                     thickness: 5.0,
                     radius: const Radius.circular(15.0),
                     child: ListView.separated(
-                      separatorBuilder: (context, index) => const Divider(
-                          color: Colors.black54, height: 1, thickness: 0.6),
+                      separatorBuilder: (context, index) => Divider(
+                          color: Theme.of(context).colorScheme.brightness == Brightness.light ? Colors.black38 : Colors.white30, height: 1, thickness: 0.6),
                       itemCount: songs.length,
                       itemBuilder: (context, index) {
                         return ListTile(

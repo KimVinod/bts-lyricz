@@ -88,10 +88,10 @@ class _GameScreenState extends State<GameScreen> {
       children: [
         Container(
           height: 56,
-          color: appUILightColor,
+          color: Theme.of(context).colorScheme.secondary,
           width: MediaQuery.of(context).size.width,
           child: Material(
-            color: appUILightColor,
+            color: Theme.of(context).colorScheme.secondary,
             elevation: 4,
             child: Stack(
               children: [
@@ -99,7 +99,6 @@ class _GameScreenState extends State<GameScreen> {
                   child: Text(
                     "Guess the Song?",
                     style: GoogleFonts.openSans(
-                      color: Colors.black,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -121,12 +120,12 @@ class _GameScreenState extends State<GameScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          GestureDetector(onTap: () => setState(() {}), child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.3)),
+                          GestureDetector(onTap: () => setState(() {}), child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25)),
                           SizedBox(height: 8),
                           Text(
                             "Are you ready to test your BTS knowledge?\nPlay and have fun ♡",
                             textAlign: TextAlign.center,
-                            style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),
+                            style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
                           ),
                           SizedBox(height: 16),
                           CustomButton(width: 160, text: "PLAY", onTap: () => startGame(songs)),
@@ -237,7 +236,7 @@ class _GameScreenState extends State<GameScreen> {
             borderRadius: BorderRadius.circular(20),
             elevation: 3,
             color: Colors.transparent,
-            shadowColor: Colors.purple.shade700,
+            shadowColor: Theme.of(context).colorScheme.shadow,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Stack(
@@ -245,7 +244,7 @@ class _GameScreenState extends State<GameScreen> {
                   Container(
                     height: 85,
                     decoration: BoxDecoration(
-                        color: appCardColor,
+                        color: Theme.of(context).colorScheme.tertiary,
                         borderRadius: BorderRadius.circular(20)
                     ),
                     child: Row(

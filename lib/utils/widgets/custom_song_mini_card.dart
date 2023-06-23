@@ -17,7 +17,7 @@ class CustomSongMiniCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         elevation: 3,
         color: Colors.transparent,
-        shadowColor: Colors.purple.shade700,
+        shadowColor: Theme.of(context).colorScheme.shadow,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Stack(
@@ -25,7 +25,7 @@ class CustomSongMiniCard extends StatelessWidget {
               Container(
                 height: 85,
                 decoration: BoxDecoration(
-                    color: appCardColor,
+                    color: Theme.of(context).colorScheme.tertiary,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Row(

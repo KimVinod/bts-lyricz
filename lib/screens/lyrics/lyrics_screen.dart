@@ -2,7 +2,6 @@ import 'dart:developer';
 import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
@@ -48,7 +47,6 @@ class _LyricsPageState extends State<LyricsPage> {
             NestedScrollView(
               headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
                 SliverAppBar(
-                  backgroundColor: appBarColor,
                   floating: true,
                   snap: true,
                   pinned: true,
@@ -56,7 +54,7 @@ class _LyricsPageState extends State<LyricsPage> {
                   bottom: PreferredSize(
                     preferredSize: const Size(0, kToolbarHeight),
                     child: TabBar(
-                      indicatorColor: Colors.purple[100],
+                      indicatorColor: Theme.of(context).indicatorColor,
                       tabs: [
                         if (widget.songLyrics.kr != null) const Tab(text: "KOR"),
                         if (widget.songLyrics.jp != null) const Tab(text: "JP"),
@@ -88,14 +86,12 @@ class _LyricsPageState extends State<LyricsPage> {
                 context: context,
                 removeBottom: true,
                 child: AppBar(
-                  
                   titleSpacing: 0,
                   elevation: 0,
                   title: Text(
                     "Lyrics",
                     style: GoogleFonts.openSans(fontWeight: FontWeight.w600),
                   ),
-                  backgroundColor: appBarColor,
                   actions: [
                     IconButton(
                       onPressed: () {

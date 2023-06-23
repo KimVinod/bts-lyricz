@@ -38,12 +38,11 @@ class Albums extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        backgroundColor: appBarColor,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
       ),
       body: Container(
         width: double.infinity,
-        color: appUILightColor,
+        color: Theme.of(context).colorScheme.surface,
         child: AnimationLimiter(
           child: GridView.builder(
             padding: const EdgeInsets.symmetric(vertical: 16),

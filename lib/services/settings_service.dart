@@ -1,13 +1,92 @@
 import 'package:app_settings/app_settings.dart';
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:native_updater/native_updater.dart';
 
 class SettingsService {
+
+  static Future<String> _getTheme() async {
+    Box userThemeBox = await Hive.openBox('userTheme');
+    return userThemeBox.get('theme',defaultValue: 'light'); // light, dark, system
+  }
+
+  static Future _saveTheme(String theme) async {
+    Box userThemeBox = await Hive.openBox('userTheme');
+    userThemeBox.put('theme', theme);
+  }
+
+  static Future<ThemeMode> loadTheme() async {
+    String userTheme = await _getTheme();
+    if(userTheme == "light") {
+      return ThemeMode.light;
+    } else if(userTheme == "dark") {
+      return ThemeMode.dark;
+    } else {
+      return ThemeMode.system;
+    }
+  }
+
+  static Future<void> openThemeDialog(BuildContext context) async {
+
+    onChanged(String theme) {
+      _saveTheme(theme).then((value) async {
+        Navigator.pop(context);
+        BTSLyricsApp.of(context).changeTheme(await loadTheme());
+      });
+    }
+
+    await _getTheme().then((value) {
+      if(context.mounted) {
+        showDialog(context: context, builder: (context) => StatefulBuilder(
+            builder: (context, setState) {
+              return Dialog(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    RadioListTile<String>(
+                      value: 'light',
+                      groupValue: value,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      title: Text("Bora mode", style: GoogleFonts.openSans()),
+                      onChanged: (value) => onChanged(value!),
+                    ),
+                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
+                    RadioListTile<String>(
+                      value: 'dark',
+                      groupValue: value,
+                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      title: Text("Dark mode", style: GoogleFonts.openSans()),
+                      onChanged: (value) => onChanged(value!),
+                    ),
+                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
+                    RadioListTile<String>(
+                      value: 'system',
+                      groupValue: value,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      onChanged: (value) => onChanged(value!),
+                      title: Text("System default", style: GoogleFonts.openSans()),
+                    ),
+                  ],
+                ),
+              );
+            }
+        ));
+      }
+    });
+
+
+  }
+
   static void openNotifications() => AppSettings.openNotificationSettings();
 
   static void openBatteryOptimization() => AppSettings.openBatteryOptimizationSettings();
@@ -59,7 +138,7 @@ class SettingsService {
       showDialog(context: context, builder: (context) {
       return Dialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-        backgroundColor: appUILightColor,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -70,9 +149,9 @@ class SettingsService {
                 Navigator.pop(context);
                 _emailMe(packageInfo: packageInfo);
               },
-              title: Text("Email me", style: GoogleFonts.openSans(color: Colors.black)),
+              title: Text("Email me", style: GoogleFonts.openSans()),
             ),
-            Divider(height: 0, thickness: 1, color: appUIDarkColor.withOpacity(0.3)),
+            Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
             ListTile(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
               contentPadding: EdgeInsets.symmetric(horizontal: 24),
@@ -80,7 +159,7 @@ class SettingsService {
                 Navigator.pop(context);
                 _twitter();
               },
-              title: Text("DM me on Twitter", style: GoogleFonts.openSans(color: Colors.black)),
+              title: Text("DM me on Twitter", style: GoogleFonts.openSans()),
             ),
           ],
         ),
@@ -116,12 +195,11 @@ class SettingsService {
       builder: (BuildContext context) => Center(
         child: Container(
           padding: const EdgeInsets.all(16),
-          height: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.55,
           width: MediaQuery.of(context).size.width * 0.75,
           decoration: BoxDecoration(
-            color: appUILightColor,
-            borderRadius:
-            BorderRadius.circular(28),
+            color: Theme.of(context).colorScheme.secondary,
+            borderRadius: BorderRadius.circular(28),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,7 +208,6 @@ class SettingsService {
               Text(
                 "Bangtan Lyricz",
                 style: GoogleFonts.openSans(
-                    color: Colors.black,
                     fontWeight: FontWeight.w600,
                     fontSize: 19
                 ),
@@ -140,6 +217,7 @@ class SettingsService {
                   Container(
                     height: 140,
                     width: 140,
+                    margin: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
                         image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
                         borderRadius: BorderRadius.circular(20)
@@ -148,7 +226,6 @@ class SettingsService {
                   Text(
                     "Version: ${packageInfo.version} (${packageInfo.buildNumber})",
                     style: GoogleFonts.openSans(
-                        color: Colors.black,
                         fontWeight: FontWeight.w600,
                         fontSize: 16
                     ),
@@ -159,9 +236,7 @@ class SettingsService {
                 "Special thanks to translator armys & genius.com for the lyrics :)",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.openSans(
-                    color: Colors.black,
                     fontStyle: FontStyle.italic,
-                    //fontWeight: FontWeight.w600,
                     fontSize: 14
                 ),
               ),
@@ -169,7 +244,6 @@ class SettingsService {
                 "Made by ARMY\nMade for ARMY\nMade with borahae 💜",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.openSans(
-                    color: Colors.black,
                     fontWeight: FontWeight.w600,
                     fontSize: 13
                 ),

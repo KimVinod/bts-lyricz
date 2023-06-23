@@ -16,10 +16,10 @@ class SettingsScreen extends StatelessWidget {
       children: [
         Container(
           height: 56,
-          color: appUILightColor,
+          color: Theme.of(context).colorScheme.secondary,
           width: MediaQuery.of(context).size.width,
           child: Material(
-            color: appUILightColor,
+            color: Theme.of(context).colorScheme.secondary,
             elevation: 4,
             child: Stack(
               children: [
@@ -27,7 +27,6 @@ class SettingsScreen extends StatelessWidget {
                   child: Text(
                     "Settings",
                     style: GoogleFonts.openSans(
-                      color: Colors.black,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -53,6 +52,12 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   children: [
                     SettingsCard(
+                      icon: Icons.color_lens_outlined,
+                      title: "Set app theme",
+                      subtitle: "Change the look and feel of the app",
+                      onTap: () => SettingsService.openThemeDialog(context),
+                    ),
+                    SettingsCard(
                       icon: Icons.notifications_none,
                       title: "Turn ON/OFF BTS related notifications",
                       subtitle: "Btw I rarely send these ~.~",
@@ -60,7 +65,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     SettingsCard(
                       icon: Icons.system_update,
-                      title: "Check for updates",
+                      title: "Check for Updates",
                       subtitle: "Get latest songs and improvements",
                       onTap: () => SettingsService.checkForUpdates(context),
                     ),

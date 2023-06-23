@@ -17,7 +17,7 @@ class CustomSongCard extends StatelessWidget {
         children: <Widget>[
           Material(
               elevation: 3,
-              shadowColor: Colors.purple.shade700,
+              shadowColor: Theme.of(context).colorScheme.shadow,
               borderRadius: BorderRadius.circular(12),
               child: Ink(
                 width: 150,

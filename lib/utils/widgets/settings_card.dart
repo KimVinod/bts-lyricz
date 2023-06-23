@@ -26,7 +26,7 @@ class SettingsCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           elevation: 3,
           color: Colors.transparent,
-          shadowColor: Colors.purple.shade700,
+          shadowColor: Theme.of(context).colorScheme.shadow,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Stack(
@@ -34,11 +34,11 @@ class SettingsCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   decoration: BoxDecoration(
-                      color: appCardColor,
+                      color: Theme.of(context).colorScheme.tertiary,
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     children: <Widget>[
-                      Icon(icon, color: Colors.black),
+                      Icon(icon),
                       const SizedBox(width: 16),
                       Expanded(
                         child: Column(
@@ -49,11 +49,10 @@ class SettingsCard extends StatelessWidget {
                               style: GoogleFonts.openSans(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
                               ),
                             ),
                             const SizedBox(height: 4),
-                            Text(subtitle, style: GoogleFonts.openSans(color: Colors.black.withOpacity(0.6))),
+                            Text(subtitle, style: GoogleFonts.openSans()),
                           ],
                         ),
                       ),

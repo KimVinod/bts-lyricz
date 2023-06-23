@@ -28,8 +28,8 @@ class SearchWidgetState extends State<SearchWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final styleActive = GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w600);
-    final styleHint = GoogleFonts.openSans(color: Colors.black54, fontWeight: FontWeight.w600);
+    final styleActive = GoogleFonts.openSans(fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.brightness == Brightness.dark ? Colors.white : null);
+    final styleHint = GoogleFonts.openSans(fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.brightness == Brightness.dark ? Colors.white60 : null);
     final style = widget.text.isEmpty ? styleHint : styleActive;
 
     return Padding(
@@ -37,12 +37,11 @@ class SearchWidgetState extends State<SearchWidget> {
       child: Material(
         borderRadius: BorderRadius.circular(12),
         elevation: 3,
-        shadowColor: Colors.purple.shade700,
+        shadowColor: Theme.of(context).colorScheme.shadow,
         child: Container(
           height: 45,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color: Colors.white70,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: TextField(

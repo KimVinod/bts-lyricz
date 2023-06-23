@@ -54,11 +54,10 @@ class _MemberState extends State<Member> {
       appBar: AppBar(
         titleSpacing: 0,
         title: Text(widget.isAlbum ? "${widget.memberName} Albums and Songs" : "${widget.memberName} Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),
-        backgroundColor: appBarColor,
       ),
       body: Container(
         width: double.infinity,
-        color: appUILightColor,
+        color: Theme.of(context).colorScheme.surface,
         padding: const EdgeInsets.only(top: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,7 +114,7 @@ class _MemberState extends State<Member> {
             const SizedBox(height: 8.0),
             Expanded(
               child: RawScrollbar(
-                thumbColor: appThumbBarColor,
+                thumbColor: Theme.of(context).colorScheme.tertiary,
                 thickness: 7.0,
                 radius: const Radius.circular(15.0),
                 thumbVisibility: true,

@@ -39,11 +39,10 @@ class _DigitalSinglesState extends State<DigitalSingles> {
       appBar: AppBar(
         titleSpacing: 0,
         title: Text(widget.isUnOfficial ? "BTS Unofficial Songs" : "BTS Digital Singles", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),
-        backgroundColor: appBarColor,
       ),
       body: Container(
         width: double.infinity,
-        color: appUILightColor,
+        color: Theme.of(context).colorScheme.surface,
         padding: const EdgeInsets.only(top: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +61,7 @@ class _DigitalSinglesState extends State<DigitalSingles> {
             const SizedBox(height: 8.0),
             Expanded(
               child: RawScrollbar(
-                thumbColor: appThumbBarColor,
+                thumbColor: Theme.of(context).colorScheme.tertiary,
                 thickness: 7.0,
                 radius: const Radius.circular(15.0),
                 thumbVisibility: true,
