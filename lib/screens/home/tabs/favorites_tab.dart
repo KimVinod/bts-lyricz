@@ -7,15 +7,15 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
-class FavoritesScreen extends StatefulWidget {
+class FavoritesTab extends StatefulWidget {
   final ScrollController controller;
-  const FavoritesScreen({Key? key, required this.controller}) : super(key: key);
+  const FavoritesTab({Key? key, required this.controller}) : super(key: key);
 
   @override
-  State<FavoritesScreen> createState() => _FavoritesScreenState();
+  State<FavoritesTab> createState() => _FavoritesTabState();
 }
 
-class _FavoritesScreenState extends State<FavoritesScreen> {
+class _FavoritesTabState extends State<FavoritesTab> {
 
   late Box userFavLyricsBox;
   List userFavLyrics = [];

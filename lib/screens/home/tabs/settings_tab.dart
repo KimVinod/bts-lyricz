@@ -1,4 +1,4 @@
-import 'package:bts_lyrics_app/screens/settings/faq_screen.dart';
+import 'package:bts_lyrics_app/screens/faq/faq_screen.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:bts_lyrics_app/utils/widgets/settings_card.dart';
@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsTab extends StatelessWidget {
   final ScrollController controller;
-  const SettingsScreen({super.key, required this.controller});
+  const SettingsTab({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {

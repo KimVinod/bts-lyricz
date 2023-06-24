@@ -11,16 +11,16 @@ import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class GameScreen extends StatefulWidget {
+class GameTab extends StatefulWidget {
   final ScrollController controller;
   final VoidCallback onQuit;
-  const GameScreen({super.key, required this.controller, required this.onQuit});
+  const GameTab({super.key, required this.controller, required this.onQuit});
 
   @override
-  State<GameScreen> createState() => _GameScreenState();
+  State<GameTab> createState() => _GameTabState();
 }
 
-class _GameScreenState extends State<GameScreen> {
+class _GameTabState extends State<GameTab> {
 
   GameState gameState = GameState.notReady;
   Lyrics currentLyrics = const Lyrics();

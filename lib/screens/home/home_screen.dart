@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'package:bts_lyrics_app/screens/favorites/favorites_screen.dart';
-import 'package:bts_lyrics_app/screens/game/game_screen.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/favorites_tab.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/game_tab.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
-import 'package:bts_lyrics_app/screens/settings/settings_screen.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/settings_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
@@ -101,9 +101,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               controller: _pageController,
               children: [
                 HomeTab(controller: scrollController),
-                FavoritesScreen(controller: scrollController),
-                GameScreen(controller: scrollController, onQuit: () => _onPageChanged(0)),
-                SettingsScreen(controller: scrollController),
+                FavoritesTab(controller: scrollController),
+                GameTab(controller: scrollController, onQuit: () => _onPageChanged(0)),
+                SettingsTab(controller: scrollController),
               ],
           ),
             );
