@@ -10,8 +10,7 @@ const Color appUIDarkColor = Color.fromRGBO(91, 50, 120, 1);
 const Color appBarColor = Color.fromRGBO(150, 86, 190, 1);
 const Color appCardColor = Color.fromRGBO(152, 105, 190, 1);
 const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
-const Color appBlackColor = Color(0xff121212);
-const Color appOffBlackColor = Color(0xff2a2a2a);
+const Color appOffBlackColor = Color(0xff262626);
 
 ThemeData lightTheme = ThemeData(
   textTheme: GoogleFonts.openSansTextTheme(),
@@ -35,9 +34,9 @@ ThemeData darkTheme = ThemeData(
   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.white), overlayColor: MaterialStateProperty.all(Colors.white30))),
   radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.white)),
   colorScheme: ColorScheme.fromSeed(
-    seedColor: appOffBlackColor,
+    seedColor: Colors.black,
     brightness: Brightness.dark,
-    surface: appBlackColor,  //background
+    surface: Colors.black,  //background
     secondary: appOffBlackColor, //home appbar
     tertiary: appOffBlackColor,  //card, scroller
   ),
@@ -127,7 +126,7 @@ void showToastError() => Fluttertoast.showToast(
 
 Container buildNA(BuildContext context) {
   return Container(
-    color: appUILightColor,
+    color: Theme.of(context).colorScheme.surface,
     width: double.infinity,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
