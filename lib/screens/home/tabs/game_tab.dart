@@ -121,13 +121,13 @@ class _GameTabState extends State<GameTab> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           GestureDetector(onTap: () => setState(() {}), child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25)),
-                          SizedBox(height: 8),
+                          const SizedBox(height: 8),
                           Text(
                             "Are you ready to test your BTS knowledge?\nPlay and have fun ♡",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
                           ),
-                          SizedBox(height: 16),
+                          const SizedBox(height: 16),
                           CustomButton(width: 160, text: "PLAY", onTap: () => startGame(songs)),
                         ],
                       ),
@@ -206,13 +206,13 @@ class _GameTabState extends State<GameTab> {
                       children: [
                         Expanded(
                           child: AnimationConfiguration.synchronized(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             child: FadeInAnimation(child: CustomButton(text: 'Restart', onTap: restartGame)),),
                         ),
                         const SizedBox(width: 12),
                         Expanded(
                           child: AnimationConfiguration.synchronized(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             child: FadeInAnimation(child: CustomButton(text: 'Quit', onTap: widget.onQuit)),),
                         ),
                       ],

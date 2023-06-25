@@ -3,7 +3,6 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class Songs extends StatefulWidget {
   final String albumName;
@@ -90,7 +89,7 @@ class _SongsState extends State<Songs> {
                       borderRadius: BorderRadius.circular(20)),
                   color: Theme.of(context).colorScheme.tertiary,
                   child: RawScrollbar(
-                    padding: EdgeInsets.symmetric(vertical: 12),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
                     thumbColor: Theme.of(context).cardColor,
                     thickness: 5.0,
                     radius: const Radius.circular(15.0),

@@ -54,8 +54,8 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'light',
                       groupValue: value,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("Bora mode", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -63,7 +63,7 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'dark',
                       groupValue: value,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("Dark mode", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -71,8 +71,8 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'system',
                       groupValue: value,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 24),
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       onChanged: (value) => onChanged(value!),
                       title: Text("System default", style: GoogleFonts.openSans()),
                     ),
@@ -143,8 +143,8 @@ class SettingsService {
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
-              contentPadding: EdgeInsets.symmetric(horizontal: 24),
+              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 24),
               onTap: () {
                 Navigator.pop(context);
                 _emailMe(packageInfo: packageInfo);
@@ -153,8 +153,8 @@ class SettingsService {
             ),
             Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
             ListTile(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
-              contentPadding: EdgeInsets.symmetric(horizontal: 24),
+              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 24),
               onTap: () {
                 Navigator.pop(context);
                 _twitter();
@@ -217,7 +217,7 @@ class SettingsService {
                   Container(
                     height: 140,
                     width: 140,
-                    margin: EdgeInsets.only(bottom: 8),
+                    margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
                         image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
                         borderRadius: BorderRadius.circular(20)

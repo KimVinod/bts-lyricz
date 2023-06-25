@@ -1,6 +1,5 @@
 import 'package:bts_lyrics_app/screens/faq/faq_screen.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:bts_lyrics_app/utils/widgets/settings_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';

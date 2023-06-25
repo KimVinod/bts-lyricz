@@ -2,7 +2,6 @@ import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/utils/widgets/custom_song_mini_card.dart';
 import 'package:flutter/material.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
