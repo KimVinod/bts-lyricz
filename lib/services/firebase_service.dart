@@ -2,6 +2,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import '../firebase_options.dart';
@@ -23,20 +24,15 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 class FirebaseService {
   static void _setupCrashlytics() {
-    FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
-    FirebaseCrashlytics.instance.deleteUnsentReports();
-    /*if(kDebugMode) {
+    if(kDebugMode) {
       FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
       FirebaseCrashlytics.instance.deleteUnsentReports();
     } else {
       FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    }*/
+    }
   }
 
-  static void _setupAnalytics() {
-    //FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(!kDebugMode);
-    FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(false);
-  }
+  static void _setupAnalytics() => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(!kDebugMode);
 
   static Future<void> _setupMessaging() async {
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
