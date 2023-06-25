@@ -84,8 +84,8 @@ class SearchSongsState extends State<SearchSongs> {
     uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
 
     final matchedSongs = uniqueList.where((song) {
-      final songName = song.name.toLowerCase();
-      final searchLower = query.toLowerCase();
+      final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
+      final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
       final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseJpLyrics = song.lyrics.jp?.toLowerCase() ?? '';
       final lowercaseKrLyrics = song.lyrics.kr?.toLowerCase() ?? '';
@@ -101,4 +101,5 @@ class SearchSongsState extends State<SearchSongs> {
       songs = matchedSongs;
     });
   }
+
 }
