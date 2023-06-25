@@ -4,6 +4,17 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 
 const List<Song> newReleaseSongs = [
   //max 4 songs
+  //angel pt2
+  Song(
+    name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
+    displayName: "Angel Pt. 2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt2,
+  ),
+
   //take two
   Song(
     name: "Take Two",
@@ -35,17 +46,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
     lang: "eng",
     lyrics: getJiminAngelPt1,
-  ),
-
-  //the planet
-  Song(
-    name: "The Planet",
-    displayName: "The Planet",
-    isSolo: IsSolo(isSolo: true, soloName: "bts"),
-    album: null,
-    albumArt: "images/singles/bts-thePlanet.jpg",
-    lang: "kr",
-    lyrics: getThePlanet,
   ),
 ];
 
@@ -1197,6 +1197,15 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getJiminAngelPt1,
   ),
+  Song(
+    name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
+    displayName: "ANGEL PT. 2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt2,
+  ),
 
 
   ///taehyung
@@ -1258,6 +1267,15 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     lyrics: getJungkookWorking,
+  ),
+  Song(
+    name: "I’m In Love (10점 만점에 10점 양궁소녀, 이렇게 하면 너를 찌를 수 있을 거라 생각했어 펜싱맨)",
+    displayName: "I’M IN LOVE",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-imInLove.jpg",
+    lang: "kr",
+    lyrics: getJungkookImInLove,
   ),
   Song(
     name: "Still With You",
@@ -1383,6 +1401,15 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     lyrics: getBeautiful,
+  ),
+  Song(
+    name: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
+    displayName: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-soundcloud.jpg",
+    lang: "kr",
+    lyrics: getATypicalIdolChristmas,
   ),
   Song(
     name: "95 Graduation by V and Jimin",
