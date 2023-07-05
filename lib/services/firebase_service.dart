@@ -2,7 +2,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import '../firebase_options.dart';
@@ -23,16 +23,16 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }
 
 class FirebaseService {
-  static void _setupCrashlytics() {
-    if(kDebugMode) {
+  static void _setupCrashlytics(bool isRelease) {
+    if(isRelease) {
+      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+    } else {
       FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
       FirebaseCrashlytics.instance.deleteUnsentReports();
-    } else {
-      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
     }
   }
 
-  static void _setupAnalytics() => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(!kDebugMode);
+  static void _setupAnalytics(bool isRelease) => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(isRelease);
 
   static Future<void> _setupMessaging() async {
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
@@ -51,10 +51,10 @@ class FirebaseService {
     );
   }
 
-  static Future<void> setup() async {
+  static Future<void> setup({required bool isRelease}) async {
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    _setupCrashlytics();
-    _setupAnalytics();
+    _setupCrashlytics(isRelease);
+    _setupAnalytics(isRelease);
     await _setupMessaging();
   }
 

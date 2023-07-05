@@ -9,7 +9,7 @@ import 'package:hive_flutter/adapters.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  await FirebaseService.setup();
+  await FirebaseService.setup(isRelease: true);
   runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme()));
 }
 
