@@ -3518,6 +3518,17 @@ const List<Song> allSongs = [
     lyrics: getYnwaYnwa,
   ),
 
+  //come back home
+  Song(
+    name: "Come Back Home",
+    displayName: "COME BACK HOME",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-come-back-home.jpg",
+    lang: "kr",
+    lyrics: getComeBackHome,
+  ),
+
   //ly her
   Song(
     name: "Intro: Serendipity (세렌디피티)",
