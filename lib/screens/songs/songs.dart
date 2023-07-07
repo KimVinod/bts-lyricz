@@ -81,7 +81,7 @@ class _SongsState extends State<Songs> {
                 ),
               ),
               const SizedBox(height: 8),
-              Expanded(
+              Flexible(
                 child: Card(
                   elevation: 3,
                   shadowColor: Theme.of(context).colorScheme.shadow,
@@ -94,6 +94,7 @@ class _SongsState extends State<Songs> {
                     thickness: 5.0,
                     radius: const Radius.circular(15.0),
                     child: ListView.separated(
+                      shrinkWrap: true,
                       separatorBuilder: (context, index) => Divider(
                           color: Theme.of(context).colorScheme.brightness == Brightness.light ? Colors.black38 : Colors.white30, height: 1, thickness: 0.6),
                       itemCount: songs.length,
