@@ -82,7 +82,9 @@ class SearchSongsState extends State<SearchSongs> {
     List<Song> uniqueList = allSongs.where((e) => seen.add(e.name)).toList();
     uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
 
-    final matchedSongs = uniqueList.where((song) {
+    final matchedSongs = query.isEmpty
+        ? uniqueList // Show all songs if the query is empty
+        : uniqueList.where((song) {
       final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
       final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
       final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
@@ -94,6 +96,30 @@ class SearchSongsState extends State<SearchSongs> {
           lowercaseJpLyrics.contains(searchLower) ||
           lowercaseKrLyrics.contains(searchLower);
     }).toList();
+
+    matchedSongs.sort((a, b) {
+      final songNameA = a.name.toLowerCase();
+      final songNameB = b.name.toLowerCase();
+      final lowercaseEngLyricsA = a.lyrics.eng?.toLowerCase() ?? '';
+      final lowercaseEngLyricsB = b.lyrics.eng?.toLowerCase() ?? '';
+
+      // Compare song names first
+      if (songNameA.contains(query) && !songNameB.contains(query)) {
+        return -1; // songNameA should come before songNameB
+      } else if (!songNameA.contains(query) && songNameB.contains(query)) {
+        return 1; // songNameA should come after songNameB
+      }
+
+      // Compare song lyrics if song names have equal priority
+      if (lowercaseEngLyricsA.contains(query) && !lowercaseEngLyricsB.contains(query)) {
+        return -1; // lowercaseEngLyricsA should come before lowercaseEngLyricsB
+      } else if (!lowercaseEngLyricsA.contains(query) && lowercaseEngLyricsB.contains(query)) {
+        return 1; // lowercaseEngLyricsA should come after lowercaseEngLyricsB
+      }
+
+      // If neither song names nor lyrics match the query, maintain the original order
+      return 0;
+    });
 
     setState(() {
       this.query = query;
