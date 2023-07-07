@@ -132,7 +132,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
                                       userFavLyricsBox.put("favouritesList", userFavLyrics);
                                       setState(() {});
                                     },
-                                    child: CustomSongMiniCard(song: song),
+                                    child: CustomSongMiniCard(song: song, onFinish: () => loadData()),
                                   ),
                                 ),
                               ),

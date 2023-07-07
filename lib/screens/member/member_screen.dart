@@ -130,7 +130,7 @@ class _MemberState extends State<Member> {
                           child: FadeInAnimation(
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                              child: CustomSongMiniCard(song: song),
+                              child: CustomSongMiniCard(song: song, onFinish: () {}),
                             ),
                           ),
                         ),

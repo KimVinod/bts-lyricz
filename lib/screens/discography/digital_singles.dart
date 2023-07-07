@@ -77,7 +77,7 @@ class _DigitalSinglesState extends State<DigitalSingles> {
                           child: FadeInAnimation(
                             child: Padding(
                               padding: const EdgeInsets.only(top: 4, bottom: 16, left: 16, right: 16),
-                              child: CustomSongMiniCard(song: song),
+                              child: CustomSongMiniCard(song: song, onFinish: () {}),
                             ),
                           ),
                         ),

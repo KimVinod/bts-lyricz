@@ -6,7 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomSongMiniCard extends StatelessWidget {
   final Song song;
-  const CustomSongMiniCard({super.key,required this.song});
+  final VoidCallback onFinish;
+  const CustomSongMiniCard({super.key,required this.song, required this.onFinish});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,7 @@ class CustomSongMiniCard extends StatelessWidget {
                       songFullName: song.name,
                       songName: song.displayName,
                       songLyrics: song.lyrics,
-                    ))),
+                    ))).then((value) => onFinish()),
                   ),
                 ),
               ),
