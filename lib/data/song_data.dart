@@ -4,6 +4,24 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 
 const List<Song> newReleaseSongs = [
   //max 4 songs
+  Song(
+    name: "Seven - Clean Ver. (feat. Latto)",
+    displayName: "Seven (Clean)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenClean,
+  ),
+  Song(
+    name: "Seven - Explicit Ver. (feat. Latto)",
+    displayName: "Seven (Explicit)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenExplicit,
+  ),
   //angel pt2
   Song(
     name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
@@ -24,28 +42,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/singles/bts-take-two.jpg",
     lang: "kr",
     lyrics: getTakeTwo,
-  ),
-
-  //lilith
-  Song(
-    name: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
-    displayName: "Lilith",
-    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
-    album: null,
-    albumArt: "images/albums-solo/suga/suga-lilith.jpg",
-    lang: "eng",
-    lyrics: getYoongiLilith,
-  ),
-
-  //angel pt1
-  Song(
-    name: "Angel Pt. 1 (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
-    displayName: "Angel Pt. 1",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: null,
-    albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
-    lang: "eng",
-    lyrics: getJiminAngelPt1,
   ),
 ];
 
@@ -1321,6 +1317,24 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-dreamers.jpg",
     lang: "eng",
     lyrics: getJungkookDreamers,
+  ),
+  Song(
+    name: "Seven - Clean Ver. (feat. Latto)",
+    displayName: "SEVEN (CLEAN  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenClean,
+  ),
+  Song(
+    name: "Seven - Explicit Ver. (feat. Latto)",
+    displayName: "SEVEN (EXPLICIT  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenExplicit,
   ),
 
 
