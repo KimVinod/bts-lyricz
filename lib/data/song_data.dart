@@ -2,6 +2,49 @@
 import 'package:bts_lyrics_app/data/lyrics_data.dart';
 import 'package:bts_lyrics_app/data/song_model.dart';
 
+const List<Song> newReleaseSongs = [
+  //max 4 songs
+  Song(
+    name: "Seven - Clean Ver. (feat. Latto)",
+    displayName: "Seven (Clean)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenClean,
+  ),
+  Song(
+    name: "Seven - Explicit Ver. (feat. Latto)",
+    displayName: "Seven (Explicit)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenExplicit,
+  ),
+  //angel pt2
+  Song(
+    name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
+    displayName: "Angel Pt. 2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt2,
+  ),
+
+  //take two
+  Song(
+    name: "Take Two",
+    displayName: "Take Two",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-take-two.jpg",
+    lang: "kr",
+    lyrics: getTakeTwo,
+  ),
+];
+
 const List<Song> allSongs = [
 
   ///solo projects
@@ -1150,6 +1193,15 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getJiminAngelPt1,
   ),
+  Song(
+    name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
+    displayName: "ANGEL PT. 2",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
+    lang: "eng",
+    lyrics: getJiminAngelPt2,
+  ),
 
 
   ///taehyung
@@ -1213,6 +1265,15 @@ const List<Song> allSongs = [
     lyrics: getJungkookWorking,
   ),
   Song(
+    name: "I’m In Love (10점 만점에 10점 양궁소녀, 이렇게 하면 너를 찌를 수 있을 거라 생각했어 펜싱맨)",
+    displayName: "I’M IN LOVE",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-imInLove.jpg",
+    lang: "kr",
+    lyrics: getJungkookImInLove,
+  ),
+  Song(
     name: "Still With You",
     displayName: "STILL WITH YOU",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -1257,11 +1318,29 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getJungkookDreamers,
   ),
+  Song(
+    name: "Seven - Clean Ver. (feat. Latto)",
+    displayName: "SEVEN (CLEAN  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenClean,
+  ),
+  Song(
+    name: "Seven - Explicit Ver. (feat. Latto)",
+    displayName: "SEVEN (EXPLICIT  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenExplicit,
+  ),
 
 
 
   ///uo albums
-  //bts world
+      //bts world
   Song(
     name: "Heartbeat",
     displayName: "HEARTBEAT",
@@ -1336,6 +1415,15 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     lyrics: getBeautiful,
+  ),
+  Song(
+    name: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
+    displayName: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-soundcloud.jpg",
+    lang: "kr",
+    lyrics: getATypicalIdolChristmas,
   ),
   Song(
     name: "95 Graduation by V and Jimin",
@@ -3442,6 +3530,17 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     lyrics: getYnwaYnwa,
+  ),
+
+  //come back home
+  Song(
+    name: "Come Back Home",
+    displayName: "COME BACK HOME",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/singles/bts-come-back-home.jpg",
+    lang: "kr",
+    lyrics: getComeBackHome,
   ),
 
   //ly her

@@ -1,620 +1,141 @@
-import 'package:bts_lyrics_app/data/lyrics_data.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_eng.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_kr.dart';
+import 'dart:async';
+import 'package:bts_lyrics_app/screens/home/tabs/favorites_tab.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/game_tab.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/home_tab.dart';
+import 'package:bts_lyrics_app/screens/home/tabs/settings_tab.dart';
 import 'package:flutter/material.dart';
-import 'package:bts_lyrics_app/screens/discography/albums_jp.dart';
-import 'package:bts_lyrics_app/screens/discography/albums_kr.dart';
-import 'package:bts_lyrics_app/screens/discography/albums_uo.dart';
-import 'package:bts_lyrics_app/screens/members/jin.dart';
-import 'package:bts_lyrics_app/screens/members/jungkook.dart';
-import 'package:bts_lyrics_app/screens/members/namjoon.dart';
-import 'package:bts_lyrics_app/screens/songs/songs.dart';
-import 'package:bts_lyrics_app/screens/discography/songs_uo.dart';
-import 'package:bts_lyrics_app/screens/members/taehyung.dart';
-import 'package:bts_lyrics_app/screens/members/yoongi.dart';
-import 'package:bts_lyrics_app/screens/members/hoseok.dart';
-import 'package:bts_lyrics_app/screens/members/jimin.dart';
-import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+
+  int currentPage = 0;
+  int _selectedIndex = 0;
+  Timer timer = Timer(const Duration(seconds: 0), () {});
+  late TabController tabController;
+  late AnimationController animationController;
+  ScrollController scrollController = ScrollController();
+  final PageController _pageController = PageController();
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    tabController.dispose();
+    super.dispose();
+  }
+
+  void _onPageChanged(int index) {
+    setState(() {
+      _selectedIndex = index;
+      _pageController.jumpToPage(index);
+      tabController.animateTo(index);
+    });
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      /*_pageController.animateToPage(
+        index,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );*/
+      _pageController.jumpToPage(index);
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    tabController = TabController(length: 4, vsync: this);
+  }
+
+  void showBottomBar(ScrollController scrollController, AnimationController animationController, int timerSecs) {
+    if (scrollController.hasClients) {
+      if(timer.isActive) timer.cancel();
+      timer = Timer(Duration(seconds: timerSecs), () => (animationController.status == AnimationStatus.dismissed) ? animationController.forward() : {});
+    }
+  }
+
+  Future<bool> onWillPop() {
+    if(_selectedIndex != 0) {
+      _onPageChanged(0);
+      return Future.value(false);
+    } else {
+      return Future.value(true);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 14.0, top: 6.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            "New Releases",
-            style: GoogleFonts.openSans(
-              fontSize: 21.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 14.0),
-          SizedBox(
-            height: 210,
-            child: ListView(
-              padding: const EdgeInsets.only(right: 10.0),
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              children: <Widget>[
-                const SizedBox(width: 5),
+    return WillPopScope(
+      onWillPop: onWillPop,
+      child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        body: BottomBar(
+          borderRadius: BorderRadius.circular(500),
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.decelerate,
+          width: MediaQuery.of(context).size.width * 0.8,
+          barColor: Theme.of(context).cardColor,
+          showIcon: false,
+          bottom: 16,
+          onBottomBarHidden: () {
+            showBottomBar(scrollController, animationController, 5);
+          },
+          body: (context, scrollController, animationController) {
 
-                /// take two
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/singles/bts-take-two.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsKR(
-                                  songFullName: "Take Two",
-                                  songName: "TAKE TWO",
-                                  songTabs: [1,1,1,0],
-                                  songLyrics: getTakeTwo,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Take Two",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
+            this.scrollController = scrollController;
+            this.animationController = animationController;
 
-                /// lilith
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/suga/suga-lilith.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsENG(
-                                  songFullName: "Lilith (Diablo IV Anthem) (Halsey ft. SUGA of BTS)",
-                                  songName: "LILITH",
-                                  songTabs: [1,0,0,0],
-                                  songLyrics: getYoongiLilith,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Lilith",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// Angel Pt. 1
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/albums-solo/jimin/jimin-angelPt1.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsENG(
-                                  songFullName: "Angel Pt. 1 (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
-                                  songName: "ANGEL PT. 1",
-                                  songTabs: [1,0,0,0],
-                                  songLyrics: getJiminAngelPt1,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "Angel Pt. 1",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-
-                /// the planet
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/singles/bts-thePlanet.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LyricsKR(
-                                  songFullName: "The Planet",
-                                  songName: "THE PLANET",
-                                  songTabs: [1,1,1,0],
-                                  songLyrics: getThePlanet,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    SizedBox(
-                      height: 20,
-                      width: 150,
-                      child: FittedBox(
-                        child: Text(
-                          "The Planet",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.openSans(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-
+            return SafeArea(
+              child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: _pageController,
+              children: [
+                HomeTab(controller: scrollController),
+                FavoritesTab(controller: scrollController),
+                GameTab(controller: scrollController, onQuit: () => _onPageChanged(0)),
+                SettingsTab(controller: scrollController),
               ],
-            ),
           ),
-          const SizedBox(height: 10.0), // space above albums
-          Text(
-            "Discography",
-            style: GoogleFonts.openSans(
-              fontSize: 21.0,
-              fontWeight: FontWeight.bold,
-            ),
+            );
+          },
+          child: TabBar(
+            onTap: (index) {
+              /*if(index == 0) {
+                if(scrollController.hasClients) {
+                  scrollController.animateTo(0, duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+                }
+              }*/
+              _onItemTapped(index);
+            },
+            unselectedLabelColor: Colors.white54,
+            splashBorderRadius: BorderRadius.circular(500),
+            indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+            controller: tabController,
+            indicator: UnderlineTabIndicator(
+              borderRadius: BorderRadius.circular(6),
+                borderSide: const BorderSide(
+                  color: Colors.white,
+                  width: 2.5,
+                ),
+                insets: const EdgeInsets.fromLTRB(16, 0, 16, 8)),
+            tabs: const <Widget>[
+              Tooltip(message: "Home", child: Tab(icon: Icon(Icons.home))),
+              Tooltip(message: "Favorites", child: Tab(icon: Icon(Icons.favorite))),
+              Tooltip(message: "Mini Game", child: Tab(icon: Icon(Icons.videogame_asset_rounded))),
+              Tooltip(message: "Settings", child: Tab(icon: Icon(Icons.settings))),
+            ],
           ),
-          const SizedBox(height: 14.0),
-          SizedBox(
-            height: 190,
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.only(right: 10.0),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                const SizedBox(width: 5),
-                ///digital singles
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/digital-singles.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const DigitalSingles())),
-                          ),
-                        )),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///kr albums
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/kr-albums.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsKR())),
-                          ),
-                        )),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///jp albums
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/jp-albums.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsJP())),
-                          ),
-                        )),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///uo albums
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/uo-albums.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AlbumsUO())),
-                          ),
-                        )),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///uo albums
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/uo-songs2.jpg"), fit: BoxFit.fill)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SongsUO())),
-                          ),
-                        )),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10.0), // space above solo
-          Text(
-            "Solo Projects",
-            style: GoogleFonts.openSans(
-              fontSize: 21.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 14.0), //space below solo
-          SizedBox(
-            height: 208,
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.only(right: 10.0),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                const SizedBox(width: 5),
-                ///joon
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/joon.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Namjoon())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "RM",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///jin
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/jin.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jin())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "Jin",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///yoongi
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/yoongi.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Yoongi())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "SUGA / Agust D",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///hobi
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/hobi.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Hoseok())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "j-hope",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///jimin
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/jimin.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jimin())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "Jimin",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///tae
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/tae.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Taehyung())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "V",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 10),
-                ///jk
-                Column(
-                  children: <Widget>[
-                    Material(
-                        elevation: 3,
-                        shadowColor: Colors.purple.shade700,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Ink(
-                          width: 150,
-                          height: 170,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(image: AssetImage("images/members/jk.jpg"), fit: BoxFit.cover)
-                          ),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(10),
-                            //splashColor: Colors.purple.shade200.withOpacity(0.5),
-                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Jungkook())),
-                          ),
-                        )),
-                    const SizedBox(height: 4),
-                    Text(
-                      "Jungkook",
-                      style: GoogleFonts.openSans(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10.0),
-        ],
+        ),
       ),
     );
   }

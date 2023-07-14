@@ -108,10 +108,10 @@ packages:
     dependency: "direct main"
     description:
       name: in_app_update
-      sha256: "0be3b79405409d77999b57075322ae4703af7871d83529b5b52c246ada9861fe"
+      sha256: a220c46e649ae6cfaa80ea6688efb22e73eaa9ec538d8666f5814cc04c08a696
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.1"
+    version: "4.1.4"
   js:
     dependency: transitive
     description:
@@ -241,10 +241,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: eb1e00ab44303d50dd487aab67ebc575456c146c6af44422f9c13889984c00f3
+      sha256: "781bd58a1eb16069412365c98597726cd8810ae27435f04b3b4d3a470bacd61e"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.11"
+    version: "6.1.12"
   url_launcher_android:
     dependency: transitive
     description:
@@ -318,5 +318,5 @@ packages:
     source: hosted
     version: "4.1.4"
 sdks:
-  dart: ">=3.0.0-0 <4.0.0"
-  flutter: ">=3.3.0"
+  dart: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
