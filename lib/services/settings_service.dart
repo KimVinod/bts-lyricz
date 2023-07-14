@@ -87,9 +87,9 @@ class SettingsService {
 
   }
 
-  static void openNotifications() => AppSettings.openNotificationSettings();
+  static void openNotifications() => AppSettings.openAppSettings(type: AppSettingsType.notification);
 
-  static void openBatteryOptimization() => AppSettings.openBatteryOptimizationSettings();
+  static void openBatteryOptimization() => AppSettings.openAppSettings(type: AppSettingsType.batteryOptimization);
 
   static void checkForUpdates(BuildContext context) => NativeUpdater.displayUpdateAlert(context, forceUpdate: true);
 
