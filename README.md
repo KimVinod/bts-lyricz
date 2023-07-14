@@ -3,21 +3,23 @@
 <a href='https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80" /></a>
 
 ## Description
-An android application using flutter framework which shows song lyrics of the biggest band BTS.
+An android application using flutter framework which shows song lyrics of the biggest group BTS.
 
 ## Screenshots
 <p align = "center">
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/screen_1.png" width="18%" unselectable="on"/>
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/screen_2.png" width="18%" unselectable="on"/>
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/screen_3.png" width="18%" unselectable="on"/>
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/screen_4.png" width="18%" unselectable="on"/>
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/screen_5.png" width="18%" unselectable="on"/> 
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/home.png" width="16%" unselectable="on"/>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/mini-game.png" width="16%" unselectable="on"/>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/settings.png" width="16%" unselectable="on"/>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/search.png" width="16%" unselectable="on"/>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/lyrics.png" width="16%" unselectable="on"/> 
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/dark-mode.png" width="16%" unselectable="on"/> 
 </p>
 
 ## Features
 <ul>
   <li>Includes all the song lyrics from debut till current era</li>
-  <li>Free and Open source application so you don't have to worry about privacy</li>
+  <li>Mini game - Guess the song</li>
+  <li>Free and Open source app so you don't have to worry about privacy</li>
   <li>Does not have ads</li>
   <li>User friendly and BTS themed design</li>
   <li>In-app update feature provided by Google Play Core</li>
