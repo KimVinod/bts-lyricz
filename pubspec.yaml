@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.14.0
-  firebase_messaging: ^14.6.4
-  firebase_analytics: ^10.4.3
-  firebase_crashlytics: ^3.3.3
+  firebase_core: ^2.15.0
+  firebase_messaging: ^14.6.5
+  firebase_analytics: ^10.4.4
+  firebase_crashlytics: ^3.3.4
 
   #persistent
   hive: ^2.2.3
