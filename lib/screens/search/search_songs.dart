@@ -85,8 +85,8 @@ class SearchSongsState extends State<SearchSongs> {
     final matchedSongs = query.isEmpty
         ? uniqueList // Show all songs if the query is empty
         : uniqueList.where((song) {
-      final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
-      final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase(); // Remove ' and ’ characters
+      final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase();
+      final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase();
       final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseJpLyrics = song.lyrics.jp?.toLowerCase() ?? '';
       final lowercaseKrLyrics = song.lyrics.kr?.toLowerCase() ?? '';
@@ -102,6 +102,21 @@ class SearchSongsState extends State<SearchSongs> {
       final songNameB = b.name.toLowerCase();
       final lowercaseEngLyricsA = a.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseEngLyricsB = b.lyrics.eng?.toLowerCase() ?? '';
+      final lowercaseJpLyricsA = a.lyrics.jp?.toLowerCase() ?? '';
+      final lowercaseJpLyricsB = b.lyrics.jp?.toLowerCase() ?? '';
+      final lowercaseKrLyricsA = a.lyrics.kr?.toLowerCase() ?? '';
+      final lowercaseKrLyricsB = b.lyrics.kr?.toLowerCase() ?? '';
+
+      // Check if there's an exact match in the song name
+      final exactMatchA = songNameA == query.toLowerCase();
+      final exactMatchB = songNameB == query.toLowerCase();
+
+      // If there's an exact match in song name, it should come first
+      if (exactMatchA && !exactMatchB) {
+        return -1;
+      } else if (!exactMatchA && exactMatchB) {
+        return 1;
+      }
 
       // Compare song names first
       if (songNameA.contains(query) && !songNameB.contains(query)) {
@@ -110,10 +125,20 @@ class SearchSongsState extends State<SearchSongs> {
         return 1; // songNameA should come after songNameB
       }
 
-      // Compare song lyrics if song names have equal priority
-      if (lowercaseEngLyricsA.contains(query) && !lowercaseEngLyricsB.contains(query)) {
+      // If song names have equal priority or both don't match the query,
+      // then compare the presence of the query in the lyrics
+      final containsQueryLyricsA =
+          lowercaseEngLyricsA.contains(query) ||
+              lowercaseJpLyricsA.contains(query) ||
+              lowercaseKrLyricsA.contains(query);
+      final containsQueryLyricsB =
+          lowercaseEngLyricsB.contains(query) ||
+              lowercaseJpLyricsB.contains(query) ||
+              lowercaseKrLyricsB.contains(query);
+
+      if (containsQueryLyricsA && !containsQueryLyricsB) {
         return -1; // lowercaseEngLyricsA should come before lowercaseEngLyricsB
-      } else if (!lowercaseEngLyricsA.contains(query) && lowercaseEngLyricsB.contains(query)) {
+      } else if (!containsQueryLyricsA && containsQueryLyricsB) {
         return 1; // lowercaseEngLyricsA should come after lowercaseEngLyricsB
       }
 
