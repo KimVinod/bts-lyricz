@@ -48,7 +48,7 @@ dependencies:
   native_updater:
     path: ./packages/native_updater
     #git: https://github.com/Furation-Technology/native_updater.git
-  share_plus: ^7.0.2
+  share_plus: ^7.1.0
   url_launcher: ^6.1.12
 
 
