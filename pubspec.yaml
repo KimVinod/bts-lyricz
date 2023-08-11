@@ -30,7 +30,7 @@ dependencies:
   firebase_analytics: ^10.4.4
   firebase_crashlytics: ^3.3.4
 
-  #persistent
+  #persistent 
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
