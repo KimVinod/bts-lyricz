@@ -4,9 +4,10 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 
 const List<Song> newReleaseSongs = [
   //max 4 songs
+  //recheck display name as logic is diff here
   Song(
     name: "Rainy Days",
-    displayName: "RAINY DAYS",
+    displayName: "Rainy Days",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
     album: "Layover",
     albumArt: "images/albums-solo/v/v-layover.jpg",
@@ -15,7 +16,7 @@ const List<Song> newReleaseSongs = [
   ),
   Song(
     name: "Love Me Again",
-    displayName: "LOVE ME AGAIN",
+    displayName: "Love Me Again",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
     album: "Layover",
     albumArt: "images/albums-solo/v/v-layover.jpg",
