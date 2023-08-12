@@ -4,6 +4,25 @@ import 'package:bts_lyrics_app/data/song_model.dart';
 
 const List<Song> newReleaseSongs = [
   //max 4 songs
+  //recheck display name as logic is diff here
+  Song(
+    name: "Rainy Days",
+    displayName: "Rainy Days",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverRainyDays,
+  ),
+  Song(
+    name: "Love Me Again",
+    displayName: "Love Me Again",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverLoveMeAgain,
+  ),
   Song(
     name: "Seven - Clean Ver. (feat. Latto)",
     displayName: "Seven (Clean)",
@@ -21,27 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     lyrics: getJungkookSevenExplicit,
-  ),
-  //angel pt2
-  Song(
-    name: "Angel Pt. 2 (JVKE feat. Jimin of BTS, Charlie Puth & Muni Long)",
-    displayName: "Angel Pt. 2",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: null,
-    albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
-    lang: "eng",
-    lyrics: getJiminAngelPt2,
-  ),
-
-  //take two
-  Song(
-    name: "Take Two",
-    displayName: "Take Two",
-    isSolo: IsSolo(isSolo: true, soloName: "bts"),
-    album: null,
-    albumArt: "images/singles/bts-take-two.jpg",
-    lang: "kr",
-    lyrics: getTakeTwo,
   ),
 ];
 
@@ -1205,6 +1203,26 @@ const List<Song> allSongs = [
 
 
   ///taehyung
+  //albums
+  //layover
+  Song(
+    name: "Rainy Days",
+    displayName: "RAINY DAYS",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: "Layover",
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverRainyDays,
+  ),
+  Song(
+    name: "Love Me Again",
+    displayName: "LOVE ME AGAIN",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: "Layover",
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverLoveMeAgain,
+  ),
   //songs
   Song(
     name: "풍경 (Scenery)",

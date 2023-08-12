@@ -109,7 +109,7 @@ const List<Map<String, dynamic>> soloProjects = [
   {
     'imageAsset': 'images/members/tae.jpg',
     'name': 'V',
-    'widget': Member(memberName: "V", isAlbum: false, dataKey: 'taehyung'),
+    'widget': Member(memberName: "V", isAlbum: true, dataKey: 'taehyung'),
   },
   {
     'imageAsset': 'images/members/jk.jpg',
