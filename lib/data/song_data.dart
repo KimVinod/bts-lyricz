@@ -353,6 +353,15 @@ const List<Song> allSongs = [
     lyrics: getNamjoonBuckubucku,
   ),
   Song(
+    name: "ProMeTheUs (YANKIE feat. Dok2, Juvie Train, Double K & Rap Monster of BTS)",
+    displayName: "ProMeTheUs",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-ProMeTheUs.jpg",
+    lang: "kr",
+    lyrics: getNamjoonProMeTheUs,
+  ),
+  Song(
     name: "Always",
     displayName: "ALWAYS",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
