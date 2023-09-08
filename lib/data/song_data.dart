@@ -6,22 +6,13 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
-    name: "Rainy Days",
-    displayName: "Rainy Days",
+    name: "Layover",
+    displayName: "Layover",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
+    album: "Layover",
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     lyrics: getTaehyungLayoverRainyDays,
-  ),
-  Song(
-    name: "Love Me Again",
-    displayName: "Love Me Again",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
-    albumArt: "images/albums-solo/v/v-layover.jpg",
-    lang: "kr",
-    lyrics: getTaehyungLayoverLoveMeAgain,
   ),
   Song(
     name: "Seven - Clean Ver. (feat. Latto)",
@@ -1224,6 +1215,15 @@ const List<Song> allSongs = [
     lyrics: getTaehyungLayoverRainyDays,
   ),
   Song(
+    name: "Blue",
+    displayName: "BLUE",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: "Layover",
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverBlue,
+  ),
+  Song(
     name: "Love Me Again",
     displayName: "LOVE ME AGAIN",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -1232,6 +1232,25 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getTaehyungLayoverLoveMeAgain,
   ),
+  Song(
+    name: "Slow Dancing",
+    displayName: "SLOW DANCING",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: "Layover",
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "kr",
+    lyrics: getTaehyungLayoverSlowDancing,
+  ),
+  Song(
+    name: "For Us",
+    displayName: "FOR US",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: "Layover",
+    albumArt: "images/albums-solo/v/v-layover.jpg",
+    lang: "eng",
+    lyrics: getTaehyungLayoverForUs,
+  ),
+
   //songs
   Song(
     name: "풍경 (Scenery)",
