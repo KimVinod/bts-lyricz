@@ -11,11 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
   # package_info will help us to find current installed version of application.
-  package_info_plus: ^4.0.2
+  package_info_plus: ^4.1.0
   # url_launcher will help us to trigger app store / play store url from our app.
-  url_launcher: ^6.1.12
+  url_launcher: ^6.1.14
   # Enables In App Updates on Android using the official Android APIs.
-  in_app_update: ^4.1.4
+  in_app_update: ^4.2.0
   # extras
   fluttertoast: ^8.2.2
 

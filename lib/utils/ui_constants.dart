@@ -191,6 +191,10 @@ const List<Map<String, dynamic>> krAlbums = [
     'imageAsset':'images/skoolluvaffair.jpg',
   },
   {
+    'album':'Skool Luv Affair (Special Addition)',
+    'imageAsset':'images/skool-luv-affair-special-addition.jpg',
+  },
+  {
     'album':'Dark & Wild',
     'imageAsset':'images/darkandwild.jpg',
   },
