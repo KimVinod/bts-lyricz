@@ -108,10 +108,10 @@ packages:
     dependency: "direct main"
     description:
       name: in_app_update
-      sha256: fc02898f8cf45d23d731d0783171864d4765080bc8547ec517bfafe0b5c8e15b
+      sha256: "102249a7e45e3050e4bc1b236cfc8de116b27d805ba78c3c276e73f3fffbaebc"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.0"
+    version: "4.2.1"
   matcher:
     dependency: transitive
     description:
