@@ -6,6 +6,24 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "3D (feat. Jack Harlow)",
+    displayName: "3D (ft. Jack Harlow)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
+    lang: "eng",
+    lyrics: getJungkook3D,
+  ),
+  Song(
+    name: "3D (Alternate Ver.)",
+    displayName: "3D (Alternate Ver.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d-alternate.jpg",
+    lang: "eng",
+    lyrics: getJungkook3DAlternate,
+  ),
+  Song(
     name: "Layover",
     displayName: "Layover",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -22,15 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     lyrics: getJungkookSevenClean,
-  ),
-  Song(
-    name: "Seven - Explicit Ver. (feat. Latto)",
-    displayName: "Seven (Explicit)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
-    lang: "eng",
-    lyrics: getJungkookSevenExplicit,
   ),
 ];
 
@@ -1472,6 +1481,24 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     lyrics: getJungkookSevenExplicit,
+  ),
+  Song(
+    name: "3D (feat. Jack Harlow)",
+    displayName: "3D (feat. Jack Harlow)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
+    lang: "eng",
+    lyrics: getJungkook3D,
+  ),
+  Song(
+    name: "3D (Alternate Ver.)",
+    displayName: "3D (Alternate Ver.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d-alternate.jpg",
+    lang: "eng",
+    lyrics: getJungkook3DAlternate,
   ),
 
 
