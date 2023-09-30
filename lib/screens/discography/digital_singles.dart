@@ -6,8 +6,8 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DigitalSingles extends StatefulWidget {
-  final bool isUnOfficial;
-  const DigitalSingles({Key? key, required this.isUnOfficial}) : super(key: key);
+  final bool isUnOfficial, isArmy;
+  const DigitalSingles({Key? key, required this.isUnOfficial, required this.isArmy}) : super(key: key);
 
   @override
   State<DigitalSingles> createState() => _DigitalSinglesState();
@@ -19,7 +19,11 @@ class _DigitalSinglesState extends State<DigitalSingles> {
 
   void loadSongs() {
     if(widget.isUnOfficial) {
-      songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.isUnofficial == true).toList();
+      if(widget.isArmy) {
+        songs = allSongs.where((s) => s.isArmy == true).toList();
+      } else {
+        songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.isUnofficial == true).toList();
+      }
     } else {
       songs = allSongs.where((s) => s.isSolo.isSolo == true && s.isSolo.soloName == "bts").toList();
     }
@@ -37,7 +41,7 @@ class _DigitalSinglesState extends State<DigitalSingles> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: Text(widget.isUnOfficial ? "BTS Unofficial Songs" : "BTS Digital Singles", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),
+        title: Text(widget.isUnOfficial ? widget.isArmy ? "ARMY Songs" : "BTS Unofficial Songs" : "BTS Digital Singles", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),
       ),
       body: Container(
         width: double.infinity,

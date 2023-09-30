@@ -3,12 +3,13 @@ class Song {
   final String name;
   final String displayName;
   final IsSolo isSolo;
+  final bool? isArmy;
   final String? album;
   final String albumArt;
   final String lang;
   final Lyrics lyrics;
 
-  const Song({required this.name, required this.displayName, required this.isSolo, this.album, required this.lang, required this.lyrics, required this.albumArt});
+  const Song({required this.name, required this.displayName, required this.isSolo, this.isArmy, this.album, required this.lang, required this.lyrics, required this.albumArt});
 
 }
 

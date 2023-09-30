@@ -73,11 +73,12 @@ String getBt21Pic() {
 }
 
 const Map<String, Widget> discography = {
-  'images/digital-singles.jpg': DigitalSingles(isUnOfficial: false),
+  'images/digital-singles.jpg': DigitalSingles(isUnOfficial: false, isArmy: false),
   'images/kr-albums.jpg': Albums(type: 'kr'),
   'images/jp-albums.jpg': Albums(type: 'jp'),
   'images/uo-albums.jpg': Albums(type: 'uo'),
-  'images/uo-songs2.jpg': DigitalSingles(isUnOfficial: true),
+  'images/uo-songs2.jpg': DigitalSingles(isUnOfficial: true, isArmy: false),
+  'images/army-songs.jpg': DigitalSingles(isUnOfficial: true, isArmy: true),
 };
 
 const List<Map<String, dynamic>> soloProjects = [

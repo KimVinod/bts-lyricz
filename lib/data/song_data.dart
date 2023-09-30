@@ -6,6 +6,24 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "3D (feat. Jack Harlow)",
+    displayName: "3D (ft. Jack Harlow)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
+    lang: "eng",
+    lyrics: getJungkook3D,
+  ),
+  Song(
+    name: "3D (Alternate Ver.)",
+    displayName: "3D (Alternate Ver.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d-alternate.jpg",
+    lang: "eng",
+    lyrics: getJungkook3DAlternate,
+  ),
+  Song(
     name: "Layover",
     displayName: "Layover",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -23,18 +41,100 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     lyrics: getJungkookSevenClean,
   ),
-  Song(
-    name: "Seven - Explicit Ver. (feat. Latto)",
-    displayName: "Seven (Explicit)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
-    lang: "eng",
-    lyrics: getJungkookSevenExplicit,
-  ),
 ];
 
 const List<Song> allSongs = [
+
+  ///army songs
+  Song(
+    name: "보라해 (I Purple U) (Vocal. 윤솜) (by 아미코드)",
+    displayName: "보라해 (I PURPLE U)",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/i-purple-you.jpg",
+    lang: "kr",
+    lyrics: getArmyIPurpleYou,
+  ),
+
+  Song(
+    name: "F.L.Y (Forever Loving You) (by UAE ARMY)",
+    displayName: "F.L.Y (FOREVER LOVING YOU)",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/fly.jpg",
+    lang: "eng",
+    lyrics: getArmyFly,
+  ),
+
+  Song(
+    name: "We'll Be Fine (Gracie Ranan ft. ARMY)",
+    displayName: "WE'LL BE FINE",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/we-will-be-fine.jpg",
+    lang: "eng",
+    lyrics: getArmyWeWillBeFine,
+  ),
+
+  Song(
+    name: "See You There (Gracie Ranan ft. ARMY)",
+    displayName: "SEE YOU THERE",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/see-you-there.jpg",
+    lang: "eng",
+    lyrics: getArmySeeYouThere,
+  ),
+
+  Song(
+    name: "7 Reasons (Gracie Ranan ft. ARMY)",
+    displayName: "7 REASONS",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/7reasons.jpg",
+    lang: "eng",
+    lyrics: getArmy7Reasons,
+  ),
+
+  Song(
+    name: "W8 (Gracie Ranan ft. ARMY)",
+    displayName: "W8",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/w8.jpg",
+    lang: "eng",
+    lyrics: getArmyW8,
+  ),
+
+  Song(
+    name: "7 Wonders (by Ciel)",
+    displayName: "7 Wonders",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/7wonders.jpg",
+    lang: "eng",
+    lyrics: getArmy7Wonders,
+  ),
+
+  Song(
+    name: "Someone In Seoul (Gracie Ranan ft. ARMY)",
+    displayName: "SOMEONE IN SEOUL",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/someone-in-seoul.jpg",
+    lang: "eng",
+    lyrics: getArmySomeoneInSeoul,
+  ),
+
+  Song(
+    name: "Love Letters (by NIA)",
+    displayName: "LOVE LETTERS",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/loveLetters.jpg",
+    lang: "eng",
+    lyrics: getArmyLoveLetters,
+  ),
 
   ///solo projects
   ///namjoon
@@ -1381,6 +1481,24 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     lyrics: getJungkookSevenExplicit,
+  ),
+  Song(
+    name: "3D (feat. Jack Harlow)",
+    displayName: "3D (feat. Jack Harlow)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
+    lang: "eng",
+    lyrics: getJungkook3D,
+  ),
+  Song(
+    name: "3D (Alternate Ver.)",
+    displayName: "3D (Alternate Ver.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-3d-alternate.jpg",
+    lang: "eng",
+    lyrics: getJungkook3DAlternate,
   ),
 
 
