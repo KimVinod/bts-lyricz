@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.16.0
-  firebase_messaging: ^14.6.8
-  firebase_analytics: ^10.5.0
-  firebase_crashlytics: ^3.3.6
+  firebase_core: ^2.19.0
+  firebase_messaging: ^14.7.1
+  firebase_analytics: ^10.6.1
+  firebase_crashlytics: ^3.4.1
 
   #persistent 
   hive: ^2.2.3
@@ -43,12 +43,12 @@ dependencies:
 
   #util
   app_settings: ^5.1.1
-  flutter_local_notifications: ^15.1.1
+  flutter_local_notifications: ^16.1.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     path: ./packages/native_updater
     #git: https://github.com/Furation-Technology/native_updater.git
-  share_plus: ^7.1.0
+  share_plus: ^7.2.1
   url_launcher: ^6.1.14
 
 
@@ -65,9 +65,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.3.4
   flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^2.0.3
+  flutter_lints: ^3.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
