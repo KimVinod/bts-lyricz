@@ -108,10 +108,10 @@ packages:
     dependency: "direct main"
     description:
       name: in_app_update
-      sha256: "102249a7e45e3050e4bc1b236cfc8de116b27d805ba78c3c276e73f3fffbaebc"
+      sha256: b6ccb757281a96a4b18536f68fe2567aeca865134218719364212da8fe94615c
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.1"
+    version: "4.2.2"
   matcher:
     dependency: transitive
     description:
@@ -140,10 +140,10 @@ packages:
     dependency: "direct main"
     description:
       name: package_info_plus
-      sha256: "6ff267fcd9d48cb61c8df74a82680e8b82e940231bb5f68356672fde0397334a"
+      sha256: "7e76fad405b3e4016cd39d08f455a4eb5199723cf594cd1b8916d47140d93017"
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.0"
   package_info_plus_platform_interface:
     dependency: transitive
     description:
