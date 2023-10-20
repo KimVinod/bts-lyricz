@@ -6,6 +6,15 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "The Kid LAROI, Jung Kook, Central Cee - TOO MUCH",
+    displayName: "TOO MUCH",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-tooMuch.jpg",
+    lang: "eng",
+    lyrics: getJungkookTooMuch,
+  ),
+  Song(
     name: "3D (feat. Jack Harlow)",
     displayName: "3D (ft. Jack Harlow)",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -31,15 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     lyrics: getTaehyungLayoverRainyDays,
-  ),
-  Song(
-    name: "Seven - Clean Ver. (feat. Latto)",
-    displayName: "Seven (Clean)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
-    lang: "eng",
-    lyrics: getJungkookSevenClean,
   ),
 ];
 
@@ -1500,11 +1500,19 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getJungkook3DAlternate,
   ),
-
+  Song(
+    name: "The Kid LAROI, Jung Kook, Central Cee - TOO MUCH",
+    displayName: "TOO MUCH",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-tooMuch.jpg",
+    lang: "eng",
+    lyrics: getJungkookTooMuch,
+  ),
 
 
   ///uo albums
-      //bts world
+  //bts world
   Song(
     name: "Heartbeat",
     displayName: "HEARTBEAT",
