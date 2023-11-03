@@ -6,6 +6,15 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "GOLDEN",
+    displayName: "GOLDEN",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenCloserToYou,
+  ),
+  Song(
     name: "The Kid LAROI, Jung Kook, Central Cee - TOO MUCH",
     displayName: "TOO MUCH",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -32,15 +41,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     lyrics: getJungkook3DAlternate,
   ),
-  Song(
-    name: "Layover",
-    displayName: "Layover",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: "Layover",
-    albumArt: "images/albums-solo/v/v-layover.jpg",
-    lang: "kr",
-    lyrics: getTaehyungLayoverRainyDays,
-  ),
 ];
 
 const List<Song> allSongs = [
@@ -55,7 +55,6 @@ const List<Song> allSongs = [
     lang: "kr",
     lyrics: getArmyIPurpleYou,
   ),
-
   Song(
     name: "F.L.Y (Forever Loving You) (by UAE ARMY)",
     displayName: "F.L.Y (FOREVER LOVING YOU)",
@@ -65,7 +64,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmyFly,
   ),
-
   Song(
     name: "We'll Be Fine (Gracie Ranan ft. ARMY)",
     displayName: "WE'LL BE FINE",
@@ -75,7 +73,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmyWeWillBeFine,
   ),
-
   Song(
     name: "See You There (Gracie Ranan ft. ARMY)",
     displayName: "SEE YOU THERE",
@@ -85,7 +82,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmySeeYouThere,
   ),
-
   Song(
     name: "7 Reasons (Gracie Ranan ft. ARMY)",
     displayName: "7 REASONS",
@@ -95,7 +91,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmy7Reasons,
   ),
-
   Song(
     name: "W8 (Gracie Ranan ft. ARMY)",
     displayName: "W8",
@@ -105,7 +100,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmyW8,
   ),
-
   Song(
     name: "7 Wonders (by Ciel)",
     displayName: "7 Wonders",
@@ -115,7 +109,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmy7Wonders,
   ),
-
   Song(
     name: "Someone In Seoul (Gracie Ranan ft. ARMY)",
     displayName: "SOMEONE IN SEOUL",
@@ -125,7 +118,6 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmySomeoneInSeoul,
   ),
-
   Song(
     name: "Love Letters (by NIA)",
     displayName: "LOVE LETTERS",
@@ -1400,6 +1392,108 @@ const List<Song> allSongs = [
 
 
   ///jungkook
+  //albums
+  //golden
+  Song(
+    name: "3D (feat. Jack Harlow)",
+    displayName: "3D (feat. Jack Harlow)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkook3D,
+  ),
+  Song(
+    name: "Closer to You (feat. Major Lazer)",
+    displayName: "CLOSER TO YOU",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenCloserToYou,
+  ),
+  Song(
+    name: "Seven - Explicit Ver. (feat. Latto)",
+    displayName: "SEVEN (EXPLICIT  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenExplicit,
+  ),
+  Song(
+    name: "Standing Next to You",
+    displayName: "STANDING NEXT TO YOU",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenStandingNextToYou,
+  ),
+  Song(
+    name: "Yes or No",
+    displayName: "YES OR NO",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenYesOrNo,
+  ),
+  Song(
+    name: "Please Don't Change (feat. DJ Snake)",
+    displayName: "PLEASE DON'T CHANGE",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenPleaseDontChange,
+  ),
+  Song(
+    name: "Hate You",
+    displayName: "HATE YOU",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenHateYou,
+  ),
+  Song(
+    name: "Somebody",
+    displayName: "SOMEBODY",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenSomebody,
+  ),
+  Song(
+    name: "Too Sad to Dance",
+    displayName: "TOO SAD TO DANCE",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenTooSadToDance,
+  ),
+  Song(
+    name: "Short Glass of Tears",
+    displayName: "SHORT GLASS OF TEARS",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookGoldenShortGlassOfTears,
+  ),
+  Song(
+    name: "Seven - Clean Ver. (feat. Latto)",
+    displayName: "SEVEN (CLEAN  VER.)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: "GOLDEN",
+    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
+    lang: "eng",
+    lyrics: getJungkookSevenClean,
+  ),
+
   //songs
   Song(
     name: "일하는중 (Working)",
