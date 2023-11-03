@@ -6,7 +6,7 @@ import 'package:bts_lyrics_app/utils/ui_constants.dart';
 
 class Albums extends StatelessWidget {
   final String type;
-  const Albums({Key? key, required this.type}) : super(key: key);
+  const Albums({super.key, required this.type});
 
   @override
   Widget build(BuildContext context) {

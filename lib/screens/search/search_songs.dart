@@ -7,7 +7,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SearchSongs extends StatefulWidget {
-  const SearchSongs({Key? key}) : super(key: key);
+  const SearchSongs({super.key});
 
   @override
   SearchSongsState createState() => SearchSongsState();
