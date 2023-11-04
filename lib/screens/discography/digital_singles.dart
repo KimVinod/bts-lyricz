@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class DigitalSingles extends StatefulWidget {
   final bool isUnOfficial, isArmy;
-  const DigitalSingles({Key? key, required this.isUnOfficial, required this.isArmy}) : super(key: key);
+  const DigitalSingles({super.key, required this.isUnOfficial, required this.isArmy});
 
   @override
   State<DigitalSingles> createState() => _DigitalSinglesState();

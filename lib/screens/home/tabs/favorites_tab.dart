@@ -9,7 +9,7 @@ import 'package:hive/hive.dart';
 
 class FavoritesTab extends StatefulWidget {
   final ScrollController controller;
-  const FavoritesTab({Key? key, required this.controller}) : super(key: key);
+  const FavoritesTab({super.key, required this.controller});
 
   @override
   State<FavoritesTab> createState() => _FavoritesTabState();

@@ -8,11 +8,11 @@ class CustomCard extends StatelessWidget {
   final String? name;
 
   const CustomCard({
-    Key? key,
+    super.key,
     required this.imageAsset,
     required this.widget,
     this.name,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class CustomCard extends StatelessWidget {
             shadowColor: Theme.of(context).colorScheme.shadow,
             borderRadius: BorderRadius.circular(12),
             child: Ink(
-              width: 150,
+              width: 170,
               height: 170,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -41,7 +41,7 @@ class CustomCard extends StatelessWidget {
             const SizedBox(height: 6),
             SizedBox(
               height: 20,
-              width: 150,
+              width: 170,
               child: FittedBox(
                 child: Text(
                   name!,

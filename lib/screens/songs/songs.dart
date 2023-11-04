@@ -8,7 +8,7 @@ class Songs extends StatefulWidget {
   final String albumName;
   final String albumArt;
 
-  const Songs({Key? key, required this.albumName, required this.albumArt}) : super(key: key);
+  const Songs({super.key, required this.albumName, required this.albumArt});
 
   @override
   State<Songs> createState() => _SongsState();
@@ -53,7 +53,7 @@ class _SongsState extends State<Songs> {
                         shadowColor: Theme.of(context).colorScheme.shadow,
                         borderRadius: BorderRadius.circular(12),
                         child: Container(
-                          width: 150,
+                          width: 170,
                           height: 170,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),

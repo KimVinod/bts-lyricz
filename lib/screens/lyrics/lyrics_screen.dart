@@ -9,7 +9,7 @@ class LyricsPage extends StatefulWidget {
   final Lyrics songLyrics;
   final String songName, songFullName;
 
-  const LyricsPage({Key? key, required this.songLyrics, required this.songName, required this.songFullName}): super(key: key);
+  const LyricsPage({super.key, required this.songLyrics, required this.songName, required this.songFullName});
 
   @override
   State<LyricsPage> createState() => _LyricsPageState();
