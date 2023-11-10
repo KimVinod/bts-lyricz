@@ -24218,7 +24218,7 @@ const Lyrics getJungkookGoldenTooSadToDance = Lyrics(
       "'Cause you don’t need no one to dance\n\n"
       "[Instrumental Outro]",
 );
-const Lyrics getJungkookGoldenShortGlassOfTears = Lyrics(
+const Lyrics getJungkookGoldenShotGlassOfTears = Lyrics(
   eng: "[Chorus]\n"
       "Tell me, am I ever gonna feel again?\n"
       "Tell me, am I ever gonna heal again?\n"

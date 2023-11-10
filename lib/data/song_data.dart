@@ -1476,13 +1476,13 @@ const List<Song> allSongs = [
     lyrics: getJungkookGoldenTooSadToDance,
   ),
   Song(
-    name: "Short Glass of Tears",
-    displayName: "SHORT GLASS OF TEARS",
+    name: "Shot Glass of Tears",
+    displayName: "SHOT GLASS OF TEARS",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
     album: "GOLDEN",
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
-    lyrics: getJungkookGoldenShortGlassOfTears,
+    lyrics: getJungkookGoldenShotGlassOfTears,
   ),
   Song(
     name: "Seven - Clean Ver. (feat. Latto)",
