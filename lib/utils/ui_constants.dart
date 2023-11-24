@@ -13,6 +13,7 @@ const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
 const Color appOffBlackColor = Color(0xff262626);
 
 ThemeData lightTheme = ThemeData(
+  useMaterial3: false,
   textTheme: GoogleFonts.openSansTextTheme(),
   cardColor: appBarColor,  //home bottom bar, divider
   appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
@@ -29,6 +30,7 @@ ThemeData lightTheme = ThemeData(
   ),
 );
 ThemeData darkTheme = ThemeData(
+  useMaterial3: false,
   appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.white), overlayColor: MaterialStateProperty.all(Colors.white30))),
