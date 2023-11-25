@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.0.7+33
+version: 2.0.8+34
 
 environment:
   sdk: '>=2.17.5 <3.0.0'
@@ -25,17 +25,17 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.22.0
-  firebase_messaging: ^14.7.4
-  firebase_analytics: ^10.6.4
-  firebase_crashlytics: ^3.4.4
+  firebase_core: ^2.23.0
+  firebase_messaging: ^14.7.5
+  firebase_analytics: ^10.7.1
+  firebase_crashlytics: ^3.4.5
 
   #persistent 
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: 8.2.2
+  fluttertoast: ^8.2.4
   flutter_floating_bottom_bar:
     path: ./packages/flutter_floating_bottom_bar
   flutter_bounceable: ^1.1.0
@@ -60,12 +60,15 @@ flutter_native_splash:
   color: "#B488D4"
   image: images/splashLogo2.png
   android: true
+  android_12:
+    color: "#B488D4"
+    image: images/splashIconLogo2.png
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_native_splash: ^2.3.5
+  flutter_native_splash: ^2.3.6
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^3.0.1
 # For information on the generic Dart part of this file, see the
