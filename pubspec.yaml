@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.23.0
-  firebase_messaging: ^14.7.5
-  firebase_analytics: ^10.7.1
-  firebase_crashlytics: ^3.4.5
+  firebase_core: ^2.24.0
+  firebase_messaging: ^14.7.6
+  firebase_analytics: ^10.7.2
+  firebase_crashlytics: ^3.4.6
 
   #persistent 
   hive: ^2.2.3
@@ -43,7 +43,7 @@ dependencies:
 
   #util
   app_settings: ^5.1.1
-  flutter_local_notifications: ^16.1.0
+  flutter_local_notifications: ^16.2.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     path: ./packages/native_updater
