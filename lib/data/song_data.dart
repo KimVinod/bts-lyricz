@@ -6,6 +6,15 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Standing Next to You (Usher Remix)",
+    displayName: "Standing Next to You (Usher Remix)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-standingNextToYou-usher.jpg",
+    lang: "eng",
+    lyrics: getJungkookStandingNextToYouUsherRemix,
+  ),
+  Song(
     name: "3D (Justin Timberlake Remix)",
     displayName: "3D (Justin Timberlake Remix)",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -31,15 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-tooMuch.jpg",
     lang: "eng",
     lyrics: getJungkookTooMuch,
-  ),
-  Song(
-    name: "3D (feat. Jack Harlow)",
-    displayName: "3D (ft. Jack Harlow)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
-    lang: "eng",
-    lyrics: getJungkook3D,
   ),
 ];
 
@@ -1611,6 +1611,15 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-3d-timberlake.jpg",
     lang: "eng",
     lyrics: getJungkook3DJustinTimberlake,
+  ),
+  Song(
+    name: "Standing Next to You (Usher Remix)",
+    displayName: "Standing Next to You (Usher Remix)",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-standingNextToYou-usher.jpg",
+    lang: "eng",
+    lyrics: getJungkookStandingNextToYouUsherRemix,
   ),
 
 
@@ -5188,4 +5197,3 @@ const List<Song> allSongs = [
   ),
 
 ];
-
