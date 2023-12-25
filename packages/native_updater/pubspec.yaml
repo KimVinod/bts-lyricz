@@ -13,7 +13,7 @@ dependencies:
   # package_info will help us to find current installed version of application.
   package_info_plus: ^5.0.1
   # url_launcher will help us to trigger app store / play store url from our app.
-  url_launcher: ^6.2.1
+  url_launcher: ^6.2.2
   # Enables In App Updates on Android using the official Android APIs.
   in_app_update: ^4.2.2
   # extras

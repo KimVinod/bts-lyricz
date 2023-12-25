@@ -6,6 +6,15 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Closer Than This",
+    displayName: "Closer Than This",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-closerThanThis.jpg",
+    lang: "kr",
+    lyrics: getJiminCloserThanThis,
+  ),
+  Song(
     name: "Standing Next to You (Usher Remix)",
     displayName: "Standing Next to You (Usher Remix)",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -31,15 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     lyrics: getJungkookGoldenCloserToYou,
-  ),
-  Song(
-    name: "The Kid LAROI, Jung Kook, Central Cee - TOO MUCH",
-    displayName: "TOO MUCH",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-tooMuch.jpg",
-    lang: "eng",
-    lyrics: getJungkookTooMuch,
   ),
 ];
 
@@ -1291,6 +1291,15 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
     lang: "eng",
     lyrics: getJiminAngelPt2,
+  ),
+  Song(
+    name: "Closer Than This",
+    displayName: "CLOSER THAN THIS",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-closerThanThis.jpg",
+    lang: "kr",
+    lyrics: getJiminCloserThanThis,
   ),
 
 
