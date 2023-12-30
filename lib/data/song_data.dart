@@ -6,6 +6,15 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "wherever u r (UMI ft. V of BTS)",
+    displayName: "wherever u r (UMI ft. V of BTS)",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-wherever-u-r.jpg",
+    lang: "eng",
+    lyrics: getTaehyungWhereverUR,
+  ),
+  Song(
     name: "Closer Than This",
     displayName: "Closer Than This",
     isSolo: IsSolo(isSolo: true, soloName: "jimin"),
@@ -31,15 +40,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-3d-timberlake.jpg",
     lang: "eng",
     lyrics: getJungkook3DJustinTimberlake,
-  ),
-  Song(
-    name: "GOLDEN",
-    displayName: "GOLDEN",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: "GOLDEN",
-    albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
-    lang: "eng",
-    lyrics: getJungkookGoldenCloserToYou,
   ),
 ];
 
@@ -1397,6 +1397,15 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-christmas-tree.jpg",
     lang: "kr",
     lyrics: getTaehyungChristmasTree,
+  ),
+  Song(
+    name: "wherever u r (UMI ft. V of BTS)",
+    displayName: "wherever u r",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-wherever-u-r.jpg",
+    lang: "eng",
+    lyrics: getTaehyungWhereverUR,
   ),
 
 
