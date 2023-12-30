@@ -24074,6 +24074,48 @@ const Lyrics getTaehyungChristmasTree = Lyrics(
       "I'm falling for your eyes\n"
       "I just want to be where you are",
 );
+const Lyrics getTaehyungWhereverUR = Lyrics(
+  eng: "[Intro: UMI]\n"
+      "Ah\n"
+      "Hm, hm\n\n"
+      "[Verse 1: UMI]\n"
+      "Lookin' back on a Sunday\n"
+      "Pictures from the past now\n"
+      "Sittin’ all in the basement\n"
+      "We should have a conversation\n"
+      "I'll call you more\n"
+      "But time moves so fast, yeah\n"
+      "Darling, you are more than just a blessin', ah\n"
+      "Lovin’ me and teachin' me some lessons\n"
+      "I wish that I called you more\n"
+      "Just to make you feel better\n\n"
+      "[Chorus: UMI]\n"
+      "I'ma be wherever you are\n"
+      "I'ma be, I'ma be, I'ma be wherever you are\n"
+      "Here in your heart\n"
+      "Wherever you are, yeah (Wherever, wherever, wherever)\n"
+      "I'ma be, I'ma be, I’ma be wherever you are\n"
+      "Wherever you are\n"
+      "Wherever you are\n\n"
+      "[Verse 2: V, V & UMI]\n"
+      "Oh, mm\n"
+      "When you’re not here\n"
+      "There's some days I feel blue\n"
+      "Space in my bed I’ll still leave for you, ah\n"
+      "Overthink real fast now 'bout it, oh\n"
+      "I gotta trust you, I\n"
+      "Even on the days, I ain't right by your side\n"
+      "I'm keeping my promise that\n"
+      "I will be wherever you are\n\n"
+      "[Chorus: V, UMI & V]\n"
+      "Wherever you are\n"
+      "I’ma be, I'ma be, I'ma be wherever you are\n"
+      "Here in your heart\n"
+      "Wherever you are (Wherever, wherever, wherever)\n"
+      "I'ma be, I'ma be, I'ma be wherever you are\n"
+      "Wherever you are\n"
+      "Wherever you are",
+);
 
 
 ///jungkook
