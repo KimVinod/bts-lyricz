@@ -43,7 +43,7 @@ dependencies:
 
   #util
   app_settings: ^5.1.1
-  flutter_local_notifications: ^16.2.0
+  flutter_local_notifications: ^16.3.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     path: ./packages/native_updater
