@@ -34,7 +34,7 @@ class SettingsService {
 
   static Future<void> openThemeDialog(BuildContext context) async {
 
-    onChanged(String theme) {
+    void onChanged(String theme) {
       _saveTheme(theme).then((value) async {
         Navigator.pop(context);
         BTSLyricsApp.of(context).changeTheme(await loadTheme());
@@ -83,8 +83,69 @@ class SettingsService {
         ));
       }
     });
+  }
 
+  static Future<String> loadGameLanguage() async {
+    Box userGameBox = await Hive.openBox('userGame');
+    return userGameBox.get('language', defaultValue: 'eng');
+  }
 
+  static Future saveGameLanguage(String language) async {
+    Box userGameBox = await Hive.openBox('userGame');
+    userGameBox.put('language', language);
+  }
+
+  static Future<void> openGameLanguageDialog(BuildContext context, Function onDialogClosed) async {
+
+    void onChanged(String lang) {
+      saveGameLanguage(lang).then((value) {
+        Navigator.pop(context);
+        onDialogClosed(true);
+      });
+    }
+
+    await loadGameLanguage().then((value) {
+      if(context.mounted) {
+        showDialog(context: context, builder: (context) => StatefulBuilder(
+            builder: (context, setState) {
+              return Dialog(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    RadioListTile<String>(
+                      value: 'eng',
+                      groupValue: value,
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                      title: Text("English", style: GoogleFonts.openSans()),
+                      onChanged: (value) => onChanged(value!),
+                    ),
+                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
+                    RadioListTile<String>(
+                      value: 'kor',
+                      groupValue: value,
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                      title: Text("Korean", style: GoogleFonts.openSans()),
+                      onChanged: (value) => onChanged(value!),
+                    ),
+                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
+                    RadioListTile<String>(
+                      value: 'jp',
+                      groupValue: value,
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
+                      title: Text("Japanese", style: GoogleFonts.openSans()),
+                      onChanged: (value) => onChanged(value!),
+                    ),
+                  ],
+                ),
+              );
+            }
+        ));
+      }
+    });
   }
 
   static void openNotifications() => AppSettings.openAppSettings(type: AppSettingsType.notification);
