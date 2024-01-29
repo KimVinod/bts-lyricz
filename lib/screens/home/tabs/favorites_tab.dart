@@ -60,35 +60,37 @@ class _FavoritesTabState extends State<FavoritesTab> {
                     ),
                   ),
                 ),
-                Positioned(
-                  bottom: 0,
-                  top: 0,
-                  right: 0,
-                  child: IconButton(
-                    icon: const Icon(Icons.close),
-                    tooltip: "Remove all",
-                    onPressed: () {
-                      showDialog(context: context, builder: (context) {
-                        return AlertDialog(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-                            backgroundColor: Theme.of(context).colorScheme.secondary,
-                            title: Text("Do you want to remove all songs?", style: GoogleFonts.openSans(fontSize: 16),),
-                            actions: [
-                              TextButton(onPressed: () {
-                                Navigator.pop(context);
-                              }, child: Text("NO", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
-                              TextButton(onPressed: () {
-                                Navigator.pop(context);
-                                userFavLyrics = [];
-                                userFavLyricsBox.put("favouritesList", userFavLyrics);
-                                setState(() {});
-                              },child: Text("YES", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
-                            ]
-                        );
-                      });
-                    },
+                if(userFavLyrics.isNotEmpty)...[
+                  Positioned(
+                    bottom: 0,
+                    top: 0,
+                    right: 0,
+                    child: IconButton(
+                      icon: const Icon(Icons.close),
+                      tooltip: "Remove all",
+                      onPressed: () {
+                        showDialog(context: context, builder: (context) {
+                          return AlertDialog(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                              backgroundColor: Theme.of(context).colorScheme.secondary,
+                              title: Text("Do you want to remove all songs?", style: GoogleFonts.openSans(fontSize: 16),),
+                              actions: [
+                                TextButton(onPressed: () {
+                                  Navigator.pop(context);
+                                }, child: Text("NO", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                                TextButton(onPressed: () {
+                                  Navigator.pop(context);
+                                  userFavLyrics = [];
+                                  userFavLyricsBox.put("favouritesList", userFavLyrics);
+                                  setState(() {});
+                                },child: Text("YES", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                              ]
+                          );
+                        });
+                      },
+                    ),
                   ),
-                ),
+                ],
               ],
             ),
           ),
