@@ -127,6 +127,15 @@ const List<Song> allSongs = [
     lang: "eng",
     lyrics: getArmyLoveLetters,
   ),
+  Song(
+    name: "We Will Be Alright (Bilaal Avaz ft. Rita Kim, Augie Bello)",
+    displayName: "WE WILL BE ALRIGHT",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/we-will-be-alright.jpg",
+    lang: "kr",
+    lyrics: getArmyWeWillBeAlright,
+  ),
 
   ///solo projects
   ///namjoon
