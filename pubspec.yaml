@@ -50,6 +50,7 @@ dependencies:
     #git: https://github.com/Furation-Technology/native_updater.git
   share_plus: ^7.2.1
   url_launcher: ^6.2.2
+  font_awesome_flutter: ^10.7.0
 
 
 flutter_launcher_icons:
