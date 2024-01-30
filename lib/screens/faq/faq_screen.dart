@@ -22,40 +22,46 @@ class FAQScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('1.\nUnofficial songs sung by two or more members are listed under:\nDiscography -> Unofficial Songs.',
+              child: Text('1.\nWant to know a little about me?\nMy name is Vinod, my pronouns are he/him and I\'m from India.\nBTS my loml is the only reason why I made this app <3',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('2.\nSongs released before debut are currently not listed.',
+              child: Text('2.\nI won\'t add mp3 songs because of few reasons:\n\n'
+                  '- App might get taken down because of copyright.\n\n'
+                  '- There would be server costs for hosting songs on cloud, i.e: uploads/downloads. (I\'m a student haha)\n\n'
+                  '- I believe we should listen songs only from official platforms (YT, Spotify, etc) to support our BTS through streams :)',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('3.\nSongs which does not have lyrics are not listed.',
+              child: Text('3.\nSongs released before debut are currently not listed.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('4.\nCover songs are not listed.',
+              child: Text('4.\nSongs which does not have lyrics are not listed.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('5.\nI won\'t upload offline songs because of few reasons:\n'
-                  '- Might get copyright claim.\n'
-                  '- This will increase app size drastically.\n'
-                  '- We should listen songs through official platforms to support our boys :)',
+              child: Text('5.\nCover songs are not listed.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('6.\nNotifications not working?\n'
+              child: Text('6.\nUnofficial songs sung by two or more members are listed under:\nDiscography -> Unofficial Songs.',
+                style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            div,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Text('7.\nNotifications not working?\n'
                   'Your phone can restrict notifications to extend battery life.\n'
                   'Try doing these following steps:\n'
                   '- Enable auto-start from phone settings.',
