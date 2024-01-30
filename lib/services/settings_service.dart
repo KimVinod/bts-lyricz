@@ -156,7 +156,7 @@ class SettingsService {
 
   static void openVersionNotes() async {
     if(await canLaunchUrlString(versionNotesUrl)) {
-      launchUrlString(versionNotesUrl, mode: LaunchMode.inAppWebView);
+      launchUrlString(versionNotesUrl, mode: LaunchMode.platformDefault);
     } else {
       showToastError();
     }
@@ -249,7 +249,7 @@ class SettingsService {
 
   static void showSourceCode() async {
     if(await canLaunchUrlString(githubUrl)) {
-      launchUrlString(githubUrl, mode: LaunchMode.externalApplication);
+      launchUrlString(githubUrl, mode: LaunchMode.platformDefault);
     } else {
       showToastError();
     }
