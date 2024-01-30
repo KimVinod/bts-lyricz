@@ -190,6 +190,14 @@ class SettingsService {
     }
   }
 
+  static void playSong(String url) async {
+    if(await canLaunchUrlString(url)) {
+      launchUrlString(url, mode: LaunchMode.externalApplication);
+    } else {
+      showToastError();
+    }
+  }
+
   static Future<PackageInfo> _getPackageInfo() async => await PackageInfo.fromPlatform();
 
   static Future<void> showFoundBugDialog({required BuildContext context}) async {

@@ -311,7 +311,7 @@ class _GameTabState extends State<GameTab> {
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name))) : checkAnswer(index),
+                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink))) : checkAnswer(index),
                       ),
                     ),
                   ),

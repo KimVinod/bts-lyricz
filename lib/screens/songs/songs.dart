@@ -112,6 +112,7 @@ class _SongsState extends State<Songs> {
                             songFullName: songs[index].name,
                             songName: songs[index].displayName,
                             songLyrics: songs[index].lyrics,
+                            songLink: songs[index].songLink,
                           ))),
                         );
                       },
