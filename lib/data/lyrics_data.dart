@@ -358,7 +358,7 @@ const Lyrics getArmyWeWillBeFine = Lyrics(
       "Exhale all the problems,\n"
       "It's okay to fall short sometimes\n"
       "While the pain chose to stay, have hope\n"
-      "Better days are coming soon, you knew\n"
+      "Better days are coming soon, you know\n"
       "They know\n"
       "When we say 'we believe'\n"
       "I know we're stronger when together\n"
