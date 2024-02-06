@@ -1892,6 +1892,16 @@ const List<Song> allSongs = [
 
   ///uo songs
   Song(
+    name: "널 웃게 할 노래 (A Song to Make You Smile) (Lee Seung Gi (이승기) ft. BTS and Hareem (하림))",
+    displayName: "널 웃게 할 노래 (A Song to Make You Smile)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-a-song-to-make-you-smile.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/5blZcMwtCrPa7bp7lMBiTt"),
+    lyrics: getASongToMakeYouSmile,
+  ),
+  Song(
     name: "Born Singer",
     displayName: "BORN SINGER",
     isSolo: IsSolo(isSolo: true, isUnofficial: true),
