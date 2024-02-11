@@ -73,17 +73,18 @@ class _FavoritesTabState extends State<FavoritesTab> {
                           return AlertDialog(
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
                               backgroundColor: Theme.of(context).colorScheme.secondary,
-                              title: Text("Do you want to remove all songs?", style: GoogleFonts.openSans(fontSize: 16),),
+                              title: const Text("Remove all songs"),
+                              content: const Text("Do you want to remove all the songs from your favorites?"),
                               actions: [
                                 TextButton(onPressed: () {
                                   Navigator.pop(context);
-                                }, child: Text("NO", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                                }, child: Text("No", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
                                 TextButton(onPressed: () {
                                   Navigator.pop(context);
                                   userFavLyrics = [];
                                   userFavLyricsBox.put("favouritesList", userFavLyrics);
                                   setState(() {});
-                                },child: Text("YES", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                                },child: Text("Yes", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
                               ]
                           );
                         });

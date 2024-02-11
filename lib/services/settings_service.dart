@@ -45,17 +45,17 @@ class SettingsService {
       if(context.mounted) {
         showDialog(context: context, builder: (context) => StatefulBuilder(
             builder: (context, setState) {
-              return Dialog(
+              return AlertDialog(
+                title: const Text("Set app theme"),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
                 backgroundColor: Theme.of(context).colorScheme.secondary,
-                child: Column(
+                contentPadding: const EdgeInsets.only(top: 16),
+                content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     RadioListTile<String>(
                       value: 'light',
                       groupValue: value,
-                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("Bora mode", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -63,7 +63,6 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'dark',
                       groupValue: value,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("Dark mode", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -72,7 +71,6 @@ class SettingsService {
                       value: 'system',
                       groupValue: value,
                       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       onChanged: (value) => onChanged(value!),
                       title: Text("System default", style: GoogleFonts.openSans()),
                     ),
@@ -108,17 +106,17 @@ class SettingsService {
       if(context.mounted) {
         showDialog(context: context, builder: (context) => StatefulBuilder(
             builder: (context, setState) {
-              return Dialog(
+              return AlertDialog(
+                title: const Text("Set language mode"),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
                 backgroundColor: Theme.of(context).colorScheme.secondary,
-                child: Column(
+                contentPadding: const EdgeInsets.only(top: 16),
+                content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     RadioListTile<String>(
                       value: 'eng',
                       groupValue: value,
-                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28)),),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("English", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -126,7 +124,6 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'kor',
                       groupValue: value,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       title: Text("Korean", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
@@ -134,7 +131,6 @@ class SettingsService {
                     RadioListTile<String>(
                       value: 'jp',
                       groupValue: value,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
                       title: Text("Japanese", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
@@ -264,7 +260,7 @@ class SettingsService {
       builder: (BuildContext context) => Center(
         child: Container(
           padding: const EdgeInsets.all(16),
-          height: MediaQuery.of(context).size.height * 0.55,
+          height: MediaQuery.of(context).size.height * 0.5,
           width: MediaQuery.of(context).size.width * 0.75,
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.secondary,
