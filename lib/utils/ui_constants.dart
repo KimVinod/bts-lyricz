@@ -20,6 +20,7 @@ ThemeData lightTheme = ThemeData(
   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.black), overlayColor: MaterialStateProperty.all(Colors.white30))),
   radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.black)),
   indicatorColor: Colors.purple[100],
+  chipTheme: const ChipThemeData(backgroundColor: appCardColor, side: BorderSide(color: appBarColor)),
   colorScheme: ColorScheme.fromSeed(
     seedColor: appUILightColor,
     brightness: Brightness.light,

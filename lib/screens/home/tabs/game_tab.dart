@@ -38,7 +38,8 @@ class _GameTabState extends State<GameTab> {
     gameState = GameState.playing;
     int randomIndex = _random.nextInt(songs.length);
     Song song = songs[randomIndex];
-    currentLyrics = GameService.getRandomLyrics(song.lyrics, 4, _selectedLanguage!);
+    currentLyrics = GameService.getRandomLyrics(song.lyrics, 4, _selectedLanguage!, 10);
+    if(currentLyrics.eng == "error") startGame(songs);
     correctAnswer = song;
 
     List<Song> filteredSongs = songs.where((song) => song.name != correctAnswer!.name).toList();
@@ -95,12 +96,19 @@ class _GameTabState extends State<GameTab> {
             child: Stack(
               children: [
                 Align(
-                  child: Text(
-                    "Guess the Song?",
-                    style: GoogleFonts.openSans(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Guess the Song?",
+                        style: GoogleFonts.openSans(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const Chip(label: Text("BETA"),)
+                    ],
                   ),
                 ),
                 Positioned(

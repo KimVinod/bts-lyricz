@@ -17,7 +17,7 @@ class GameService {
     }
   }
 
-  static Lyrics getRandomLyrics(Lyrics lyrics, int numLines, String lang) {
+  static Lyrics getRandomLyrics(Lyrics lyrics, int numLines, String lang, int count) {
     try {
       String? selectedLyrics;
 
@@ -38,17 +38,17 @@ class GameService {
       List<String> lines = selectedLyrics?.split('\n').where((line) => line.trim().isNotEmpty && !line.startsWith('[')).toList() ?? [];
 
       if (lines.length < numLines) {
-        return getRandomLyrics(lyrics, numLines, lang);
+        return getRandomLyrics(lyrics, numLines - 1, lang, count);
       }
 
       int maxStartIndex = lines.length - (numLines - 1);
       int startIndex = _random.nextInt(maxStartIndex);
       List<String> selectedLines = lines.sublist(startIndex, startIndex + numLines);
-
       if (selectedLines.length < numLines || selectedLines.any((line) => line.trim().isEmpty) || (lang == 'kor' || lang == 'jp') && !containsMaxEnglishLines(selectedLines, 2)) {
-        return getRandomLyrics(lyrics, numLines, lang);
+        count--;
+        if(count == 0) return const Lyrics(eng: "error");
+        return getRandomLyrics(lyrics, numLines, lang, count);
       }
-
       String finalLyrics = selectedLines.join('\n');
       return Lyrics(
         eng: lang == 'eng' ? finalLyrics : null,
@@ -57,7 +57,7 @@ class GameService {
       );
 
     } catch (e) {
-      return getRandomLyrics(lyrics, numLines, lang);
+      return const Lyrics(eng: "error");
     }
   }
 
