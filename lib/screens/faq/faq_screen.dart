@@ -22,7 +22,7 @@ class FAQScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('1.\nWant to know a little about me?\nMy name is Vinod, my pronouns are he/him and I\'m from India.\nBTS my loml is the only reason why I made this app <3',
+              child: Text('1.\nWant to know a little about me?\nI\'m an army just like you :) BTS my loml is the only reason why I made this app <3',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
@@ -49,7 +49,7 @@ class FAQScreen extends StatelessWidget {
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('5.\nCover songs are not listed.',
+              child: Text('5.\nNo cover songs.\nI think only bts-made songs and collabs where they get credited should be included.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
