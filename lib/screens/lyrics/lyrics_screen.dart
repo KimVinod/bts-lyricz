@@ -1,15 +1,18 @@
 import 'dart:developer';
 import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/services/settings_service.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class LyricsPage extends StatefulWidget {
   final Lyrics songLyrics;
   final String songName, songFullName;
+  final SongLink songLink;
 
-  const LyricsPage({super.key, required this.songLyrics, required this.songName, required this.songFullName});
+  const LyricsPage({super.key, required this.songLyrics, required this.songName, required this.songFullName, required this.songLink});
 
   @override
   State<LyricsPage> createState() => _LyricsPageState();
@@ -94,6 +97,11 @@ class _LyricsPageState extends State<LyricsPage> {
                   ),
                   actions: [
                     IconButton(
+                      onPressed: () => SettingsService.playSong(widget.songLink.spotify ?? widget.songLink.soundcloud ?? widget.songLink.youtube!),
+                      icon: FaIcon(widget.songLink.spotify != null ? FontAwesomeIcons.spotify : widget.songLink.soundcloud != null ? FontAwesomeIcons.soundcloud : FontAwesomeIcons.youtube),
+                      tooltip: widget.songLink.spotify != null ? "Play on Spotify" : widget.songLink.soundcloud != null ? "Play on SoundCloud" : "Play on YouTube",
+                    ),
+                    IconButton(
                       onPressed: () {
                         if (userFavLyrics.contains(widget.songFullName)) {
                           userFavLyrics.remove(widget.songFullName);
@@ -111,7 +119,8 @@ class _LyricsPageState extends State<LyricsPage> {
                       },
                       icon: Icon(isFav ? Icons.favorite : Icons.favorite_outline),
                       tooltip: "Add to favorites",
-                    )
+                    ),
+                    const SizedBox(width: 6),
                   ],
                 ),
               ),

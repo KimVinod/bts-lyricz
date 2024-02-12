@@ -57,6 +57,7 @@ class CustomSongCard extends StatelessWidget {
         songFullName: song.name,
         songName: song.displayName,
         songLyrics: song.lyrics,
+        songLink: song.songLink,
       )));
     } else {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Songs(albumName: song.album!, albumArt: song.albumArt)));

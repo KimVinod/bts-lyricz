@@ -6,13 +6,27 @@ import 'package:google_fonts/google_fonts.dart';
 class GameLyricsCard extends StatelessWidget {
   const GameLyricsCard({
     super.key,
-    required this.currentLyrics,
+    required this.currentLyrics, required this.selectedLanguage,
   });
 
   final Lyrics currentLyrics;
+  final String selectedLanguage;
 
   @override
   Widget build(BuildContext context) {
+    String? lyrics;
+    switch (selectedLanguage) {
+      case 'eng':
+        lyrics = currentLyrics.eng!;
+        break;
+      case 'kor':
+        lyrics = currentLyrics.kr!;
+        break;
+      case 'jp':
+        lyrics = currentLyrics.jp!;
+        break;
+    }
+
     return AnimationConfiguration.synchronized(
       duration: const Duration(milliseconds: 500),
       child: FadeInAnimation(
@@ -31,7 +45,7 @@ class GameLyricsCard extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  currentLyrics.eng ?? '',
+                  lyrics!,
                   style: GoogleFonts.openSans(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w600,

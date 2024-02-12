@@ -46,7 +46,7 @@ class SearchSongsState extends State<SearchSongs> {
             SearchWidget(
               text: query,
               onChanged: searchSongs,
-              hintText: 'Search by song name or lyrics...',
+              hintText: 'Search by song name, lyrics or album...',
             ),
             Expanded(
               child: AnimationLimiter(
@@ -86,12 +86,14 @@ class SearchSongsState extends State<SearchSongs> {
         ? uniqueList // Show all songs if the query is empty
         : uniqueList.where((song) {
       final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase();
+      final albumName = song.album?.replaceAll(RegExp(r"['’]"), "").toLowerCase() ?? '';
       final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase();
       final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseJpLyrics = song.lyrics.jp?.toLowerCase() ?? '';
       final lowercaseKrLyrics = song.lyrics.kr?.toLowerCase() ?? '';
 
       return songName.contains(searchLower) ||
+          albumName.contains(searchLower) ||
           lowercaseEngLyrics.contains(searchLower) ||
           lowercaseJpLyrics.contains(searchLower) ||
           lowercaseKrLyrics.contains(searchLower);
@@ -100,6 +102,8 @@ class SearchSongsState extends State<SearchSongs> {
     matchedSongs.sort((a, b) {
       final songNameA = a.name.toLowerCase();
       final songNameB = b.name.toLowerCase();
+      final albumNameA = a.album?.toLowerCase() ?? '';
+      final albumNameB = b.album?.toLowerCase() ?? '';
       final lowercaseEngLyricsA = a.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseEngLyricsB = b.lyrics.eng?.toLowerCase() ?? '';
       final lowercaseJpLyricsA = a.lyrics.jp?.toLowerCase() ?? '';
@@ -142,7 +146,17 @@ class SearchSongsState extends State<SearchSongs> {
         return 1; // lowercaseEngLyricsA should come after lowercaseEngLyricsB
       }
 
-      // If neither song names nor lyrics match the query, maintain the original order
+      // Add the comparison for album names
+      final containsQueryAlbumA = albumNameA.contains(query);
+      final containsQueryAlbumB = albumNameB.contains(query);
+
+      if (containsQueryAlbumA && !containsQueryAlbumB) {
+        return -1; // albumNameA should come before albumNameB
+      } else if (!containsQueryAlbumA && containsQueryAlbumB) {
+        return 1; // albumNameA should come after albumNameB
+      }
+
+      // If neither song names nor lyrics nor album names match the query, maintain the original order
       return 0;
     });
 
