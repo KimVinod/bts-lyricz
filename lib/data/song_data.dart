@@ -492,6 +492,16 @@ const List<Song> allSongs = [
     lyrics: getNamjoonBuckubucku,
   ),
   Song(
+    name: "카와 (K'hawah Coffee) by 랩몬스터 (Rap Monster)",
+    displayName: "카와 (K'hawah Coffee)",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-khawah.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=kOMKhK50rzs"),
+    lyrics: getNamjoonRmKhawah,
+  ),
+  Song(
     name: "ProMeTheUs (YANKIE feat. Dok2, Juvie Train, Double K & Rap Monster of BTS)",
     displayName: "ProMeTheUs",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
