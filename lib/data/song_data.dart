@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "FRI(END)S",
+    displayName: "FRI(END)S",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-friends.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
+    lyrics: getTaehyungFriends,
+  ),
+  Song(
     name: "wherever u r (UMI ft. V of BTS)",
     displayName: "wherever u r (UMI ft. V of BTS)",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -1576,6 +1586,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1k255f17DRuRbGrfz5Ifmd"),
     lyrics: getTaehyungWhereverUR,
+  ),
+  Song(
+    name: "FRI(END)S",
+    displayName: "FRI(END)S",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-friends.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
+    lyrics: getTaehyungFriends,
   ),
 
 
