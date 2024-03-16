@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,7 +38,7 @@ class UpdateCupertinoAlert extends StatelessWidget {
 
     Widget updateButton = CupertinoDialogAction(
       child: Text(updateButtonLabel),
-      onPressed: () => launchUrl(Uri.parse(appStoreUrl)),
+      onPressed: () => launch(appStoreUrl),
     );
 
     return CupertinoAlertDialog(
