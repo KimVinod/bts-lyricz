@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "on the street (solo version)",
+    displayName: "HOPE ON THE STREET VOL.1",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1OnTheStreetSoloVer,
+  ),
+  Song(
     name: "FRI(END)S",
     displayName: "FRI(END)S",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0VPFT123HKoQ2J6ipeDcI1"),
     lyrics: getJungkookStandingNextToYouUsherRemix,
-  ),
-  Song(
-    name: "3D (Justin Timberlake Remix)",
-    displayName: "3D (Justin Timberlake Remix)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-3d-timberlake.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/2mHw0KoEyDw8Yaw3yPoke6"),
-    lyrics: getJungkook3DJustinTimberlake,
   ),
 ];
 
@@ -1158,6 +1158,68 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
     lyrics: getHoseokHopeWorldOutro,
+  ),
+
+  //hope on the street vol 1
+  Song(
+    name: "on the street (solo version)",
+    displayName: "ON THE STREET",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1OnTheStreetSoloVer,
+  ),
+  Song(
+    name: "i wonder... (with Jung Kook of BTS)",
+    displayName: "I WONDER...",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1IWonder,
+  ),
+  Song(
+    name: "lock / unlock (with benny blanco & Nile Rodgers)",
+    displayName: "LOCK / UNLOCK",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1LockUnlock,
+  ),
+  Song(
+    name: "i don't know (with HUH YUNJIN of LE SSERAFIM)",
+    displayName: "I DON'T KNOW",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1IDontKnow,
+  ),
+  Song(
+    name: "what if... (dance mix)",
+    displayName: "WHAT IF...",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1WhatIfDanceMix,
+  ),
+  Song(
+    name: "NEURON (with Gaeko & YOON MIRAE)",
+    displayName: "NEURON",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: "HOPE ON THE STREET VOL.1",
+    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    lyrics: getHoseokHopeOnTheStreetVol1Neuron,
   ),
 
   //jack in the box
