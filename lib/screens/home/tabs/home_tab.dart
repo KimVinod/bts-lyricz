@@ -172,6 +172,7 @@ class HomeTab extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 60.0), //space at bottom
                 ],
               ),
             ),
