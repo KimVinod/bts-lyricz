@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.27.1
-  firebase_messaging: ^14.7.20
-  firebase_analytics: ^10.8.10
-  firebase_crashlytics: ^3.4.19
+  firebase_core: ^2.27.2
+  firebase_messaging: ^14.7.21
+  firebase_analytics: ^10.9.0
+  firebase_crashlytics: ^3.4.20
 
   #persistent 
   hive: ^2.2.3
@@ -70,9 +70,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_native_splash: ^2.3.10
+  flutter_native_splash: ^2.4.0
   flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
