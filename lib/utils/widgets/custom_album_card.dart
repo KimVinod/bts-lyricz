@@ -32,13 +32,16 @@ class CustomAlbumCard extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           SizedBox(
+            height: 20,
             width: 170,
-            child: Text(
-              albumName,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.openSans(
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold,
+            child: FittedBox(
+              child: Text(
+                albumName,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.openSans(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
