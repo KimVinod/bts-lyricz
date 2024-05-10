@@ -6,6 +6,26 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Come back to me",
+    displayName: "Come back to me",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1PT8hWQvl2gRO1JhDcSUqN"),
+    lyrics: getNamjoonComeBackToMe,
+  ),
+  Song(
+    name: "Come back to me (Radio Edit)",
+    displayName: "Come back to me (Radio Edit)",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/6vMDcLqfihUWSnn2LAhbZ4"),
+    lyrics: getNamjoonComeBackToMeRadioEdit,
+  ),
+  Song(
     name: "on the street (solo version)",
     displayName: "HOPE ON THE STREET VOL.1",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
@@ -34,26 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1k255f17DRuRbGrfz5Ifmd"),
     lyrics: getTaehyungWhereverUR,
-  ),
-  Song(
-    name: "Closer Than This",
-    displayName: "Closer Than This",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: null,
-    albumArt: "images/albums-solo/jimin/jimin-closerThanThis.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/3k6q0O9JnO2GhvD6C8fs20"),
-    lyrics: getJiminCloserThanThis,
-  ),
-  Song(
-    name: "Standing Next to You (Usher Remix)",
-    displayName: "Standing Next to You (Usher Remix)",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-standingNextToYou-usher.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/0VPFT123HKoQ2J6ipeDcI1"),
-    lyrics: getJungkookStandingNextToYouUsherRemix,
   ),
 ];
 
@@ -651,6 +651,27 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/track/34o6gteNy2T5rieA0xYAgo"),
     lyrics: getNamjoonDontEverSayLoveMe,
   ),
+  Song(
+    name: "Come back to me",
+    displayName: "COME BACK TO ME",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1PT8hWQvl2gRO1JhDcSUqN"),
+    lyrics: getNamjoonComeBackToMe,
+  ),
+  Song(
+    name: "Come back to me (Radio Edit)",
+    displayName: "COME BACK TO ME",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/6vMDcLqfihUWSnn2LAhbZ4"),
+    lyrics: getNamjoonComeBackToMeRadioEdit,
+  ),
+
 
   ///seokjin
   //songs
