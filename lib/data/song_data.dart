@@ -7,6 +7,16 @@ const List<Song> newReleaseSongs = [
   //recheck display name as logic is diff here
   Song(
     name: "Come back to me",
+    displayName: "Right Place, Wrong Person",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonComeBackToMe,
+  ),
+  Song(
+    name: "Come back to me",
     displayName: "Come back to me",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
     album: null,
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
     lyrics: getTaehyungFriends,
-  ),
-  Song(
-    name: "wherever u r (UMI ft. V of BTS)",
-    displayName: "wherever u r (UMI ft. V of BTS)",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
-    albumArt: "images/albums-solo/v/v-wherever-u-r.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1k255f17DRuRbGrfz5Ifmd"),
-    lyrics: getTaehyungWhereverUR,
   ),
 ];
 
@@ -448,6 +448,128 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
     lyrics: getNamjoonIndigoNo2,
+  ),
+
+  //rpwp
+  Song(
+    name: "Right People, Wrong Place",
+    displayName: "RIGHT PEOPLE, WRONG PLACE",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPRightPeopleWrongPerson,
+  ),
+
+  Song(
+    name: "Nuts",
+    displayName: "NUTS",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPNuts,
+  ),
+
+  Song(
+    name: "out of love",
+    displayName: "OUT OF LOVE",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPOutOfLove,
+  ),
+
+  Song(
+    name: "Domodachi (ft. Little Simz)",
+    displayName: "DOMODACHI",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPDomodachi,
+  ),
+
+  Song(
+    name: "? (Interlude)",
+    displayName: "? (INTERLUDE)",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPInterlude,
+  ),
+
+  Song(
+    name: "Groin",
+    displayName: "GROIN",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPGroin,
+  ),
+
+  Song(
+    name: "Heaven",
+    displayName: "HEAVEN",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPHeaven,
+  ),
+
+  Song(
+    name: "LOST!",
+    displayName: "LOST!",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPLost,
+  ),
+
+  Song(
+    name: "Around the world in a day! (ft. Moses Sumney)",
+    displayName: "AROUND THE WORLD IN A DAY!",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPAroundTheWorldInADay,
+  ),
+
+  Song(
+    name: "ㅠㅠ (Credit Roll)",
+    displayName: "ㅠㅠ",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonRPWPCreditRoll,
+  ),
+
+  Song(
+    name: "Come back to me",
+    displayName: "COME BACK TO ME",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: "Right Place, Wrong Person",
+    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    lyrics: getNamjoonComeBackToMe,
   ),
 
   //songs
