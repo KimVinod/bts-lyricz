@@ -17,8 +17,8 @@ ThemeData lightTheme = ThemeData(
   textTheme: GoogleFonts.openSansTextTheme(),
   cardColor: appBarColor,  //home bottom bar, divider
   appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
-  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.black), overlayColor: MaterialStateProperty.all(Colors.white30))),
-  radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.black)),
+  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.black), overlayColor: WidgetStateProperty.all(Colors.white30))),
+  radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.black)),
   indicatorColor: Colors.purple[100],
   chipTheme: const ChipThemeData(backgroundColor: appCardColor, side: BorderSide(color: appBarColor)),
   colorScheme: ColorScheme.fromSeed(
@@ -34,8 +34,8 @@ ThemeData darkTheme = ThemeData(
   useMaterial3: false,
   appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
-  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: MaterialStateProperty.all(Colors.white), overlayColor: MaterialStateProperty.all(Colors.white30))),
-  radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(Colors.white)),
+  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.white), overlayColor: WidgetStateProperty.all(Colors.white30))),
+  radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.white)),
   colorScheme: ColorScheme.fromSeed(
     seedColor: Colors.black,
     brightness: Brightness.dark,
