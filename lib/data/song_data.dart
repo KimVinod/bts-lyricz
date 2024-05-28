@@ -36,6 +36,16 @@ const List<Song> newReleaseSongs = [
     lyrics: getNamjoonComeBackToMeRadioEdit,
   ),
   Song(
+    name: "Angel Anniversary Edition (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
+    displayName: "Angel Anniversary Edition",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angel-anniversary.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
+    lyrics: getJiminAngelAnniversaryEdition,
+  ),
+  Song(
     name: "on the street (solo version)",
     displayName: "HOPE ON THE STREET VOL.1",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
     lyrics: getHoseokHopeOnTheStreetVol1OnTheStreetSoloVer,
-  ),
-  Song(
-    name: "FRI(END)S",
-    displayName: "FRI(END)S",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
-    albumArt: "images/albums-solo/v/v-friends.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
-    lyrics: getTaehyungFriends,
   ),
 ];
 
@@ -1675,7 +1675,16 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/track/3k6q0O9JnO2GhvD6C8fs20"),
     lyrics: getJiminCloserThanThis,
   ),
-
+  Song(
+    name: "Angel Anniversary Edition (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
+    displayName: "ANGEL ANNIVERSARY EDITION",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-angel-anniversary.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
+    lyrics: getJiminAngelAnniversaryEdition,
+  ),
 
   ///taehyung
   //albums
