@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 2.1.4+43
 
 environment:
-  sdk: '>=3.4.0 <5.0.0'
+  sdk: ">=3.4.0 <5.0.0"
 
 dependencies:
   flutter:
@@ -30,14 +30,12 @@ dependencies:
   firebase_analytics: ^10.10.6
   firebase_crashlytics: ^3.5.6
 
-  #persistent 
+  #persistent
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
   #ui
   fluttertoast: ^8.2.5
-  flutter_floating_bottom_bar:
-    path: ./packages/flutter_floating_bottom_bar
   flutter_bounceable: ^1.1.0
   google_fonts: ^6.2.1
 
@@ -52,7 +50,7 @@ dependencies:
   share_plus: ^9.0.0
   url_launcher: ^6.2.6
   font_awesome_flutter: ^10.7.0
-
+  dynamic_color: ^1.7.0
 
 flutter_launcher_icons:
   android: true
@@ -78,7 +76,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

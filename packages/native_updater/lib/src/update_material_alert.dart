@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class UpdateMaterialAlert extends StatelessWidget {
   final bool forceUpdate;
@@ -47,7 +47,7 @@ class UpdateMaterialAlert extends StatelessWidget {
       child: Text(updateButtonLabel.toUpperCase(),
           style: TextStyle(color: Colors.white)),
       style: flatButtonStyle,
-      onPressed: () => launch(playStoreUrl),
+      onPressed: () => launchUrlString(playStoreUrl),
     );
 
     return AlertDialog(

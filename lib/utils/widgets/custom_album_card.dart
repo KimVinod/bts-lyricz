@@ -25,6 +25,7 @@ class CustomAlbumCard extends StatelessWidget {
                 image: DecorationImage(image: AssetImage(imageAsset), fit: BoxFit.fill),
               ),
               child: InkWell(
+                overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
                 borderRadius: BorderRadius.circular(12),
                 onTap: () => onTap(context),
               ),

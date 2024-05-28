@@ -137,6 +137,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.3+1"
+  dynamic_color:
+    dependency: "direct main"
+    description:
+      name: dynamic_color
+      sha256: eae98052fa6e2826bdac3dd2e921c6ce2903be15c6b7f8b6d8a5d49b5086298d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.7.0"
   fake_async:
     dependency: transitive
     description:
@@ -269,13 +277,6 @@ packages:
       sha256: "67af1eee931477c1ec144bb1d42b848048440c84f02963dcdede42a2dfec1390"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
-  flutter_floating_bottom_bar:
-    dependency: "direct main"
-    description:
-      path: "packages/flutter_floating_bottom_bar"
-      relative: true
-    source: path
     version: "1.1.0"
   flutter_launcher_icons:
     dependency: "direct dev"

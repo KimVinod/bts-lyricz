@@ -2,20 +2,21 @@ import 'package:bts_lyrics_app/screens/home/home_screen.dart';
 import 'package:bts_lyrics_app/services/firebase_service.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hive_flutter/adapters.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await FirebaseService.setup(isRelease: true);
-  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme()));
+  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme(), isMaterialYou: await SettingsService.loadMaterialYou()));
 }
 
 class BTSLyricsApp extends StatefulWidget {
   final ThemeMode themeMode;
-  const BTSLyricsApp({super.key, required this.themeMode});
+  final bool isMaterialYou;
+  const BTSLyricsApp({super.key, required this.themeMode, required this.isMaterialYou});
 
   @override
   State<BTSLyricsApp> createState() => BTSLyricsAppState();
@@ -25,6 +26,7 @@ class BTSLyricsApp extends StatefulWidget {
 
 class BTSLyricsAppState extends State<BTSLyricsApp> {
   ThemeMode? _themeMode;
+  late bool isMaterialYou;
 
   @override
   void initState() {
@@ -37,6 +39,7 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
   void _initTheme() {
     setState(() {
       _themeMode = widget.themeMode;
+      isMaterialYou = widget.isMaterialYou;
     });
   }
 
@@ -46,22 +49,27 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
     });
   }
 
+  void changeMaterialYou(bool isMaterialYou) {
+    setState(() {
+      this.isMaterialYou = isMaterialYou;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: _themeMode,
-      home: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: NotificationListener<OverscrollIndicatorNotification>(
-          onNotification: (OverscrollIndicatorNotification overScroll){
-            overScroll.disallowIndicator();
-            return true;
-          },
-          child: const HomeScreen(),
-        ),
-      ),
+    return DynamicColorBuilder(
+      builder: (lightDynamic, darkDynamic) {
+        ColorScheme? lightScheme, darkScheme;
+
+        if (lightDynamic != null && darkDynamic != null) (lightScheme, darkScheme) = generateDynamicColourSchemes(lightDynamic, darkDynamic);
+
+        return MaterialApp(
+          theme: getLightTheme(isMaterialYou: isMaterialYou, lightColorScheme: lightScheme),
+          darkTheme: getDarkTheme(isMaterialYou: isMaterialYou, darkColorScheme: darkScheme),
+          themeMode: _themeMode,
+          home: const HomeScreen()
+        );
+      }
     );
   }
 }

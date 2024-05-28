@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +25,7 @@ class SettingsCard extends StatelessWidget {
         child: Material(
           borderRadius: BorderRadius.circular(20),
           elevation: 3,
-          color: Colors.transparent,
+          //color: Colors.transparent,
           shadowColor: Theme.of(context).colorScheme.shadow,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
@@ -33,7 +34,7 @@ class SettingsCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.tertiary,
+                      color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     children: <Widget>[
@@ -62,6 +63,7 @@ class SettingsCard extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: InkWell(
+                      overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
                       borderRadius: BorderRadius.circular(20),
                       onTap: onTap,
                     ),
