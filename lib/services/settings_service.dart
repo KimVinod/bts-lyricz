@@ -303,7 +303,7 @@ class SettingsService {
                     width: 140,
                     margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                        image: const DecorationImage(image: AssetImage("images/app-icon-new2.png")),
+                        image: const DecorationImage(image: AssetImage("images/app-icon-v3.png")),
                         borderRadius: BorderRadius.circular(20)
                     ),
                   ),
