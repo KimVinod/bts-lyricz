@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
 import 'package:bts_lyrics_app/services/game_service.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
@@ -13,9 +14,8 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GameTab extends StatefulWidget {
-  final ScrollController controller;
   final VoidCallback onQuit;
-  const GameTab({super.key, required this.controller, required this.onQuit});
+  const GameTab({super.key, required this.onQuit});
 
   @override
   State<GameTab> createState() => _GameTabState();
@@ -84,191 +84,167 @@ class _GameTabState extends State<GameTab> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: 56,
-          color: Theme.of(context).colorScheme.secondary,
-          width: MediaQuery.of(context).size.width,
-          child: Material(
-            color: Theme.of(context).colorScheme.secondary,
-            elevation: 4,
-            child: Stack(
-              children: [
-                Align(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Guess the Song?",
-                        style: GoogleFonts.openSans(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      const Chip(label: Text("BETA"),)
-                    ],
-                  ),
-                ),
-                Positioned(
-                  bottom: 0,
-                  top: 0,
-                  right: 0,
-                  child: IconButton(
-                    icon: const Icon(Icons.translate),
-                    tooltip: "Select language",
-                    onPressed: () => SettingsService.openGameLanguageDialog(context, (result) {
-                      if (result == true) {
-                        _loadLanguagePreference().then((value) => loadSongs());
-                        restartGame(isReady: false);
-                      }
-                    }),
-                  ),
-                ),
-              ],
+    return NestedScrollView(
+      physics:gameState == GameState.notReady ? const NeverScrollableScrollPhysics() : const BouncingScrollPhysics(),
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
+        SliverAppBar(
+          floating: true,
+          snap: true,
+          pinned: true,
+          centerTitle: true,
+          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+          title: Text("Guess the Song?", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.bold)),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.translate),
+              tooltip: "Select language",
+              onPressed: () => SettingsService.openGameLanguageDialog(context, (result) {
+                if (result == true) {
+                  _loadLanguagePreference().then((value) => loadSongs());
+                  restartGame(isReady: false);
+                }
+              }),
             ),
-          ),
+          ],
         ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (gameState == GameState.notReady)
-                  ...[
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            onTap: () => setState(() {}),
-                            child: Image.asset(
-                              getBt21Pic(),
-                              height: MediaQuery.of(context).size.height * 0.25,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            "Are you ready to test your BTS knowledge?\nPlay and have fun ♡",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
-                          ),
-                          const SizedBox(height: 16),
-                          CustomButton(
-                            width: 160,
-                            text: "PLAY",
-                            onTap: () => _loadLanguagePreference().then((value) => startGame(songs)),
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            "Language mode: \n${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.openSans(
-                                fontSize: 16, fontStyle: FontStyle.italic),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-                  ]
-                else
-                  if (gameState == GameState.playing)
-                    ...[
-                      GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
-                      const SizedBox(height: 16),
-                      Text(
-                        "Choose the right option",
-                        style: GoogleFonts.openSans(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Expanded(
-                        child: AnimationLimiter(
-                          child: ListView(
-                            controller: widget.controller,
-                            physics: const BouncingScrollPhysics(),
-                            children: options.asMap().entries.map((entry) {
-                              int index = entry.key;
-                              Song song = entry.value;
-                              return AnimationConfiguration.staggeredList(
-                                position: index,
-                                duration: const Duration(milliseconds: 500),
-                                child: SlideAnimation(
-                                  child: FadeInAnimation(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(bottom: 16),
-                                      child: buildOptions(song, index),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ]
-                  else
-                    ...[
-                      GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
-                      const SizedBox(height: 16),
+      ],
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: gameState == GameState.correct || gameState == GameState.incorrect ? MainAxisAlignment.start : MainAxisAlignment.center,
+          children: [
+            if (gameState == GameState.notReady)
+              ...[
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
                       GestureDetector(
                         onTap: () => setState(() {}),
-                        child: Center(
-                          child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.15),
+                        child: Image.asset(
+                          getBt21Pic(),
+                          height: MediaQuery.of(context).size.height * 0.25,
                         ),
                       ),
                       const SizedBox(height: 8),
-                      if (gameState == GameState.correct)
-                        ...[
-                          Center(
-                            child: Text(
-                              "Woohoo! You got it right!",
-                              style: GoogleFonts.openSans(fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                          const SizedBox(height: 16),
-                        ],
-                      if (gameState == GameState.incorrect)
-                        ...[
-                          Center(
-                            child: Text(
-                              "Ahh! That's not the right one. Keep trying!",
-                              style: GoogleFonts.openSans(fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                          const SizedBox(height: 24),
-                        ],
-                      buildOptions(correctAnswer!, null),
-                      const SizedBox(height: 24),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: AnimationConfiguration.synchronized(
-                              duration: const Duration(milliseconds: 500),
-                              child: FadeInAnimation(child: CustomButton(
-                                  text: 'Restart', onTap: () => restartGame(isReady: true))),),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: AnimationConfiguration.synchronized(
-                              duration: const Duration(milliseconds: 500),
-                              child: FadeInAnimation(child: CustomButton(
-                                  text: 'Quit', onTap: widget.onQuit)),),
-                          ),
-                        ],
+                      Text(
+                        "Are you ready to test your BTS knowledge?\nPlay and have fun ♡",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
+                      ),
+                      const SizedBox(height: 16),
+                      CustomButton(
+                        width: 160,
+                        text: "PLAY",
+                        onTap: () => _loadLanguagePreference().then((value) => startGame(songs)),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        "Language mode: \n${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                            fontSize: 16, fontStyle: FontStyle.italic),
                       ),
                     ],
-              ],
-            ),
-          ),
+                  ),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              ]
+            else
+              if (gameState == GameState.playing)
+                ...[
+                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
+                  const SizedBox(height: 16),
+                  Text(
+                    "Choose the right option",
+                    style: GoogleFonts.openSans(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Expanded(
+                    child: AnimationLimiter(
+                      child: ListView(
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: options.asMap().entries.map((entry) {
+                          int index = entry.key;
+                          Song song = entry.value;
+                          return AnimationConfiguration.staggeredList(
+                            position: index,
+                            duration: const Duration(milliseconds: 500),
+                            child: SlideAnimation(
+                              child: FadeInAnimation(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 16),
+                                  child: buildOptions(song, index),
+                                ),
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ),
+                ]
+              else
+                ...[
+                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
+                  const SizedBox(height: 16),
+                  GestureDetector(
+                    onTap: () => setState(() {}),
+                    child: Center(
+                      child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.15),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  if (gameState == GameState.correct)
+                    ...[
+                      Center(
+                        child: Text(
+                          "Woohoo! You got it right!",
+                          style: GoogleFonts.openSans(fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                    ],
+                  if (gameState == GameState.incorrect)
+                    ...[
+                      Center(
+                        child: Text(
+                          "Ahh! That's not the right one. Keep trying!",
+                          style: GoogleFonts.openSans(fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
+                  buildOptions(correctAnswer!, null),
+                  const SizedBox(height: 24),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: AnimationConfiguration.synchronized(
+                          duration: const Duration(milliseconds: 500),
+                          child: FadeInAnimation(child: CustomButton(
+                              text: 'Restart', onTap: () => restartGame(isReady: true))),),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: AnimationConfiguration.synchronized(
+                          duration: const Duration(milliseconds: 500),
+                          child: FadeInAnimation(child: CustomButton(
+                              text: 'Quit', onTap: widget.onQuit)),),
+                      ),
+                    ],
+                  ),
+                ],
+          ],
         ),
-      ],
+      ),
     );
   }
 
@@ -290,7 +266,7 @@ class _GameTabState extends State<GameTab> {
                   Container(
                     height: 85,
                     decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.tertiary,
+                        color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
                         borderRadius: BorderRadius.circular(20)
                     ),
                     child: Row(
@@ -318,6 +294,7 @@ class _GameTabState extends State<GameTab> {
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
+                        overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
                         borderRadius: BorderRadius.circular(20),
                         onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink))) : checkAnswer(index),
                       ),

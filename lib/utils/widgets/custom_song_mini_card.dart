@@ -1,4 +1,5 @@
 import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
@@ -25,7 +26,7 @@ class CustomSongMiniCard extends StatelessWidget {
               Container(
                 height: 85,
                 decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.tertiary,
+                    color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Row(
@@ -53,6 +54,7 @@ class CustomSongMiniCard extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
+                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
                     borderRadius: BorderRadius.circular(20),
                     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(
                       songFullName: song.name,

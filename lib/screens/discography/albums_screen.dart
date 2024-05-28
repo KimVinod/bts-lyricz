@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/utils/widgets/custom_album_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -38,11 +39,12 @@ class Albums extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
       ),
       body: Container(
         width: double.infinity,
-        color: Theme.of(context).colorScheme.surface,
+        color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
         child: AnimationLimiter(
           child: GridView.builder(
             padding: const EdgeInsets.symmetric(vertical: 16),

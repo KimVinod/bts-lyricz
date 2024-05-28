@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,11 +8,12 @@ class FAQScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Divider div = Divider(height: 25, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7));
+    Divider div = Divider(height: 25, thickness: 1, color: Theme.of(context).colorScheme.outline.withOpacity(0.5));
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text("FAQ", style: GoogleFonts.openSans(fontWeight: FontWeight.bold, fontSize: 22)),
         centerTitle: true,
       ),

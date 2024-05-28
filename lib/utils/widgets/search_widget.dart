@@ -1,5 +1,5 @@
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SearchWidget extends StatefulWidget {
   final String text;
@@ -28,44 +28,25 @@ class SearchWidgetState extends State<SearchWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final styleActive = GoogleFonts.openSans(fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.brightness == Brightness.dark ? Colors.white : null);
-    final styleHint = GoogleFonts.openSans(fontWeight: FontWeight.w600, color: Theme.of(context).colorScheme.brightness == Brightness.dark ? Colors.white60 : null);
-    final style = widget.text.isEmpty ? styleHint : styleActive;
-
     return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Material(
-        borderRadius: BorderRadius.circular(12),
-        elevation: 3,
-        shadowColor: Theme.of(context).colorScheme.shadow,
-        child: Container(
-          height: 45,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      child: SearchBar(
+        controller: controller,
+        hintText: widget.hintText,
+        //surfaceTintColor: MaterialStateProperty.all(Colors.transparent),
+        autoFocus: true,
+        trailing: widget.text.isNotEmpty ? [
+          IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () {
+              controller.clear();
+              widget.onChanged('');
+              FocusScope.of(context).requestFocus(FocusNode());
+            },
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: TextField(
-            controller: controller,
-            decoration: InputDecoration(
-              icon: Icon(Icons.search, color: style.color),
-              suffixIcon: widget.text.isNotEmpty
-                  ? GestureDetector(
-                child: Icon(Icons.close, color: style.color),
-                onTap: () {
-                  controller.clear();
-                  widget.onChanged('');
-                  FocusScope.of(context).requestFocus(FocusNode());
-                },
-              )
-                  : null,
-              hintText: widget.hintText,
-              hintStyle: style,
-              border: InputBorder.none,
-            ),
-            style: style,
-            onChanged: widget.onChanged,
-          ),
-        ),
+        ] : [],
+        backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? WidgetStateProperty.all(Theme.of(context).colorScheme.inversePrimary) : WidgetStateProperty.all(Theme.of(context).colorScheme.tertiaryContainer),
+        onChanged: widget.onChanged,
       ),
     );
   }

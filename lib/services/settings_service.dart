@@ -11,6 +11,16 @@ import 'package:native_updater/native_updater.dart';
 
 class SettingsService {
 
+  static Future _saveMaterialYou(bool isMaterialYou) async {
+    Box materialYouBox = await Hive.openBox('materialYouBox');
+    materialYouBox.put('isMaterialYou', isMaterialYou);
+  }
+
+  static Future<bool> loadMaterialYou() async {
+    Box materialYouBox = await Hive.openBox('materialYouBox');
+    return materialYouBox.get('isMaterialYou', defaultValue: false);
+  }
+
   static Future<String> _getTheme() async {
     Box userThemeBox = await Hive.openBox('userTheme');
     return userThemeBox.get('theme',defaultValue: 'light'); // light, dark, system
@@ -32,47 +42,60 @@ class SettingsService {
     }
   }
 
-  static Future<void> openThemeDialog(BuildContext context) async {
 
-    void onChanged(String theme) {
+  static Future<void> openThemeDialog(BuildContext context) async {
+    bool isMaterialYou = await loadMaterialYou();
+
+    onChanged(String theme) {
       _saveTheme(theme).then((value) async {
         Navigator.pop(context);
         BTSLyricsApp.of(context).changeTheme(await loadTheme());
       });
     }
 
-    await _getTheme().then((value) {
+    await _getTheme().then((value) async {
       if(context.mounted) {
         showDialog(context: context, builder: (context) => StatefulBuilder(
             builder: (context, setState) {
+
+              onChangedMaterialYou(bool newIsMaterialYou) {
+                _saveMaterialYou(newIsMaterialYou).then((value) async {
+                  setState(() => isMaterialYou = newIsMaterialYou);
+                  BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                });
+              }
+
               return AlertDialog(
-                title: const Text("Set app theme"),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-                backgroundColor: Theme.of(context).colorScheme.secondary,
+                title: const Text("Set App Theme"),
                 contentPadding: const EdgeInsets.only(top: 16),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    SwitchListTile(
+                      value: isMaterialYou,
+                      contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),
+                      title: const Text("Google Material You"),
+                      subtitle: const Text("Uses your wallpaper to identify source color"),
+                      onChanged: (value) => onChangedMaterialYou(value),
+                    ),
                     RadioListTile<String>(
                       value: 'light',
                       groupValue: value,
-                      title: Text("Bora mode", style: GoogleFonts.openSans()),
+                      title: Text(isMaterialYou ? "Light" : "Bora"),
                       onChanged: (value) => onChanged(value!),
                     ),
-                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
                     RadioListTile<String>(
                       value: 'dark',
                       groupValue: value,
-                      title: Text("Dark mode", style: GoogleFonts.openSans()),
+                      title: const Text("Dark"),
                       onChanged: (value) => onChanged(value!),
                     ),
-                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
                     RadioListTile<String>(
                       value: 'system',
                       groupValue: value,
                       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
                       onChanged: (value) => onChanged(value!),
-                      title: Text("System default", style: GoogleFonts.openSans()),
+                      title: const Text("System default"),
                     ),
                   ],
                 ),
@@ -109,7 +132,7 @@ class SettingsService {
               return AlertDialog(
                 title: const Text("Set language mode"),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-                backgroundColor: Theme.of(context).colorScheme.secondary,
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 contentPadding: const EdgeInsets.only(top: 16),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -120,14 +143,12 @@ class SettingsService {
                       title: Text("English", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
-                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
                     RadioListTile<String>(
                       value: 'kor',
                       groupValue: value,
                       title: Text("Korean", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
-                    Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
                     RadioListTile<String>(
                       value: 'jp',
                       groupValue: value,
@@ -203,7 +224,6 @@ class SettingsService {
       showDialog(context: context, builder: (context) {
       return Dialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-        backgroundColor: Theme.of(context).colorScheme.secondary,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -216,7 +236,6 @@ class SettingsService {
               },
               title: Text("Email me", style: GoogleFonts.openSans()),
             ),
-            Divider(height: 0, thickness: 1, color: Theme.of(context).cardColor.withOpacity(0.7)),
             ListTile(
               shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
               contentPadding: const EdgeInsets.symmetric(horizontal: 24),
@@ -263,7 +282,7 @@ class SettingsService {
           height: MediaQuery.of(context).size.height * 0.5,
           width: MediaQuery.of(context).size.width * 0.75,
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.secondary,
+            color: Theme.of(context).scaffoldBackgroundColor,
             borderRadius: BorderRadius.circular(28),
           ),
           child: Column(
