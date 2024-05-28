@@ -1,7 +1,11 @@
+import 'dart:developer';
+
 import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -54,55 +58,61 @@ class SettingsService {
     }
 
     await _getTheme().then((value) async {
-      if(context.mounted) {
-        showDialog(context: context, builder: (context) => StatefulBuilder(
-            builder: (context, setState) {
 
-              onChangedMaterialYou(bool newIsMaterialYou) {
-                _saveMaterialYou(newIsMaterialYou).then((value) async {
-                  setState(() => isMaterialYou = newIsMaterialYou);
-                  BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
-                });
+        final deviceInfoPlugin = DeviceInfoPlugin();
+        final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
+        if(context.mounted) {
+          showDialog(context: context, builder: (context) => StatefulBuilder(
+              builder: (context, setState) {
+
+                onChangedMaterialYou(bool newIsMaterialYou) {
+                  _saveMaterialYou(newIsMaterialYou).then((value) async {
+                    setState(() => isMaterialYou = newIsMaterialYou);
+                    BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                  });
+                }
+
+                return AlertDialog(
+                  title: const Text("Set App Theme"),
+                  contentPadding: const EdgeInsets.only(top: 16),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SwitchListTile(
+                        value: deviceInfo.version.sdkInt >= 31 ? isMaterialYou : false,
+                        contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),
+                        title: const Text("Google Material You"),
+                        subtitle: const Text("Uses your wallpaper to identify source color"),
+                        onChanged: (value) => deviceInfo.version.sdkInt >= 31 ? onChangedMaterialYou(value) : Fluttertoast.showToast(
+                          msg: "This feature is available on Android 12 and above",
+                          toastLength: Toast.LENGTH_LONG,
+                        ),
+                      ),
+                      RadioListTile<String>(
+                        value: 'light',
+                        groupValue: value,
+                        title: Text(isMaterialYou ? "Light" : "Bora"),
+                        onChanged: (value) => onChanged(value!),
+                      ),
+                      RadioListTile<String>(
+                        value: 'dark',
+                        groupValue: value,
+                        title: const Text("Dark"),
+                        onChanged: (value) => onChanged(value!),
+                      ),
+                      RadioListTile<String>(
+                        value: 'system',
+                        groupValue: value,
+                        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
+                        onChanged: (value) => onChanged(value!),
+                        title: const Text("System default"),
+                      ),
+                    ],
+                  ),
+                );
               }
-
-              return AlertDialog(
-                title: const Text("Set App Theme"),
-                contentPadding: const EdgeInsets.only(top: 16),
-                content: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SwitchListTile(
-                      value: isMaterialYou,
-                      contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),
-                      title: const Text("Google Material You"),
-                      subtitle: const Text("Uses your wallpaper to identify source color"),
-                      onChanged: (value) => onChangedMaterialYou(value),
-                    ),
-                    RadioListTile<String>(
-                      value: 'light',
-                      groupValue: value,
-                      title: Text(isMaterialYou ? "Light" : "Bora"),
-                      onChanged: (value) => onChanged(value!),
-                    ),
-                    RadioListTile<String>(
-                      value: 'dark',
-                      groupValue: value,
-                      title: const Text("Dark"),
-                      onChanged: (value) => onChanged(value!),
-                    ),
-                    RadioListTile<String>(
-                      value: 'system',
-                      groupValue: value,
-                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),),
-                      onChanged: (value) => onChanged(value!),
-                      title: const Text("System default"),
-                    ),
-                  ],
-                ),
-              );
-            }
-        ));
-      }
+          ));
+        }
     });
   }
 
