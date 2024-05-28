@@ -111,10 +111,16 @@ class NativeUpdater {
       if (_updateInfo.updateAvailability == UpdateAvailability.updateAvailable) {
         if (_forceUpdate == true) {
           InAppUpdate.performImmediateUpdate()
-              .catchError((e) => developer.log(e.toString()));
+              .catchError((e) {
+                developer.log(e.toString());
+                return Future<AppUpdateResult>.error(e.toString());
+              });
         } else if (_forceUpdate == false) {
           InAppUpdate.startFlexibleUpdate()
-              .catchError((e) => developer.log(e.toString()));
+              .catchError((e) {
+                developer.log(e.toString());
+                return Future<AppUpdateResult>.error(e.toString());
+              });
         }
       } else if(_updateInfo.updateAvailability == UpdateAvailability.updateNotAvailable) {
         FT.Fluttertoast.showToast(
