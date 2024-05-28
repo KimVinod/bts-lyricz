@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
@@ -179,7 +177,10 @@ class SettingsService {
 
   static void openBatteryOptimization() => AppSettings.openAppSettings(type: AppSettingsType.batteryOptimization);
 
-  static void checkForUpdates(BuildContext context) => NativeUpdater.displayUpdateAlert(context, forceUpdate: true);
+  static void checkForUpdates(BuildContext context) {
+    Fluttertoast.showToast(msg: "Checking for updates...", toastLength: Toast.LENGTH_SHORT);
+    NativeUpdater.displayUpdateAlert(context, forceUpdate: true);
+  }
 
   static void openVersionNotes() async {
     if(await canLaunchUrlString(versionNotesUrl)) {
