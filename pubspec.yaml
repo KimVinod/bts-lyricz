@@ -51,25 +51,20 @@ dependencies:
   url_launcher: ^6.2.6
   font_awesome_flutter: ^10.7.0
   dynamic_color: ^1.7.0
-
-flutter_launcher_icons:
-  android: true
-  image_path: "images/app-icon-new2.png"
+  device_info_plus: ^10.1.0
 
 flutter_native_splash:
-  color: "#B488D4"
-  image: images/splashLogo2.png
+  color: "#C295E0"
+  image: images/app-icon-v3.png
   android: true
   android_12:
-    color: "#B488D4"
-    image: images/splashIconLogo2.png
+    color: "#C295E0"
+    image: images/app-splash-foreground-v3.png
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_native_splash: ^2.4.0
-  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
