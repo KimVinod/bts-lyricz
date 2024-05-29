@@ -59,6 +59,7 @@ class SettingsService {
 
         final deviceInfoPlugin = DeviceInfoPlugin();
         final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
+        if(deviceInfo.version.sdkInt < 31) isMaterialYou = false;
         if(context.mounted) {
           showDialog(context: context, builder: (context) => StatefulBuilder(
               builder: (context, setState) {
@@ -76,16 +77,15 @@ class SettingsService {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      SwitchListTile(
-                        value: deviceInfo.version.sdkInt >= 31 ? isMaterialYou : false,
-                        contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),
-                        title: const Text("Google Material You"),
-                        subtitle: const Text("Uses your wallpaper to identify source color"),
-                        onChanged: (value) => deviceInfo.version.sdkInt >= 31 ? onChangedMaterialYou(value) : Fluttertoast.showToast(
-                          msg: "This feature is available on Android 12 and above",
-                          toastLength: Toast.LENGTH_LONG,
+                      if(deviceInfo.version.sdkInt >= 31)...[
+                        SwitchListTile(
+                          value: isMaterialYou,
+                          contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),
+                          title: const Text("Google Material You"),
+                          subtitle: const Text("Uses your wallpaper to identify source color"),
+                          onChanged: (value) => onChangedMaterialYou(value),
                         ),
-                      ),
+                      ],
                       RadioListTile<String>(
                         value: 'light',
                         groupValue: value,
