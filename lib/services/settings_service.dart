@@ -72,7 +72,7 @@ class SettingsService {
                 }
 
                 return AlertDialog(
-                  title: const Text("Set App Theme"),
+                  title: const Text("Set app theme"),
                   contentPadding: const EdgeInsets.only(top: 16),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,

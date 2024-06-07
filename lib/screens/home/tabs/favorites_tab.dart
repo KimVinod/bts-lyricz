@@ -59,7 +59,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
                       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                       title: const Text("Remove all songs"),
-                      content: const Text("Do you want to remove all the songs from your favorites?"),
+                      content: const Text("Are you sure you want to remove all songs from your favorites?"),
                       actions: [
                         TextButton(onPressed: () {
                           Navigator.pop(context);
