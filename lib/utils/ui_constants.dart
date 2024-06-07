@@ -231,27 +231,29 @@ Widget buildTabContent({required BuildContext context, required String name, Str
     width: double.infinity,
     child: Padding(
       padding:
-      const EdgeInsets.only(left: 16, right: 16),
+      const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: lyrics != null
-          ? ListView(
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          Text(
-            name,
-            style: GoogleFonts.openSans(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8.0),
-          SelectableText(
-            lyrics,
-            style: GoogleFonts.openSans(
-              fontSize: 16.0,
+          ? SingleChildScrollView(
+            child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+            Text(
+              name,
+              style: GoogleFonts.openSans(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
             ),
-          ),
-          const SizedBox(height: 16.0),
-        ],
-      )
+            const SizedBox(height: 8.0),
+            SelectableText(
+              lyrics,
+              style: GoogleFonts.openSans(
+                fontSize: 16.0,
+              ),
+            ),
+            const SizedBox(height: 16.0),
+                    ],
+                  ),
+          )
           : buildNA(context),
     ),
   );

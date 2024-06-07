@@ -164,10 +164,11 @@ class _GameTabState extends State<GameTab> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 16),
                   Expanded(
                     child: AnimationLimiter(
                       child: ListView(
+                        padding: EdgeInsets.zero,
                         physics: const NeverScrollableScrollPhysics(),
                         children: options.asMap().entries.map((entry) {
                           int index = entry.key;

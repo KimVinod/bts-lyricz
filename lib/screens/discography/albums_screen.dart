@@ -13,52 +13,45 @@ class Albums extends StatelessWidget {
   Widget build(BuildContext context) {
 
     List<Map<String, dynamic>> albums = [];
-    double childAspectRatio = 1;
     String title = "";
 
     switch (type) {
       case 'kr':
         title = "BTS Korean Albums";
         albums = krAlbums;
-        childAspectRatio = 0.72;
         break;
 
       case 'jp':
         title = "BTS Japanese Albums";
         albums = jpAlbums;
-        childAspectRatio = 0.77;
         break;
 
       case 'uo':
         title = "BTS Unofficial Albums";
         albums = uoAlbums;
-        childAspectRatio = 0.72;
         break;
     }
 
     return Scaffold(
+      backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         titleSpacing: 0,
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text(title, style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
       ),
-      body: Container(
-        width: double.infinity,
-        color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
-        child: AnimationLimiter(
-          child: GridView.builder(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            physics: const BouncingScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: childAspectRatio),
-            itemCount: albums.length,
-            itemBuilder: (context, index) => AnimationConfiguration.staggeredGrid(
-              position: index,
-              columnCount: 2,
-              duration: const Duration(milliseconds: 500),
-              child: ScaleAnimation(
-                child: FadeInAnimation(
-                  child: CustomAlbumCard(albumName: albums[index]['album'], imageAsset: albums[index]['imageAsset']),
-                ),
+      body: AnimationLimiter(
+        child: GridView.builder(
+          padding: const EdgeInsets.all(16),
+          physics: const BouncingScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 196, mainAxisExtent: 196, mainAxisSpacing: 24, crossAxisSpacing: 16),
+          itemCount: albums.length,
+          itemBuilder: (context, index) => AnimationConfiguration.staggeredGrid(
+            position: index,
+            columnCount: 2,
+            duration: const Duration(milliseconds: 500),
+            child: ScaleAnimation(
+              child: FadeInAnimation(
+                child: CustomAlbumCard(albumName: albums[index]['album'], imageAsset: albums[index]['imageAsset']),
               ),
             ),
           ),
