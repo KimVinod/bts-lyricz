@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Never Let Go",
+    displayName: "Never Let Go",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-neverLetGo.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
+    lyrics: getJungkookNeverLetGo,
+  ),
+  Song(
     name: "Come back to me",
     displayName: "Right Place, Wrong Person",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
     lyrics: getJiminAngelAnniversaryEdition,
-  ),
-  Song(
-    name: "on the street (solo version)",
-    displayName: "HOPE ON THE STREET VOL.1",
-    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
-    album: "HOPE ON THE STREET VOL.1",
-    albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
-    lyrics: getHoseokHopeOnTheStreetVol1OnTheStreetSoloVer,
   ),
 ];
 
@@ -461,7 +461,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPRightPeopleWrongPerson,
   ),
-
   Song(
     name: "Nuts",
     displayName: "NUTS",
@@ -472,7 +471,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPNuts,
   ),
-
   Song(
     name: "out of love",
     displayName: "OUT OF LOVE",
@@ -483,7 +481,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPOutOfLove,
   ),
-
   Song(
     name: "Domodachi (ft. Little Simz)",
     displayName: "DOMODACHI",
@@ -494,7 +491,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPDomodachi,
   ),
-
   Song(
     name: "? (Interlude)",
     displayName: "? (INTERLUDE)",
@@ -505,7 +501,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPInterlude,
   ),
-
   Song(
     name: "Groin",
     displayName: "GROIN",
@@ -516,7 +511,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPGroin,
   ),
-
   Song(
     name: "Heaven",
     displayName: "HEAVEN",
@@ -527,7 +521,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPHeaven,
   ),
-
   Song(
     name: "LOST!",
     displayName: "LOST!",
@@ -538,7 +531,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPLost,
   ),
-
   Song(
     name: "Around the world in a day! (ft. Moses Sumney)",
     displayName: "AROUND THE WORLD IN A DAY!",
@@ -549,7 +541,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPAroundTheWorldInADay,
   ),
-
   Song(
     name: "ㅠㅠ (Credit Roll)",
     displayName: "ㅠㅠ",
@@ -560,7 +551,6 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
     lyrics: getNamjoonRPWPCreditRoll,
   ),
-
   Song(
     name: "Come back to me",
     displayName: "COME BACK TO ME",
@@ -2067,6 +2057,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0VPFT123HKoQ2J6ipeDcI1"),
     lyrics: getJungkookStandingNextToYouUsherRemix,
+  ),
+  Song(
+    name: "Never Let Go",
+    displayName: "NEVER LET GO",
+    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
+    album: null,
+    albumArt: "images/albums-solo/jungkook/jungkook-neverLetGo.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
+    lyrics: getJungkookNeverLetGo,
   ),
 
 
