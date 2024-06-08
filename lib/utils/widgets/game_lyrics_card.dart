@@ -1,4 +1,5 @@
 import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +41,7 @@ class GameLyricsCard extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiary,
+                  color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
                   borderRadius: BorderRadius.circular(20)
               ),
               child: Center(

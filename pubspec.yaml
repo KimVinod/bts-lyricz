@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -15,29 +15,27 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.1.4+43
+version: 2.2.0+44
 
 environment:
-  sdk: '>=3.4.0 <5.0.0'
+  sdk: ">=3.4.0 <5.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   #firebase
-  firebase_core: ^2.31.1
-  firebase_messaging: ^14.9.3
-  firebase_analytics: ^10.10.6
-  firebase_crashlytics: ^3.5.6
+  firebase_core: ^3.0.0
+  firebase_messaging: ^15.0.0
+  firebase_analytics: ^11.0.0
+  firebase_crashlytics: ^4.0.0
 
-  #persistent 
+  #persistent
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^8.2.5
-  flutter_floating_bottom_bar:
-    path: ./packages/flutter_floating_bottom_bar
+  fluttertoast: ^8.2.6
   flutter_bounceable: ^1.1.0
   google_fonts: ^6.2.1
 
@@ -50,35 +48,29 @@ dependencies:
     #git: https://github.com/benthemobileguy/native_updater.git   # dependencies updated
     #git: https://github.com/Furation-Technology/native_updater.git   #og
   share_plus: ^9.0.0
-  url_launcher: ^6.2.6
+  url_launcher: ^6.3.0
   font_awesome_flutter: ^10.7.0
-
-
-flutter_launcher_icons:
-  android: true
-  image_path: "images/app-icon-new2.png"
+  dynamic_color: ^1.7.0
+  device_info_plus: ^10.1.0
 
 flutter_native_splash:
-  color: "#B488D4"
-  image: images/splashLogo2.png
+  color: "#C295E0"
+  image: images/app-icon-v3.png
   android: true
   android_12:
-    color: "#B488D4"
-    image: images/splashIconLogo2.png
+    color: "#C295E0"
+    image: images/app-splash-foreground-v3.png
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_native_splash: ^2.4.0
-  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

@@ -1,6 +1,8 @@
 import 'package:bts_lyrics_app/screens/discography/albums_screen.dart';
 import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
 import 'package:bts_lyrics_app/screens/member/member_screen.dart';
+import 'package:bts_lyrics_app/utils/theme.dart';
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,37 +14,112 @@ const Color appCardColor = Color.fromRGBO(152, 105, 190, 1);
 const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
 const Color appOffBlackColor = Color(0xff262626);
 
-ThemeData lightTheme = ThemeData(
-  useMaterial3: false,
-  textTheme: GoogleFonts.openSansTextTheme(),
-  cardColor: appBarColor,  //home bottom bar, divider
-  appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
-  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.black), overlayColor: WidgetStateProperty.all(Colors.white30))),
-  radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.black)),
-  indicatorColor: Colors.purple[100],
-  chipTheme: const ChipThemeData(backgroundColor: appCardColor, side: BorderSide(color: appBarColor)),
-  colorScheme: ColorScheme.fromSeed(
-    seedColor: appUILightColor,
-    brightness: Brightness.light,
-    shadow: Colors.purple.shade700,
-    surface: appUILightColor,  //background
-    secondary: appUILightColor, //home appbar
-    tertiary: appCardColor,  //card, scroller
-  ),
-);
-ThemeData darkTheme = ThemeData(
-  useMaterial3: false,
-  appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
-  textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
-  textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.white), overlayColor: WidgetStateProperty.all(Colors.white30))),
-  radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.white)),
-  colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.black,
-    brightness: Brightness.dark,
-    surface: Colors.black,  //background
-    secondary: appOffBlackColor, //home appbar
-    tertiary: appOffBlackColor,  //card, scroller
-  ),
+// ThemeData lightThemeOld = ThemeData(
+//   pageTransitionsTheme: const PageTransitionsTheme(
+//     builders: <TargetPlatform, PageTransitionsBuilder>{
+//       TargetPlatform.android: ZoomPageTransitionsBuilder(
+//         allowEnterRouteSnapshotting: false,
+//       ),
+//     },
+//   ),
+//   cardColor: appBarColor,  //home bottom bar, divider
+//   appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
+//   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.black), overlayColor: WidgetStateProperty.all(Colors.white30))),
+//   radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.black)),
+//   indicatorColor: Colors.purple[100],
+//   chipTheme: const ChipThemeData(backgroundColor: appCardColor, side: BorderSide(color: appBarColor)),
+//   colorScheme: ColorScheme.fromSeed(
+//     seedColor: appUILightColor,
+//     brightness: Brightness.light,
+//     shadow: Colors.purple.shade700,
+//     surface: appUILightColor,  //background
+//     secondary: appUILightColor, //home appbar
+//     tertiary: appCardColor,  //card, scroller
+//   ),
+// );
+// ThemeData darkThemeOld = ThemeData(
+//   pageTransitionsTheme: const PageTransitionsTheme(
+//     builders: <TargetPlatform, PageTransitionsBuilder>{
+//       TargetPlatform.android: ZoomPageTransitionsBuilder(
+//         allowEnterRouteSnapshotting: false,
+//       ),
+//     },
+//   ),
+//   appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
+//   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
+//   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.white), overlayColor: WidgetStateProperty.all(Colors.white30))),
+//   radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.white)),
+//   colorScheme: ColorScheme.fromSeed(
+//     seedColor: Colors.black,
+//     brightness: Brightness.dark,
+//     surface: Colors.black,  //background
+//     secondary: appOffBlackColor, //home appbar
+//     tertiary: appOffBlackColor,  //card, scroller
+//   ),
+// );
+
+ThemeData getLightTheme({required bool isMaterialYou, ColorScheme? lightColorScheme}) {
+  return ThemeData(
+    pageTransitionsTheme: const PageTransitionsTheme(
+      builders: <TargetPlatform, PageTransitionsBuilder>{
+        TargetPlatform.android: ZoomPageTransitionsBuilder(
+          allowEnterRouteSnapshotting: false,
+        ),
+      },
+    ),
+    splashColor: appUILightColor.withOpacity(0.1),
+    focusColor: appUILightColor.withOpacity(0.08),
+    hoverColor: appUILightColor.withOpacity(0.1),
+    colorScheme: isMaterialYou ? lightColorScheme ?? MaterialTheme.lightScheme().toColorScheme() : MaterialTheme.lightScheme().toColorScheme(),
+  );
+}
+
+ThemeData getDarkTheme({required bool isMaterialYou, ColorScheme? darkColorScheme}) {
+  return ThemeData(
+    pageTransitionsTheme: const PageTransitionsTheme(
+      builders: <TargetPlatform, PageTransitionsBuilder>{
+        TargetPlatform.android: ZoomPageTransitionsBuilder(
+          allowEnterRouteSnapshotting: false,
+        ),
+      },
+    ),
+    colorScheme: isMaterialYou ? darkColorScheme ?? MaterialTheme.darkScheme().toColorScheme() : MaterialTheme.darkScheme().toColorScheme(),
+  );
+}
+
+(ColorScheme light, ColorScheme dark) generateDynamicColourSchemes(ColorScheme lightDynamic, ColorScheme darkDynamic) {
+  var lightBase = ColorScheme.fromSeed(seedColor: lightDynamic.primary);
+  var darkBase = ColorScheme.fromSeed(seedColor: darkDynamic.primary, brightness: Brightness.dark);
+
+  var lightAdditionalColours = _extractAdditionalColours(lightBase);
+  var darkAdditionalColours = _extractAdditionalColours(darkBase);
+
+  var lightScheme = _insertAdditionalColours(lightBase, lightAdditionalColours);
+  var darkScheme = _insertAdditionalColours(darkBase, darkAdditionalColours);
+
+  return (lightScheme.harmonized(), darkScheme.harmonized());
+}
+
+List<Color> _extractAdditionalColours(ColorScheme scheme) => [
+  scheme.surface,
+  scheme.surfaceDim,
+  scheme.surfaceBright,
+  scheme.surfaceContainerLowest,
+  scheme.surfaceContainerLow,
+  scheme.surfaceContainer,
+  scheme.surfaceContainerHigh,
+  scheme.surfaceContainerHighest,
+];
+
+ColorScheme _insertAdditionalColours(ColorScheme scheme, List<Color> additionalColours) => scheme.copyWith(
+  surface: additionalColours[0],
+  surfaceDim: additionalColours[1],
+  surfaceBright: additionalColours[2],
+  surfaceContainerLowest: additionalColours[3],
+  surfaceContainerLow: additionalColours[4],
+  surfaceContainer: additionalColours[5],
+  surfaceContainerHigh: additionalColours[6],
+  surfaceContainerHighest: additionalColours[7],
 );
 
 const String shareText = "Hey! Check this out. Get all the song lyrics of BTS in one place.\n\nApp name: Bangtan Lyricz\n\nGoogle Play Store:\n$playStoreUrl";
@@ -150,32 +227,33 @@ Container buildNA(BuildContext context) {
 }
 
 Widget buildTabContent({required BuildContext context, required String name, String? lyrics}) {
-  return Container(
-    color: Theme.of(context).colorScheme.surface,
+  return SizedBox(
     width: double.infinity,
     child: Padding(
       padding:
-      const EdgeInsets.only(left: 16, right: 16),
+      const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: lyrics != null
-          ? ListView(
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          Text(
-            name,
-            style: GoogleFonts.openSans(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8.0),
-          SelectableText(
-            lyrics,
-            style: GoogleFonts.openSans(
-              fontSize: 16.0,
+          ? SingleChildScrollView(
+            child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+            Text(
+              name,
+              style: GoogleFonts.openSans(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
             ),
-          ),
-          const SizedBox(height: 16.0),
-        ],
-      )
+            const SizedBox(height: 8.0),
+            SelectableText(
+              lyrics,
+              style: GoogleFonts.openSans(
+                fontSize: 16.0,
+              ),
+            ),
+            const SizedBox(height: 16.0),
+                    ],
+                  ),
+          )
           : buildNA(context),
     ),
   );

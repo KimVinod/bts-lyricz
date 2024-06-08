@@ -1,3 +1,4 @@
+import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,7 +28,7 @@ class CustomButton extends StatelessWidget {
                 width: width,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.tertiary,
+                    color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
                     borderRadius: BorderRadius.circular(20)
                 ),
                 child: Center(
@@ -44,6 +45,7 @@ class CustomButton extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
+                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
                     borderRadius: BorderRadius.circular(20),
                     onTap: () => onTap(),
                   ),
