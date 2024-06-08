@@ -11,6 +11,8 @@ An android application using flutter framework which shows song lyrics of the bi
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/mini-game.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/settings.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/search.png" width="16%" unselectable="on"/>
+   <br>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/album.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/lyrics.png" width="16%" unselectable="on"/> 
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/dark-mode.png" width="16%" unselectable="on"/> 
 </p>
@@ -18,7 +20,7 @@ An android application using flutter framework which shows song lyrics of the bi
 ## Features
 <ul>
   <li>Includes all the song lyrics from debut till current era</li>
-  <li>Mini game - Guess the song</li>
+  <li>Mini game - Guess the song?</li>
   <li>Free and Open source app so you don't have to worry about privacy</li>
   <li>Does not have ads</li>
   <li>User friendly and BTS themed design</li>
@@ -34,7 +36,7 @@ Link: https://sites.google.com/view/bts-lyricz-ver
 ## Credits
 Special thanks to translator armys and genius.com for the lyrics :)<br>
 I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC<br>
-App icon credit: <a href="https://in.pinterest.com/pin/807340670713498489/">Lola</a>
+App icon credit: <a href="https://in.pinterest.com/pin/807340670713498489/">Lola</a> <a href="https://www.instagram.com/addigni/">addigni</a>
 
 <p align = "center">
  <br>
