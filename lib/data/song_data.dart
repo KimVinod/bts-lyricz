@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Smeraldo Garden Marching Band (feat. Loco)",
+    displayName: "Smeraldo Garden Marching Band",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-smeraldo-garden-marching-band.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
+    lyrics: getJiminSmeraldoGardenMarchingBand,
+  ),
+  Song(
     name: "Never Let Go",
     displayName: "Never Let Go",
     isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6vMDcLqfihUWSnn2LAhbZ4"),
     lyrics: getNamjoonComeBackToMeRadioEdit,
-  ),
-  Song(
-    name: "Angel Anniversary Edition (Kodak Black & NLE Choppa feat. Jimin of BTS, JVKE, & Muni Long)",
-    displayName: "Angel Anniversary Edition",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: null,
-    albumArt: "images/albums-solo/jimin/jimin-angel-anniversary.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
-    lyrics: getJiminAngelAnniversaryEdition,
   ),
 ];
 
@@ -1674,6 +1674,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
     lyrics: getJiminAngelAnniversaryEdition,
+  ),
+  Song(
+    name: "Smeraldo Garden Marching Band (feat. Loco)",
+    displayName: "SMERALDO GARDEN MARCHING BAND",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-smeraldo-garden-marching-band.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
+    lyrics: getJiminSmeraldoGardenMarchingBand,
   ),
 
   ///taehyung
