@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Be Mine (English Version)",
+    displayName: "Be Mine (English Version)",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4DairgmwgyfmFHm0e7kRPL"),
+    lyrics: getJiminBeMineEngVer,
+  ),
+  Song(
     name: "Rebirth (Intro)",
     displayName: "MUSE",
     isSolo: IsSolo(isSolo: true, soloName: "jimin"),
@@ -43,16 +53,6 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
-    lyrics: getNamjoonComeBackToMe,
-  ),
-  Song(
-    name: "Come back to me",
-    displayName: "Come back to me",
-    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
-    album: null,
-    albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1PT8hWQvl2gRO1JhDcSUqN"),
     lyrics: getNamjoonComeBackToMe,
   ),
 ];
@@ -1756,6 +1756,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
     lyrics: getJiminSmeraldoGardenMarchingBand,
+  ),
+  Song(
+    name: "Be Mine (English Version)",
+    displayName: "BE MINE",
+    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    album: null,
+    albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4DairgmwgyfmFHm0e7kRPL"),
+    lyrics: getJiminBeMineEngVer,
   ),
 
   ///taehyung
