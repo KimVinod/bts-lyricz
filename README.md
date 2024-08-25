@@ -1,6 +1,6 @@
 # Bangtan Lyricz
 
-<a href='https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz'><img alt='Get it on Google Play' src='https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/github-banner.png' width="50%" /></a>
+<a href='https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz'><img alt='Get it on Google Play' src='https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/banner.png' width="50%" /></a>
 
 ## Description
 An android application using flutter framework which shows song lyrics of the biggest group BTS.
