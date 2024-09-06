@@ -1233,8 +1233,8 @@ const List<Song> allSongs = [
     lyrics: getHoseokHopeWorldHopeWorld,
   ),
   Song(
-    name: "P.O.P (Peace of Piece) Pt.1",
-    displayName: "P.O.P (PEACE OF PIECE) PT.1",
+    name: "P.O.P (Piece of Peace) Pt.1",
+    displayName: "P.O.P (PIECE OF PEACE) PT.1",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
     album: "Hope World",
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
