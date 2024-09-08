@@ -6,14 +6,14 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
-    name: "Be Mine (English Version)",
-    displayName: "Be Mine (English Version)",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
+    name: "Neva Play (Megan Thee Stallion ft. RM of BTS)",
+    displayName: "Neva Play",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
     album: null,
-    albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
+    albumArt: "images/albums-solo/rm/rm-nevaPlay.jpg",
     lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/4DairgmwgyfmFHm0e7kRPL"),
-    lyrics: getJiminBeMineEngVer,
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
+    lyrics: getNamjoonNevaPlay,
   ),
   Song(
     name: "Rebirth (Intro)",
@@ -44,16 +44,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
     lyrics: getJungkookNeverLetGo,
-  ),
-  Song(
-    name: "Come back to me",
-    displayName: "Right Place, Wrong Person",
-    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
-    album: "Right Place, Wrong Person",
-    albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
-    lyrics: getNamjoonComeBackToMe,
   ),
 ];
 
@@ -783,6 +773,16 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/track/6vMDcLqfihUWSnn2LAhbZ4"),
     lyrics: getNamjoonComeBackToMeRadioEdit,
   ),
+  Song(
+    name: "Neva Play (Megan Thee Stallion ft. RM of BTS)",
+    displayName: "NEVA PLAY",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-nevaPlay.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
+    lyrics: getNamjoonNevaPlay,
+  ),
 
 
   ///seokjin
@@ -1233,8 +1233,8 @@ const List<Song> allSongs = [
     lyrics: getHoseokHopeWorldHopeWorld,
   ),
   Song(
-    name: "P.O.P (Peace of Piece) Pt.1",
-    displayName: "P.O.P (PEACE OF PIECE) PT.1",
+    name: "P.O.P (Piece of Peace) Pt.1",
+    displayName: "P.O.P (PIECE OF PEACE) PT.1",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
     album: "Hope World",
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
