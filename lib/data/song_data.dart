@@ -150,6 +150,16 @@ const List<Song> allSongs = [
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=vLYUlk2ZAEg"),
     lyrics: getArmyWeWillBeAlright,
   ),
+  Song(
+    name: "Shooting Star (by BTS FOR ARMY'S)",
+    displayName: "SHOOTING STAR",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/shooting-star.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=21BZO8SBVLg"),
+    lyrics: getArmyShootingStar,
+  ),
 
   ///solo projects
   ///namjoon
