@@ -624,6 +624,16 @@ const List<Song> allSongs = [
     lyrics: getNamjoonProMeTheUs,
   ),
   Song(
+    name: "Fantastic (Feat. Mandy Ventrice)",
+    displayName: "FANTASTIC",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-fantastic.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=R3AWPKqD68g"),
+    lyrics: getNamjoonFantastic,
+  ),
+  Song(
     name: "Always",
     displayName: "ALWAYS",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
