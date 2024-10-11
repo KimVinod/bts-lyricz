@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "슈퍼 참치 (Super Tuna) (Extended Version)",
+    displayName: "슈퍼 참치 (Super Tuna) (Extended)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
+    lyrics: getSeokjinSuperTunaExtendedVer,
+  ),
+  Song(
     name: "Neva Play (Megan Thee Stallion ft. RM of BTS)",
     displayName: "Neva Play",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
@@ -34,16 +44,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
     lyrics: getJiminSmeraldoGardenMarchingBand,
-  ),
-  Song(
-    name: "Never Let Go",
-    displayName: "Never Let Go",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-neverLetGo.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
-    lyrics: getJungkookNeverLetGo,
   ),
 ];
 
@@ -856,6 +856,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0h7QMc9ZRzA9QJrbEHytn2"),
     lyrics: getSeokjinTheAstronaut,
+  ),
+  Song(
+    name: "슈퍼 참치 (Super Tuna) (Extended Version)",
+    displayName: "슈퍼 참치 (SUPER TUNA)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
+    lyrics: getSeokjinSuperTunaExtendedVer,
   ),
 
 
