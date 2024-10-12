@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "슈퍼 참치 (Super Tuna) (Extended Version)",
+    displayName: "슈퍼 참치 (Super Tuna) (Extended)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
+    lyrics: getSeokjinSuperTunaExtendedVer,
+  ),
+  Song(
     name: "Neva Play (Megan Thee Stallion ft. RM of BTS)",
     displayName: "Neva Play",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
@@ -34,16 +44,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
     lyrics: getJiminSmeraldoGardenMarchingBand,
-  ),
-  Song(
-    name: "Never Let Go",
-    displayName: "Never Let Go",
-    isSolo: IsSolo(isSolo: true, soloName: "jungkook"),
-    album: null,
-    albumArt: "images/albums-solo/jungkook/jungkook-neverLetGo.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
-    lyrics: getJungkookNeverLetGo,
   ),
 ];
 
@@ -149,6 +149,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=vLYUlk2ZAEg"),
     lyrics: getArmyWeWillBeAlright,
+  ),
+  Song(
+    name: "Shooting Star (by BTS FOR ARMY'S)",
+    displayName: "SHOOTING STAR",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/shooting-star.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=21BZO8SBVLg"),
+    lyrics: getArmyShootingStar,
   ),
 
   ///solo projects
@@ -624,6 +634,16 @@ const List<Song> allSongs = [
     lyrics: getNamjoonProMeTheUs,
   ),
   Song(
+    name: "Fantastic (Feat. Mandy Ventrice)",
+    displayName: "FANTASTIC",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-fantastic.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=R3AWPKqD68g"),
+    lyrics: getNamjoonFantastic,
+  ),
+  Song(
     name: "Always",
     displayName: "ALWAYS",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
@@ -836,6 +856,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0h7QMc9ZRzA9QJrbEHytn2"),
     lyrics: getSeokjinTheAstronaut,
+  ),
+  Song(
+    name: "슈퍼 참치 (Super Tuna) (Extended Version)",
+    displayName: "슈퍼 참치 (SUPER TUNA)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
+    lyrics: getSeokjinSuperTunaExtendedVer,
   ),
 
 
