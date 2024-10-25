@@ -41,17 +41,17 @@ dependencies:
 
   #util
   app_settings: ^5.1.1
-  flutter_local_notifications: ^17.2.3
+  flutter_local_notifications: ^17.2.4
   flutter_staggered_animations: ^1.1.1
   native_updater:
     path: ./packages/native_updater
     #git: https://github.com/benthemobileguy/native_updater.git   # dependencies updated
     #git: https://github.com/Furation-Technology/native_updater.git   #og
-  share_plus: ^10.0.3
+  share_plus: ^10.1.1
   url_launcher: ^6.3.1
   font_awesome_flutter: ^10.7.0
   dynamic_color: ^1.7.0
-  device_info_plus: ^11.0.0
+  device_info_plus: ^11.1.0
 
 flutter_native_splash:
   color: "#C295E0"
@@ -64,7 +64,7 @@ flutter_native_splash:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^2.4.1
+  flutter_native_splash: ^2.4.2
   flutter_lints: ^5.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
