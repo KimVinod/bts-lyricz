@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "I’ll Be There",
+    displayName: "I’ll Be There",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-i-will-be-there.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
+    lyrics: getSeokjinIWillBeThere,
+  ),
+  Song(
     name: "슈퍼 참치 (Super Tuna) (Extended Version)",
     displayName: "슈퍼 참치 (Super Tuna) (Extended)",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -34,16 +44,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
     lyrics: getJiminMuseIntro,
-  ),
-  Song(
-    name: "Smeraldo Garden Marching Band (feat. Loco)",
-    displayName: "Smeraldo Garden Marching Band",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: null,
-    albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
-    lyrics: getJiminSmeraldoGardenMarchingBand,
   ),
 ];
 
@@ -866,6 +866,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
     lyrics: getSeokjinSuperTunaExtendedVer,
+  ),
+  Song(
+    name: "I’ll Be There",
+    displayName: "I'LL BE THERE",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-i-will-be-there.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
+    lyrics: getSeokjinIWillBeThere,
   ),
 
 
