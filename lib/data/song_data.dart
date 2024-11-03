@@ -160,6 +160,16 @@ const List<Song> allSongs = [
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=21BZO8SBVLg"),
     lyrics: getArmyShootingStar,
   ),
+  Song(
+    name: "Purple Light",
+    displayName: "PURPLE LIGHT",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/purple-light.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=MDcDHaGnuhk"),
+    lyrics: getArmyPurpleLight,
+  ),
 
   ///solo projects
   ///namjoon
