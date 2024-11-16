@@ -50,8 +50,10 @@ class SettingsService {
 
     onChanged(String theme) {
       _saveTheme(theme).then((value) async {
-        Navigator.pop(context);
-        BTSLyricsApp.of(context).changeTheme(await loadTheme());
+        if(context.mounted) {
+          Navigator.pop(context);
+          BTSLyricsApp.of(context).changeTheme(await loadTheme());
+        }
       });
     }
 
@@ -67,7 +69,7 @@ class SettingsService {
                 onChangedMaterialYou(bool newIsMaterialYou) {
                   _saveMaterialYou(newIsMaterialYou).then((value) async {
                     setState(() => isMaterialYou = newIsMaterialYou);
-                    BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                    if(context.mounted) BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
                   });
                 }
 
@@ -128,8 +130,10 @@ class SettingsService {
 
     void onChanged(String lang) {
       saveGameLanguage(lang).then((value) {
-        Navigator.pop(context);
-        onDialogClosed(true);
+        if(context.mounted) {
+          Navigator.pop(context);
+          onDialogClosed(true);
+        }
       });
     }
 

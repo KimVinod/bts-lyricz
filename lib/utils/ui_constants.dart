@@ -165,37 +165,37 @@ const List<Map<String, dynamic>> soloProjects = [
   {
     'imageAsset': 'images/members/joon.jpg',
     'name': 'RM',
-    'widget': Member(memberName: "RM", isAlbum: true, dataKey: 'namjoon'),
+    'widget': Member(memberName: "RM", dataKey: 'namjoon'),
   },
   {
     'imageAsset': 'images/members/jin.jpg',
     'name': 'Jin',
-    'widget': Member(memberName: "Jin", isAlbum: false, dataKey: 'seokjin'),
+    'widget': Member(memberName: "Jin", dataKey: 'seokjin'),
   },
   {
     'imageAsset': 'images/members/yoongi.jpg',
     'name': 'SUGA / Agust D',
-    'widget': Member(memberName: "SUGA / Agust D", isAlbum: true, dataKey: 'yoongi'),
+    'widget': Member(memberName: "SUGA / Agust D", dataKey: 'yoongi'),
   },
   {
     'imageAsset': 'images/members/hobi.jpg',
     'name': 'j-hope',
-    'widget': Member(memberName: "j-hope", isAlbum: true, dataKey: 'hoseok'),
+    'widget': Member(memberName: "j-hope", dataKey: 'hoseok'),
   },
   {
     'imageAsset': 'images/members/jimin.jpg',
     'name': 'Jimin',
-    'widget': Member(memberName: "Jimin", isAlbum: true, dataKey: 'jimin'),
+    'widget': Member(memberName: "Jimin", dataKey: 'jimin'),
   },
   {
     'imageAsset': 'images/members/tae.jpg',
     'name': 'V',
-    'widget': Member(memberName: "V", isAlbum: true, dataKey: 'taehyung'),
+    'widget': Member(memberName: "V", dataKey: 'taehyung'),
   },
   {
     'imageAsset': 'images/members/jk.jpg',
     'name': 'Jungkook',
-    'widget': Member(memberName: "Jungkook", isAlbum: true, dataKey: 'jungkook'),
+    'widget': Member(memberName: "Jungkook", dataKey: 'jungkook'),
   },
 
 ];

@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Running Wild",
+    displayName: "Happy",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyRunningWild,
+  ),
+  Song(
     name: "I’ll Be There",
     displayName: "I’ll Be There",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -159,6 +169,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=21BZO8SBVLg"),
     lyrics: getArmyShootingStar,
+  ),
+  Song(
+    name: "Purple Light",
+    displayName: "PURPLE LIGHT",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/purple-light.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=MDcDHaGnuhk"),
+    lyrics: getArmyPurpleLight,
   ),
 
   ///solo projects
@@ -806,6 +826,68 @@ const List<Song> allSongs = [
 
 
   ///seokjin
+  //happy
+  Song(
+    name: "Running Wild",
+    displayName: "RUNNING WILD",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyRunningWild,
+  ),
+  Song(
+    name: "I'll Be There",
+    displayName: "I'll BE THERE",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyIllBeThere,
+  ),
+  Song(
+    name: "Another level",
+    displayName: "ANOTHER LEVEL",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyAnotherLevel,
+  ),
+  Song(
+    name: "네게 닿을 때까지 (Falling)",
+    displayName: "네게 닿을 때까지 (FALLING)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyFalling,
+  ),
+  Song(
+    name: "Heart on the Window (with WENDY)",
+    displayName: "HEART ON THE WINDOW",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyHeartOnTheWindow,
+  ),
+  Song(
+    name: "그리움에 (I will come to you)",
+    displayName: "그리움에 (I WILL COME TO YOU)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: "Happy",
+    albumArt: "images/albums-solo/jin/jin-happy.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    lyrics: getSeokjinHappyIWillComeToYou,
+  ),
+
   //songs
   Song(
     name: "이 밤 (Tonight)",
