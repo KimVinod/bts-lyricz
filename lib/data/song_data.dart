@@ -959,6 +959,16 @@ const List<Song> allSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
     lyrics: getSeokjinIWillBeThere,
   ),
+  Song(
+    name: "네게 닿을 때까지 (Falling) (feat. Taka)",
+    displayName: "네게 닿을 때까지 (FALLING)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-falling.jpg",
+    lang: "jp",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
+    lyrics: getSeokjinFalling,
+  ),
 
 
   ///yoongi
