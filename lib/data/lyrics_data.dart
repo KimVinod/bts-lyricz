@@ -30741,7 +30741,7 @@ const Lyrics getJungkookStillWithYou = Lyrics(
       "그대 향해 한 걸음씩 걸어갈래요\n"
       "Still with you\n\n"
       "[Verse 1]\n"
-      "어두운 밤 조명 하나 없이\n"
+      "어두운 방 조명 하나 없이\n"
       "익숙해지면 안 되는데\n"
       "그게 또 익숙해\n"
       "나지막이 들리는\n"
