@@ -6,6 +6,26 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Winter Ahead (with PARK HYO SHIN)",
+    displayName: "Winter Ahead",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-winter-ahead.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
+    lyrics: getTaehyungWinterAhead,
+  ),
+  Song(
+    name: "네게 닿을 때까지 (Falling) (feat. Taka)",
+    displayName: "Falling (feat. Taka)",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-falling.jpg",
+    lang: "jp",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
+    lyrics: getSeokjinFalling,
+  ),
+  Song(
     name: "Running Wild",
     displayName: "Happy",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -44,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
     lyrics: getNamjoonNevaPlay,
-  ),
-  Song(
-    name: "Rebirth (Intro)",
-    displayName: "MUSE",
-    isSolo: IsSolo(isSolo: true, soloName: "jimin"),
-    album: "MUSE",
-    albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
-    lyrics: getJiminMuseIntro,
   ),
 ];
 
@@ -2024,6 +2034,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
     lyrics: getTaehyungFriends,
+  ),
+  Song(
+    name: "Winter Ahead (with PARK HYO SHIN)",
+    displayName: "WINTER AHEAD",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-winter-ahead.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
+    lyrics: getTaehyungWinterAhead,
   ),
 
 
