@@ -30195,6 +30195,26 @@ const Lyrics getTaehyungWinterAhead = Lyrics(
       "Paradise, mmm\n"
       "Paradise",
 );
+const Lyrics getTaehyungWhiteChristmas = Lyrics(
+  eng: "[Verse 1: V, Bing Crosby, V & Bing Crosby]\n"
+      "I'm dreaming of a white Christmas\n"
+      "Just like the ones I used to know\n"
+      "Where the treetops glisten and children listen (Listen)\n"
+      "To hear sleigh bells in the snow\n\n"
+      "[Verse 2: V, Bing Crosby, V & Bing Crosby]\n"
+      "I'm dreaming of a white Christmas\n"
+      "With every Christmas card I write\n"
+      "'May your days be merry and bright\n"
+      "And may all your Christmases be white'\n"
+      "(Where the treetops glisten and children listen)\n"
+      "(To hear sleigh bells in the snow)\n\n"
+      "[Verse 3: V, V & Bing Crosby]\n"
+      "I'm dreaming of a white Christmas\n"
+      "With every Christmas card I write\n"
+      "'May your days be merry and bright\n"
+      "And may all your Christmases be white'\n"
+      "(Merry merry merry Christmas)",
+);
 
 
 ///jungkook

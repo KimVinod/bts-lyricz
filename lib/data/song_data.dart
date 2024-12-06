@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "White Christmas (Bing Crosby ft. V of BTS)",
+    displayName: "White Christmas",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-white-christmas.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7134tEHq45eL6am9oVazZU"),
+    lyrics: getTaehyungWhiteChristmas,
+  ),
+  Song(
     name: "Winter Ahead (with PARK HYO SHIN)",
     displayName: "Winter Ahead",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -54,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
     lyrics: getSeokjinSuperTunaExtendedVer,
-  ),
-  Song(
-    name: "Neva Play (Megan Thee Stallion ft. RM of BTS)",
-    displayName: "Neva Play",
-    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
-    album: null,
-    albumArt: "images/albums-solo/rm/rm-nevaPlay.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
-    lyrics: getNamjoonNevaPlay,
   ),
 ];
 
@@ -2044,6 +2044,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
     lyrics: getTaehyungWinterAhead,
+  ),
+  Song(
+    name: "White Christmas (Bing Crosby ft. V of BTS)",
+    displayName: "White Christmas",
+    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
+    album: null,
+    albumArt: "images/albums-solo/v/v-white-christmas.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7134tEHq45eL6am9oVazZU"),
+    lyrics: getTaehyungWhiteChristmas,
   ),
 
 
