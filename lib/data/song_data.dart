@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Close to You",
+    displayName: "Close to You",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-close-to-you.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4z0vfU3JiAsl99ZHL29hMm"),
+    lyrics: getSeokjinCloseToYou,
+  ),
+  Song(
     name: "White Christmas (Bing Crosby ft. V of BTS)",
     displayName: "White Christmas",
     isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
@@ -54,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
     lyrics: getSeokjinIWillBeThere,
-  ),
-  Song(
-    name: "슈퍼 참치 (Super Tuna) (Extended Version)",
-    displayName: "슈퍼 참치 (Super Tuna) (Extended)",
-    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
-    album: null,
-    albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
-    lyrics: getSeokjinSuperTunaExtendedVer,
   ),
 ];
 
@@ -978,6 +978,16 @@ const List<Song> allSongs = [
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
     lyrics: getSeokjinFalling,
+  ),
+  Song(
+    name: "Close to You",
+    displayName: "CLOSE TO YOU",
+    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
+    album: null,
+    albumArt: "images/albums-solo/jin/jin-close-to-you.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/4z0vfU3JiAsl99ZHL29hMm"),
+    lyrics: getSeokjinCloseToYou,
   ),
 
 
