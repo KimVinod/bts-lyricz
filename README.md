@@ -3,7 +3,11 @@
 <a href='https://play.google.com/store/apps/details?id=com.kimvinod.bts_lyricz'><img alt='Get it on Google Play' src='https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/banner.png' width="50%" /></a>
 
 ## Description
-An android application using flutter framework which shows song lyrics of the biggest group BTS.
+Your ultimate offline BTS lyrics app — no distractions!
+
+Unleash your inner ARMY with Bangtan Lyricz! Dive into the world of BTS lyrics, from their debut hits to their latest chart-toppers, all in one beautifully designed, BTS-themed app. Sing along to every song, test your knowledge with the fun "Guess the Song" mini-game, and explore the complete lyrical journey of RM, Jin, SUGA, j-hope, Jimin, V, and Jung Kook.
+
+Bangtan Lyricz is completely free, offline, open-source, and ad-free, putting your privacy first. Enjoy a seamless experience with in-app updates powered by Google Play Core. Perfect for every BTS fan, whether you're a new ARMY or a seasoned veteran.
 
 ## Screenshots
 <p align = "center">
@@ -35,7 +39,7 @@ Link: https://sites.google.com/view/bts-lyricz-ver
 
 ## Credits
 Special thanks to translator armys and genius.com for the lyrics :)<br>
-I do not own any names, images and lyrics. All credits goes to BTS and BIGHIT MUSIC<br>
+I do not own any of the names, images and lyrics. All credits goes to BTS, BIGHIT MUSIC and HYBE.<br>
 App icon credit: <a href="https://in.pinterest.com/pin/807340670713498489/">Lola</a> <a href="https://www.instagram.com/addigni/">addigni</a>
 
 <p align = "center">
