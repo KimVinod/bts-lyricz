@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "LV Bag (Don Toliver ft. j-hope of BTS & Pharrell Williams)",
+    displayName: "LV Bag",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-lvBag.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
+    lyrics: getHoseokLvBag,
+  ),
+  Song(
     name: "Close to You",
     displayName: "Close to You",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -54,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
     lyrics: getSeokjinHappyRunningWild,
-  ),
-  Song(
-    name: "I’ll Be There",
-    displayName: "I’ll Be There",
-    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
-    album: null,
-    albumArt: "images/albums-solo/jin/jin-i-will-be-there.jpg",
-    lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
-    lyrics: getSeokjinIWillBeThere,
   ),
 ];
 
@@ -1659,6 +1659,16 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5wxYxygyHpbgv0EXZuqb9V"),
     lyrics: getHoseokOnTheStreet,
+  ),
+  Song(
+    name: "LV Bag (Don Toliver ft. j-hope of BTS & Pharrell Williams)",
+    displayName: "LV BAG",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-lvBag.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
+    lyrics: getHoseokLvBag,
   ),
 
 
