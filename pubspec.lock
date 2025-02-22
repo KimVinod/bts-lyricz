@@ -29,10 +29,10 @@ packages:
     dependency: transitive
     description:
       name: archive
-      sha256: "6199c74e3db4fbfbd04f66d739e72fe11c8a8957d5f219f1f4482dbde6420b5a"
+      sha256: "528579c7e4579719f04b21eeeeddfd73a18b31dabc22766893b7d1be7f49b967"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.2"
+    version: "4.0.3"
   args:
     dependency: transitive
     description:
@@ -129,22 +129,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.2"
-  dio:
-    dependency: transitive
-    description:
-      name: dio
-      sha256: "253a18bbd4851fecba42f7343a1df3a9a4c1d31a2c1b37e221086b4fa8c8dbc9"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.8.0+1"
-  dio_web_adapter:
-    dependency: transitive
-    description:
-      name: dio_web_adapter
-      sha256: e485c7a39ff2b384fa1d7e09b4e25f755804de8384358049124830b04fc4f93a
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
   dynamic_color:
     dependency: "direct main"
     description:
@@ -412,10 +396,10 @@ packages:
     dependency: transitive
     description:
       name: image
-      sha256: "8346ad4b5173924b5ddddab782fc7d8a6300178c8b1dc427775405a01701c4a6"
+      sha256: "13d3349ace88f12f4a0d175eb5c12dcdd39d35c4c109a8a13dfeb6d0bd9e31c3"
       url: "https://pub.dev"
     source: hosted
-    version: "4.5.2"
+    version: "4.5.3"
   in_app_update:
     dependency: transitive
     description:
@@ -491,10 +475,12 @@ packages:
   native_updater:
     dependency: "direct main"
     description:
-      path: "packages/native_updater"
-      relative: true
-    source: path
-    version: "0.1.1"
+      path: "."
+      ref: HEAD
+      resolved-ref: "87f5efe080fb3612f1faea66b27beea7dacd1939"
+      url: "https://github.com/KimVinod/native_updater.git"
+    source: git
+    version: "1.0.0"
   package_info_plus:
     dependency: "direct main"
     description:
