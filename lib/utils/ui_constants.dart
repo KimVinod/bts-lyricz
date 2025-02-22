@@ -67,9 +67,9 @@ ThemeData getLightTheme({required bool isMaterialYou, ColorScheme? lightColorSch
         ),
       },
     ),
-    splashColor: appUILightColor.withOpacity(0.1),
-    focusColor: appUILightColor.withOpacity(0.08),
-    hoverColor: appUILightColor.withOpacity(0.1),
+    splashColor: appUILightColor.withValues(alpha: 0.1),
+    focusColor: appUILightColor.withValues(alpha: 0.08),
+    hoverColor: appUILightColor.withValues(alpha: 0.1),
     colorScheme: isMaterialYou ? lightColorScheme ?? MaterialTheme.lightScheme().toColorScheme() : MaterialTheme.lightScheme().toColorScheme(),
   );
 }

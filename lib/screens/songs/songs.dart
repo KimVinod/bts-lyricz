@@ -123,7 +123,7 @@ class _SongsState extends State<Songs> {
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
                         colors: [
-                          Colors.black.withOpacity(0.37),
+                          Colors.black.withValues(alpha: 0.37),
                           Colors.transparent,
                         ],
                       ),
