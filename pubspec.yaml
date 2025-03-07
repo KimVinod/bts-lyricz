@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^3.12.0
-  firebase_messaging: ^15.2.3
-  firebase_analytics: ^11.4.3
-  firebase_crashlytics: ^4.3.3
+  firebase_core: ^3.12.1
+  firebase_messaging: ^15.2.4
+  firebase_analytics: ^11.4.4
+  firebase_crashlytics: ^4.3.4
 
   #persistent
   hive: ^2.2.3
@@ -50,8 +50,8 @@ dependencies:
   url_launcher: ^6.3.1
   font_awesome_flutter: ^10.8.0
   dynamic_color: ^1.7.0
-  device_info_plus: ^11.3.0
-  package_info_plus: ^8.2.1
+  device_info_plus: ^11.3.3
+  package_info_plus: ^8.3.0
 
 flutter_native_splash:
   color: "#C295E0"
