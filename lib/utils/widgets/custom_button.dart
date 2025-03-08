@@ -45,7 +45,7 @@ class CustomButton extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
+                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3)),
                     borderRadius: BorderRadius.circular(20),
                     onTap: () => onTap(),
                   ),

@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/favorites_tab.dart';
 import 'package:bts_lyrics_app/screens/home/tabs/game_tab.dart';
@@ -33,25 +32,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     });
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  Future<bool> onWillPop() {
+  void onPop(bool didPop, dynamic result) {
     if(_selectedIndex != 0) {
       _onPageChanged(0);
-      return Future.value(false);
     } else {
-      return Future.value(true);
+      Navigator.of(context).pop();
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: onWillPop,
+    return PopScope(
+      onPopInvokedWithResult: onPop,
+      canPop: _selectedIndex == 0,
       child: Scaffold(
         backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
         body: SafeArea(

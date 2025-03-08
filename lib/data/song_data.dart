@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Sweet Dreams (ft. Miguel)",
+    displayName: "Sweet Dreams",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-sweet-dreams.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
+    lyrics: getHoseokSweetDreams,
+  ),
+  Song(
     name: "LV Bag (Don Toliver ft. j-hope of BTS & Pharrell Williams)",
     displayName: "LV Bag",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
@@ -54,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
     lyrics: getSeokjinFalling,
-  ),
-  Song(
-    name: "Running Wild",
-    displayName: "Happy",
-    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
-    album: "Happy",
-    albumArt: "images/albums-solo/jin/jin-happy.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
-    lyrics: getSeokjinHappyRunningWild,
   ),
 ];
 
@@ -1669,6 +1669,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
     lyrics: getHoseokLvBag,
+  ),
+  Song(
+    name: "Sweet Dreams (ft. Miguel)",
+    displayName: "SWEET DREAMS",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-sweet-dreams.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
+    lyrics: getHoseokSweetDreams,
   ),
 
 

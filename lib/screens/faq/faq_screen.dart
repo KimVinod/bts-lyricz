@@ -8,7 +8,7 @@ class FAQScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Divider div = Divider(height: 25, thickness: 1, color: Theme.of(context).colorScheme.outline.withOpacity(0.5));
+    Divider div = Divider(height: 25, thickness: 1, color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.5));
 
     return Scaffold(
       backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,

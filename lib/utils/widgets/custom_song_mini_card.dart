@@ -54,7 +54,7 @@ class CustomSongMiniCard extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
+                    overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3)),
                     borderRadius: BorderRadius.circular(20),
                     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(
                       songFullName: song.name,

@@ -27,7 +27,7 @@ class CustomSongCard extends StatelessWidget {
                     image: DecorationImage(image: AssetImage(song.albumArt), fit: BoxFit.fill)
                 ),
                 child: InkWell(
-                  overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3)),
+                  overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3)),
                   borderRadius: BorderRadius.circular(12),
                   onTap: () => onTap(context),
                 ),
