@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "MONA LISA",
+    displayName: "MONA LISA",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-mona-lisa.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
+    lyrics: getHoseokMonaLisa,
+  ),
+  Song(
     name: "Sweet Dreams (ft. Miguel)",
     displayName: "Sweet Dreams",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
@@ -54,16 +64,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
     lyrics: getTaehyungWinterAhead,
-  ),
-  Song(
-    name: "네게 닿을 때까지 (Falling) (feat. Taka)",
-    displayName: "Falling (feat. Taka)",
-    isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
-    album: null,
-    albumArt: "images/albums-solo/jin/jin-falling.jpg",
-    lang: "jp",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
-    lyrics: getSeokjinFalling,
   ),
 ];
 
@@ -1679,6 +1679,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
     lyrics: getHoseokSweetDreams,
+  ),
+  Song(
+    name: "MONA LISA",
+    displayName: "MONA LISA",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-mona-lisa.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
+    lyrics: getHoseokMonaLisa,
   ),
 
 
