@@ -41,7 +41,7 @@ dependencies:
 
   #util
   app_settings: ^5.2.0
-  flutter_local_notifications: ^18.0.1
+  flutter_local_notifications: ^19.0.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
