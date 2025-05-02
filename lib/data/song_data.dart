@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Stop The Rain",
+    displayName: "STOP THE RAIN",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-stopTheRain.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7kb6IV0z8Nd7vejSdAq0YN"),
+    lyrics: getNamjoonStopTheRain,
+  ),
+  Song(
     name: "MONA LISA",
     displayName: "MONA LISA",
     isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
@@ -44,26 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4z0vfU3JiAsl99ZHL29hMm"),
     lyrics: getSeokjinCloseToYou,
-  ),
-  Song(
-    name: "White Christmas (Bing Crosby ft. V of BTS)",
-    displayName: "White Christmas",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
-    albumArt: "images/albums-solo/v/v-white-christmas.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/7134tEHq45eL6am9oVazZU"),
-    lyrics: getTaehyungWhiteChristmas,
-  ),
-  Song(
-    name: "Winter Ahead (with PARK HYO SHIN)",
-    displayName: "Winter Ahead",
-    isSolo: IsSolo(isSolo: true, soloName: "taehyung"),
-    album: null,
-    albumArt: "images/albums-solo/v/v-winter-ahead.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
-    lyrics: getTaehyungWinterAhead,
   ),
 ];
 
@@ -1122,6 +1112,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
     lyrics: getNamjoonNevaPlay,
+  ),
+  Song(
+    name: "Stop The Rain (TABLO x RM)",
+    displayName: "STOP THE RAIN",
+    isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
+    album: null,
+    albumArt: "images/albums-solo/rm/rm-stopTheRain.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/7kb6IV0z8Nd7vejSdAq0YN"),
+    lyrics: getNamjoonStopTheRain,
   ),
 
 
