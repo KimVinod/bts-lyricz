@@ -39,31 +39,25 @@ class FAQScreen extends StatelessWidget {
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('3.\nSongs released before debut are currently not listed.',
+              child: Text('3.\nSongs which does not have lyrics are not listed.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('4.\nSongs which does not have lyrics are not listed.',
+              child: Text('4.\nNo cover songs.\nI think only bts-made songs and collabs where they get credited should be included.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('5.\nNo cover songs.\nI think only bts-made songs and collabs where they get credited should be included.',
+              child: Text('5.\nUnofficial songs sung by two or more members are listed under:\nDiscography -> Unofficial Songs.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             div,
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('6.\nUnofficial songs sung by two or more members are listed under:\nDiscography -> Unofficial Songs.',
-                style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
-            ),
-            div,
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('7.\nNotifications not working?\n'
+              child: Text('6.\nNotifications not working?\n'
                   'Your phone can restrict notifications to extend battery life.\n'
                   'Try doing these following steps:\n'
                   '- Enable auto-start from phone settings.',

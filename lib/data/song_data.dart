@@ -6,8 +6,8 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
-    name: "Stop The Rain",
-    displayName: "STOP THE RAIN",
+    name: "Stop The Rain (TABLO x RM)",
+    displayName: "Stop The Rain",
     isSolo: IsSolo(isSolo: true, soloName: "namjoon"),
     album: null,
     albumArt: "images/albums-solo/rm/rm-stopTheRain.jpg",
