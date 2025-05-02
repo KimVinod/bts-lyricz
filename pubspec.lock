@@ -485,10 +485,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "87f5efe080fb3612f1faea66b27beea7dacd1939"
+      resolved-ref: "6b8fdd636065001eda4adcf3b649b11017ab4729"
       url: "https://github.com/KimVinod/native_updater.git"
     source: git
-    version: "1.0.0"
+    version: "1.0.1"
   package_info_plus:
     dependency: "direct main"
     description:
