@@ -275,7 +275,7 @@ class SettingsService {
     }
   }
 
-  static void share() => Share.share(shareText);
+  static void share() => SharePlus.instance.share(ShareParams(text: shareText));
 
   static void showSourceCode() async {
     if(await canLaunchUrlString(githubUrl)) {
