@@ -25,7 +25,7 @@ class BTSLyricsApp extends StatefulWidget {
 }
 
 class BTSLyricsAppState extends State<BTSLyricsApp> {
-  ThemeMode? _themeMode;
+  late ThemeMode _themeMode;
   late bool isMaterialYou;
 
   @override
@@ -37,10 +37,8 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
   }
 
   void _initTheme() {
-    setState(() {
       _themeMode = widget.themeMode;
       isMaterialYou = widget.isMaterialYou;
-    });
   }
 
   void changeTheme(ThemeMode themeMode) {

@@ -28,47 +28,51 @@ class _GameTabState extends State<GameTab> {
   final _random = Random();
   List<Song> options = [];
   List<Song> songs = [];
-  String? _selectedLanguage;
+  late String _selectedLanguage;
+  bool isLang = false;
 
   void loadSongs() {
-    songs = GameService.filterSongs(allSongs, _selectedLanguage!);
+    songs = GameService.filterSongs(allSongs, _selectedLanguage);
   }
 
   void startGame(List<Song> songs) {
-    gameState = GameState.playing;
-    int randomIndex = _random.nextInt(songs.length);
-    Song song = songs[randomIndex];
-    currentLyrics = GameService.getRandomLyrics(song.lyrics, 4, _selectedLanguage!, 10);
-    if(currentLyrics.eng == "error") startGame(songs);
-    correctAnswer = song;
+    setState(() {
+      gameState = GameState.playing;
+      int randomIndex = _random.nextInt(songs.length);
+      Song song = songs[randomIndex];
+      currentLyrics = GameService.getRandomLyrics(song.lyrics, 4, _selectedLanguage, 10);
+      if(currentLyrics.eng == "error") startGame(songs);
+      correctAnswer = song;
 
-    List<Song> filteredSongs = songs.where((song) => song.name != correctAnswer!.name).toList();
-    filteredSongs.shuffle();
+      List<Song> filteredSongs = songs.where((song) => song.name != correctAnswer!.name).toList();
+      filteredSongs.shuffle();
 
-    int correctAnswerIndex = _random.nextInt(4);
-    filteredSongs.insert(correctAnswerIndex, song);
+      int correctAnswerIndex = _random.nextInt(4);
+      filteredSongs.insert(correctAnswerIndex, song);
 
-    options = filteredSongs.take(4).toList();
-    setState(() {});
+      options = filteredSongs.take(4).toList();
+    });
   }
 
   void restartGame({required bool isReady}) {
-    gameState = isReady ? GameState.ready : GameState.notReady;
-    currentLyrics = const Lyrics();
-    correctAnswer = null;
-    options = [];
-    if(isReady) startGame(songs);
-    setState(() {});
+    setState(() {
+      gameState = isReady ? GameState.ready : GameState.notReady;
+      currentLyrics = const Lyrics();
+      correctAnswer = null;
+      options = [];
+      if(isReady) startGame(songs);
+    });
   }
 
   void checkAnswer(int selectedOptionIndex) {
     String selectedOption = options[selectedOptionIndex].name;
-    if (selectedOption == correctAnswer!.name) {
-      gameState = GameState.correct;
-    } else {
-      gameState = GameState.incorrect;
-    }
-    setState(() {});
+    setState(() {
+      if (selectedOption == correctAnswer!.name) {
+        gameState = GameState.correct;
+      } else {
+        gameState = GameState.incorrect;
+      }
+    });
   }
 
   @override
@@ -78,8 +82,11 @@ class _GameTabState extends State<GameTab> {
   }
 
   Future<void> _loadLanguagePreference() async {
-    _selectedLanguage = await SettingsService.loadGameLanguage();
-    setState(() {});
+     final language = await SettingsService.loadGameLanguage();
+    setState(() {
+    _selectedLanguage = language;
+    isLang = true;
+    });
   }
 
   @override
@@ -100,15 +107,18 @@ class _GameTabState extends State<GameTab> {
               tooltip: "Select language",
               onPressed: () => SettingsService.openGameLanguageDialog(context, (result) {
                 if (result == true) {
-                  _loadLanguagePreference().then((value) => loadSongs());
-                  restartGame(isReady: false);
+                  _loadLanguagePreference().then((value) {
+                    loadSongs();
+                    restartGame(isReady: false);
+                  });
                 }
               }),
             ),
           ],
         ),
       ],
-      body: Padding(
+      body: isLang
+          ? Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -155,7 +165,7 @@ class _GameTabState extends State<GameTab> {
             else
               if (gameState == GameState.playing)
                 ...[
-                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
+                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage),
                   const SizedBox(height: 16),
                   Text(
                     "Choose the right option",
@@ -192,7 +202,7 @@ class _GameTabState extends State<GameTab> {
                 ]
               else
                 ...[
-                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage!),
+                  GameLyricsCard(currentLyrics: currentLyrics, selectedLanguage: _selectedLanguage),
                   const SizedBox(height: 16),
                   GestureDetector(
                     onTap: () => setState(() {}),
@@ -245,7 +255,8 @@ class _GameTabState extends State<GameTab> {
                 ],
           ],
         ),
-      ),
+      )
+          : SizedBox(),
     );
   }
 

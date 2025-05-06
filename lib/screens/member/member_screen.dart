@@ -22,7 +22,6 @@ class _MemberState extends State<Member> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadSongs();
   }
