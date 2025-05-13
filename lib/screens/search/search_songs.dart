@@ -31,9 +31,7 @@ class SearchSongsState extends State<SearchSongs> {
     final seen = <String>{};
     List<Song> uniqueList = allSongs.where((e) => seen.add(e.name)).toList();
     uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
-    setState(() {
-      songs = uniqueList;
-    });
+    songs = uniqueList;
   }
 
   @override

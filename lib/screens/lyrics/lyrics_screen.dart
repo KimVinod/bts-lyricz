@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:bts_lyrics_app/data/song_model.dart';
 import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/services/settings_service.dart';
@@ -32,7 +31,6 @@ class _LyricsPageState extends State<LyricsPage> {
         isFav = true;
       });
     }
-    log("load favList: $userFavLyrics");
   }
 
   @override
@@ -115,7 +113,6 @@ class _LyricsPageState extends State<LyricsPage> {
                           });
                         }
                         userFavLyricsBox.put("favouritesList", userFavLyrics);
-                        log("current favList: $userFavLyrics");
                       },
                       icon: Icon(isFav ? Icons.favorite : Icons.favorite_outline),
                       tooltip: "Add to favorites",

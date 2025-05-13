@@ -24,9 +24,7 @@ class _SongsState extends State<Songs> {
   final ScrollController _scrollController = ScrollController();
 
   void loadSongs() {
-    setState(() {
       songs = allSongs.where((s) => s.album == widget.albumName).toList();
-    });
   }
 
   Future<void> _calculateLuminance() async {
