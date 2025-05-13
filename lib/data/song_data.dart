@@ -180,6 +180,16 @@ const List<Song> allSongs = [
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=MDcDHaGnuhk"),
     lyrics: getArmyPurpleLight,
   ),
+  Song(
+    name: "The wait is over",
+    displayName: "THE WAIT IS OVER",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/the-wait-is-over.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BpezaGDs3r8"),
+    lyrics: getArmyTheWaitIsOver,
+  ),
 
   ///solo projects
   ///namjoon
