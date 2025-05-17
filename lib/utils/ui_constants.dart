@@ -14,50 +14,6 @@ const Color appCardColor = Color.fromRGBO(152, 105, 190, 1);
 const Color appThumbBarColor = Color.fromRGBO(130, 70, 190, 1);
 const Color appOffBlackColor = Color(0xff262626);
 
-// ThemeData lightThemeOld = ThemeData(
-//   pageTransitionsTheme: const PageTransitionsTheme(
-//     builders: <TargetPlatform, PageTransitionsBuilder>{
-//       TargetPlatform.android: ZoomPageTransitionsBuilder(
-//         allowEnterRouteSnapshotting: false,
-//       ),
-//     },
-//   ),
-//   cardColor: appBarColor,  //home bottom bar, divider
-//   appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
-//   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.black), overlayColor: WidgetStateProperty.all(Colors.white30))),
-//   radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.black)),
-//   indicatorColor: Colors.purple[100],
-//   chipTheme: const ChipThemeData(backgroundColor: appCardColor, side: BorderSide(color: appBarColor)),
-//   colorScheme: ColorScheme.fromSeed(
-//     seedColor: appUILightColor,
-//     brightness: Brightness.light,
-//     shadow: Colors.purple.shade700,
-//     surface: appUILightColor,  //background
-//     secondary: appUILightColor, //home appbar
-//     tertiary: appCardColor,  //card, scroller
-//   ),
-// );
-// ThemeData darkThemeOld = ThemeData(
-//   pageTransitionsTheme: const PageTransitionsTheme(
-//     builders: <TargetPlatform, PageTransitionsBuilder>{
-//       TargetPlatform.android: ZoomPageTransitionsBuilder(
-//         allowEnterRouteSnapshotting: false,
-//       ),
-//     },
-//   ),
-//   appBarTheme: const AppBarTheme(backgroundColor: appOffBlackColor),
-//   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
-//   textButtonTheme: TextButtonThemeData( style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.white), overlayColor: WidgetStateProperty.all(Colors.white30))),
-//   radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(Colors.white)),
-//   colorScheme: ColorScheme.fromSeed(
-//     seedColor: Colors.black,
-//     brightness: Brightness.dark,
-//     surface: Colors.black,  //background
-//     secondary: appOffBlackColor, //home appbar
-//     tertiary: appOffBlackColor,  //card, scroller
-//   ),
-// );
-
 ThemeData getLightTheme({required bool isMaterialYou, ColorScheme? lightColorScheme}) {
   return ThemeData(
     pageTransitionsTheme: const PageTransitionsTheme(

@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:bts_lyrics_app/data/song_data.dart';
 import 'package:bts_lyrics_app/utils/widgets/custom_song_mini_card.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
@@ -22,12 +21,11 @@ class _FavoritesTabState extends State<FavoritesTab> {
 
   Future loadData() async {
     userFavLyricsBox = await Hive.openBox('userFavourites');
+    userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
     setState(() {
-      userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
       userFavLyrics = userFavLyrics.reversed.toList();
       isBoxInit = true;
     });
-    log("load favList: $userFavLyrics");
   }
 
   @override

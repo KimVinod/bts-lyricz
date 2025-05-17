@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   int currentPage = 0;
   int _selectedIndex = 0;
-  ScrollController scrollController = ScrollController();
+  final ScrollController scrollController = ScrollController();
   final PageController _pageController = PageController();
 
   @override
