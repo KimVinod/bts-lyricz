@@ -181,6 +181,16 @@ const List<Song> allSongs = [
     lyrics: getArmyPurpleLight,
   ),
   Song(
+    name: "We are Forever ARMY",
+    displayName: "We are Forever ARMY",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/we-are-forever-army.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=lrrseNJccDY"),
+    lyrics: getArmyWeAreForeverArmy,
+  ),
+  Song(
     name: "The wait is over",
     displayName: "THE WAIT IS OVER",
     isArmy: true,
@@ -189,6 +199,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BpezaGDs3r8"),
     lyrics: getArmyTheWaitIsOver,
+  ),
+  Song(
+    name: "your our guiding light",
+    displayName: "your our guiding light",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/your-our-guiding-light.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=gIsW_Pj6oLw"),
+    lyrics: getArmyYourOurGuidingLight,
   ),
 
   ///solo projects
