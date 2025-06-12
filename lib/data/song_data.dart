@@ -161,7 +161,7 @@ const List<Song> allSongs = [
     lyrics: getArmyWeWillBeAlright,
   ),
   Song(
-    name: "Shooting Star (by BTS FOR ARMY'S)",
+    name: "Shooting Star (by BTS FOR ARMY'S LATINOAMÉRICA)",
     displayName: "SHOOTING STAR",
     isArmy: true,
     isSolo: IsSolo(isSolo: true),
