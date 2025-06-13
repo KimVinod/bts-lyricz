@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Killin' It Girl (feat. GloRilla)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirl,
+  ),
+  Song(
     name: "Don't Say You Love Me",
     displayName: "Echo",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
     lyrics: getHoseokSweetDreams,
-  ),
-  Song(
-    name: "LV Bag (Don Toliver ft. j-hope of BTS & Pharrell Williams)",
-    displayName: "LV Bag",
-    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
-    album: null,
-    albumArt: "images/albums-solo/jhope/jhope-lvBag.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
-    lyrics: getHoseokLvBag,
   ),
 ];
 
@@ -2131,6 +2131,26 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
     lyrics: getHoseokMonaLisa,
+  ),
+  Song(
+    name: "Killin' It Girl (feat. GloRilla)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirl,
+  ),
+  Song(
+    name: "Killin' It Girl (Solo Version)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirlSoloVer,
   ),
 
 
