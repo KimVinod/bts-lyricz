@@ -6,6 +6,16 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Killin' It Girl (feat. GloRilla)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirl,
+  ),
+  Song(
     name: "Don't Say You Love Me",
     displayName: "Echo",
     isSolo: IsSolo(isSolo: true, soloName: "seokjin"),
@@ -44,16 +54,6 @@ const List<Song> newReleaseSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
     lyrics: getHoseokSweetDreams,
-  ),
-  Song(
-    name: "LV Bag (Don Toliver ft. j-hope of BTS & Pharrell Williams)",
-    displayName: "LV Bag",
-    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
-    album: null,
-    albumArt: "images/albums-solo/jhope/jhope-lvBag.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
-    lyrics: getHoseokLvBag,
   ),
 ];
 
@@ -161,7 +161,7 @@ const List<Song> allSongs = [
     lyrics: getArmyWeWillBeAlright,
   ),
   Song(
-    name: "Shooting Star (by BTS FOR ARMY'S)",
+    name: "Shooting Star (by BTS FOR ARMY'S LATINOAMÉRICA)",
     displayName: "SHOOTING STAR",
     isArmy: true,
     isSolo: IsSolo(isSolo: true),
@@ -181,6 +181,16 @@ const List<Song> allSongs = [
     lyrics: getArmyPurpleLight,
   ),
   Song(
+    name: "We are Forever ARMY",
+    displayName: "We are Forever ARMY",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/we-are-forever-army.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=lrrseNJccDY"),
+    lyrics: getArmyWeAreForeverArmy,
+  ),
+  Song(
     name: "The wait is over",
     displayName: "THE WAIT IS OVER",
     isArmy: true,
@@ -189,6 +199,16 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BpezaGDs3r8"),
     lyrics: getArmyTheWaitIsOver,
+  ),
+  Song(
+    name: "your our guiding light",
+    displayName: "your our guiding light",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/your-our-guiding-light.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=gIsW_Pj6oLw"),
+    lyrics: getArmyYourOurGuidingLight,
   ),
 
   ///solo projects
@@ -2111,6 +2131,26 @@ const List<Song> allSongs = [
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
     lyrics: getHoseokMonaLisa,
+  ),
+  Song(
+    name: "Killin' It Girl (feat. GloRilla)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirl,
+  ),
+  Song(
+    name: "Killin' It Girl (Solo Version)",
+    displayName: "Killin' It Girl",
+    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
+    album: null,
+    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    lyrics: getHoseokKillinItGirlSoloVer,
   ),
 
 
