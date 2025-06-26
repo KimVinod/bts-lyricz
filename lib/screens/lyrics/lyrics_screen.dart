@@ -9,10 +9,10 @@ import 'package:hive/hive.dart';
 
 class LyricsPage extends StatefulWidget {
   final Lyrics songLyrics;
-  final String songName, songFullName;
+  final String songName, songFullName, releaseDate;
   final SongLink songLink;
 
-  const LyricsPage({super.key, required this.songLyrics, required this.songName, required this.songFullName, required this.songLink});
+  const LyricsPage({super.key, required this.songLyrics, required this.songName, required this.songFullName, required this.songLink, required this.releaseDate});
 
   @override
   State<LyricsPage> createState() => _LyricsPageState();
@@ -70,12 +70,12 @@ class _LyricsPageState extends State<LyricsPage> {
               body: TabBarView(
                 children: [
                   if (widget.songLyrics.kr != null)
-                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr),
+                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr, releaseDate: widget.releaseDate),
                   if (widget.songLyrics.jp != null)
-                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp),
-                  buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng),
+                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp, releaseDate: widget.releaseDate),
+                  buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng, releaseDate: widget.releaseDate),
                   if(widget.songLyrics.kr != null || widget.songLyrics.jp != null)
-                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom),
+                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom, releaseDate: widget.releaseDate),
                 ],
               ),
             ),

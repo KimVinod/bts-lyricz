@@ -131,13 +131,26 @@ class _SongsState extends State<Songs> {
                     alignment: Alignment.bottomLeft,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Text(
-                        widget.albumName,
-                        style: GoogleFonts.openSans(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
-                        ),
+                      child: Wrap(
+                        direction: Axis.vertical,
+                        children: [
+                          Text(
+                            widget.albumName,
+                            style: GoogleFonts.openSans(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                            ),
+                          ),
+                          Text(
+                            "Released: ${songs.firstOrNull != null ? songs.firstOrNull!.releaseDate : "-"}",
+                            style: GoogleFonts.openSans(
+                              fontSize: 13.0,
+                              //fontWeight: FontWeight.bold,
+                              color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -183,6 +196,7 @@ class _SongsState extends State<Songs> {
                             songName: songs[index].displayName,
                             songLyrics: songs[index].lyrics,
                             songLink: songs[index].songLink,
+                            releaseDate: songs[index].releaseDate,
                           ))),
                         );
                       },

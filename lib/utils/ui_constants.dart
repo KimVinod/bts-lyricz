@@ -182,7 +182,7 @@ Container buildNA(BuildContext context) {
   );
 }
 
-Widget buildTabContent({required BuildContext context, required String name, String? lyrics}) {
+Widget buildTabContent({required BuildContext context, required String name, String? lyrics, required String releaseDate}) {
   return SizedBox(
     width: double.infinity,
     child: Padding(
@@ -199,7 +199,11 @@ Widget buildTabContent({required BuildContext context, required String name, Str
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 8.0),
+            Text(
+              "Released: $releaseDate",
+              style: GoogleFonts.openSans(fontSize: 14.0),
+            ),
+            const SizedBox(height: 24.0),
             SelectableText(
               lyrics,
               style: GoogleFonts.openSans(

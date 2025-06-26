@@ -308,7 +308,7 @@ class _GameTabState extends State<GameTab> {
                       child: InkWell(
                         overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3)),
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink))) : checkAnswer(index),
+                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink, releaseDate: song.releaseDate))) : checkAnswer(index),
                       ),
                     ),
                   ),

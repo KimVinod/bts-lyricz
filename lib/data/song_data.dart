@@ -13,6 +13,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    releaseDate: "13 Jun 2025",
     lyrics: getHoseokKillinItGirl,
   ),
   Song(
@@ -23,6 +24,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoDontSayYouLoveMe,
   ),
   Song(
@@ -33,6 +35,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/rm/rm-stopTheRain.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7kb6IV0z8Nd7vejSdAq0YN"),
+    releaseDate: "1 May 2025",
     lyrics: getNamjoonStopTheRain,
   ),
   Song(
@@ -43,6 +46,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jhope/jhope-mona-lisa.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
+    releaseDate: "21 Mar 2025",
     lyrics: getHoseokMonaLisa,
   ),
   Song(
@@ -53,6 +57,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/albums-solo/jhope/jhope-sweet-dreams.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
+    releaseDate: "7 Mar 2025",
     lyrics: getHoseokSweetDreams,
   ),
 ];
@@ -68,6 +73,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/i-purple-you.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=qR03i1LfKFQ"),
+    releaseDate: "2017",
     lyrics: getArmyIPurpleYou,
   ),
   Song(
@@ -78,6 +84,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/fly.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=YtFFLbpzpJw"),
+    releaseDate: "24 Jun 2017",
     lyrics: getArmyFly,
   ),
   Song(
@@ -88,6 +95,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/we-will-be-fine.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=-4s67Sks6XE"),
+    releaseDate: "9 Jul 2018",
     lyrics: getArmyWeWillBeFine,
   ),
   Song(
@@ -98,6 +106,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/see-you-there.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=eyvuh2jPkno"),
+    releaseDate: "8 Jul 2019",
     lyrics: getArmySeeYouThere,
   ),
   Song(
@@ -108,6 +117,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/7reasons.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=9zvspV-NUlI"),
+    releaseDate: "9 Jul 2020",
     lyrics: getArmy7Reasons,
   ),
   Song(
@@ -118,6 +128,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/w8.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=LZZX0yzHU3k"),
+    releaseDate: "8 Jul 2021",
     lyrics: getArmyW8,
   ),
   Song(
@@ -128,6 +139,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/7wonders.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=X19pZN14Kk8"),
+    releaseDate: "26 Apr 2022",
     lyrics: getArmy7Wonders,
   ),
   Song(
@@ -138,6 +150,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/someone-in-seoul.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=zsxwE4C0ZY8"),
+    releaseDate: "8 Jul 2022",
     lyrics: getArmySomeoneInSeoul,
   ),
   Song(
@@ -148,6 +161,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/loveLetters.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=lC9NnpxC9K8"),
+    releaseDate: "12 Jun 2023",
     lyrics: getArmyLoveLetters,
   ),
   Song(
@@ -158,6 +172,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/we-will-be-alright.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=vLYUlk2ZAEg"),
+    releaseDate: "30 Aug 2023",
     lyrics: getArmyWeWillBeAlright,
   ),
   Song(
@@ -168,6 +183,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/shooting-star.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=21BZO8SBVLg"),
+    releaseDate: "31 Aug 2024",
     lyrics: getArmyShootingStar,
   ),
   Song(
@@ -178,6 +194,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/purple-light.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=MDcDHaGnuhk"),
+    releaseDate: "3 Sep 2024",
     lyrics: getArmyPurpleLight,
   ),
   Song(
@@ -188,6 +205,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/we-are-forever-army.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=lrrseNJccDY"),
+    releaseDate: "5 Jun 2024",
     lyrics: getArmyWeAreForeverArmy,
   ),
   Song(
@@ -198,6 +216,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/the-wait-is-over.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BpezaGDs3r8"),
+    releaseDate: "9 Mar 2025",
     lyrics: getArmyTheWaitIsOver,
   ),
   Song(
@@ -208,6 +227,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/your-our-guiding-light.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=gIsW_Pj6oLw"),
+    releaseDate: "24 Mar 2025",
     lyrics: getArmyYourOurGuidingLight,
   ),
 
@@ -223,6 +243,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmVoice,
   ),
   Song(
@@ -233,6 +254,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmDoYou,
   ),
   Song(
@@ -243,6 +265,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmAwakening,
   ),
   Song(
@@ -253,6 +276,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmMonster,
   ),
   Song(
@@ -263,6 +287,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmThrowAway,
   ),
   Song(
@@ -273,6 +298,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmJoke,
   ),
   Song(
@@ -283,6 +309,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmGodRap,
   ),
   Song(
@@ -293,6 +320,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmRush,
   ),
   Song(
@@ -303,6 +331,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmLife,
   ),
   Song(
@@ -313,6 +342,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmAdrift,
   ),
   Song(
@@ -323,6 +353,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mixtape.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sets/rm-rap-monster"),
+    releaseDate: "20 Mar 2015",
     lyrics: getNamjoonRmIBelieve,
   ),
 
@@ -335,6 +366,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoTokyo,
   ),
   Song(
@@ -345,6 +377,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoSeoul,
   ),
   Song(
@@ -355,6 +388,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoMoonchild,
   ),
   Song(
@@ -365,6 +399,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoBadbye,
   ),
   Song(
@@ -375,6 +410,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoUhgood,
   ),
   Song(
@@ -385,6 +421,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoEverythingoes,
   ),
   Song(
@@ -395,6 +432,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-mono.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vsTrL1h2bRHP1kUPvlIyb"),
+    releaseDate: "23 Oct 2018",
     lyrics: getNamjoonMonoForeverRain,
   ),
 
@@ -407,6 +445,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoYun,
   ),
   Song(
@@ -417,6 +456,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoStillLife,
   ),
   Song(
@@ -427,6 +467,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoAllDay,
   ),
   Song(
@@ -437,6 +478,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoForgetful,
   ),
   Song(
@@ -447,6 +489,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoCloser,
   ),
   Song(
@@ -457,6 +500,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoChangePt2,
   ),
   Song(
@@ -467,6 +511,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoLonely,
   ),
   Song(
@@ -477,6 +522,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoHectic,
   ),
   Song(
@@ -487,6 +533,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoWildFlower,
   ),
   Song(
@@ -497,6 +544,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-indigo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2wGinO7YWLHN2sULIr4a7v"),
+    releaseDate: "2 Dec 2022",
     lyrics: getNamjoonIndigoNo2,
   ),
 
@@ -509,6 +557,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPRightPeopleWrongPerson,
   ),
   Song(
@@ -519,6 +568,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPNuts,
   ),
   Song(
@@ -529,6 +579,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPOutOfLove,
   ),
   Song(
@@ -539,6 +590,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPDomodachi,
   ),
   Song(
@@ -549,6 +601,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPInterlude,
   ),
   Song(
@@ -559,6 +612,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPGroin,
   ),
   Song(
@@ -569,6 +623,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPHeaven,
   ),
   Song(
@@ -579,6 +634,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPLost,
   ),
   Song(
@@ -589,6 +645,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPAroundTheWorldInADay,
   ),
   Song(
@@ -599,6 +656,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "24 May 2024",
     lyrics: getNamjoonRPWPCreditRoll,
   ),
   Song(
@@ -609,6 +667,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-rpwp.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/512dQp7hBbDDurodCqSw5I"),
+    releaseDate: "10 May 2024",
     lyrics: getNamjoonComeBackToMe,
   ),
 
@@ -621,6 +680,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=5MrKHkAb4xA"),
+    releaseDate: "11 Mar 2008",
     lyrics: getNamjoonCheckTheVoice,
   ),
   Song(
@@ -631,6 +691,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=RyxphDFbFRI"),
+    releaseDate: "Jun 2008",
     lyrics: getNamjoon7Dayz,
   ),
   Song(
@@ -641,6 +702,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=osvcpdAJ6nM"),
+    releaseDate: "2008",
     lyrics: getNamjoonCanWe,
   ),
   Song(
@@ -650,6 +712,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/members/joon.jpg",
     lang: "kr",
+    releaseDate: "17 Sep 2008",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=GPRqkN-z2VA"),
     lyrics: getNamjoonTheRealest,
   ),
@@ -661,6 +724,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=dp8CMcVvgss"),
+    releaseDate: "17 Sep 2008",
     lyrics: getNamjoonKanjiPlayer,
   ),
   Song(
@@ -671,6 +735,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=1mS01LxgKxI"),
+    releaseDate: "Jun 2008",
     lyrics: getNamjoonFuckCockroachez,
   ),
   Song(
@@ -681,6 +746,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=hsC-i2TajV8"),
+    releaseDate: "28 Jun 2008",
     lyrics: getNamjoonLaLaLa,
   ),
   Song(
@@ -691,6 +757,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=RAjcAZw-UI8"),
+    releaseDate: "4 Jul 2008",
     lyrics: getNamjoonRecording,
   ),
   Song(
@@ -700,6 +767,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/members/joon.jpg",
     lang: "kr",
+    releaseDate: "4 Jul 2008",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=1myHveqM5A4"),
     lyrics: getNamjoonFavoriteStyle,
   ),
@@ -711,6 +779,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=wtq7z96pDf4"),
+    releaseDate: "27 Jan 2009",
     lyrics: getNamjoon2009GroupRap,
   ),
   Song(
@@ -721,6 +790,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=OqVG4l-WrBk"),
+    releaseDate: "1 Aug 2009",
     lyrics: getNamjoonListenFirst,
   ),
   Song(
@@ -731,6 +801,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=4gdZEVqLs_Q"),
+    releaseDate: "25 Oct 2009",
     lyrics: getNamjoonTheSwagger,
   ),
   Song(
@@ -741,6 +812,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=cWF-uo9MVVI"),
+    releaseDate: "12 Jan 2009",
     lyrics: getNamjoonWickedMan,
   ),
   Song(
@@ -751,6 +823,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=xfy1Pf8CL18"),
+    releaseDate: "6 Sep 2010",
     lyrics: getNamjoonSeventeen,
   ),
   Song(
@@ -761,6 +834,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=QacgtY7dx5s"),
+    releaseDate: "30 Aug 2010",
     lyrics: getNamjoonDreamin,
   ),
   Song(
@@ -771,6 +845,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/mix-final"),
+    releaseDate: "22 DDec 2012",
     lyrics: getNamjoonRapMonster,
   ),
   Song(
@@ -781,6 +856,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=XxBmc-xJOiE"),
+    releaseDate: "2011",
     lyrics: getNamjoonGlory,
   ),
   Song(
@@ -791,6 +867,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=yEPI7lTuJz4"),
+    releaseDate: "Jun 2011",
     lyrics: getNamjoonRollin,
   ),
   Song(
@@ -801,6 +878,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=e3gdCnsHWU0"),
+    releaseDate: "22 Dec 2012",
     lyrics: getNamjoonBangtanRoom,
   ),
   Song(
@@ -811,6 +889,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=Y4J5sRsRfdE"),
+    releaseDate: "17 Dec 2012",
     lyrics: getNamjoonVote,
   ),
   Song(
@@ -821,6 +900,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/wonniefx/rap-monster-illest-bitch"),
+    releaseDate: "2012",
     lyrics: getNamjoonIllestBitch,
   ),
   Song(
@@ -831,6 +911,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=7A2Y6bB3heg"),
+    releaseDate: "2012",
     lyrics: getNamjoonThinkinBoutU,
   ),
   Song(
@@ -841,6 +922,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=G0B_S-7FyYc"),
+    releaseDate: "2 Feb 2012",
     lyrics: getNamjoonRegularGirl,
   ),
   Song(
@@ -851,6 +933,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "eng",
     songLink: SongLink(soundcloud: "https://soundcloud.com/destroymonstervn/00-suicide-rap-monster"),
+    releaseDate: "1 Jan 2012",
     lyrics: getNamjoonSuicide,
   ),
   Song(
@@ -861,6 +944,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/monzterlude/tipsy-rapmonster-ft-supreme-boi"),
+    releaseDate: "2011",
     lyrics: getNamjoonTipsy,
   ),
   Song(
@@ -871,6 +955,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/where-u-at-by-rap-monster"),
+    releaseDate: "3 Jan 2013",
     lyrics: getNamjoonWhereUAt,
   ),
   Song(
@@ -881,6 +966,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/favorite-girl-1"),
+    releaseDate: "28 Jan 2013",
     lyrics: getNamjoonFavoriteGirl,
   ),
   Song(
@@ -891,6 +977,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/something-by-rap-monster-1"),
+    releaseDate: "21 Sep 2013",
     lyrics: getNamjoonSomething,
   ),
   Song(
@@ -901,6 +988,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/joon.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/rap-monster-too-much"),
+    releaseDate: "22 Nov 2013",
     lyrics: getNamjoonTooMuch,
   ),
   Song(
@@ -911,6 +999,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-monterlude.jpg",
     lang: "eng",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/monterlude-by-rap-monster"),
+    releaseDate: "17 Jan 2014",
     lyrics: getNamjoonMonterlude,
   ),
   Song(
@@ -921,6 +1010,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-unpackYourBags.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/soulscape-x-rapmonster"),
+    releaseDate: "20 May 2014",
     lyrics: getNamjoonUnpackYourBags,
   ),
   Song(
@@ -931,6 +1021,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-pdd.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=WFArWe1MLW8"),
+    releaseDate: "5 Mar 2015",
     lyrics: getNamjoonPdd,
   ),
   Song(
@@ -941,6 +1032,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-u.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5LlgJFQLF4uXmt1nCtdyTJ"),
+    releaseDate: "12 Aug 2015",
     lyrics: getNamjoonU,
   ),
   Song(
@@ -951,6 +1043,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-buckubucku.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4e3DIkvwzyWu3ZpZFZJb5o"),
+    releaseDate: "16 Mar 2015",
     lyrics: getNamjoonBuckubucku,
   ),
   Song(
@@ -961,6 +1054,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-khawah.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=kOMKhK50rzs"),
+    releaseDate: "27 Apr 2015",
     lyrics: getNamjoonRmKhawah,
   ),
   Song(
@@ -971,6 +1065,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-ProMeTheUs.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4FC4LApeNhUUhhlar4AK5r"),
+    releaseDate: "27 May 2015",
     lyrics: getNamjoonProMeTheUs,
   ),
   Song(
@@ -981,6 +1076,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-fantastic.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=R3AWPKqD68g"),
+    releaseDate: "4 Aug 2015",
     lyrics: getNamjoonFantastic,
   ),
   Song(
@@ -991,6 +1087,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-always.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/always-by-RM"),
+    releaseDate: "1 Jan 2017",
     lyrics: getNamjoonAlways,
   ),
   Song(
@@ -1001,6 +1098,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-change.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1XNlRfQuMTW3IF0z0dUZgq"),
+    releaseDate: "19 Mar 2017",
     lyrics: getNamjoonChange,
   ),
   Song(
@@ -1011,6 +1109,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-gajah.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6KboccKS3L0feiVQST88Ag"),
+    releaseDate: "5 Apr 2017",
     lyrics: getNamjoonGajah,
   ),
   Song(
@@ -1021,6 +1120,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-champion.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6PurllVXXGL1s6UkLtzMVF"),
+    releaseDate: "15 Dec 2017",
     lyrics: getNamjoonChampionRemix,
   ),
   Song(
@@ -1031,6 +1131,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-timeless.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3wRn6i5bOJPAUg9trFSRCN"),
+    releaseDate: "14 Nov 2018",
     lyrics: getNamjoonTimeless,
   ),
   Song(
@@ -1041,6 +1142,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-cryingOverYou.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7AyaV1Ga66yguStIr20zsO"),
+    releaseDate: "27 Mar 2019",
     lyrics: getNamjoonCryingOverYou,
   ),
   Song(
@@ -1051,6 +1153,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-seoulTownRoad.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6woeVu3fVMflqen1t4N6pg"),
+    releaseDate: "24 Jul 2019",
     lyrics: getNamjoonSeoulTownRoad,
   ),
   Song(
@@ -1061,6 +1164,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-winterFlower.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4Eefey3uN90Abhbr47zKmC"),
+    releaseDate: "6 Jan 2020",
     lyrics: getNamjoonWinterFlower,
   ),
   Song(
@@ -1071,6 +1175,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-dont.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6KE3Fs6LMzi4hJI3eFqyLC"),
+    releaseDate: "30 Apr 2021",
     lyrics: getNamjoonWinterDont,
   ),
   Song(
@@ -1081,6 +1186,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-bicycle.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5zvLKLuTQvN8BzdQtOSBd3"),
+    releaseDate: "7 Jun 2021",
     lyrics: getNamjoonBicycle,
   ),
   Song(
@@ -1091,6 +1197,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-sexy-nukim.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1XkMxUilV0E3ChDERZJUEq"),
+    releaseDate: "1 Sep 2022",
     lyrics: getNamjoonSexyNukim,
   ),
   Song(
@@ -1101,6 +1208,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-smoke-sprite.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5YSkDxmHvzSDWTu4MaEtfa"),
+    releaseDate: "14 Mar 2023",
     lyrics: getNamjoonSmokeSprite,
   ),
   Song(
@@ -1111,6 +1219,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-dont-ever-say-love-me.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/34o6gteNy2T5rieA0xYAgo"),
+    releaseDate: "4 May 2023",
     lyrics: getNamjoonDontEverSayLoveMe,
   ),
   Song(
@@ -1121,6 +1230,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1PT8hWQvl2gRO1JhDcSUqN"),
+    releaseDate: "10 May 2024",
     lyrics: getNamjoonComeBackToMe,
   ),
   Song(
@@ -1131,6 +1241,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-comeBackToMe.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6vMDcLqfihUWSnn2LAhbZ4"),
+    releaseDate: "10 May 2024",
     lyrics: getNamjoonComeBackToMeRadioEdit,
   ),
   Song(
@@ -1141,6 +1252,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-nevaPlay.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2ZqTbIID9vFPTXaGyzbb4q"),
+    releaseDate: "6 Sep 2024",
     lyrics: getNamjoonNevaPlay,
   ),
   Song(
@@ -1151,6 +1263,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/rm/rm-stopTheRain.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7kb6IV0z8Nd7vejSdAq0YN"),
+    releaseDate: "1 May 2025",
     lyrics: getNamjoonStopTheRain,
   ),
 
@@ -1165,6 +1278,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "15 Nov 2024",
     lyrics: getSeokjinHappyRunningWild,
   ),
   Song(
@@ -1175,6 +1289,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "25 Oct 2024",
     lyrics: getSeokjinHappyIllBeThere,
   ),
   Song(
@@ -1185,6 +1300,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "15 Nov 2024",
     lyrics: getSeokjinHappyAnotherLevel,
   ),
   Song(
@@ -1195,6 +1311,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "15 Nov 2024",
     lyrics: getSeokjinHappyFalling,
   ),
   Song(
@@ -1205,6 +1322,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "15 Nov 2024",
     lyrics: getSeokjinHappyHeartOnTheWindow,
   ),
   Song(
@@ -1215,6 +1333,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-happy.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0fKlaQuBMQYFo5aIFoGIXt"),
+    releaseDate: "15 Nov 2024",
     lyrics: getSeokjinHappyIWillComeToYou,
   ),
 
@@ -1227,6 +1346,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoDontSayYouLoveMe,
   ),
   Song(
@@ -1237,6 +1357,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoNothingWithoutYourLove,
   ),
   Song(
@@ -1247,6 +1368,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoLoser,
   ),
   Song(
@@ -1257,6 +1379,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoRopeIt,
   ),
   Song(
@@ -1267,6 +1390,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoWithTheClouds,
   ),
   Song(
@@ -1277,6 +1401,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoBackground,
   ),
   Song(
@@ -1287,6 +1412,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-echo.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3DmDoHxAeEiDFNWrHSKAdQ"),
+    releaseDate: "16 May 2025",
     lyrics: getSeokjinEchoToMeToday,
   ),
 
@@ -1299,6 +1425,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-tonight.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2P6PLe4ojigLUp4CWMkcAI"),
+    releaseDate: "5 Jun 2019",
     lyrics: getSeokjinTonight,
   ),
   Song(
@@ -1309,6 +1436,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-abyss.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/40BomFCBuJok3OjxM9oG7e"),
+    releaseDate: "3 Dec 2020",
     lyrics: getSeokjinAbyss,
   ),
   Song(
@@ -1319,6 +1447,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-yours.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/66sBTYlkaiyBwf4fhbIHlZ"),
+    releaseDate: "7 Nov 2021",
     lyrics: getSeokjinYours,
   ),
   Song(
@@ -1329,6 +1458,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-super-tuna.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5EaVikAxSRponyifRP6Fhp"),
+    releaseDate: "16 May 2021",
     lyrics: getSeokjinSuperTuna,
   ),
   Song(
@@ -1339,6 +1469,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-the-astronaut.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0h7QMc9ZRzA9QJrbEHytn2"),
+    releaseDate: "28 Oct 2022",
     lyrics: getSeokjinTheAstronaut,
   ),
   Song(
@@ -1349,6 +1480,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-super-tuna-2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf"),
+    releaseDate: "11 Oct 2024",
     lyrics: getSeokjinSuperTunaExtendedVer,
   ),
   Song(
@@ -1359,6 +1491,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-i-will-be-there.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2Qcbspnftnon37jibwyvMU"),
+    releaseDate: "25 Oct 2024",
     lyrics: getSeokjinIWillBeThere,
   ),
   Song(
@@ -1369,6 +1502,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-falling.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7HaUkQ34NYlOXFFspHeoG6"),
+    releaseDate: "26 Nov 2024",
     lyrics: getSeokjinFalling,
   ),
   Song(
@@ -1379,6 +1513,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jin/jin-close-to-you.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4z0vfU3JiAsl99ZHL29hMm"),
+    releaseDate: "26 Jan 2025",
     lyrics: getSeokjinCloseToYou,
   ),
 
@@ -1394,6 +1529,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdIntro,
   ),
   Song(
@@ -1404,6 +1540,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdAgustd,
   ),
   Song(
@@ -1414,6 +1551,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdGiveItToMe,
   ),
   Song(
@@ -1424,6 +1562,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustd724148,
   ),
   Song(
@@ -1434,6 +1573,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustd140503AtDawn,
   ),
   Song(
@@ -1444,6 +1584,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdTheLast,
   ),
   Song(
@@ -1454,6 +1595,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdTonyMontana,
   ),
   Song(
@@ -1464,6 +1606,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdInterlude,
   ),
   Song(
@@ -1474,6 +1617,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-agustd.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1qHUxg0YIm6caZQrDJvDdk"),
+    releaseDate: "15 Aug 2016",
     lyrics: getYoongiAgustdSoFarAway,
   ),
 
@@ -1486,6 +1630,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2Moonlight,
   ),
   Song(
@@ -1496,6 +1641,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2Daechwita,
   ),
   Song(
@@ -1506,6 +1652,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2WhatDoYouThink,
   ),
   Song(
@@ -1516,6 +1663,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2Strange,
   ),
   Song(
@@ -1526,6 +1674,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD228,
   ),
   Song(
@@ -1536,6 +1685,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2BurnIt,
   ),
   Song(
@@ -1546,6 +1696,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2People,
   ),
   Song(
@@ -1556,6 +1707,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2Honsool,
   ),
   Song(
@@ -1566,6 +1718,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2SetMeFree,
   ),
   Song(
@@ -1576,6 +1729,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7lhFsAaVCFaYbkNvBMw5Zf"),
+    releaseDate: "22 May 2020",
     lyrics: getYoongiD2DearMyFriend,
   ),
 
@@ -1588,6 +1742,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayDDay,
   ),
   Song(
@@ -1598,6 +1753,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayHaeguem,
   ),
   Song(
@@ -1608,6 +1764,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayHuh,
   ),
   Song(
@@ -1618,6 +1775,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayAmygdala,
   ),
   Song(
@@ -1628,6 +1786,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDaySDL,
   ),
   Song(
@@ -1638,6 +1797,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "7 Apr 2023",
     lyrics: getYoongiPeoplePt2,
   ),
   Song(
@@ -1648,6 +1808,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayPolarNight,
   ),
   Song(
@@ -1658,6 +1819,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDaySnooze,
   ),
   Song(
@@ -1668,6 +1830,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-d-day.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/446ROKmKfpEwkbi2SjELVX"),
+    releaseDate: "21 Apr 2023",
     lyrics: getYoongiDDayLGO,
   ),
 
@@ -1680,6 +1843,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/yoongi.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=kdAV7tJf0Pg"),
+    releaseDate: "1 Nov 2010",
     lyrics: getYoongiSwagger,
   ),
   Song(
@@ -1690,6 +1854,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/yoongi.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=jmG1EhBntCA"),
+    releaseDate: "1 Nov 2010",
     lyrics: getYoongiDiss,
   ),
   Song(
@@ -1700,6 +1865,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/yoongi.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=elmH5rBKD-M"),
+    releaseDate: "17 May 2010",
     lyrics: getYoongi518062,
   ),
   Song(
@@ -1710,6 +1876,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/yoongi.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/mix-final-1"),
+    releaseDate: "7 Jan 2013",
     lyrics: getYoongiAllIDoIsWin,
   ),
   Song(
@@ -1720,6 +1887,7 @@ const List<Song> allSongs = [
     albumArt: "images/members/yoongi.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/suga-dream-money"),
+    releaseDate: "7 Apr 2013",
     lyrics: getYoongiDreamMoney,
   ),
   Song(
@@ -1730,6 +1898,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-songrequest.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6Au7CCNN2wXgCNxdavgxDM"),
+    releaseDate: "22 Jan 2019",
     lyrics: getYoongiSongRequest,
   ),
   Song(
@@ -1740,6 +1909,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-sugasinterlude.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5a0nHa7F4S9hb0Zi0zLS8w"),
+    releaseDate: "6 Dec 2019",
     lyrics: getYoongiSugasInterlude,
   ),
   Song(
@@ -1750,6 +1920,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-eight.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0pYacDCZuRhcrwGUA5nTBe"),
+    releaseDate: "6 May 2020",
     lyrics: getYoongiEight,
   ),
   Song(
@@ -1760,6 +1931,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-blueberryeyes.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5dn6QANKbf76pANGjMBida"),
+    releaseDate: "15 Sep 2020",
     lyrics: getYoongiBlueberryEyes,
   ),
   Song(
@@ -1770,6 +1942,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-you.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4rF72sAKXnQ2t2Q5aZlreW"),
+    releaseDate: "15 Oct 2021",
     lyrics: getYoongiYou,
   ),
   Song(
@@ -1779,6 +1952,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/suga/suga-girl-of-my-dreams.jpg",
     lang: "kr",
+    releaseDate: "10 Dec 2021",
     songLink: SongLink(spotify: "https://open.spotify.com/track/59bY27SZQ4r25o02vqOhgC"),
     lyrics: getYoongiGirlOfMyDreams,
   ),
@@ -1790,6 +1964,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-that-that.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7GNRUsU3M4XNDDB9xle5Dz"),
+    releaseDate: "29 Apr 2022",
     lyrics: getYoongiThatThat,
   ),
   Song(
@@ -1800,6 +1975,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-peoplept2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4EaQ0ouIydfeAgQUz284EF"),
+    releaseDate: "7 Apr 2023",
     lyrics: getYoongiPeoplePt2,
   ),
   Song(
@@ -1810,6 +1986,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/suga/suga-lilith.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3l6LBCOL9nPsSY29TUY2VE"),
+    releaseDate: "3 Jun 2023",
     lyrics: getYoongiLilith,
   ),
 
@@ -1824,6 +2001,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldHopeWorld,
   ),
   Song(
@@ -1834,6 +2012,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldPopPt1,
   ),
   Song(
@@ -1844,6 +2023,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldDayDream,
   ),
   Song(
@@ -1854,6 +2034,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldBaseLine,
   ),
   Song(
@@ -1864,6 +2045,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldHangsang,
   ),
   Song(
@@ -1874,6 +2056,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldAirplane,
   ),
   Song(
@@ -1884,6 +2067,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeworld.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0XX1044L7ovU5aon6nRiF7"),
+    releaseDate: "2 Mar 2018",
     lyrics: getHoseokHopeWorldOutro,
   ),
 
@@ -1896,6 +2080,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxIntro,
   ),
   Song(
@@ -1906,6 +2091,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxPandoraBox,
   ),
   Song(
@@ -1916,6 +2102,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokMore,
   ),
   Song(
@@ -1926,6 +2113,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxStop,
   ),
   Song(
@@ -1936,6 +2124,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxEqualSign,
   ),
   Song(
@@ -1946,6 +2135,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxWhatIf,
   ),
   Song(
@@ -1956,6 +2146,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxSafetyZone,
   ),
   Song(
@@ -1966,6 +2157,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxFuture,
   ),
   Song(
@@ -1976,6 +2168,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-jackInTheBox.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0FrC9lzgVhziJenigsrXdl"),
+    releaseDate: "15 Jul 2022",
     lyrics: getHoseokJackInTheBoxArson,
   ),
 
@@ -1988,6 +2181,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1OnTheStreetSoloVer,
   ),
   Song(
@@ -1998,6 +2192,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1IWonder,
   ),
   Song(
@@ -2008,6 +2203,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1LockUnlock,
   ),
   Song(
@@ -2018,6 +2214,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1IDontKnow,
   ),
   Song(
@@ -2028,6 +2225,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1WhatIfDanceMix,
   ),
   Song(
@@ -2038,6 +2236,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-hopeOnTheStreetVol1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5mqxdPWQirLBE7vdDMhlB4"),
+    releaseDate: "24 Apr 2024",
     lyrics: getHoseokHopeOnTheStreetVol1Neuron,
   ),
 
@@ -2050,6 +2249,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-oneverse.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/1-verse-by-jhope"),
+    releaseDate: "21 Dec 2015",
     lyrics: getHoseok1Verse,
   ),
   Song(
@@ -2060,6 +2260,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-cns.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2y6Ty2NPAsP84XJAtzLxuk"),
+    releaseDate: "27 Sep 2019",
     lyrics: getHoseokCns,
   ),
   Song(
@@ -2070,6 +2271,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-blueside.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1nwdfbj4UyRMpa9L98a4Yi"),
+    releaseDate: "2 Mar 2022",
     lyrics: getHoseokBlueSide,
   ),
   Song(
@@ -2080,6 +2282,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-more.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7GARzfC1mwhDuk4t9WOACq"),
+    releaseDate: "1 Jul 2022",
     lyrics: getHoseokMore,
   ),
   Song(
@@ -2090,6 +2293,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-rushhour.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5aucVLKiumD89mxVCB4zvS"),
+    releaseDate: "27 Sep 2022",
     lyrics: getHoseokRushHour,
   ),
   Song(
@@ -2100,6 +2304,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-onTheStreet.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5wxYxygyHpbgv0EXZuqb9V"),
+    releaseDate: "3 Mar 2023",
     lyrics: getHoseokOnTheStreet,
   ),
   Song(
@@ -2110,6 +2315,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-lvBag.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1MhXchY126AX5Iuv4Odbe8"),
+    releaseDate: "21 Feb 2025",
     lyrics: getHoseokLvBag,
   ),
   Song(
@@ -2120,6 +2326,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-sweet-dreams.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1yX9gy5fK02j6nBnGJ1S3k"),
+    releaseDate: "7 Mar 2025",
     lyrics: getHoseokSweetDreams,
   ),
   Song(
@@ -2130,6 +2337,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-mona-lisa.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5Fhr3wqeieN5WDkAsqL1JJ"),
+    releaseDate: "21 Mar 2025",
     lyrics: getHoseokMonaLisa,
   ),
   Song(
@@ -2140,6 +2348,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    releaseDate: "13 Jun 2025",
     lyrics: getHoseokKillinItGirl,
   ),
   Song(
@@ -2150,6 +2359,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
+    releaseDate: "13 Jun 2025",
     lyrics: getHoseokKillinItGirlSoloVer,
   ),
 
@@ -2165,6 +2375,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceFaceOff,
   ),
   Song(
@@ -2175,6 +2386,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceInterludeDive,
   ),
   Song(
@@ -2185,6 +2397,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceLikeCrazy,
   ),
   Song(
@@ -2195,6 +2408,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceAlone,
   ),
   Song(
@@ -2205,6 +2419,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "17 Mar 2023",
     lyrics: getJiminSetMeFreePt2,
   ),
   Song(
@@ -2215,6 +2430,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4xc3Lc9yASZgEJGH7acWMB"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceLikeCrazyEngVer,
   ),
   Song(
@@ -2225,6 +2441,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-face.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=DMDJt9x8LlI"),
+    releaseDate: "24 Mar 2023",
     lyrics: getJiminFaceLetter,
   ),
 
@@ -2237,6 +2454,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminMuseIntro,
   ),
   Song(
@@ -2247,6 +2465,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminMuseInterlude,
   ),
   Song(
@@ -2257,6 +2476,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
+    releaseDate: "28 Jun 2024",
     lyrics: getJiminSmeraldoGardenMarchingBand,
   ),
   Song(
@@ -2267,6 +2487,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminMuseSlowDance,
   ),
   Song(
@@ -2277,6 +2498,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminMuseBeMine,
   ),
   Song(
@@ -2287,6 +2509,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/15XcLhiVMlSOipUddTNDnr"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminMuseWho,
   ),
   Song(
@@ -2297,6 +2520,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3k6q0O9JnO2GhvD6C8fs20"),
+    releaseDate: "19 Jul 2024",
     lyrics: getJiminCloserThanThis,
   ),
 
@@ -2309,6 +2533,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-promise.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2RUcwyW74Sv4VracHFrKdh"),
+    releaseDate: "31 Dec 2018",
     lyrics: getJiminPromise,
   ),
   Song(
@@ -2319,6 +2544,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-christmaslove.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5oaQsszgxYAdABuXoWEOUe"),
+    releaseDate: "24 Dec 2020",
     lyrics: getJiminChristmasLove,
   ),
   Song(
@@ -2329,6 +2555,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-withyou.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2gzhQaCTeNgxpeB2TPllyY"),
+    releaseDate: "24 Apr 2022",
     lyrics: getJiminWithYou,
   ),
   Song(
@@ -2339,6 +2566,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-vibe.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/14XLUySagFhP9KoqOTg5ka"),
+    releaseDate: "13 Jan 2023",
     lyrics: getJiminVibe,
   ),
   Song(
@@ -2349,6 +2577,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-set-me-free-pt2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/59hBR0BCtJsfIbV9VzCVAp"),
+    releaseDate: "17 Mar 2023",
     lyrics: getJiminSetMeFreePt2,
   ),
   Song(
@@ -2359,6 +2588,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-angelPt1.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1vvcEHQdaUTvWt0EIUYcFK"),
+    releaseDate: "18 May 2023",
     lyrics: getJiminAngelPt1,
   ),
   Song(
@@ -2369,6 +2599,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-angelPt2.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0ApadYqa3GRQkJJ3E7pQDJ"),
+    releaseDate: "15 Jun 2023",
     lyrics: getJiminAngelPt2,
   ),
   Song(
@@ -2379,6 +2610,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-closerThanThis.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3k6q0O9JnO2GhvD6C8fs20"),
+    releaseDate: "22 Dec 2023",
     lyrics: getJiminCloserThanThis,
   ),
   Song(
@@ -2389,6 +2621,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-angel-anniversary.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1XE3rehhUySx3O1fALkswV"),
+    releaseDate: "13 May 2024",
     lyrics: getJiminAngelAnniversaryEdition,
   ),
   Song(
@@ -2399,6 +2632,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1kPhV0KQui1phEpjnWIqUN"),
+    releaseDate: "28 Jun 2024",
     lyrics: getJiminSmeraldoGardenMarchingBand,
   ),
   Song(
@@ -2409,6 +2643,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jimin/jimin-muse.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4DairgmwgyfmFHm0e7kRPL"),
+    releaseDate: "2 Aug 2024",
     lyrics: getJiminBeMineEngVer,
   ),
 
@@ -2423,6 +2658,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
+    releaseDate: "8 Sep 2024",
     lyrics: getTaehyungLayoverRainyDays,
   ),
   Song(
@@ -2433,6 +2669,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
+    releaseDate: "8 Sep 2024",
     lyrics: getTaehyungLayoverBlue,
   ),
   Song(
@@ -2443,6 +2680,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
+    releaseDate: "8 Sep 2024",
     lyrics: getTaehyungLayoverLoveMeAgain,
   ),
   Song(
@@ -2453,6 +2691,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
+    releaseDate: "8 Sep 2024",
     lyrics: getTaehyungLayoverSlowDancing,
   ),
   Song(
@@ -2463,6 +2702,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
+    releaseDate: "8 Sep 2024",
     lyrics: getTaehyungLayoverForUs,
   ),
 
@@ -2475,6 +2715,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-scenery.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1UHkDovEFqHzHCPyNe0BTy"),
+    releaseDate: "30 Jan 2019",
     lyrics: getTaehyungScenery,
   ),
   Song(
@@ -2485,6 +2726,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-winterbear.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/74ewFAgDzRkhZ7EX2eLtfZ"),
+    releaseDate: "10 Aug 2019",
     lyrics: getTaehyungWinterBear,
   ),
   Song(
@@ -2495,6 +2737,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-sweetnight.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3Wno87vVBVbSVS2vUUFuKC"),
+    releaseDate: "13 Mar 2020",
     lyrics: getTaehyungSweetNight,
   ),
   Song(
@@ -2505,6 +2748,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-snowflower.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/34IGOyXR6cn0YI9VBu8m0y"),
+    releaseDate: "25 Dec 2020",
     lyrics: getTaehyungSnowFlower,
   ),
   Song(
@@ -2515,6 +2759,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-christmas-tree.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/186NCtNk1tUYS7c2DxgJ7O"),
+    releaseDate: "24 Dec 2021",
     lyrics: getTaehyungChristmasTree,
   ),
   Song(
@@ -2525,6 +2770,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-wherever-u-r.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1k255f17DRuRbGrfz5Ifmd"),
+    releaseDate: "30 Dec 2023",
     lyrics: getTaehyungWhereverUR,
   ),
   Song(
@@ -2535,6 +2781,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-friends.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0PBTlQ84CBJF0tBnKGmQa6"),
+    releaseDate: "15 Mar 2024",
     lyrics: getTaehyungFriends,
   ),
   Song(
@@ -2545,6 +2792,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-winter-ahead.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7G7mSV4BebkoHWwKTDvXu9"),
+    releaseDate: "29 Nov 2024",
     lyrics: getTaehyungWinterAhead,
   ),
   Song(
@@ -2555,6 +2803,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-white-christmas.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7134tEHq45eL6am9oVazZU"),
+    releaseDate: "6 Dec 2024",
     lyrics: getTaehyungWhiteChristmas,
   ),
 
@@ -2570,6 +2819,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023", //releaseDate: "29 Sep 2023",
     lyrics: getJungkook3D,
   ),
   Song(
@@ -2580,6 +2830,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenCloserToYou,
   ),
   Song(
@@ -2590,6 +2841,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "14 Jul 2023",
     lyrics: getJungkookSevenExplicit,
   ),
   Song(
@@ -2600,6 +2852,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenStandingNextToYou,
   ),
   Song(
@@ -2610,6 +2863,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenYesOrNo,
   ),
   Song(
@@ -2620,6 +2874,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenPleaseDontChange,
   ),
   Song(
@@ -2630,6 +2885,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenHateYou,
   ),
   Song(
@@ -2640,6 +2896,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenSomebody,
   ),
   Song(
@@ -2650,6 +2907,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenTooSadToDance,
   ),
   Song(
@@ -2660,6 +2918,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "3 Nov 2023",
     lyrics: getJungkookGoldenShotGlassOfTears,
   ),
   Song(
@@ -2670,6 +2929,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-golden.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"),
+    releaseDate: "14 Jul 2023",
     lyrics: getJungkookSevenClean,
   ),
 
@@ -2682,6 +2942,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/by-1"),
+    releaseDate: "27 Sep 2014",
     lyrics: getJungkookWorking,
   ),
   Song(
@@ -2692,6 +2953,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-imInLove.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2oLG1iXgeqxg4d9ZGQTpaE"),
+    releaseDate: "7 Aug 2016",
     lyrics: getJungkookImInLove,
   ),
   Song(
@@ -2702,6 +2964,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-stillwithyou.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0eFMbKCRw8KByXyWBw8WO7"),
+    releaseDate: "5 Jun 2020",
     lyrics: getJungkookStillWithYou,
   ),
   Song(
@@ -2712,6 +2975,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-stayalive.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7CAdT0HdiQNlt1C7xk2hep"),
+    releaseDate: "11 Feb 2022",
     lyrics: getJungkookStayAlive,
   ),
   Song(
@@ -2722,6 +2986,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-myyou.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0pNFrM5L0te1EXGxveeYiR"),
+    releaseDate: "13 Jun 2022",
     lyrics: getJungkookMyYou,
   ),
   Song(
@@ -2731,6 +2996,7 @@ const List<Song> allSongs = [
     album: null,
     albumArt: "images/albums-solo/jungkook/jungkook-leftandright.jpg",
     lang: "eng",
+    releaseDate: "24 Jun 2022",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6RhEbk4odKK0PwPhpok7h1"),
     lyrics: getJungkookLeftAndRight,
   ),
@@ -2742,6 +3008,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-dreamers.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0jY618wuln0b5b8sCxFgjk"),
+    releaseDate: "20 Nov 2022",
     lyrics: getJungkookDreamers,
   ),
   Song(
@@ -2752,6 +3019,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5Avril3IZ26DPVFHbJX8o6"),
+    releaseDate: "14 Jul 2023",
     lyrics: getJungkookSevenClean,
   ),
   Song(
@@ -2762,6 +3030,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-seven.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/7x9aauaA9cu6tyfpHnqDLo"),
+    releaseDate: "14 Jul 2023",
     lyrics: getJungkookSevenExplicit,
   ),
   Song(
@@ -2772,6 +3041,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-3d.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6ehWdR7cGDXnT7aKEASJxE"),
+    releaseDate: "29 Sep 2023",
     lyrics: getJungkook3D,
   ),
   Song(
@@ -2782,6 +3052,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-3d-alternate.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2pLZ6tUBapqlngc9lnYz4M"),
+    releaseDate: "29 Sep 2023",
     lyrics: getJungkook3DAlternate,
   ),
   Song(
@@ -2792,6 +3063,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-tooMuch.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0rKWJnmo6Q0ovoPOLoLm0t"),
+    releaseDate: "20 Oct 2023",
     lyrics: getJungkookTooMuch,
   ),
   Song(
@@ -2802,6 +3074,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-3d-timberlake.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2mHw0KoEyDw8Yaw3yPoke6"),
+    releaseDate: "24 Nov 2023",
     lyrics: getJungkook3DJustinTimberlake,
   ),
   Song(
@@ -2812,6 +3085,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-standingNextToYou-usher.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0VPFT123HKoQ2J6ipeDcI1"),
+    releaseDate: "1 Dec 2023",
     lyrics: getJungkookStandingNextToYouUsherRemix,
   ),
   Song(
@@ -2822,6 +3096,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/jungkook/jungkook-neverLetGo.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2nRMW95dnOILirpjbksLTs"),
+    releaseDate: "7 Jun 2024",
     lyrics: getJungkookNeverLetGo,
   ),
 
@@ -2836,6 +3111,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldHeartbeat,
   ),
   Song(
@@ -2846,6 +3122,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldDreamGlow,
   ),
   Song(
@@ -2856,6 +3133,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldABrandNewDay,
   ),
   Song(
@@ -2866,6 +3144,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldAllNight,
   ),
   Song(
@@ -2876,6 +3155,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldLaLaLa,
   ),
   Song(
@@ -2886,6 +3166,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-world.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2SVMQ9dcWrlZj4vmKBPiE6"),
+    releaseDate: "28 Jun 2019",
     lyrics: getBtsWorldYouAreHere,
   ),
 
@@ -2899,6 +3180,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=UCQ1x0eonKI"),
+    releaseDate: "12 Oct 2010",
     lyrics: getWeAreBPB,
   ),
   Song(
@@ -2909,6 +3191,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=5VfI6gKATdU"),
+    releaseDate: "13 Sep 2010",
     lyrics: getHookGayo,
   ),
   Song(
@@ -2919,6 +3202,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-loveu-hateu.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2GAqePxIWf5BXTQ28Xp0Vu"),
+    releaseDate: "26 Oct 2010",
     lyrics: getLoveUHateU,
   ),
   Song(
@@ -2929,6 +3213,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-ashes.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/38c5hFp6P8Y6jym7xQ0UQQ"),
+    releaseDate: "30 Sep 2010",
     lyrics: getAshes,
   ),
   Song(
@@ -2939,6 +3224,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=45MgPc2bSIg"),
+    releaseDate: "7 Aug 2011",
     lyrics: getPaldogangsanOgVer,
   ),
   Song(
@@ -2949,6 +3235,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-ASongThatWillMakeYouSmile.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0PSSwqnKVCzf7xyv8H2HsP"),
+    releaseDate: "27 Oct 2011",
     lyrics: getASongThatWillMakeYouSmile,
   ),
   Song(
@@ -2959,6 +3246,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-bad-girl.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4RSIdYv4V3cuyLyBXX9wr9"),
+    releaseDate: "15 Feb 2011",
     lyrics: getBadGirl,
   ),
   Song(
@@ -2969,6 +3257,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-BecauseImAFoolishWoman.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0y1Tuq1o6yT68AwWC0Pkx8"),
+    releaseDate: "21 Feb 2011",
     lyrics: getBecauseImAFoolishWoman,
   ),
   Song(
@@ -2979,6 +3268,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/full-version"),
+    releaseDate: "23 Dec 2012",
     lyrics: getATypicalTraineeChristmas,
   ),
   Song(
@@ -2989,6 +3279,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtansongs/trouble"),
+    releaseDate: "2012",
     lyrics: getTrouble,
   ),
   Song(
@@ -2999,6 +3290,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=6GKBsyhDIFc"),
+    releaseDate: "31 Jul 2013",
     lyrics: getWaterfalls,
   ),
   Song(
@@ -3009,6 +3301,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=gByTGPuCVEE"),
+    releaseDate: "13 Mar 2013",
     lyrics: getAdultChild,
   ),
   Song(
@@ -3019,6 +3312,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=Sby_6W_I0dQ"),
+    releaseDate: "20 Jan 2013",
     lyrics: getSchoolOfTears,
   ),
   Song(
@@ -3029,6 +3323,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=sctrgmZ_JNM"),
+    releaseDate: "8 Feb 2013",
     lyrics: getGraduationSong,
   ),
   Song(
@@ -3039,6 +3334,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/like-a-star"),
+    releaseDate: "2 Feb 2013",
     lyrics: getLikeAStar,
   ),
   Song(
@@ -3049,6 +3345,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1IthE5GNiRzFN5CVaCa445"),
+    releaseDate: "11 Jul 2013",
     lyrics: getBornSinger,
   ),
   Song(
@@ -3059,6 +3356,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/beautiful"),
+    releaseDate: "1 Oct 2013",
     lyrics: getBeautiful,
   ),
   Song(
@@ -3069,6 +3367,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/z5qlfcdqitpc"),
+    releaseDate: "23 Dec 2013",
     lyrics: getATypicalIdolChristmas,
   ),
   Song(
@@ -3079,6 +3378,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-95graduation.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/95-graduation-by-jimin-v-of"),
+    releaseDate: "28 Feb 2014",
     lyrics: get95Graduation,
   ),
   Song(
@@ -3089,6 +3389,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-so4more.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/so-4-more-by-bts"),
+    releaseDate: "13 Jun 2014",
     lyrics: getSo4More,
   ),
   Song(
@@ -3099,6 +3400,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/christmas-day-by-jimin-jungkook-of-bts"),
+    releaseDate: "25 Dec 2014",
     lyrics: getChristmasDay,
   ),
   Song(
@@ -3109,6 +3411,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-soundcloud.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/we-are-bulletproof-pt1-4-begins-ruff"),
+    releaseDate: "9 Jun 2015",
     lyrics: getWabPt1,
   ),
   Song(
@@ -3119,6 +3422,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-iknow.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sothatiloveyou"),
+    releaseDate: "1 Jun 2016",
     lyrics: getIKnow,
   ),
   Song(
@@ -3129,6 +3433,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-wednesday.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=wUYsdE_q-ok"),
+    releaseDate: "6 May 2016",
     lyrics: getWednesday,
   ),
   Song(
@@ -3139,6 +3444,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-btsjessi.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=yVBQ6suP0d8"),
+    releaseDate: "11 Mar 2016",
     lyrics: getBtsJessi,
   ),
   Song(
@@ -3149,6 +3455,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-its-definitely-you.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2LowwiemmGMzzNSH1PJprK"),
+    releaseDate: "20 Dec 2016",
     lyrics: getItsDefinitelyYou,
   ),
   Song(
@@ -3159,6 +3466,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-sofaraway.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/sofarawayfesta"),
+    releaseDate: "17 Jun 2017",
     lyrics: getSoFarAway,
   ),
   Song(
@@ -3169,6 +3477,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-4oclock.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/4oclockrmv"),
+    releaseDate: "9 Jun 2017",
     lyrics: get4oClock,
   ),
   Song(
@@ -3179,6 +3488,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-withseoul.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=oHUD162uWD0"),
+    releaseDate: "13 Dec 2017",
     lyrics: getWithSeoul,
   ),
   Song(
@@ -3189,6 +3499,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-ddaeng.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/bangtan/ddceremony"),
+    releaseDate: "11 Jun 2018",
     lyrics: getDdaeng,
   ),
   Song(
@@ -3199,6 +3510,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-ldf.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=XuaDFAYAriE"),
+    releaseDate: "10 Apr 2018",
     lyrics: getLdf,
   ),
   Song(
@@ -3209,6 +3521,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-ioniq.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=l6yzZdHruUI"),
+    releaseDate: "31 Aug 2020",
     lyrics: getIoniq,
   ),
   Song(
@@ -3219,6 +3532,7 @@ const List<Song> allSongs = [
     albumArt: "images/songs-uo/bts-inthesoop.jpg",
     lang: "kr",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=RWCUg1akrao"),
+    releaseDate: "19 Aug 2020",
     lyrics: getInTheSoop,
   ),
 
@@ -3233,6 +3547,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/nomoredream.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5x3pRdlUUVG0eHAMDkW39a"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamNoMoreDream,
   ),
   Song(
@@ -3243,6 +3558,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/nomoredream.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5x3pRdlUUVG0eHAMDkW39a"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamILikeIt,
   ),
   Song(
@@ -3253,6 +3569,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/nomoredream.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5x3pRdlUUVG0eHAMDkW39a"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamAttackOnBangtan,
   ),
 
@@ -3265,6 +3582,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/boyinluv.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6l0cl7IM7uuoNtdl9emYbw"),
+    releaseDate: "16 Jul 2014",
     lyrics: getBoyInLuvBoyInLuv,
   ),
   Song(
@@ -3275,6 +3593,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/boyinluv.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6l0cl7IM7uuoNtdl9emYbw"),
+    releaseDate: "16 Jul 2014",
     lyrics: getBoyInLuvNo,
   ),
   Song(
@@ -3285,6 +3604,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/boyinluv.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6l0cl7IM7uuoNtdl9emYbw"),
+    releaseDate: "16 Jul 2014",
     lyrics: getBoyInLuvJustOneDay,
   ),
 
@@ -3297,6 +3617,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/danger.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4obhxC4Xdmg1b6kcMpW8fD"),
+    releaseDate: "19 Nov 2014",
     lyrics: getDangerDanger,
   ),
   Song(
@@ -3307,6 +3628,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/danger.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4obhxC4Xdmg1b6kcMpW8fD"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamAttackOnBangtan,
   ),
   Song(
@@ -3317,6 +3639,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/danger.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4obhxC4Xdmg1b6kcMpW8fD"),
+    releaseDate: "19 Nov 2014",
     lyrics: getDangerMissRight,
   ),
 
@@ -3329,6 +3652,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpIntro,
   ),
   Song(
@@ -3339,6 +3663,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpTheStars,
   ),
   Song(
@@ -3349,6 +3674,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpJump,
   ),
   Song(
@@ -3359,6 +3685,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "19 Nov 2014",
     lyrics: getDangerDanger,
   ),
   Song(
@@ -3369,6 +3696,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "16 Jul 2014",
     lyrics: getBoyInLuvBoyInLuv,
   ),
   Song(
@@ -3379,6 +3707,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getBoyInLuvJustOneDay,
   ),
   Song(
@@ -3389,6 +3718,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamILikeIt,
   ),
   Song(
@@ -3399,6 +3729,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpILikeItPt2,
   ),
   Song(
@@ -3409,6 +3740,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "25 May 2014",
     lyrics: getNoMoreDreamNoMoreDream,
   ),
   Song(
@@ -3419,6 +3751,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "4 Jun 2014",
     lyrics: getNoMoreDreamAttackOnBangtan,
   ),
   Song(
@@ -3429,6 +3762,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "16 Jul 2014",
     lyrics: getBoyInLuvNo,
   ),
   Song(
@@ -3439,6 +3773,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpWakeUp,
   ),
   Song(
@@ -3449,6 +3784,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/wakeup.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2bXp5bEM5sgZdIznTesQZb"),
+    releaseDate: "24 Dec 2014",
     lyrics: getWakeUpOutro,
   ),
 
@@ -3461,6 +3797,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/foryou.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3dviBwFcDYCcpXUbeacrIl"),
+    releaseDate: "17 Jun 2015",
     lyrics: getForYouForYou,
   ),
   Song(
@@ -3471,6 +3808,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/foryou.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3dviBwFcDYCcpXUbeacrIl"),
+    releaseDate: "17 Jun 2015",
     lyrics: getForYouWarOfHormone,
   ),
   Song(
@@ -3481,6 +3819,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/foryou.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/3dviBwFcDYCcpXUbeacrIl"),
+    releaseDate: "17 Jun 2015",
     lyrics: getForYouLetMeKnow,
   ),
 
@@ -3493,6 +3832,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/ineedu.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/71mivOtJblgvlGqvAPRJyw"),
+    releaseDate: "8 Dec 2015",
     lyrics: getINeedUINeedU,
   ),
   Song(
@@ -3503,6 +3843,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/ineedu.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/71mivOtJblgvlGqvAPRJyw"),
+    releaseDate: "8 Dec 2015",
     lyrics: getINeedUDope,
   ),
   Song(
@@ -3513,6 +3854,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/ineedu.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/71mivOtJblgvlGqvAPRJyw"),
+    releaseDate: "8 Dec 2015",
     lyrics: getINeedUBoyzWithFun,
   ),
 
@@ -3525,6 +3867,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/run.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1Za3UxQMhgKeO8QNsVwzRt"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunRun,
   ),
   Song(
@@ -3535,6 +3878,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/run.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1Za3UxQMhgKeO8QNsVwzRt"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunButterfly,
   ),
   Song(
@@ -3545,6 +3889,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/run.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1Za3UxQMhgKeO8QNsVwzRt"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunGoodDay,
   ),
 
@@ -3557,6 +3902,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthIntro,
   ),
   Song(
@@ -3567,6 +3913,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunRun,
   ),
   Song(
@@ -3577,6 +3924,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthFire,
   ),
   Song(
@@ -3587,6 +3935,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "8 Dec 2015",
     lyrics: getINeedUDope,
   ),
   Song(
@@ -3597,6 +3946,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunGoodDay,
   ),
   Song(
@@ -3607,6 +3957,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthSaveMe,
   ),
   Song(
@@ -3617,6 +3968,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "8 Dec 2015",
     lyrics: getINeedUBoyzWithFun,
   ),
   Song(
@@ -3627,6 +3979,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthSilverSpoon,
   ),
   Song(
@@ -3637,6 +3990,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthWishingOnAStar,
   ),
   Song(
@@ -3647,6 +4001,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "15 Mar 2016",
     lyrics: getRunButterfly,
   ),
   Song(
@@ -3657,6 +4012,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getForYouForYou,
   ),
   Song(
@@ -3667,6 +4023,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "8 Dec 2016",
     lyrics: getINeedUINeedU,
   ),
   Song(
@@ -3677,6 +4034,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/youth.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/442zUwKHCTO47XPF7cUSqY"),
+    releaseDate: "7 Sep 2016",
     lyrics: getYouthEpilogue,
   ),
 
@@ -3689,6 +4047,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/bst.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1rxOBsRqYTRBhltSLWjseF"),
+    releaseDate: "10 May 2017",
     lyrics: getBstBst,
   ),
   Song(
@@ -3699,6 +4058,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/bst.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1rxOBsRqYTRBhltSLWjseF"),
+    releaseDate: "10 May 2017",
     lyrics: getBstNotToday,
   ),
   Song(
@@ -3709,6 +4069,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/bst.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1rxOBsRqYTRBhltSLWjseF"),
+    releaseDate: "10 May 2017",
     lyrics: getBstSpringDay,
   ),
 
@@ -3721,6 +4082,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/crystalsnow.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/03yfkUHGv0rY49Wz9mzloe"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowMicDrop,
   ),
   Song(
@@ -3731,6 +4093,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/crystalsnow.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/03yfkUHGv0rY49Wz9mzloe"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowDna,
   ),
   Song(
@@ -3741,6 +4104,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/crystalsnow.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/03yfkUHGv0rY49Wz9mzloe"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowCrystalSnow,
   ),
 
@@ -3753,6 +4117,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfIntro,
   ),
   Song(
@@ -3763,6 +4128,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfBestOfMe,
   ),
   Song(
@@ -3773,6 +4139,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "10 May 2017",
     lyrics: getBstBst,
   ),
   Song(
@@ -3783,6 +4150,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowDna,
   ),
   Song(
@@ -3793,6 +4161,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "10 May 2017",
     lyrics: getBstNotToday,
   ),
   Song(
@@ -3803,6 +4172,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowMicDrop,
   ),
   Song(
@@ -3813,6 +4183,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfDontLeaveMe,
   ),
   Song(
@@ -3823,6 +4194,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfGoGo,
   ),
   Song(
@@ -3833,6 +4205,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowCrystalSnow,
   ),
   Song(
@@ -3843,6 +4216,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "10 May 2017",
     lyrics: getBstSpringDay,
   ),
   Song(
@@ -3853,6 +4227,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfLetGo,
   ),
   Song(
@@ -3863,6 +4238,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/faceyourself.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/66J1OXSaS3hBZASOV3el8t"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfOutro,
   ),
 
@@ -3875,6 +4251,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/fl-airplane2.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1v6mgJ29d4Ta3ZUfF0P18W"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveFakeLove,
   ),
   Song(
@@ -3885,6 +4262,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/fl-airplane2.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1v6mgJ29d4Ta3ZUfF0P18W"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveAirplanePt2,
   ),
 
@@ -3897,6 +4275,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/lights.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0rHMQLHyw0Bt17fRTJEqh6"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsLights,
   ),
   Song(
@@ -3907,6 +4286,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/lights.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0rHMQLHyw0Bt17fRTJEqh6"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsBwl,
   ),
   Song(
@@ -3917,6 +4297,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/lights.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0rHMQLHyw0Bt17fRTJEqh6"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsIdol,
   ),
 
@@ -3929,6 +4310,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyIntro,
   ),
   Song(
@@ -3939,6 +4321,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyStayGold,
   ),
   Song(
@@ -3949,6 +4332,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsBwl,
   ),
   Song(
@@ -3959,6 +4343,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyMIR,
   ),
   Song(
@@ -3969,6 +4354,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyDionysus,
   ),
   Song(
@@ -3979,6 +4365,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsIdol,
   ),
   Song(
@@ -3989,6 +4376,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveAirplanePt2,
   ),
   Song(
@@ -3999,6 +4387,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveFakeLove,
   ),
   Song(
@@ -4009,6 +4398,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyBlackSwan,
   ),
   Song(
@@ -4019,6 +4409,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyOn,
   ),
   Song(
@@ -4029,6 +4420,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsLights,
   ),
   Song(
@@ -4039,6 +4431,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyYourEyesTell,
   ),
   Song(
@@ -4049,6 +4442,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/mots7thejourney.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1nScVw87kRJiT2bg2Kswhp"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyOutro,
   ),
 
@@ -4061,6 +4455,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-filmout.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3UHPGOkUcE4hE7sqBF4Snt"),
+    releaseDate: "2 Apr 2021",
     lyrics: getFilmOut,
   ),
 
@@ -4073,6 +4468,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "16 Jun 2021",
     lyrics: getFilmOut,
   ),
   Song(
@@ -4083,6 +4479,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowDna,
   ),
   Song(
@@ -4093,6 +4490,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfBestOfMe,
   ),
   Song(
@@ -4103,6 +4501,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsLights,
   ),
   Song(
@@ -4113,6 +4512,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "10 May 2017",
     lyrics: getBstBst,
   ),
   Song(
@@ -4123,6 +4523,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveFakeLove,
   ),
   Song(
@@ -4133,6 +4534,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyBlackSwan,
   ),
   Song(
@@ -4143,6 +4545,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "16 Oct 2018",
     lyrics: getFakeLoveAirplanePt2,
   ),
   Song(
@@ -4153,6 +4556,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfGoGo,
   ),
   Song(
@@ -4163,6 +4567,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsIdol,
   ),
   Song(
@@ -4173,6 +4578,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyDionysus,
   ),
   Song(
@@ -4183,6 +4589,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowMicDrop,
   ),
   Song(
@@ -4193,6 +4600,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "21 Aug 2020",
     lyrics: getDynamite,
   ),
   Song(
@@ -4203,6 +4611,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "3 Jul 2019",
     lyrics: getLightsBwl,
   ),
   Song(
@@ -4213,6 +4622,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyStayGold,
   ),
   Song(
@@ -4223,6 +4633,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfLetGo,
   ),
   Song(
@@ -4233,6 +4644,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "10 May 2017",
     lyrics: getBstSpringDay,
   ),
   Song(
@@ -4243,6 +4655,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyOn,
   ),
   Song(
@@ -4253,6 +4666,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "4 Apr 2018",
     lyrics: getFaceYourselfDontLeaveMe,
   ),
   Song(
@@ -4263,6 +4677,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "10 May 2017",
     lyrics: getBstNotToday,
   ),
   Song(
@@ -4273,6 +4688,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "20 Jul 2020",
     lyrics: getMotsJourneyMIR,
   ),
   Song(
@@ -4283,6 +4699,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "15 Jul 2020",
     lyrics: getMotsJourneyYourEyesTell,
   ),
   Song(
@@ -4293,6 +4710,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-jp/btsthebest.jpg",
     lang: "jp",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6bN241dPMC54Ac6zV1B8hl"),
+    releaseDate: "6 Dec 2017",
     lyrics: getCrystalSnowCrystalSnow,
   ),
 
@@ -4307,6 +4725,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolIntro,
   ),
   Song(
@@ -4317,6 +4736,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolWabPt2,
   ),
   Song(
@@ -4327,6 +4747,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolSkit,
   ),
   Song(
@@ -4337,6 +4758,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolNoMoreDream,
   ),
   Song(
@@ -4347,6 +4769,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolLike,
   ),
   Song(
@@ -4357,6 +4780,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/user-547204697/bts-roadpath"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolPath,
   ),
   Song(
@@ -4367,6 +4791,7 @@ const List<Song> allSongs = [
     albumArt: "images/2cool4skool.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6egaEe9JaULuUCkihSnYlH"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolOutro,
   ),
 
@@ -4379,6 +4804,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82Intro,
   ),
   Song(
@@ -4389,6 +4815,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82NO,
   ),
   Song(
@@ -4399,6 +4826,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82WeOn,
   ),
   Song(
@@ -4409,6 +4837,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82Skit,
   ),
   Song(
@@ -4420,6 +4849,7 @@ const List<Song> allSongs = [
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
     lyrics: getorul82IfIRuledTheWorld,
+    releaseDate: "11 Sep 2013",
   ),
   Song(
     name: "Coffee",
@@ -4429,6 +4859,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82Coffee,
   ),
   Song(
@@ -4439,6 +4870,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82CypherPt1,
   ),
   Song(
@@ -4449,6 +4881,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82AttackOnBangtan,
   ),
   Song(
@@ -4459,6 +4892,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82Paldogangsan,
   ),
   Song(
@@ -4469,6 +4903,7 @@ const List<Song> allSongs = [
     albumArt: "images/o!rul8,2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6rWmdSJIaGTVtdMJQ35Lvf"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82Outro,
   ),
 
@@ -4481,6 +4916,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairIntro,
   ),
   Song(
@@ -4491,6 +4927,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairBoyInLuv,
   ),
   Song(
@@ -4501,6 +4938,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairSkit,
   ),
   Song(
@@ -4511,6 +4949,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairWhereYouFrom,
   ),
   Song(
@@ -4521,6 +4960,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairJustOneDay,
   ),
   Song(
@@ -4531,6 +4971,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairTomorrow,
   ),
   Song(
@@ -4541,6 +4982,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairCypherPt2Triptych,
   ),
   Song(
@@ -4551,6 +4993,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairSpineBreaker,
   ),
   Song(
@@ -4561,6 +5004,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairJump,
   ),
   Song(
@@ -4571,6 +5015,7 @@ const List<Song> allSongs = [
     albumArt: "images/skoolluvaffair.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5r35iS0uSSoQBKzQj0IeI3"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairOutro,
   ),
 
@@ -4583,6 +5028,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "14 May 2014",
     lyrics: getSkoolLuvAffairSpecialAdditionMissRight,
   ),
   Song(
@@ -4593,6 +5039,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "14 May 2014",
     lyrics: get2Cool4SkoolLike,
   ),
   Song(
@@ -4603,6 +5050,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairIntro,
   ),
   Song(
@@ -4613,6 +5061,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairBoyInLuv,
   ),
   Song(
@@ -4623,6 +5072,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairSkit,
   ),
   Song(
@@ -4633,6 +5083,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairWhereYouFrom,
   ),
   Song(
@@ -4643,6 +5094,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairJustOneDay,
   ),
   Song(
@@ -4653,6 +5105,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairTomorrow,
   ),
   Song(
@@ -4663,6 +5116,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairCypherPt2Triptych,
   ),
   Song(
@@ -4673,6 +5127,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairSpineBreaker,
   ),
   Song(
@@ -4683,6 +5138,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairJump,
   ),
   Song(
@@ -4693,6 +5149,7 @@ const List<Song> allSongs = [
     albumArt: "images/skool-luv-affair-special-addition.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0pX41mddl0CZXxpxkQ7347"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairOutro,
   ),
 
@@ -4705,6 +5162,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildIntro,
   ),
   Song(
@@ -4715,6 +5173,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildDanger,
   ),
   Song(
@@ -4725,6 +5184,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildWarOfHormone,
   ),
   Song(
@@ -4735,7 +5195,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
-
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildHipHopPhile,
   ),
   Song(
@@ -4746,6 +5206,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildLetMeKnow,
   ),
   Song(
@@ -4756,6 +5217,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildRain,
   ),
   Song(
@@ -4766,6 +5228,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildCypherPt3Killer,
   ),
   Song(
@@ -4776,6 +5239,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildCellPhone,
   ),
   Song(
@@ -4786,6 +5250,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildEmbarrassed,
   ),
   Song(
@@ -4796,6 +5261,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildHeaven,
   ),
   Song(
@@ -4806,6 +5272,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildLookHere,
   ),
   Song(
@@ -4816,6 +5283,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildSecondGrade,
   ),
   Song(
@@ -4826,6 +5294,7 @@ const List<Song> allSongs = [
     albumArt: "images/darkandwild.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/35voVqYGkotyJ945O9egDY"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildOutro,
   ),
 
@@ -4838,6 +5307,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1Intro,
   ),
   Song(
@@ -4848,6 +5318,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1INeedU,
   ),
   Song(
@@ -4858,6 +5329,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1HoldMeTight,
   ),
   Song(
@@ -4868,6 +5340,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1Skit,
   ),
   Song(
@@ -4878,6 +5351,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1Dope,
   ),
   Song(
@@ -4888,6 +5362,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1BoyzWithFun,
   ),
   Song(
@@ -4898,6 +5373,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1ConverseHigh,
   ),
   Song(
@@ -4908,6 +5384,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1MovingOn,
   ),
   Song(
@@ -4918,6 +5395,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh1.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0mEeCuKJQ8Xh9tQ5dMm89X"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1Outro,
   ),
 
@@ -4930,6 +5408,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Intro,
   ),
   Song(
@@ -4940,6 +5419,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Run,
   ),
   Song(
@@ -4950,6 +5430,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Butterfly,
   ),
   Song(
@@ -4960,6 +5441,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Whalien52,
   ),
   Song(
@@ -4970,6 +5452,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2MaCity,
   ),
   Song(
@@ -4980,6 +5463,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2SilverSpoon,
   ),
   Song(
@@ -4990,6 +5474,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Skit,
   ),
   Song(
@@ -5000,6 +5485,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2AutumnLeaves,
   ),
   Song(
@@ -5010,6 +5496,7 @@ const List<Song> allSongs = [
     albumArt: "images/hyyh2.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2ds8iT4wkaN1Q1gZe1qcOD"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Outro,
   ),
 
@@ -5022,6 +5509,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getHyyh1Intro,
   ),
   Song(
@@ -5032,6 +5520,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1INeedU,
   ),
   Song(
@@ -5042,6 +5531,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1HoldMeTight,
   ),
   Song(
@@ -5052,6 +5542,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2AutumnLeaves,
   ),
   Song(
@@ -5062,6 +5553,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverButterflyPrologueMix,
   ),
   Song(
@@ -5072,6 +5564,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Run,
   ),
   Song(
@@ -5082,6 +5575,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2MaCity,
   ),
   Song(
@@ -5092,6 +5586,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2SilverSpoon,
   ),
   Song(
@@ -5102,6 +5597,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1Dope,
   ),
   Song(
@@ -5112,6 +5608,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverFire,
   ),
   Song(
@@ -5122,6 +5619,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverSaveMe,
   ),
   Song(
@@ -5132,6 +5630,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverEpilogue,
   ),
   Song(
@@ -5142,6 +5641,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1ConverseHigh,
   ),
   Song(
@@ -5152,6 +5652,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1MovingOn,
   ),
   Song(
@@ -5162,6 +5663,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "15 Nov 2015",
     lyrics: getHyyh2Whalien52,
   ),
   Song(
@@ -5172,6 +5674,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Butterfly,
   ),
   Song(
@@ -5182,6 +5685,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverHouseOfCardsFull,
   ),
   Song(
@@ -5192,6 +5696,7 @@ const List<Song> allSongs = [
     albumArt: "images/youngforever.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1k5bJ8l5oL5xxVBVHjil09"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverLoveIsNotOverFull,
   ),
 
@@ -5204,6 +5709,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsIntro,
   ),
   Song(
@@ -5214,6 +5720,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsBST,
   ),
   Song(
@@ -5224,6 +5731,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsBegin,
   ),
   Song(
@@ -5234,6 +5742,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsLie,
   ),
   Song(
@@ -5244,6 +5753,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsStigma,
   ),
   Song(
@@ -5254,6 +5764,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsFirstLove,
   ),
   Song(
@@ -5264,6 +5775,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsReflection,
   ),
   Song(
@@ -5274,6 +5786,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsMama,
   ),
   Song(
@@ -5284,6 +5797,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsAwake,
   ),
   Song(
@@ -5294,6 +5808,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsLost,
   ),
   Song(
@@ -5304,6 +5819,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsCypher4,
   ),
   Song(
@@ -5314,6 +5830,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsAmIWrong,
   ),
   Song(
@@ -5324,6 +5841,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWings21stCenturyGirl,
   ),
   Song(
@@ -5334,6 +5852,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWings23,
   ),
   Song(
@@ -5344,6 +5863,7 @@ const List<Song> allSongs = [
     albumArt: "images/wings.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/1vhNGBTFoaSTLbHjPGFIlF"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsInterlude,
   ),
 
@@ -5356,6 +5876,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "13 Feb 2017", //releaseDate: "10 Oct 2016",
     lyrics: getWingsIntro,
   ),
   Song(
@@ -5366,6 +5887,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsBST,
   ),
   Song(
@@ -5376,6 +5898,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsBegin,
   ),
   Song(
@@ -5386,6 +5909,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsLie,
   ),
   Song(
@@ -5396,6 +5920,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsStigma,
   ),
   Song(
@@ -5406,6 +5931,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsFirstLove,
   ),
   Song(
@@ -5416,6 +5942,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsReflection,
   ),
   Song(
@@ -5426,6 +5953,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsMama,
   ),
   Song(
@@ -5436,6 +5964,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsAwake,
   ),
   Song(
@@ -5446,6 +5975,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsLost,
   ),
   Song(
@@ -5456,6 +5986,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsCypher4,
   ),
   Song(
@@ -5466,6 +5997,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsAmIWrong,
   ),
   Song(
@@ -5476,6 +6008,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWings21stCenturyGirl,
   ),
   Song(
@@ -5486,6 +6019,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWings23,
   ),
   Song(
@@ -5496,6 +6030,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "13 Feb 2017",
     lyrics: getYnwaSpringDay,
   ),
   Song(
@@ -5506,6 +6041,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "13 Feb 2017",
     lyrics: getYnwaNotToday,
   ),
   Song(
@@ -5516,6 +6052,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "13 Feb 2017",
     lyrics: getYnwaOutro,
   ),
   Song(
@@ -5526,6 +6063,7 @@ const List<Song> allSongs = [
     albumArt: "images/ynwa.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6THpewjqJ15ORBJkh5CEYb"),
+    releaseDate: "13 Feb 2017",
     lyrics: getYnwaYnwa,
   ),
 
@@ -5538,6 +6076,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-come-back-home.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5dEaQCUCJIQyJs5qVZYXOC"),
+    releaseDate: "4 Jul 2017",
     lyrics: getComeBackHome,
   ),
 
@@ -5550,6 +6089,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerIntro,
   ),
   Song(
@@ -5560,6 +6100,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDna,
   ),
   Song(
@@ -5570,6 +6111,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerBestOfMe,
   ),
   Song(
@@ -5580,6 +6122,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDimple,
   ),
   Song(
@@ -5590,6 +6133,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerPiedPiper,
   ),
   Song(
@@ -5600,6 +6144,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerSkit1,
   ),
   Song(
@@ -5610,6 +6155,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerMicDrop,
   ),
   Song(
@@ -5620,6 +6166,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerGoGo,
   ),
   Song(
@@ -5630,6 +6177,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerSkit2,
   ),
   Song(
@@ -5640,6 +6188,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(soundcloud: "https://soundcloud.com/kim-taetae-887092149/bts-sea-hidden-track-from-love-yourself-lyrics-color-coded-eng"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerSea,
   ),
   Song(
@@ -5650,6 +6199,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyher.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/07Rq17GzCnIdWJcyVHb57G"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerOutro,
   ),
 
@@ -5662,6 +6212,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-micdropDesiigner.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6XxpvCj3eLWs3lYowSgC4G"),
+    releaseDate: "24 Nov 2017",
     lyrics: getMicDropDesiigner,
   ),
 
@@ -5674,6 +6225,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearIntro,
   ),
   Song(
@@ -5684,6 +6236,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearFakeLove,
   ),
   Song(
@@ -5694,6 +6247,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearTTU,
   ),
   Song(
@@ -5704,6 +6258,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTear134340,
   ),
   Song(
@@ -5714,6 +6269,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearParadise,
   ),
   Song(
@@ -5724,6 +6280,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearLoveMaze,
   ),
   Song(
@@ -5734,6 +6291,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearMagicShop,
   ),
   Song(
@@ -5744,6 +6302,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearAirplanePt2,
   ),
   Song(
@@ -5754,6 +6313,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearAnpanman,
   ),
   Song(
@@ -5764,6 +6324,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearSoWhat,
   ),
   Song(
@@ -5774,6 +6335,7 @@ const List<Song> allSongs = [
     albumArt: "images/lytear.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/4NIqCxqP9o8Tp6tGLBqd8O"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearOutro,
   ),
 
@@ -5786,6 +6348,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerEuphoria,
   ),
   Song(
@@ -5796,6 +6359,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerJustDance,
   ),
   Song(
@@ -5806,6 +6370,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerSerendipityFull,
   ),
   Song(
@@ -5816,6 +6381,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDna,
   ),
   Song(
@@ -5826,6 +6392,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDimple,
   ),
   Song(
@@ -5836,6 +6403,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerLove,
   ),
   Song(
@@ -5846,6 +6414,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerOutro,
   ),
   Song(
@@ -5856,6 +6425,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearIntro,
   ),
   Song(
@@ -5866,6 +6436,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearFakeLove,
   ),
   Song(
@@ -5876,6 +6447,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearTTU,
   ),
   Song(
@@ -5886,6 +6458,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerSeesaw,
   ),
   Song(
@@ -5896,6 +6469,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearOutro,
   ),
   Song(
@@ -5906,6 +6480,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerEpiphany,
   ),
   Song(
@@ -5916,6 +6491,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerImFine,
   ),
   Song(
@@ -5926,6 +6502,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerIdol,
   ),
   Song(
@@ -5936,6 +6513,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerLoveMyself,
   ),
   Song(
@@ -5946,6 +6524,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearMagicShop,
   ),
   Song(
@@ -5956,6 +6535,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerBestOfMe,
   ),
   Song(
@@ -5966,6 +6546,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearAirplanePt2,
   ),
   Song(
@@ -5976,6 +6557,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerGoGo,
   ),
   Song(
@@ -5986,6 +6568,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearAnpanman,
   ),
   Song(
@@ -5996,6 +6579,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerMicDrop,
   ),
   Song(
@@ -6006,6 +6590,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerMicDropFull,
   ),
   Song(
@@ -6016,6 +6601,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerIdolRemix,
   ),
 
@@ -6028,6 +6614,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-wasteitonme.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5LL57U9xAYhM8dVP8b6bEc"),
+    releaseDate: "25 Oct 2018",
     lyrics: getWasteItOnMe,
   ),
 
@@ -6040,6 +6627,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaIntro,
   ),
   Song(
@@ -6050,6 +6638,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaBwl,
   ),
   Song(
@@ -6060,6 +6649,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaMikrokosmos,
   ),
   Song(
@@ -6070,6 +6660,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaMIR,
   ),
   Song(
@@ -6080,6 +6671,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaHome,
   ),
   Song(
@@ -6090,6 +6682,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaJamaisVu,
   ),
   Song(
@@ -6100,6 +6693,7 @@ const List<Song> allSongs = [
     albumArt: "images/motspersona.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2KqlAl1Kl5fZvbFgJ0qFB6"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaDionysus,
   ),
 
@@ -6112,6 +6706,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-makeitrightLauv.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/2WH4oy1SYppZrcdgKwSA0j"),
+    releaseDate: "18 Oct 2019",
     lyrics: getMIRLauv,
   ),
 
@@ -6124,6 +6719,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-blackswan.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/6wH3AP7b01vpzKYRJhreMy"),
+    releaseDate: "17 Jan 2020",
     lyrics: getBlackSwan,
   ),
 
@@ -6136,6 +6732,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020", //releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaIntro,
   ),
   Song(
@@ -6146,6 +6743,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaBwl,
   ),
   Song(
@@ -6156,6 +6754,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaMIR,
   ),
   Song(
@@ -6166,6 +6765,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaJamaisVu,
   ),
   Song(
@@ -6176,6 +6776,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaDionysus,
   ),
   Song(
@@ -6186,6 +6787,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Interlude,
   ),
   Song(
@@ -6196,6 +6798,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "17 Jan 2020",
     lyrics: getBlackSwan,
   ),
   Song(
@@ -6206,6 +6809,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Filter,
   ),
   Song(
@@ -6216,6 +6820,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7MyTime,
   ),
   Song(
@@ -6226,6 +6831,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7LDR,
   ),
   Song(
@@ -6236,6 +6842,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7On,
   ),
   Song(
@@ -6246,6 +6853,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Ugh,
   ),
   Song(
@@ -6256,6 +6864,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7ZeroOClock,
   ),
   Song(
@@ -6266,6 +6875,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7InnerChild,
   ),
   Song(
@@ -6276,6 +6886,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Friends,
   ),
   Song(
@@ -6286,6 +6897,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Moon,
   ),
   Song(
@@ -6296,6 +6908,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Respect,
   ),
   Song(
@@ -6306,6 +6919,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7WabTheEternal,
   ),
   Song(
@@ -6316,6 +6930,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Outro,
   ),
   Song(
@@ -6326,6 +6941,7 @@ const List<Song> allSongs = [
     albumArt: "images/mots7.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/5W1XY5ucNATjTULERvXx9j"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7OnSia,
   ),
 
@@ -6338,6 +6954,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-who.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0pSqYDTjY1Xt86usTQslAx"),
+    releaseDate: "6 Mar 2020",
     lyrics: getWho,
   ),
 
@@ -6350,6 +6967,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/dynamite2.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/72IwoG8tqvIWV10IHjpNNA"),
+    releaseDate: "21 Aug 2020",
     lyrics: getDynamite,
   ),
 
@@ -6362,6 +6980,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeLgo,
   ),
   Song(
@@ -6372,6 +6991,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeFtmr,
   ),
   Song(
@@ -6382,6 +7002,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeBlueAndGrey,
   ),
   Song(
@@ -6392,6 +7013,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeSkit,
   ),
   Song(
@@ -6402,6 +7024,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeTelepathy,
   ),
   Song(
@@ -6412,6 +7035,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeDisease,
   ),
   Song(
@@ -6422,6 +7046,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeStay,
   ),
   Song(
@@ -6432,6 +7057,7 @@ const List<Song> allSongs = [
     albumArt: "images/be.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6nYfHQnvkvOTNHnOhDT3sr"),
+    releaseDate: "21 Aug 2020",
     lyrics: getDynamite,
   ),
 
@@ -6444,6 +7070,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-savagelove.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4TgxFMOn5yoESW6zCidCXL"),
+    releaseDate: "2 Oct 2020",
     lyrics: getSavageLove,
   ),
 
@@ -6456,6 +7083,7 @@ const List<Song> allSongs = [
     albumArt: "images/butter.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/1mWdTewIgB3gtBM3TOSFhB"),
+    releaseDate: "21 May 2021",
     lyrics: getButter,
   ),
 
@@ -6468,6 +7096,7 @@ const List<Song> allSongs = [
     albumArt: "images/butter-ptd.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0E4HPJE6DPIc2OUmJ8rTP0"),
+    releaseDate: "9 Jul 2021",//releaseDate: "21 May 2021",
     lyrics: getButter,
   ),
   Song(
@@ -6478,6 +7107,7 @@ const List<Song> allSongs = [
     albumArt: "images/butter-ptd.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/0E4HPJE6DPIc2OUmJ8rTP0"),
+    releaseDate: "9 Jul 2021",
     lyrics: getPtd,
   ),
 
@@ -6490,6 +7120,7 @@ const List<Song> allSongs = [
     albumArt: "images/butterRemix.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/474VqnPDr0251lsQBB8sQB"),
+    releaseDate: "27 Aug 2021",
     lyrics: getButterRemix,
   ),
 
@@ -6502,6 +7133,7 @@ const List<Song> allSongs = [
     albumArt: "images/myuniverse.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/3FeVmId7tL5YN8B7R3imoM"),
+    releaseDate: "24 Sep 2021",
     lyrics: getMyUniverse,
   ),
 
@@ -6514,6 +7146,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "10 Jun 2022",//releaseDate: "11 Jul 2013",
     lyrics: getBornSinger,
   ),
   Song(
@@ -6524,6 +7157,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "12 Jun 2013",
     lyrics: get2Cool4SkoolNoMoreDream,
   ),
   Song(
@@ -6534,6 +7168,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "11 Sep 2013",
     lyrics: getorul82NO,
   ),
   Song(
@@ -6544,6 +7179,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "12 Feb 2014",
     lyrics: getSkoolLuvAffairBoyInLuv,
   ),
   Song(
@@ -6554,6 +7190,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildDanger,
   ),
   Song(
@@ -6564,6 +7201,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "29 Apr 2015",
     lyrics: getHyyh1INeedU,
   ),
   Song(
@@ -6574,6 +7212,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "30 Nov 2015",
     lyrics: getHyyh2Run,
   ),
   Song(
@@ -6584,6 +7223,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "2 May 2016",
     lyrics: getYoungForeverFire,
   ),
   Song(
@@ -6594,6 +7234,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "10 Oct 2016",
     lyrics: getWingsBST,
   ),
   Song(
@@ -6604,6 +7245,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "13 Feb 2017",
     lyrics: getYnwaSpringDay,
   ),
   Song(
@@ -6614,6 +7256,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDna,
   ),
   Song(
@@ -6624,6 +7267,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearFakeLove,
   ),
   Song(
@@ -6634,6 +7278,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerIdol,
   ),
   Song(
@@ -6644,6 +7289,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaBwl,
   ),
   Song(
@@ -6654,6 +7300,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7On,
   ),
   Song(
@@ -6664,6 +7311,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Aug 2020",
     lyrics: getDynamite,
   ),
   Song(
@@ -6674,6 +7322,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeLgo,
   ),
   Song(
@@ -6684,6 +7333,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 May 2021",
     lyrics: getButter,
   ),
   Song(
@@ -6694,6 +7344,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "9 Jun 2022",
     lyrics: getProofYtc,
   ),
   Song(
@@ -6704,6 +7355,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "10 Jun 2022",
     lyrics: getProofRunBts,
   ),
   Song(
@@ -6714,6 +7366,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaIntro,
   ),
   Song(
@@ -6724,6 +7377,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "20 Nov 2020",
     lyrics: getBeStay,
   ),
   Song(
@@ -6734,6 +7388,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Moon,
   ),
   Song(
@@ -6744,6 +7399,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "12 Apr 2019",
     lyrics: getMotsPersonaJamaisVu,
   ),
   Song(
@@ -6754,6 +7410,7 @@ const List<Song> allSongs = [
     albumArt: "images/lyanswer.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/43wFM1HquliY3iwKWzPN4y"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerSeesaw,
   ),
   Song(
@@ -6764,6 +7421,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "20 Aug 2014",
     lyrics: getDarkAndWildCypherPt3Killer,
   ),
   Song(
@@ -6774,6 +7432,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Outro,
   ),
   Song(
@@ -6784,6 +7443,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerOutro,
   ),
   Song(
@@ -6794,6 +7454,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Filter,
   ),
   Song(
@@ -6804,6 +7465,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7Friends,
   ),
   Song(
@@ -6814,6 +7476,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "18 May 2018",
     lyrics: getLyTearIntro,
   ),
   Song(
@@ -6824,6 +7487,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "21 Feb 2020",
     lyrics: getMots7ZeroOClock,
   ),
   Song(
@@ -6834,6 +7498,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "24 Aug 2018",
     lyrics: getLyAnswerEuphoria,
   ),
   Song(
@@ -6844,6 +7509,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "18 Sep 2017",
     lyrics: getLyHerDimple,
   ),
   Song(
@@ -6853,7 +7519,8 @@ const List<Song> allSongs = [
     album: "Proof",
     albumArt: "images/proof.jpg",
     lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=vlxekrL9K-4"),
+    releaseDate: "10 Jun 2022",
     lyrics: getProofYoungLove,
   ),
   Song(
@@ -6863,7 +7530,8 @@ const List<Song> allSongs = [
     album: "Proof",
     albumArt: "images/proof.jpg",
     lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=YTFCb3-NHRE"),
+    releaseDate: "10 Jun 2022",
     lyrics: getProofQuotationMark,
   ),
   Song(
@@ -6873,7 +7541,8 @@ const List<Song> allSongs = [
     album: "Proof",
     albumArt: "images/proof.jpg",
     lang: "kr",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=3K8GaHWr018"),
+    releaseDate: "10 Jun 2022",
     lyrics: getProofTonyMontana,
   ),
   Song(
@@ -6884,6 +7553,7 @@ const List<Song> allSongs = [
     albumArt: "images/proof.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/6al2VdKbb6FIz9d7lU7WRB"),
+    releaseDate: "10 Jun 2022",
     lyrics: getProofForYouth,
   ),
 
@@ -6896,6 +7566,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-bad-decisions.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/track/0xzI1KAr0Yd9tv8jlIk3sn"),
+    releaseDate: "5 Aug 2022",
     lyrics: getBadDecisions,
   ),
 
@@ -6908,6 +7579,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-yet-to-come-hyundai.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4ncTUgTfUV3wrjTPzKvn01"),
+    releaseDate: "23 Sep 2022",
     lyrics: getYetToComeHyundai,
   ),
 
@@ -6920,6 +7592,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-thePlanet.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/4IJsVXbSeGPUrgwpVoHmlg"),
+    releaseDate: "12 May 2023",
     lyrics: getThePlanet,
   ),
 
@@ -6932,6 +7605,7 @@ const List<Song> allSongs = [
     albumArt: "images/singles/bts-take-two.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/track/5IAESfJjmOYu7cHyX557kz"),
+    releaseDate: "9 Jun 2023",
     lyrics: getTakeTwo,
   ),
 
