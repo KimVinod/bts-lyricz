@@ -230,6 +230,28 @@ const List<Song> allSongs = [
     releaseDate: "24 Mar 2025",
     lyrics: getArmyYourOurGuidingLight,
   ),
+  Song(
+    name: "Brightest Stars",
+    displayName: "Brightest Stars",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/brightest-stars.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BGnmMAaqBuw"),
+    releaseDate: "24 Mar 2025",
+    lyrics: getArmyBrightestStars,
+  ),
+  Song(
+    name: "The Sound Of Your Voice",
+    displayName: "The Sound Of Your Voice",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/the-sound-of-your-voice.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=TH2CRpIxbdU"),
+    releaseDate: "13 Jun 2025",
+    lyrics: getArmyTheSoundOfYourVoice,
+  ),
 
   ///solo projects
   ///namjoon
