@@ -135,7 +135,7 @@ class _GameTabState extends State<GameTab> {
                         onTap: () => setState(() {}),
                         child: Image.asset(
                           getBt21Pic(),
-                          height: MediaQuery.of(context).size.height * 0.25,
+                          height: MediaQuery.sizeOf(context).height * 0.25,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -160,7 +160,7 @@ class _GameTabState extends State<GameTab> {
                     ],
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                SizedBox(height: MediaQuery.sizeOf(context).height * 0.1),
               ]
             else
               if (gameState == GameState.playing)
@@ -207,7 +207,7 @@ class _GameTabState extends State<GameTab> {
                   GestureDetector(
                     onTap: () => setState(() {}),
                     child: Center(
-                      child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.15),
+                      child: Image.asset(getBt21Pic(), height: MediaQuery.sizeOf(context).height * 0.15),
                     ),
                   ),
                   const SizedBox(height: 8),

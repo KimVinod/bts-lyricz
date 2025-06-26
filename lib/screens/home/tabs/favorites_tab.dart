@@ -138,7 +138,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
           children: [
             GestureDetector(
                 onTap: ()=> setState(() {}),
-                child: Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25)),
+                child: Image.asset(getBt21Pic(), height: MediaQuery.sizeOf(context).height * 0.25)),
             const SizedBox(height: 10),
             Text("Nothing here  ~.~", style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),),
             const SizedBox(height: 20),

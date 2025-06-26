@@ -168,7 +168,7 @@ Container buildNA(BuildContext context) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(getBt21Pic(), height: MediaQuery.of(context).size.height * 0.25),
+        Image.asset(getBt21Pic(), height: MediaQuery.sizeOf(context).height * 0.25),
         const SizedBox(height: 10),
         Text(
           "not available >.<",
