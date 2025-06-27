@@ -131,8 +131,9 @@ class _SongsState extends State<Songs> {
                     alignment: Alignment.bottomLeft,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Wrap(
-                        direction: Axis.vertical,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             widget.albumName,
