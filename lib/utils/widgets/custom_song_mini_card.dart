@@ -61,6 +61,7 @@ class CustomSongMiniCard extends StatelessWidget {
                       songName: song.displayName,
                       songLyrics: song.lyrics,
                       songLink: song.songLink,
+                      releaseDate: song.releaseDate,
                     ))).then((value) => onFinish()),
                   ),
                 ),

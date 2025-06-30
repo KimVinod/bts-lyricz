@@ -65,7 +65,7 @@ class SearchSongsState extends State<SearchSongs> {
             if(songs.isEmpty)...[
               GestureDetector(
                 onTap: ()=> setState(() {}),
-                child: Image.asset(bt21Asset, height: MediaQuery.of(context).size.height * 0.25),
+                child: Image.asset(bt21Asset, height: MediaQuery.sizeOf(context).height * 0.25),
               ),
               const SizedBox(height: 10),
               Text("Nothing here  ~.~", style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic)),

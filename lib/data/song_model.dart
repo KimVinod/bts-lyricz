@@ -8,8 +8,9 @@ class Song {
   final String lang;
   final Lyrics lyrics;
   final SongLink songLink;
+  final String releaseDate;
 
-  const Song({required this.name, required this.displayName, required this.isSolo, this.isArmy, this.album, required this.lang, required this.lyrics, required this.albumArt, required this.songLink});
+  const Song({required this.name, required this.displayName, required this.isSolo, this.isArmy, this.album, required this.lang, required this.lyrics, required this.albumArt, required this.songLink, required this.releaseDate});
 
 }
 

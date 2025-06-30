@@ -294,8 +294,8 @@ class SettingsService {
       builder: (BuildContext context) => Center(
         child: Container(
           padding: const EdgeInsets.all(16),
-          height: MediaQuery.of(context).size.height * 0.5,
-          width: MediaQuery.of(context).size.width * 0.75,
+          height: MediaQuery.sizeOf(context).height * 0.5,
+          width: MediaQuery.sizeOf(context).width * 0.75,
           decoration: BoxDecoration(
             color: Theme.of(context).scaffoldBackgroundColor,
             borderRadius: BorderRadius.circular(28),
