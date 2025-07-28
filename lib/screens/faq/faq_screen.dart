@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:bts_lyricz/main.dart';
 import 'package:bts_lyricz/services/settings_service.dart';
 import 'package:flutter/material.dart';
@@ -63,21 +64,27 @@ class FAQScreen extends StatelessWidget {
                   '- Enable auto-start from phone settings.',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
-                children: [
-                  Text('- Disable battery optimization. ',style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
-                  GestureDetector(
-                    onTap: () => SettingsService.openBatteryOptimization(),
-                    child: Container(
-                      color: Colors.transparent,
-                      child: Text('Click here', style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.bold)),
+            if(Platform.isAndroid)...[
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    Text(
+                      '- Disable battery optimization. ',
+                      style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500)
                     ),
-                  ),
-                ],
+                    GestureDetector(
+                      onTap: () => SettingsService.openBatteryOptimization(),
+                      child: Container(
+                        color: Colors.transparent,
+                        child: Text('Click here',
+                          style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
+            ],
           ],
         ),
       ),

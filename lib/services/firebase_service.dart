@@ -38,6 +38,9 @@ class FirebaseService {
 
     await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
         AndroidFlutterLocalNotificationsPlugin>()?.requestNotificationsPermission();
+    
+    await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
+        IOSFlutterLocalNotificationsPlugin>()?.requestPermissions(alert: true, badge: true, sound: true);
 
     await flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
@@ -59,23 +62,26 @@ class FirebaseService {
 
   static void init() {
     const initializationSettingsAndroid = AndroidInitializationSettings("@mipmap/ic_launcher");
-    const initializationSettings = InitializationSettings(android: initializationSettingsAndroid);
+    const initializationSettingsDarwin = DarwinInitializationSettings();
+    const initializationSettings = InitializationSettings(android: initializationSettingsAndroid, iOS: initializationSettingsDarwin);
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
-      if(notification != null && android != null) {
+      AppleNotification? ios = message.notification?.apple;
+      if(notification != null && (android != null || ios != null)) {
         flutterLocalNotificationsPlugin.show(
           notification.hashCode,
           notification.title,
           notification.body,
           NotificationDetails(
-            android: AndroidNotificationDetails(
+            android: android != null ? AndroidNotificationDetails(
               channel.id,
               channel.name,
               playSound: true,
-            ),
+            ) : null,
+            iOS: ios != null ? DarwinNotificationDetails() : null,
           ),
         );
       }
