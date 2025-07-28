@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyrics_app/screens/home/main.dart';
 import 'package:bts_lyrics_app/utils/ui_constants.dart';
@@ -79,7 +80,7 @@ class SettingsService {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      if(deviceInfo.version.sdkInt >= 31)...[
+                      if(deviceInfo.version.sdkInt >= 31 && Platform.isAndroid)...[
                         SwitchListTile(
                           value: isMaterialYou,
                           contentPadding: const EdgeInsets.fromLTRB(28, 0, 16, 8),

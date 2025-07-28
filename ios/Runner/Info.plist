@@ -12,6 +12,8 @@
 		<string>6.0</string>
 		<key>CFBundleName</key>
 		<string>Bangtan Lyricz</string>
+		<key>CFBundleDisplayName</key>
+		<string>Bangtan Lyricz</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>
