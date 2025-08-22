@@ -194,6 +194,14 @@ class SettingsService {
     }
   }
 
+  static void openBTSGuide() async {
+    if(await canLaunchUrlString(btsGuideUrl)) {
+      launchUrlString(btsGuideUrl, mode: LaunchMode.platformDefault);
+    } else {
+      showToastError();
+    }
+  }
+
   static void _emailMe({required PackageInfo packageInfo}) async {
     String? encodeQueryParameters(Map<String, String> params) {
       return params.entries

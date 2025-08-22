@@ -238,7 +238,7 @@ const List<Song> allSongs = [
     albumArt: "images/army/brightest-stars.jpg",
     lang: "eng",
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BGnmMAaqBuw"),
-    releaseDate: "24 Mar 2025",
+    releaseDate: "9 May 2025",
     lyrics: getArmyBrightestStars,
   ),
   Song(
@@ -251,6 +251,17 @@ const List<Song> allSongs = [
     songLink: SongLink(youtube: "https://www.youtube.com/watch?v=TH2CRpIxbdU"),
     releaseDate: "13 Jun 2025",
     lyrics: getArmyTheSoundOfYourVoice,
+  ),
+  Song(
+    name: "Where Our Stars Align",
+    displayName: "Where Our Stars Align",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/where-our-stars-align.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=fjOI3Fxab6k"),
+    releaseDate: "13 Jun 2025",
+    lyrics: getArmyWhereOurStarsAlign,
   ),
 
   ///solo projects

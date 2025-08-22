@@ -31,8 +31,8 @@ class FAQScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text('2.\nI won\'t add mp3 songs because of few reasons:\n\n'
-                  '- App might get taken down because of copyright.\n\n'
-                  '- There would be server costs for hosting songs on cloud, i.e: uploads/downloads. (I\'m a student haha)\n\n'
+                  '- App might get taken down because of copyright. (Already received one from HYBE but I think they reverted)\n\n'
+                  '- There would be server costs for hosting songs on cloud, i.e: uploads/downloads. (I\'m broke haha)\n\n'
                   '- I believe we should listen songs only from official platforms (YT, Spotify, etc) to support our BTS through streams :)',
                 style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w500),),
             ),
