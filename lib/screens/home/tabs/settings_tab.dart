@@ -54,6 +54,12 @@ class SettingsTab extends StatelessWidget {
                   onTap: () => SettingsService.checkForUpdates(context),
                 ),
                 SettingsCard(
+                  icon: Icons.menu_book,
+                  title: "Guide to BTS",
+                  subtitle: "Special thanks to @ARMYBTSguide on Twitter",
+                  onTap: () => SettingsService.openBTSGuide(),
+                ),
+                SettingsCard(
                   icon: Icons.question_mark,
                   title: "FAQ",
                   subtitle: "Got stuck somewhere? This might help you",
