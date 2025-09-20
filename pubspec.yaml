@@ -35,23 +35,23 @@ dependencies:
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^8.2.12
+  fluttertoast: ^8.2.14
   flutter_bounceable: ^1.2.0
-  google_fonts: ^6.3.0
+  google_fonts: ^6.3.1
 
   #util
   app_settings: ^6.1.1
-  flutter_local_notifications: ^19.4.0
+  flutter_local_notifications: ^19.4.2
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
 
-  share_plus: ^11.1.0
+  share_plus: ^12.0.0
   url_launcher: ^6.3.2
-  font_awesome_flutter: ^10.9.0
+  font_awesome_flutter: ^10.9.1
   dynamic_color: ^1.8.1
-  device_info_plus: ^11.5.0
-  package_info_plus: ^8.3.1
+  device_info_plus: ^12.1.0
+  package_info_plus: ^9.0.0
 
 flutter_native_splash:
   color: "#C295E0"
