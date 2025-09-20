@@ -263,6 +263,17 @@ const List<Song> allSongs = [
     releaseDate: "13 Jun 2025",
     lyrics: getArmyWhereOurStarsAlign,
   ),
+  Song(
+    name: "Stars in Our Eyes",
+    displayName: "Stars in Our Eyes'",
+    isArmy: true,
+    isSolo: IsSolo(isSolo: true),
+    albumArt: "images/army/stars-in-our-eyes.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=-1gvp8TTFGc"),
+    releaseDate: "24 Aug 2025",
+    lyrics: getArmyStarsInOurEyes,
+  ),
 
   ///solo projects
   ///namjoon
