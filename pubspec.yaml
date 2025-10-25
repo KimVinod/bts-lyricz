@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.3.6+64
+version: 2.3.7+65
 
 environment:
   sdk: ">=3.5.3 <5.0.0"
@@ -25,32 +25,32 @@ dependencies:
     sdk: flutter
 
   #firebase
-  firebase_core: ^3.15.1
-  firebase_messaging: ^15.2.9
-  firebase_analytics: ^11.5.2
-  firebase_crashlytics: ^4.3.9
+  firebase_core: ^3.15.1  # don't change cuz of min sdk 23>=
+  firebase_messaging: ^15.2.9 # don't change cuz of min sdk 23>=
+  firebase_analytics: ^11.5.2 # don't change cuz of min sdk 23>=
+  firebase_crashlytics: ^4.3.9 # don't change cuz of min sdk 23>=
 
   #persistent
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^8.2.14
+  fluttertoast: ^8.2.14 # don't change cuz of flutter constraints
   flutter_bounceable: ^1.2.0
-  google_fonts: ^6.3.1
+  google_fonts: ^6.3.2
 
   #util
   app_settings: ^6.1.1
-  flutter_local_notifications: ^19.4.2
+  flutter_local_notifications: ^19.5.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
 
-  share_plus: ^12.0.0
+  share_plus: ^12.0.1
   url_launcher: ^6.3.2
-  font_awesome_flutter: ^10.9.1
+  font_awesome_flutter: ^10.9.1 # don't change cuz of flutter constraints
   dynamic_color: ^1.8.1
-  device_info_plus: ^12.1.0
+  device_info_plus: ^12.2.0
   package_info_plus: ^9.0.0
 
 flutter_native_splash:
@@ -64,7 +64,7 @@ flutter_native_splash:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^2.4.6
+  flutter_native_splash: ^2.4.7
   flutter_lints: ^6.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
