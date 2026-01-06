@@ -42,7 +42,7 @@ dependencies:
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^9.0.0 # don't change cuz of flutter constraints
+  fluttertoast: ^9.0.0
   flutter_bounceable: ^1.2.0
   google_fonts: ^6.3.2 # don't change cuz of flutter constraints
 
