@@ -3514,6 +3514,17 @@ const List<Song> allSongs = [
     lyrics: getBtsJessi,
   ),
   Song(
+    name: "お疲れさまでした (Otsukare)",
+    displayName: "お疲れさまでした (Otsukare)",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-otsukare.jpg",
+    lang: "jp",
+    songLink: SongLink(soundcloud: "https://soundcloud.com/karey-villanew/full-hd-sope-otsukare-bts-japan-official-fanmeeting-vol3"),
+    releaseDate: "9 Nov 2016",
+    lyrics: getOtsukare,
+  ),
+  Song(
     name: "죽어도 너야 (It’s Definitely You)",
     displayName: "죽어도 너야 (IT'S DEFINITELY YOU)",
     isSolo: IsSolo(isSolo: true, isUnofficial: true),
