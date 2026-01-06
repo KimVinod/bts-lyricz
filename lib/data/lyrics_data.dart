@@ -1,4 +1,4 @@
-import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyricz/data/song_model.dart';
 
 ///army songs
 const Lyrics getArmyLoveLetters = Lyrics(

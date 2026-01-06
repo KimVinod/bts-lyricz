@@ -1,7 +1,7 @@
-import 'package:bts_lyrics_app/screens/discography/albums_screen.dart';
-import 'package:bts_lyrics_app/screens/discography/digital_singles.dart';
-import 'package:bts_lyrics_app/screens/member/member_screen.dart';
-import 'package:bts_lyrics_app/utils/theme.dart';
+import 'package:bts_lyricz/screens/discography/albums_screen.dart';
+import 'package:bts_lyricz/screens/discography/digital_singles.dart';
+import 'package:bts_lyricz/screens/member/member_screen.dart';
+import 'package:bts_lyricz/utils/theme.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';

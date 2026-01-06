@@ -1,5 +1,5 @@
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/services/settings_service.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/settings_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

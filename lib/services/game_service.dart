@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyricz/data/song_model.dart';
 
 class GameService {
   static final Random _random = Random();

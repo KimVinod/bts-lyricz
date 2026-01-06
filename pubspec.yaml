@@ -1,9 +1,8 @@
-name: bts_lyrics_app
-description: A new Flutter project.
-
+name: bts_lyricz
+description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -12,14 +11,22 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # build by specifying --build-name and --build-number, respectively.
 # In Android, build-name is used as versionName while build-number used as versionCode.
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
 version: 2.3.7+65
 
 environment:
-  sdk: ">=3.5.3 <5.0.0"
+  sdk: ^3.8.1 # flutter 3.32.8
 
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
@@ -35,23 +42,39 @@ dependencies:
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^8.2.14 # don't change cuz of flutter constraints
+  fluttertoast: ^9.0.0 # don't change cuz of flutter constraints
   flutter_bounceable: ^1.2.0
-  google_fonts: ^6.3.2
+  google_fonts: ^6.3.2 # don't change cuz of flutter constraints
 
   #util
-  app_settings: ^6.1.1
+  app_settings: ^7.0.0
   flutter_local_notifications: ^19.5.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
 
+
   share_plus: ^12.0.1
   url_launcher: ^6.3.2
   font_awesome_flutter: ^10.9.1 # don't change cuz of flutter constraints
   dynamic_color: ^1.8.1
-  device_info_plus: ^12.2.0
+  device_info_plus: ^12.3.0
   package_info_plus: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.7
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
 
 flutter_native_splash:
   color: "#C295E0"
@@ -61,16 +84,9 @@ flutter_native_splash:
     color: "#C295E0"
     image: images/app-splash-foreground-v3.png
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_native_splash: ^2.4.7
-  flutter_lints: ^6.0.0
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
+# The following section is specific to Flutter packages.
 flutter:
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -95,10 +111,10 @@ flutter:
     - images/singles/
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # https://flutter.dev/to/resolution-aware-images
 
   # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # https://flutter.dev/to/asset-from-package
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -106,9 +122,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #  - family: Product Sans
-  #    fonts:
-  #      - asset: fonts/Product-Sans-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
@@ -121,4 +134,4 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  # see https://flutter.dev/to/font-from-package

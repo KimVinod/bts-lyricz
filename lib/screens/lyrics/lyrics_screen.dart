@@ -1,7 +1,7 @@
-import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/services/settings_service.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
+import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/settings_service.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';

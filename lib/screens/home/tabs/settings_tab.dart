@@ -1,6 +1,6 @@
-import 'package:bts_lyrics_app/screens/faq/faq_screen.dart';
-import 'package:bts_lyrics_app/services/settings_service.dart';
-import 'package:bts_lyrics_app/utils/widgets/settings_card.dart';
+import 'package:bts_lyricz/screens/faq/faq_screen.dart';
+import 'package:bts_lyricz/services/settings_service.dart';
+import 'package:bts_lyricz/utils/widgets/settings_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';

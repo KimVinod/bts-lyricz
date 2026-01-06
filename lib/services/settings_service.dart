@@ -1,6 +1,6 @@
 import 'package:app_settings/app_settings.dart';
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';

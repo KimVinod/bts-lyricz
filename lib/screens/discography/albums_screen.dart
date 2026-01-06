@@ -1,9 +1,9 @@
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_album_card.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/utils/widgets/custom_album_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 
 class Albums extends StatelessWidget {
   final String type;

@@ -1,6 +1,6 @@
 //   ,   , ​
-import 'package:bts_lyrics_app/data/lyrics_data.dart';
-import 'package:bts_lyrics_app/data/song_model.dart';
+import 'package:bts_lyricz/data/lyrics_data.dart';
+import 'package:bts_lyricz/data/song_model.dart';
 
 const List<Song> newReleaseSongs = [
   //max 4 songs

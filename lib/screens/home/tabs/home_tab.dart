@@ -1,8 +1,8 @@
-import 'package:bts_lyrics_app/data/song_data.dart';
-import 'package:bts_lyrics_app/screens/search/search_songs.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_card.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_song_card.dart';
+import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/screens/search/search_songs.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
+import 'package:bts_lyricz/utils/widgets/custom_card.dart';
+import 'package:bts_lyricz/utils/widgets/custom_song_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
