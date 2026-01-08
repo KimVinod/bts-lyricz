@@ -2724,7 +2724,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
-    releaseDate: "8 Sep 2024",
+    releaseDate: "8 Sep 2023",
     lyrics: getTaehyungLayoverRainyDays,
   ),
   Song(
@@ -2735,7 +2735,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
-    releaseDate: "8 Sep 2024",
+    releaseDate: "8 Sep 2023",
     lyrics: getTaehyungLayoverBlue,
   ),
   Song(
@@ -2746,7 +2746,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
-    releaseDate: "8 Sep 2024",
+    releaseDate: "8 Sep 2023",
     lyrics: getTaehyungLayoverLoveMeAgain,
   ),
   Song(
@@ -2757,7 +2757,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
-    releaseDate: "8 Sep 2024",
+    releaseDate: "8 Sep 2023",
     lyrics: getTaehyungLayoverSlowDancing,
   ),
   Song(
@@ -2768,7 +2768,7 @@ const List<Song> allSongs = [
     albumArt: "images/albums-solo/v/v-layover.jpg",
     lang: "eng",
     songLink: SongLink(spotify: "https://open.spotify.com/album/7ixOAT89NSsgUITYc5ByB5"),
-    releaseDate: "8 Sep 2024",
+    releaseDate: "8 Sep 2023",
     lyrics: getTaehyungLayoverForUs,
   ),
 
