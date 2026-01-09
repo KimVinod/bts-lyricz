@@ -1,6 +1,6 @@
-import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
-import 'package:bts_lyrics_app/screens/songs/songs.dart';
+import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/screens/lyrics/lyrics_screen.dart';
+import 'package:bts_lyricz/screens/songs/songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';

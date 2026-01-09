@@ -1,8 +1,8 @@
-import 'package:bts_lyrics_app/data/song_data.dart';
-import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_album_card.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_song_mini_card.dart';
+import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/utils/widgets/custom_album_card.dart';
+import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -54,90 +54,92 @@ class _MemberState extends State<Member> {
         titleSpacing: 0,
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text("${widget.memberName} Albums and Songs", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),),),
-      body: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.only(top: 16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: Text(
-                "Albums",
-                style: GoogleFonts.openSans(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.only(top: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: Text(
+                  "Albums",
+                  style: GoogleFonts.openSans(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 8.0),
-            SizedBox(
-              height: 198,
-              child: AnimationLimiter(
-                child: ListView.builder(
-                  padding: const EdgeInsets.only(left: 16.0, right: 6.0),
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: albums.length,
-                  itemBuilder: (context, index) => AnimationConfiguration.staggeredList(
-                    position: index,
-                    duration: const Duration(milliseconds: 500),
-                    child: SlideAnimation(
-                      horizontalOffset: 50,
-                      child: FadeInAnimation(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 12),
-                          child: CustomAlbumCard(albumName: albums[index]['albumName'], imageAsset: albums[index]['imageAsset']),
+              const SizedBox(height: 8.0),
+              SizedBox(
+                height: 198,
+                child: AnimationLimiter(
+                  child: ListView.builder(
+                    padding: const EdgeInsets.only(left: 16.0, right: 6.0),
+                    scrollDirection: Axis.horizontal,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: albums.length,
+                    itemBuilder: (context, index) => AnimationConfiguration.staggeredList(
+                      position: index,
+                      duration: const Duration(milliseconds: 500),
+                      child: SlideAnimation(
+                        horizontalOffset: 50,
+                        child: FadeInAnimation(
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 12),
+                            child: CustomAlbumCard(albumName: albums[index]['albumName'], imageAsset: albums[index]['imageAsset']),
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0),
-              child: Text(
-                "Songs",
-                style: GoogleFonts.openSans(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            Expanded(
-              child: RawScrollbar(
-                thumbColor: Theme.of(context).focusColor,
-                thickness: 7.0,
-                radius: const Radius.circular(15.0),
-                thumbVisibility: true,
-                child: AnimationLimiter(
-                  child: ListView.builder(
-                    physics: const BouncingScrollPhysics(),
-                    itemCount: songs.length,
-                    itemBuilder: (context, index) {
-                      final song = songs[index];
-                      return AnimationConfiguration.staggeredList(
-                        position: index,
-                        duration: const Duration(milliseconds: 500),
-                        child: SlideAnimation(
-                          child: FadeInAnimation(
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                              child: CustomSongMiniCard(song: song, onFinish: () {}),
-                            ),
-                          ),
-                        ),
-                      );
-                      },
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Text(
+                  "Songs",
+                  style: GoogleFonts.openSans(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-            ),
-          ],
+              const SizedBox(height: 8.0),
+              Expanded(
+                child: RawScrollbar(
+                  thumbColor: Theme.of(context).focusColor,
+                  thickness: 7.0,
+                  radius: const Radius.circular(15.0),
+                  thumbVisibility: true,
+                  child: AnimationLimiter(
+                    child: ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: songs.length,
+                      itemBuilder: (context, index) {
+                        final song = songs[index];
+                        return AnimationConfiguration.staggeredList(
+                          position: index,
+                          duration: const Duration(milliseconds: 500),
+                          child: SlideAnimation(
+                            child: FadeInAnimation(
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                                child: CustomSongMiniCard(song: song, onFinish: () {}),
+                              ),
+                            ),
+                          ),
+                        );
+                        },
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

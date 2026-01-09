@@ -1,7 +1,7 @@
-import 'package:bts_lyrics_app/data/song_data.dart';
-import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/screens/lyrics/lyrics_screen.dart';
+import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/screens/lyrics/lyrics_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:ui' as ui;
@@ -94,118 +94,121 @@ class _SongsState extends State<Songs> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
-      body: NestedScrollView(
-        controller: _scrollController,
-        physics: const AlwaysScrollableScrollPhysics(),
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
-          SliverAppBar(
-            expandedHeight: MediaQuery.sizeOf(context).height * 0.4,
-            floating: true,
-            pinned: true,
-            snap: false,
-            titleSpacing: 0,
-            foregroundColor: appBarForegroundColor,
-            title: Text("Album", style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
-            backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    widget.albumArt,
-                    fit: BoxFit.cover,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                        colors: [
-                          Colors.black.withValues(alpha: 0.37),
-                          Colors.transparent,
-                        ],
+      body: SafeArea(
+        top: false,
+        child: NestedScrollView(
+          controller: _scrollController,
+          physics: const AlwaysScrollableScrollPhysics(),
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
+            SliverAppBar(
+              expandedHeight: MediaQuery.sizeOf(context).height * 0.4,
+              floating: true,
+              pinned: true,
+              snap: false,
+              titleSpacing: 0,
+              foregroundColor: appBarForegroundColor,
+              title: Text("Album", style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
+              backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Image.asset(
+                      widget.albumArt,
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Colors.black.withValues(alpha: 0.37),
+                            Colors.transparent,
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            widget.albumName,
-                            style: GoogleFonts.openSans(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget.albumName,
+                              style: GoogleFonts.openSans(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                              ),
                             ),
-                          ),
-                          Text(
-                            "Released: ${songs.firstOrNull != null ? songs.firstOrNull!.releaseDate : "-"}",
-                            style: GoogleFonts.openSans(
-                              fontSize: 13.0,
-                              //fontWeight: FontWeight.bold,
-                              color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                            Text(
+                              "Released: ${songs.firstOrNull != null ? songs.firstOrNull!.releaseDate : "-"}",
+                              style: GoogleFonts.openSans(
+                                fontSize: 13.0,
+                                //fontWeight: FontWeight.bold,
+                                color: Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Flexible(
-                child: Card(
-                  elevation: 3,
-                  shadowColor: Theme.of(context).colorScheme.shadow,
-                  surfaceTintColor: Colors.transparent,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-                  color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
-                  child: RawScrollbar(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    thumbColor: Theme.of(context).focusColor,
-                    thickness: 5.0,
-                    radius: const Radius.circular(15.0),
-                    child: ListView.separated(
-                      shrinkWrap: true,
-                      padding: EdgeInsets.zero,
-                      separatorBuilder: (context, index) => Divider(
-                          color: Theme.of(context).colorScheme.brightness == Brightness.light ? Colors.black38 : Colors.white30, height: 1, thickness: 0.6),
-                      itemCount: songs.length,
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                          title: Text(
-                            songs[index].name,
-                            style: GoogleFonts.openSans(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500,
+          ],
+          body: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Flexible(
+                  child: Card(
+                    elevation: 3,
+                    shadowColor: Theme.of(context).colorScheme.shadow,
+                    surfaceTintColor: Colors.transparent,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                    color: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
+                    child: RawScrollbar(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      thumbColor: Theme.of(context).focusColor,
+                      thickness: 5.0,
+                      radius: const Radius.circular(15.0),
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        padding: EdgeInsets.zero,
+                        separatorBuilder: (context, index) => Divider(
+                            color: Theme.of(context).colorScheme.brightness == Brightness.light ? Colors.black38 : Colors.white30, height: 1, thickness: 0.6),
+                        itemCount: songs.length,
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                            title: Text(
+                              songs[index].name,
+                              style: GoogleFonts.openSans(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(
-                            songFullName: songs[index].name,
-                            songName: songs[index].displayName,
-                            songLyrics: songs[index].lyrics,
-                            songLink: songs[index].songLink,
-                            releaseDate: songs[index].releaseDate,
-                          ))),
-                        );
-                      },
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(
+                              songFullName: songs[index].name,
+                              songName: songs[index].displayName,
+                              songLyrics: songs[index].lyrics,
+                              songLink: songs[index].songLink,
+                              releaseDate: songs[index].releaseDate,
+                            ))),
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

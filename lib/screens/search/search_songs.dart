@@ -1,9 +1,9 @@
-import 'package:bts_lyrics_app/data/song_model.dart';
-import 'package:bts_lyrics_app/screens/home/main.dart';
-import 'package:bts_lyrics_app/utils/ui_constants.dart';
-import 'package:bts_lyrics_app/utils/widgets/custom_song_mini_card.dart';
-import 'package:bts_lyrics_app/utils/widgets/search_widget.dart';
-import 'package:bts_lyrics_app/data/song_data.dart';
+import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
+import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
+import 'package:bts_lyricz/utils/widgets/search_widget.dart';
+import 'package:bts_lyricz/data/song_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,65 +38,68 @@ class SearchSongsState extends State<SearchSongs> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
-      body: NestedScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
-          SliverAppBar(
-            floating: true,
-            snap: true,
-            pinned: true,
-            titleSpacing: 0,
-            shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(28), bottomRight: Radius.circular(28))),
-            backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-            title: Text("Search Songs", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.w600)),
-            bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(kToolbarHeight + 32),
-              child: SearchWidget(
-                text: query,
-                onChanged: searchSongs,
-                hintText: 'Search by song name, lyrics or album...',
-              ),
-            ),
-          ),
-        ],
-        body: Column(
-          mainAxisAlignment: songs.isEmpty ? MainAxisAlignment.center : MainAxisAlignment.start,
-          children: [
-            if(songs.isEmpty)...[
-              GestureDetector(
-                onTap: ()=> setState(() {}),
-                child: Image.asset(bt21Asset, height: MediaQuery.sizeOf(context).height * 0.25),
-              ),
-              const SizedBox(height: 10),
-              Text("Nothing here  ~.~", style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic)),
-            ] else ...[
-              Expanded(
-                child: AnimationLimiter(
-                  child: ListView.builder(
-                    padding: const EdgeInsets.only(top: 16),
-                    physics: const BouncingScrollPhysics(),
-                    itemCount: songs.length,
-                    itemBuilder: (context, index) {
-                      final song = songs[index];
-                      return AnimationConfiguration.staggeredList(
-                        position: index,
-                        duration: const Duration(milliseconds: 500),
-                        child: SlideAnimation(
-                          child: FadeInAnimation(
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                              child: CustomSongMiniCard(song: song, onFinish: () {}),
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+      body: SafeArea(
+        top: false,
+        child: NestedScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
+            SliverAppBar(
+              floating: true,
+              snap: true,
+              pinned: true,
+              titleSpacing: 0,
+              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(28), bottomRight: Radius.circular(28))),
+              backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+              title: Text("Search Songs", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.w600)),
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(kToolbarHeight + 32),
+                child: SearchWidget(
+                  text: query,
+                  onChanged: searchSongs,
+                  hintText: 'Search by song name, lyrics or album...',
                 ),
               ),
-            ]
-
+            ),
           ],
+          body: Column(
+            mainAxisAlignment: songs.isEmpty ? MainAxisAlignment.center : MainAxisAlignment.start,
+            children: [
+              if(songs.isEmpty)...[
+                GestureDetector(
+                  onTap: ()=> setState(() {}),
+                  child: Image.asset(bt21Asset, height: MediaQuery.sizeOf(context).height * 0.25),
+                ),
+                const SizedBox(height: 10),
+                Text("Nothing here  ~.~", style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic)),
+              ] else ...[
+                Expanded(
+                  child: AnimationLimiter(
+                    child: ListView.builder(
+                      padding: const EdgeInsets.only(top: 16),
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: songs.length,
+                      itemBuilder: (context, index) {
+                        final song = songs[index];
+                        return AnimationConfiguration.staggeredList(
+                          position: index,
+                          duration: const Duration(milliseconds: 500),
+                          child: SlideAnimation(
+                            child: FadeInAnimation(
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                                child: CustomSongMiniCard(song: song, onFinish: () {}),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ]
+
+            ],
+          ),
         ),
       ),
     );

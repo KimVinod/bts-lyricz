@@ -1,4 +1,4 @@
-import 'package:bts_lyrics_app/screens/home/main.dart';
+import 'package:bts_lyricz/main.dart';
 import 'package:flutter/material.dart';
 
 class SearchWidget extends StatefulWidget {
