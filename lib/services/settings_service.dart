@@ -87,6 +87,9 @@ class SettingsService {
                           title: const Text("Google Material You"),
                           subtitle: const Text("Uses your wallpaper to identify source color"),
                           onChanged: (value) => onChangedMaterialYou(value),
+                          inactiveTrackColor: Theme.of(context).colorScheme.surfaceContainer,
+                          inactiveThumbColor: Theme.of(context).colorScheme.tertiary,
+                          trackOutlineColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.tertiary),
                         ),
                       ],
                       RadioListTile<String>(
