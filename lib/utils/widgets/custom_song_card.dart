@@ -1,6 +1,7 @@
 import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/screens/lyrics/lyrics_screen.dart';
 import 'package:bts_lyricz/screens/songs/songs.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -60,6 +61,8 @@ class CustomSongCard extends StatelessWidget {
         songLyrics: song.lyrics,
         songLink: song.songLink,
         releaseDate: song.releaseDate,
+        songAlbumArt: song.albumArt,
+        songArtistName: getArtistName(song.isSolo.soloName ?? ""),
       )));
     } else {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Songs(albumName: song.album!, albumArt: song.albumArt)));

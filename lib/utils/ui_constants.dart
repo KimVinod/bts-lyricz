@@ -94,6 +94,11 @@ enum GameState {
   incorrect,
 }
 
+enum GenerationMode {
+  lyrics,
+  song,
+}
+
 String getBt21Pic() {
   final List<String> bt21Pics = [
     "images/bt21/koya.png",
@@ -107,6 +112,27 @@ String getBt21Pic() {
 
   bt21Pics.shuffle();
   return bt21Pics.first;
+}
+
+String getArtistName(String name) {
+  switch(name) {
+    case "namjoon":
+      return "RM";
+    case "seokjin":
+      return "Jin";
+    case "yoongi":
+      return "SUGA / Agust D";
+    case "hoseok":
+      return "j-hope";
+    case "jimin":
+      return "Jimin";
+    case "taehyung":
+      return "V";
+    case "jungkook":
+      return "Jungkook";
+    default:
+      return "BTS";
+  }
 }
 
 const Map<String, Widget> discography = {
@@ -159,6 +185,11 @@ const List<Map<String, dynamic>> soloProjects = [
 
 void showToastError() => Fluttertoast.showToast(
   msg: "Error occurred. Your phone doesn't support opening links",
+  toastLength: Toast.LENGTH_SHORT,
+);
+
+void showCustomToastError(String msg) => Fluttertoast.showToast(
+  msg: msg,
   toastLength: Toast.LENGTH_SHORT,
 );
 

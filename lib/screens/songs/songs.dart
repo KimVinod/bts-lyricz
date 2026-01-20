@@ -2,6 +2,8 @@ import 'package:bts_lyricz/data/song_data.dart';
 import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/main.dart';
 import 'package:bts_lyricz/screens/lyrics/lyrics_screen.dart';
+import 'package:bts_lyricz/screens/share/song_lyrics_generator.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:ui' as ui;
@@ -109,6 +111,20 @@ class _SongsState extends State<Songs> {
               foregroundColor: appBarForegroundColor,
               title: Text("Album", style: GoogleFonts.openSans(fontWeight: FontWeight.w600)),
               backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+              actions: [
+                IconButton(
+                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SongLyricsGenerator(
+                    songTitle: widget.albumName,
+                    artistName: songs.firstOrNull != null ? getArtistName(songs.firstOrNull!.isSolo.soloName ?? "") : "",
+                    albumArt: AssetImage(widget.albumArt),
+                    lyrics: "",
+                    mode: GenerationMode.song,
+                  ))),
+                  icon: Icon(Icons.share),
+                  tooltip: "Share",
+                ),
+                const SizedBox(width: 6),
+              ],
               flexibleSpace: FlexibleSpaceBar(
                 background: Stack(
                   fit: StackFit.expand,
@@ -200,6 +216,8 @@ class _SongsState extends State<Songs> {
                               songLyrics: songs[index].lyrics,
                               songLink: songs[index].songLink,
                               releaseDate: songs[index].releaseDate,
+                              songAlbumArt: songs[index].albumArt,
+                              songArtistName: getArtistName(songs[index].isSolo.soloName ?? ""),
                             ))),
                           );
                         },
