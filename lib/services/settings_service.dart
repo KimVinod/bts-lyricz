@@ -122,9 +122,24 @@ class SettingsService {
     return userGameBox.get('language', defaultValue: 'eng');
   }
 
+  static Future<int> loadGameScore() async {
+    Box userGameBox = await Hive.openBox('userGame');
+    return userGameBox.get('highScore', defaultValue: 0);
+  }
+
   static Future saveGameLanguage(String language) async {
     Box userGameBox = await Hive.openBox('userGame');
     userGameBox.put('language', language);
+  }
+
+  static Future saveGameScore(int highScore) async {
+    Box userGameBox = await Hive.openBox('userGame');
+    userGameBox.put('highScore', highScore);
+  }
+
+  static Future clearGameScore() async {
+    Box userGameBox = await Hive.openBox('userGame');
+    userGameBox.delete('highScore');
   }
 
   static Future<void> openGameLanguageDialog(BuildContext context, Function onDialogClosed) async {
