@@ -9,14 +9,14 @@ import 'package:hive_flutter/adapters.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  await FirebaseService.setup(isRelease: false);
-  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme(), isMaterialYou: await SettingsService.loadMaterialYou()));
+  await FirebaseService.setup(isRelease: true);
+  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme(), isMaterialYou: await SettingsService.loadMaterialYou(), isDeprecate: await SettingsService.checkOSDeprecation()));
 }
 
 class BTSLyricsApp extends StatefulWidget {
   final ThemeMode themeMode;
-  final bool isMaterialYou;
-  const BTSLyricsApp({super.key, required this.themeMode, required this.isMaterialYou});
+  final bool isMaterialYou, isDeprecate;
+  const BTSLyricsApp({super.key, required this.themeMode, required this.isMaterialYou, required this.isDeprecate});
 
   @override
   State<BTSLyricsApp> createState() => BTSLyricsAppState();
@@ -26,7 +26,7 @@ class BTSLyricsApp extends StatefulWidget {
 
 class BTSLyricsAppState extends State<BTSLyricsApp> {
   late ThemeMode _themeMode;
-  late bool isMaterialYou;
+  late bool isMaterialYou, isDeprecate;
 
   @override
   void initState() {
@@ -39,6 +39,7 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
   void _initTheme() {
     _themeMode = widget.themeMode;
     isMaterialYou = widget.isMaterialYou;
+    isDeprecate = widget.isDeprecate;
   }
 
   void changeTheme(ThemeMode themeMode) {

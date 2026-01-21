@@ -28,8 +28,9 @@ class _GameTabState extends State<GameTab> {
   final _random = Random();
   List<Song> options = [];
   List<Song> songs = [];
-  late String _selectedLanguage;
-  bool isLang = false;
+  String _selectedLanguage = "eng";
+  int _currentHighScore = 0;
+  bool isLang = false, isHighScore = false;
 
   void loadSongs() {
     songs = GameService.filterSongs(allSongs, _selectedLanguage);
@@ -69,6 +70,8 @@ class _GameTabState extends State<GameTab> {
     setState(() {
       if (selectedOption == correctAnswer!.name) {
         gameState = GameState.correct;
+        _currentHighScore++;
+        SettingsService.saveGameScore(_currentHighScore);
       } else {
         gameState = GameState.incorrect;
       }
@@ -83,9 +86,12 @@ class _GameTabState extends State<GameTab> {
 
   Future<void> _loadLanguagePreference() async {
      final language = await SettingsService.loadGameLanguage();
+     final highScore = await SettingsService.loadGameScore();
     setState(() {
     _selectedLanguage = language;
+    _currentHighScore = highScore;
     isLang = true;
+    isHighScore = true;
     });
   }
 
@@ -102,6 +108,33 @@ class _GameTabState extends State<GameTab> {
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           title: Text("Guess the Song?", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.bold)),
           actions: [
+            if(_currentHighScore != 0)
+            IconButton(
+              icon: const Icon(Icons.close),
+              tooltip: "Reset highscore",
+              onPressed: _currentHighScore != 0
+                  ? () {
+                showDialog(context: context, builder: (context) {
+                  return AlertDialog(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                      title: const Text("Reset highscore"),
+                      content: const Text("Are you sure you want to reset your highscore?"),
+                      actions: [
+                        TextButton(onPressed: () {
+                          Navigator.pop(context);
+                        }, child: Text("No", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                        TextButton(onPressed: () {
+                          Navigator.pop(context);
+                          SettingsService.clearGameScore();
+                          setState(() => _currentHighScore = 0);
+                          restartGame(isReady: false);
+                        },child: Text("Yes", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                      ]
+                  );
+                });
+              } : null,
+            ),
             IconButton(
               icon: const Icon(Icons.translate),
               tooltip: "Select language",
@@ -117,7 +150,7 @@ class _GameTabState extends State<GameTab> {
           ],
         ),
       ],
-      body: isLang
+      body: isLang && isHighScore
           ? Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -152,10 +185,15 @@ class _GameTabState extends State<GameTab> {
                       ),
                       const SizedBox(height: 16),
                       Text(
+                        "Highscore: \n$_currentHighScore",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
                         "Language mode: \n${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.openSans(
-                            fontSize: 16, fontStyle: FontStyle.italic),
+                        style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
                       ),
                     ],
                   ),
@@ -221,6 +259,12 @@ class _GameTabState extends State<GameTab> {
                         ),
                       ),
                       const SizedBox(height: 16),
+                      Text(
+                        "Highscore: $_currentHighScore",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
+                      ),
+                      const SizedBox(height: 16),
                     ],
                   if (gameState == GameState.incorrect)
                     ...[
@@ -229,6 +273,14 @@ class _GameTabState extends State<GameTab> {
                           "Ahh! That's not the right one. Keep trying!",
                           style: GoogleFonts.openSans(fontSize: 15,
                               fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Center(
+                        child: Text(
+                          "Highscore: $_currentHighScore",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
                         ),
                       ),
                       const SizedBox(height: 24),
