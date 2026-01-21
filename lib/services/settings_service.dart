@@ -363,4 +363,10 @@ class SettingsService {
     );
     }
   }
+
+  static Future<bool> checkOSDeprecation() async {
+    final deviceInfoPlugin = DeviceInfoPlugin();
+    final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
+    return deviceInfo.version.sdkInt < 23;
+  }
 }

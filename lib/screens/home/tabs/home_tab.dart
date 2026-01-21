@@ -1,4 +1,6 @@
 import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/screens/faq/deprecated_screen.dart';
 import 'package:bts_lyricz/screens/search/search_songs.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:bts_lyricz/utils/widgets/custom_card.dart';
@@ -41,6 +43,52 @@ class HomeTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              if(BTSLyricsApp.of(context).isDeprecate)
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                  color: BTSLyricsApp.of(context).isMaterialYou
+                      ? Theme.of(context).colorScheme.secondaryContainer
+                      : Theme.of(context).colorScheme.tertiaryContainer,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 8, 0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.info_outline,
+                              size: 18,
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Text(
+                                "No future updates for this device.",
+                                style: GoogleFonts.openSans(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: TextButton(
+                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const DeprecatedScreen())),
+                            child: Text("Learn more", style: TextStyle(color: Theme.of(context).colorScheme.onPrimaryContainer)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
