@@ -33,6 +33,7 @@ class SearchWidgetState extends State<SearchWidget> {
       child: SearchBar(
         controller: controller,
         hintText: widget.hintText,
+        hintStyle: WidgetStatePropertyAll(TextStyle(fontSize: 15)),
         //surfaceTintColor: MaterialStateProperty.all(Colors.transparent),
         autoFocus: true,
         trailing: widget.text.isNotEmpty ? [
