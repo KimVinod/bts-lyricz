@@ -72,7 +72,7 @@ const List<Song> allSongs = [
     isSolo: IsSolo(isSolo: true),
     albumArt: "images/army/i-purple-you.jpg",
     lang: "kr",
-    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=qR03i1LfKFQ"),
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=QQZcPHtRH18"),
     releaseDate: "2017",
     lyrics: getArmyIPurpleYou,
   ),
