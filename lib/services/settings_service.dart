@@ -126,9 +126,9 @@ class SettingsService {
     return userGameBox.get('language', defaultValue: 'eng');
   }
 
-  static Future<int> loadGameScore() async {
+  static Future<int> loadGameScore(String languageMode) async {
     Box userGameBox = await Hive.openBox('userGame');
-    return userGameBox.get('highScore', defaultValue: 0);
+    return userGameBox.get('highScore-$languageMode', defaultValue: 0);
   }
 
   static Future saveGameLanguage(String language) async {
@@ -136,9 +136,9 @@ class SettingsService {
     userGameBox.put('language', language);
   }
 
-  static Future saveGameScore(int highScore) async {
+  static Future saveGameScore(int highScore, String languageMode) async {
     Box userGameBox = await Hive.openBox('userGame');
-    userGameBox.put('highScore', highScore);
+    userGameBox.put('highScore-$languageMode', highScore);
   }
 
   static Future clearGameScore() async {
