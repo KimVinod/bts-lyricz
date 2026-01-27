@@ -1,5 +1,6 @@
 import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/utils/debouncer.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
 import 'package:bts_lyricz/utils/widgets/search_widget.dart';
@@ -19,12 +20,19 @@ class SearchSongsState extends State<SearchSongs> {
   List<Song> songs = [];
   String query = "";
   late String bt21Asset;
+  final _debouncer = Debouncer(milliseconds: 250);
 
   @override
   void initState() {
     super.initState();
     bt21Asset = getBt21Pic();
     loadSongs();
+  }
+
+  @override
+  void dispose() {
+    _debouncer.dispose();
+    super.dispose();
   }
 
   void loadSongs() {
@@ -55,7 +63,7 @@ class SearchSongsState extends State<SearchSongs> {
                 preferredSize: const Size.fromHeight(kToolbarHeight + 32),
                 child: SearchWidget(
                   text: query,
-                  onChanged: searchSongs,
+                  onChanged: (value) => _debouncer.run(() => searchSongs(value)),
                   hintText: 'Search by song name, lyrics or album...',
                 ),
               ),
