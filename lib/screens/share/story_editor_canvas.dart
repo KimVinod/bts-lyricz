@@ -60,12 +60,13 @@ class StoryEditorCanvas extends StatefulWidget {
 class StoryEditorCanvasState extends State<StoryEditorCanvas> {
   final ScreenshotController _screenshotController = ScreenshotController();
   late Color _currentColor;
+  bool _showHintBorder = false;
   bool _enableBackground = true;
   bool _showLogo = true;
   bool _lightText = false;
   bool _isLoading = false;
-  double _userScale = 1.0;
-  double _baseScale = 1.0;
+  double _userScale = 0.9;
+  double _baseScale = 0.9;
 
   @override
   void initState() {
@@ -104,7 +105,10 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
   }
 
   Future<void> _shareImage() async {
-    setState(() => _isLoading = true);
+    setState(() {
+      _showHintBorder = false;
+      _isLoading = true;
+    });
     const double captureRatio = 3.0; // Hardcoded 3.0 for standard 1080p width
 
     // final double pixelRatio = MediaQuery.of(context).devicePixelRatio;
@@ -141,7 +145,7 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
         ? _currentColor.computeLuminance() < 0.4
         : Theme.brightnessOf(context) == Brightness.dark;
 
-    final Color iconColor = isBackgroundDark ? Colors.white : Colors.black;
+    final Color foregroundColor = isBackgroundDark ? Colors.white : Colors.black;
     final Color textColor = _lightText ? Colors.white : Colors.black;
 
     return Scaffold(
@@ -162,11 +166,13 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
               onScaleStart: _enableBackground
                   ? (details) => _baseScale = _userScale
                   : null,
+              onScaleEnd: (v) => setState(() => _showHintBorder = false),
               onScaleUpdate: _enableBackground
                   ? (details) {
                 setState(() {
                   // Clamp scale between 0.5x (half size) and 1.5x (big)
-                  _userScale = (_baseScale * details.scale).clamp(0.5, 1.5);
+                  _userScale = (_baseScale * details.scale).clamp(0.5, 1.1);
+                  _showHintBorder = true;
                 });
               }
                   : null,
@@ -176,10 +182,10 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
                     // Add padding to "push" the scrolling area up
                     // Top: 80 (approx Header height)
                     // Bottom: 160 (approx Footer height + buffer)
-                    padding: const EdgeInsets.only(top: 80, left: 30, right: 30, bottom: 160),
+                    padding: const EdgeInsets.only(top: 80, left: 0, right: 0, bottom: 160),
                     child: Screenshot(
                       controller: _screenshotController,
-                      child: _buildCardPreview(textColor),
+                      child: _buildCardPreview(textColor, foregroundColor),
                     ),
                   ),
                 ),
@@ -199,7 +205,7 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
                   children: [
                     IconButton(
                       icon: const Icon(Icons.arrow_back),
-                      color: iconColor,
+                      color: foregroundColor,
                       onPressed: widget.onBack,
                     ),
                     const Spacer(),
@@ -207,25 +213,25 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
                     IconButton(
                       tooltip: "Text Color",
                       icon: Icon(_lightText ? Icons.format_color_text : Icons.format_color_text_outlined),
-                      color: iconColor,
+                      color: foregroundColor,
                       onPressed: () => setState(() => _lightText = !_lightText),
                     ),
 
                     IconButton(
                       tooltip: _showLogo ? "Hide logo" : "Show logo",
                       icon: Icon(_showLogo ? Icons.verified : Icons.verified_outlined),
-                      color: iconColor,
+                      color: foregroundColor,
                       onPressed: () => setState(() => _showLogo = !_showLogo),
                     ),
 
                     IconButton(
                       tooltip: _enableBackground ? "Card mode" : "Story mode",
                       icon: Icon(_enableBackground ? Icons.aspect_ratio_rounded : Icons.crop_free_rounded),
-                      color: iconColor,
+                      color: foregroundColor,
                       onPressed: () {
                         setState(() {
                           _enableBackground = !_enableBackground;
-                          if(_enableBackground) _userScale = 1.0;
+                          if(_enableBackground) _userScale = 0.9;
                         });
                       },
                     ),
@@ -256,9 +262,9 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
                           GestureDetector(
                             onTap: _openColorPicker,
                             child: Container(
-                              margin: const EdgeInsets.only(right: 8),
-                              width: 40,
-                              height: 40,
+                              margin: const EdgeInsets.only(right: 12),
+                              width: 38,
+                              height: 38,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 gradient: const SweepGradient(
@@ -325,8 +331,8 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
         alignment: Alignment.center,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          width: isSelected ? 45 : 38, // Animate size inside the fixed box
-          height: isSelected ? 45 : 38,
+          width: isSelected ? 40 : 36, // Animate size inside the fixed box
+          height: isSelected ? 40 : 36,
           decoration: BoxDecoration(
             color: color,
             shape: BoxShape.circle,
@@ -338,7 +344,7 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
     );
   }
 
-  Widget _buildCardPreview(Color textColor) {
+  Widget _buildCardPreview(Color textColor, Color foregroundColor) {
     final double screenWidth = MediaQuery.of(context).size.width;
     final double baseWidth = screenWidth > 500 ? 350 : screenWidth * 0.85;
 
@@ -359,7 +365,8 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
         height: baseWidth * (16 / 9),
         decoration: BoxDecoration(
           color: _currentColor,
-          borderRadius: BorderRadius.zero,
+          borderRadius: _showHintBorder ? BorderRadius.circular(24) : null,
+          border: _showHintBorder ? Border.all(color: foregroundColor.withValues(alpha: 0.5)) : null,
         ),
         child: Transform.scale(
           scale: _userScale,
