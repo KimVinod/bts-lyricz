@@ -194,11 +194,15 @@ class _GameTabState extends State<GameTab> {
                       ),
                       const SizedBox(height: 16),
                       _buildScoreChips(showScore: false),
-                      const SizedBox(height: 16),
-                      Text(
-                        "Language mode: \n${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.openSans(fontSize: 16, fontStyle: FontStyle.italic),
+                      const SizedBox(height: 8),
+                      Chip(
+                        avatar: const Icon(Icons.translate),
+                        shape: StadiumBorder(),
+                        backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
+                        label: Text(
+                          "Language: ${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ],
                   ),
