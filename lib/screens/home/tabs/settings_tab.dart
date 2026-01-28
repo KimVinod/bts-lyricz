@@ -51,7 +51,7 @@ class SettingsTab extends StatelessWidget {
                   icon: Icons.system_update,
                   title: "Check for Updates",
                   subtitle: "Get latest songs and improvements",
-                  onTap: () => SettingsService.checkForUpdates(context),
+                  onTap: () => SettingsService.checkForUpdates(Navigator.of(context).context),
                 ),
                 SettingsCard(
                   icon: Icons.menu_book,
