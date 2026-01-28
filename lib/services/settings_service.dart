@@ -436,8 +436,12 @@ class SettingsService {
   }
 
   static Future<bool> checkOSDeprecation() async {
-    final deviceInfoPlugin = DeviceInfoPlugin();
-    final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
-    return deviceInfo.version.sdkInt < 23;
+    try {
+      final deviceInfoPlugin = DeviceInfoPlugin();
+      final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
+      return deviceInfo.version.sdkInt < 23;
+    } catch(e) {
+      return false;
+    }
   }
 }

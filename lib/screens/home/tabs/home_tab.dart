@@ -43,7 +43,7 @@ class HomeTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              if(BTSLyricsApp.of(context).isDeprecate)
+              if(BTSLyricsApp.of(context).isDeprecated)
               SizedBox(
                 width: double.infinity,
                 child: Card(
