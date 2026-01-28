@@ -13,7 +13,7 @@ import 'package:bts_lyricz/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const BTSLyricsApp(themeMode: ThemeMode.system, isMaterialYou: false, isDeprecate: false));
+    await tester.pumpWidget(const BTSLyricsApp(themeMode: ThemeMode.system, isMaterialYou: false, isDeprecated: false));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

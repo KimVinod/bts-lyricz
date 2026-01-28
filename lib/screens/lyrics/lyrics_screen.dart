@@ -72,12 +72,7 @@ class _LyricsPageState extends State<LyricsPage> {
       }
     }
 
-    final List<String> listOfLyrics = [];
-
-    if (widget.songLyrics.kr != null) listOfLyrics.add("KOR");
-    if (widget.songLyrics.jp != null) listOfLyrics.add("JP");
-    if (widget.songLyrics.eng != null) listOfLyrics.add("ENG");
-    if(widget.songLyrics.kr != null || widget.songLyrics.jp != null) listOfLyrics.add("ROM");
+    final List<String> listOfLyrics = getListOfLyrics();
 
     if(listOfLyrics.isEmpty) return;
 
@@ -125,11 +120,21 @@ class _LyricsPageState extends State<LyricsPage> {
     );
   }
 
+  List<String> getListOfLyrics() {
+    final List<String> listOfLyrics = [];
+
+    if (widget.songLyrics.kr != null) listOfLyrics.add("KOR");
+    if (widget.songLyrics.jp != null) listOfLyrics.add("JP");
+    if (widget.songLyrics.eng != null) listOfLyrics.add("ENG");
+    if(widget.songLyrics.kr != null || widget.songLyrics.jp != null) listOfLyrics.add("ROM");
+
+    return listOfLyrics;
+  }
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: widget.songLyrics.kr != null || widget.songLyrics.jp != null ? 3 : 1,
+      length: getListOfLyrics().length,
       child: Scaffold(
         backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.surfaceContainerLow : Theme.of(context).scaffoldBackgroundColor,
         body: SafeArea(
@@ -146,25 +151,16 @@ class _LyricsPageState extends State<LyricsPage> {
                     backgroundColor: Theme.of(context).colorScheme.primaryContainer,
                     bottom: TabBar(
                       dividerColor: Colors.transparent,
-                      tabs: [
-                        if (widget.songLyrics.kr != null) const Tab(text: "KOR"),
-                        if (widget.songLyrics.jp != null) const Tab(text: "JP"),
-                        const Tab(text: "ENG"),
-                        if(widget.songLyrics.kr != null || widget.songLyrics.jp != null)
-                          const Tab(text: "ROM",)
-                      ],
+                      tabs: getListOfLyrics().map((lyric) => Tab(text: lyric)).toList(),
                     ),
                   ),
                 ],
                 body: TabBarView(
                   children: [
-                    if (widget.songLyrics.kr != null)
-                      buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr, releaseDate: widget.releaseDate),
-                    if (widget.songLyrics.jp != null)
-                      buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp, releaseDate: widget.releaseDate),
-                    buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng, releaseDate: widget.releaseDate),
-                    if(widget.songLyrics.kr != null || widget.songLyrics.jp != null)
-                      buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom, releaseDate: widget.releaseDate),
+                    if (widget.songLyrics.kr != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr, releaseDate: widget.releaseDate),
+                    if (widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp, releaseDate: widget.releaseDate),
+                    if (widget.songLyrics.eng != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng, releaseDate: widget.releaseDate),
+                    if (widget.songLyrics.kr != null || widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom, releaseDate: widget.releaseDate),
                   ],
                 ),
               ),
