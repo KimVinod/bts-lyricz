@@ -501,10 +501,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "599bea7747de5d41a4ebd7e629bb96601ad7727c"
+      resolved-ref: dd6fcbd5b43ce4c2253ee06d53112c46354d5767
       url: "https://github.com/KimVinod/native_updater.git"
     source: git
-    version: "1.0.3"
+    version: "1.0.4"
   package_info_plus:
     dependency: "direct main"
     description:

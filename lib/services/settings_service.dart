@@ -255,7 +255,7 @@ class SettingsService {
 
   static void checkForUpdates(BuildContext context) {
     Fluttertoast.showToast(msg: "Checking for updates...", toastLength: Toast.LENGTH_SHORT);
-    NativeUpdater.displayUpdateAlert(context, forceUpdate: true);
+    NativeUpdater.displayUpdateAlert(context, forceUpdate: true, playStoreUrl: playStoreUrl);
   }
 
   static void openVersionNotes() async {
