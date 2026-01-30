@@ -399,3 +399,5 @@ const List<Map<String, dynamic>> uoAlbums = [
     'imageAsset':'images/bts-world.jpg',
   },
 ];
+
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();

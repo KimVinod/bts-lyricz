@@ -1,4 +1,6 @@
 import 'package:bts_lyricz/firebase_options.dart';
+import 'package:bts_lyricz/services/settings_service.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
@@ -15,6 +17,7 @@ const AndroidNotificationChannel channel = AndroidNotificationChannel(
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
+@pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform
@@ -34,6 +37,7 @@ class FirebaseService {
   static void _setupAnalytics(bool isRelease) => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(isRelease);
 
   static Future<void> _setupMessaging() async {
+    // this is called when app is in background (app not removed from recent apps or killed)
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
     await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
@@ -64,8 +68,13 @@ class FirebaseService {
     const initializationSettingsAndroid = AndroidInitializationSettings("@mipmap/ic_launcher");
     const initializationSettingsDarwin = DarwinInitializationSettings();
     const initializationSettings = InitializationSettings(android: initializationSettingsAndroid, iOS: initializationSettingsDarwin);
+
+    // this is called when app is in foreground (opened) and then user clicks on notification
+    // void onDidReceiveNotificationResponse(NotificationResponse notificationResponse) {}
+
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
+    // this is called when app is in foreground (opened)
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
@@ -84,10 +93,20 @@ class FirebaseService {
             iOS: ios != null ? DarwinNotificationDetails() : null,
           ),
         );
+
+        if(notification.title?.toLowerCase().contains("update") == true && navigatorKey.currentContext != null && Navigator.of(navigatorKey.currentContext!).mounted) SettingsService.checkForUpdates(Navigator.of(navigatorKey.currentContext!).context);
       }
     });
 
+    // this is called when app is in background (app not removed from recent apps or killed) and then user clicks on notification
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      if (message.notification?.title?.toLowerCase().contains("update") == true && navigatorKey.currentContext != null && Navigator.of(navigatorKey.currentContext!).mounted) SettingsService.checkForUpdates(Navigator.of(navigatorKey.currentContext!).context);
     });
+  }
+
+  // this is called when app is in killed state and then user clicks on notification
+  static Future<void> runIfAppStartsFromNotification(BuildContext context) async {
+    final msg = await FirebaseMessaging.instance.getInitialMessage();
+    if(msg?.notification?.title?.toLowerCase().contains("update") == true && context.mounted && Navigator.of(context).mounted) SettingsService.checkForUpdates(Navigator.of(context).context);
   }
 }

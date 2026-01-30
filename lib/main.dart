@@ -30,7 +30,6 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _initTheme();
     FirebaseService.init();
@@ -63,6 +62,7 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
           if (lightDynamic != null && darkDynamic != null) (lightScheme, darkScheme) = generateDynamicColourSchemes(lightDynamic, darkDynamic);
 
           return MaterialApp(
+              navigatorKey: navigatorKey,
               theme: getLightTheme(isMaterialYou: isMaterialYou, lightColorScheme: lightScheme),
               darkTheme: getDarkTheme(isMaterialYou: isMaterialYou, darkColorScheme: darkScheme),
               themeMode: _themeMode,

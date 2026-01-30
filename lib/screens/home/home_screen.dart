@@ -3,6 +3,7 @@ import 'package:bts_lyricz/screens/home/tabs/favorites_tab.dart';
 import 'package:bts_lyricz/screens/home/tabs/game_tab.dart';
 import 'package:bts_lyricz/screens/home/tabs/home_tab.dart';
 import 'package:bts_lyricz/screens/home/tabs/settings_tab.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,6 +19,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   int _selectedIndex = 0;
   final ScrollController scrollController = ScrollController();
   final PageController _pageController = PageController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => FirebaseService.runIfAppStartsFromNotification(context));
+  }
 
   @override
   void dispose() {
