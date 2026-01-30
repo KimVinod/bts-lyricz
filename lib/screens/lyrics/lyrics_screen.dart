@@ -22,16 +22,15 @@ class LyricsPage extends StatefulWidget {
 class _LyricsPageState extends State<LyricsPage> {
   late Box userFavLyricsBox;
   List userFavLyrics = [];
-  bool isFav = false;
+  bool isFav = false, isBoxInit = false;
 
   void loadData() async {
     userFavLyricsBox = await Hive.openBox('userFavourites');
     userFavLyrics = userFavLyricsBox.get('favouritesList', defaultValue: []);
-    if (userFavLyrics.contains(widget.songFullName)) {
-      setState(() {
-        isFav = true;
-      });
-    }
+    setState(() {
+      if (userFavLyrics.contains(widget.songFullName)) isFav = true;
+      isBoxInit = true;
+    });
   }
 
   @override
@@ -178,7 +177,7 @@ class _LyricsPageState extends State<LyricsPage> {
                       "Lyrics",
                       style: GoogleFonts.openSans(fontWeight: FontWeight.w600),
                     ),
-                    actions: [
+                    actions: isBoxInit ? [
                       IconButton(
                         onPressed: () => SettingsService.playSong(widget.songLink.spotify ?? widget.songLink.soundcloud ?? widget.songLink.youtube!),
                         icon: FaIcon(widget.songLink.spotify != null ? FontAwesomeIcons.spotify : widget.songLink.soundcloud != null ? FontAwesomeIcons.soundcloud : FontAwesomeIcons.youtube),
@@ -208,7 +207,7 @@ class _LyricsPageState extends State<LyricsPage> {
                         tooltip: "Share",
                       ),
                       const SizedBox(width: 6),
-                    ],
+                    ] : null,
                   ),
                 ),
               )

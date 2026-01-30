@@ -47,7 +47,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
           centerTitle: true,
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           title: Text("Favorites", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.bold)),
-          actions: userFavLyrics.isNotEmpty ? [
+          actions: isBoxInit && userFavLyrics.isNotEmpty ? [
             IconButton(
               icon: const Icon(Icons.close),
               tooltip: "Remove all",
@@ -73,7 +73,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
                 });
               },
             )
-          ] : [],
+          ] : null,
         ),
       ],
       body: isBoxInit
