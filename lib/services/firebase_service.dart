@@ -37,7 +37,7 @@ class FirebaseService {
   static void _setupAnalytics(bool isRelease) => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(isRelease);
 
   static Future<void> _setupMessaging() async {
-    // this is called when app is in background (app not removed from recent apps or killed)
+    // this is called when app is in background (bg or killed state)
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
     await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
@@ -72,7 +72,7 @@ class FirebaseService {
     // this is called when app is in foreground (opened) and then user clicks on notification
     // void onDidReceiveNotificationResponse(NotificationResponse notificationResponse) {}
 
-    flutterLocalNotificationsPlugin.initialize(initializationSettings);
+    flutterLocalNotificationsPlugin.initialize(settings: initializationSettings);
 
     // this is called when app is in foreground (opened)
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
@@ -81,10 +81,10 @@ class FirebaseService {
       AppleNotification? ios = message.notification?.apple;
       if(notification != null && (android != null || ios != null)) {
         flutterLocalNotificationsPlugin.show(
-          notification.hashCode,
-          notification.title,
-          notification.body,
-          NotificationDetails(
+          id: notification.hashCode,
+          title: notification.title,
+          body: notification.body,
+          notificationDetails: NotificationDetails(
             android: android != null ? AndroidNotificationDetails(
               channel.id,
               channel.name,
