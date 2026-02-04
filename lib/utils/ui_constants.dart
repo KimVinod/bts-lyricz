@@ -401,3 +401,5 @@ const List<Map<String, dynamic>> uoAlbums = [
 ];
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+const String removeSymbolsRegexString = r"['’.,!?:;()\[\]\-\x22]";
