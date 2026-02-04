@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/services/settings_service.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';
@@ -131,8 +132,8 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
           files: [XFile(imagePath.path)],
         ));
       }
-    } catch (e) {
-      debugPrint("Share failed: $e");
+    } catch (e, s) {
+      FirebaseService.logCustomError(e, s, "StoryEditorCanvasState - _shareImage");
       if (mounted) showCustomToastError("Something went wrong");
     } finally {
       if (mounted) setState(() => _isLoading = false);

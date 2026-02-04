@@ -1,5 +1,6 @@
 import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/debouncer.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
@@ -82,7 +83,8 @@ class SearchSongsState extends State<SearchSongs> {
         displayedSongs = processedData.map((e) => e.song).toList();
         _isLoading = false;
       });
-    } catch(e) {
+    } catch(e, s) {
+      FirebaseService.logCustomError(e, s, "SearchSongsState - _loadSongs");
       if (!mounted) return;
       setState(() {
         _isLoading = false;

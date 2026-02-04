@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:bts_lyricz/utils/widgets/settings_card.dart';
 import 'package:device_info_plus/device_info_plus.dart';
@@ -440,7 +441,8 @@ class SettingsService {
       final deviceInfoPlugin = DeviceInfoPlugin();
       final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
       return deviceInfo.version.sdkInt < 23;
-    } catch(e) {
+    } catch(e, s) {
+      FirebaseService.logCustomError(e, s, "SettingsService - checkOSDeprecation");
       return false;
     }
   }

@@ -1,5 +1,6 @@
 import 'package:bts_lyricz/main.dart';
 import 'package:bts_lyricz/screens/share/story_editor_canvas.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -61,7 +62,8 @@ class _SongLyricsGeneratorState extends State<SongLyricsGenerator> {
         ].whereType<Color>().toList();
         _isLoadingColors = false;
       });
-    } catch (e) {
+    } catch (e, s) {
+      FirebaseService.logCustomError(e, s, "SongLyricsGeneratorState - _extractColors");
       if (mounted) setState(() => _isLoadingColors = false);
     }
   }

@@ -41,13 +41,13 @@ class FirebaseService {
     }
   }
 
-  static void logCustomError(Exception e, StackTrace s, String? functionName) {
+  static void logCustomError(Object e, StackTrace s, String? name, {bool fatal = false}) { // name semantics: className - functionName
     if(kReleaseMode) {
       FirebaseCrashlytics.instance.recordError(
         e,
         s,
         fatal: true,
-        reason: functionName != null ? 'Error in $functionName' : null,
+        reason: name != null ? 'Error in $name' : null,
       );
     }
   }

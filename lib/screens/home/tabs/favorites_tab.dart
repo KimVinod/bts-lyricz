@@ -1,4 +1,5 @@
 import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
@@ -118,8 +119,12 @@ class _FavoritesTabState extends State<FavoritesTab> {
                           ),
                         ),
                       );
-                    } catch(e) {
-                      userFavLyrics = [];
+                    } catch(e, s) {
+                      FirebaseService.logCustomError(e, s, "_FavoritesTabState - build - ListView.builder");
+                      if(!mounted) return null;
+                      setState(() {
+                        userFavLyrics = [];
+                      });
                       userFavLyricsBox.put("favouritesList", userFavLyrics);
                     }
                     return null;
