@@ -121,7 +121,7 @@ class SearchSongsState extends State<SearchSongs> {
             ),
           ],
           body: _isLoading
-              ? Center(child: CircularProgressIndicator(color: Theme.of(context).colorScheme.onPrimaryContainer))
+              ? SizedBox()
               : Column(
             mainAxisAlignment: displayedSongs.isEmpty ? MainAxisAlignment.center : MainAxisAlignment.start,
             children: [

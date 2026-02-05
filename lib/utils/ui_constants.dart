@@ -221,30 +221,30 @@ Widget buildTabContent({required BuildContext context, required String name, Str
       padding:
       const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: lyrics != null
-          ? SingleChildScrollView(
-            child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-            Text(
-              name,
-              style: GoogleFonts.openSans(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              "Released: $releaseDate",
-              style: GoogleFonts.openSans(fontSize: 14.0),
-            ),
-            const SizedBox(height: 24.0),
-            SelectableText(
-              lyrics,
-              style: GoogleFonts.openSans(
-                fontSize: 16.0,
+          ? SelectionArea(
+            child: SingleChildScrollView(
+              child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+              Text(
+                name,
+                style: GoogleFonts.openSans(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold),
               ),
+              Text(
+                "Released: $releaseDate",
+                style: GoogleFonts.openSans(fontSize: 14.0),
+              ),
+              const SizedBox(height: 24.0),
+              Text(
+                  lyrics,
+                  style: GoogleFonts.openSans(fontSize: 16.0),
+              ),
+              const SizedBox(height: 16.0),
+                      ],
+                    ),
             ),
-            const SizedBox(height: 16.0),
-                    ],
-                  ),
           )
           : buildNA(context),
     ),
