@@ -94,6 +94,11 @@ enum GameState {
   incorrect,
 }
 
+enum GenerationMode {
+  lyrics,
+  song,
+}
+
 String getBt21Pic() {
   final List<String> bt21Pics = [
     "images/bt21/koya.png",
@@ -107,6 +112,27 @@ String getBt21Pic() {
 
   bt21Pics.shuffle();
   return bt21Pics.first;
+}
+
+String getArtistName(String name) {
+  switch(name) {
+    case "namjoon":
+      return "RM";
+    case "seokjin":
+      return "Jin";
+    case "yoongi":
+      return "SUGA / Agust D";
+    case "hoseok":
+      return "j-hope";
+    case "jimin":
+      return "Jimin";
+    case "taehyung":
+      return "V";
+    case "jungkook":
+      return "Jungkook";
+    default:
+      return "BTS";
+  }
 }
 
 const Map<String, Widget> discography = {
@@ -162,6 +188,11 @@ void showToastError() => Fluttertoast.showToast(
   toastLength: Toast.LENGTH_SHORT,
 );
 
+void showCustomToastError(String msg) => Fluttertoast.showToast(
+  msg: msg,
+  toastLength: Toast.LENGTH_SHORT,
+);
+
 Container buildNA(BuildContext context) {
   return Container(
     color: Theme.of(context).colorScheme.surface,
@@ -190,30 +221,30 @@ Widget buildTabContent({required BuildContext context, required String name, Str
       padding:
       const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: lyrics != null
-          ? SingleChildScrollView(
-            child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-            Text(
-              name,
-              style: GoogleFonts.openSans(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              "Released: $releaseDate",
-              style: GoogleFonts.openSans(fontSize: 14.0),
-            ),
-            const SizedBox(height: 24.0),
-            SelectableText(
-              lyrics,
-              style: GoogleFonts.openSans(
-                fontSize: 16.0,
+          ? SelectionArea(
+            child: SingleChildScrollView(
+              child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+              Text(
+                name,
+                style: GoogleFonts.openSans(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold),
               ),
+              Text(
+                "Released: $releaseDate",
+                style: GoogleFonts.openSans(fontSize: 14.0),
+              ),
+              const SizedBox(height: 24.0),
+              Text(
+                  lyrics,
+                  style: GoogleFonts.openSans(fontSize: 16.0),
+              ),
+              const SizedBox(height: 16.0),
+                      ],
+                    ),
             ),
-            const SizedBox(height: 16.0),
-                    ],
-                  ),
           )
           : buildNA(context),
     ),
@@ -368,3 +399,7 @@ const List<Map<String, dynamic>> uoAlbums = [
     'imageAsset':'images/bts-world.jpg',
   },
 ];
+
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+const String removeSymbolsRegexString = r"['’.,!?:;()\[\]\-\x22]";

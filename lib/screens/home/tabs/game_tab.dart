@@ -28,8 +28,10 @@ class _GameTabState extends State<GameTab> {
   final _random = Random();
   List<Song> options = [];
   List<Song> songs = [];
-  late String _selectedLanguage;
-  bool isLang = false;
+  String _selectedLanguage = "eng";
+  int _score = 0;
+  int _highScore = 0;
+  bool isLang = false, isHighScore = false;
 
   void loadSongs() {
     songs = GameService.filterSongs(allSongs, _selectedLanguage);
@@ -69,6 +71,9 @@ class _GameTabState extends State<GameTab> {
     setState(() {
       if (selectedOption == correctAnswer!.name) {
         gameState = GameState.correct;
+        _score++;
+        if(_score > _highScore) _highScore = _score;
+        SettingsService.saveGameScore(_highScore, _selectedLanguage);
       } else {
         gameState = GameState.incorrect;
       }
@@ -83,9 +88,12 @@ class _GameTabState extends State<GameTab> {
 
   Future<void> _loadLanguagePreference() async {
      final language = await SettingsService.loadGameLanguage();
+     final highScore = await SettingsService.loadGameScore(language);
     setState(() {
     _selectedLanguage = language;
+    _highScore = highScore;
     isLang = true;
+    isHighScore = true;
     });
   }
 
@@ -102,6 +110,37 @@ class _GameTabState extends State<GameTab> {
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           title: Text("Guess the Song?", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.bold)),
           actions: [
+            if(_score != 0 || _highScore != 0)
+            IconButton(
+              icon: const Icon(Icons.close),
+              tooltip: "Reset highscore",
+              onPressed: (_score != 0 || _highScore != 0)
+                  ? () {
+                showDialog(context: context, builder: (context) {
+                  return AlertDialog(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                      title: const Text("Reset highscore"),
+                      content: const Text("Are you sure you want to reset your highscore?"),
+                      actions: [
+                        TextButton(onPressed: () {
+                          Navigator.pop(context);
+                        }, child: Text("No", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                        TextButton(onPressed: () {
+                          Navigator.pop(context);
+                          SettingsService.clearGameScore();
+                          setState(() {
+                            _score = 0;
+                            _highScore = 0;
+                          });
+                          SettingsService.saveGameScore(_highScore, _selectedLanguage);
+                          restartGame(isReady: false);
+                        },child: Text("Yes", style: GoogleFonts.openSans(fontWeight: FontWeight.w600),)),
+                      ]
+                  );
+                });
+              } : null,
+            ),
             IconButton(
               icon: const Icon(Icons.translate),
               tooltip: "Select language",
@@ -109,6 +148,9 @@ class _GameTabState extends State<GameTab> {
                 if (result == true) {
                   _loadLanguagePreference().then((value) {
                     loadSongs();
+                    setState(() {
+                      _score = 0;
+                    });
                     restartGame(isReady: false);
                   });
                 }
@@ -117,7 +159,7 @@ class _GameTabState extends State<GameTab> {
           ],
         ),
       ],
-      body: isLang
+      body: isLang && isHighScore
           ? Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -151,11 +193,16 @@ class _GameTabState extends State<GameTab> {
                         onTap: () => _loadLanguagePreference().then((value) => startGame(songs)),
                       ),
                       const SizedBox(height: 16),
-                      Text(
-                        "Language mode: \n${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.openSans(
-                            fontSize: 16, fontStyle: FontStyle.italic),
+                      _buildScoreChips(showScore: false),
+                      const SizedBox(height: 8),
+                      Chip(
+                        avatar: const Icon(Icons.translate),
+                        shape: StadiumBorder(),
+                        backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
+                        label: Text(
+                          "Language: ${_selectedLanguage == "eng" ? "English" : _selectedLanguage == "kor" ? "Korean": _selectedLanguage == "jp" ? "Japanese" : ""}",
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ],
                   ),
@@ -221,6 +268,8 @@ class _GameTabState extends State<GameTab> {
                         ),
                       ),
                       const SizedBox(height: 16),
+                      _buildScoreChips(),
+                      const SizedBox(height: 16),
                     ],
                   if (gameState == GameState.incorrect)
                     ...[
@@ -231,6 +280,8 @@ class _GameTabState extends State<GameTab> {
                               fontWeight: FontWeight.w500),
                         ),
                       ),
+                      const SizedBox(height: 16),
+                      _buildScoreChips(),
                       const SizedBox(height: 24),
                     ],
                   buildOptions(correctAnswer!, null),
@@ -241,7 +292,17 @@ class _GameTabState extends State<GameTab> {
                         child: AnimationConfiguration.synchronized(
                           duration: const Duration(milliseconds: 500),
                           child: FadeInAnimation(child: CustomButton(
-                              text: 'Restart', onTap: () => restartGame(isReady: true))),),
+                              text: gameState == GameState.correct ? 'Next' : 'Restart',
+                              onTap: () {
+                                if (gameState == GameState.incorrect) {
+                                  setState(() {
+                                    _score = 0;
+                                  });
+                                }
+                                restartGame(isReady: true);
+                              }),
+                          ),
+                        ),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
@@ -257,6 +318,34 @@ class _GameTabState extends State<GameTab> {
         ),
       )
           : SizedBox(),
+    );
+  }
+
+  Widget _buildScoreChips({bool showScore = true, showHighScore = true}) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        if(showScore)
+        Chip(
+          avatar: const Icon(Icons.sports_esports),
+          shape: StadiumBorder(),
+          backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
+          label: Text(
+            'Score: $_score',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          ),
+        ),
+        if(showHighScore)
+        Chip(
+          avatar: const Icon(Icons.emoji_events),
+          shape: StadiumBorder(),
+          backgroundColor: BTSLyricsApp.of(context).isMaterialYou ? Theme.of(context).colorScheme.secondaryContainer : Theme.of(context).colorScheme.tertiaryContainer,
+          label: Text(
+            'Highscore: $_highScore',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          ),
+        ),
+      ],
     );
   }
 
@@ -308,7 +397,7 @@ class _GameTabState extends State<GameTab> {
                       child: InkWell(
                         overlayColor: WidgetStateProperty.all(Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3)),
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink, releaseDate: song.releaseDate))) : checkAnswer(index),
+                        onTap: () => index == null ? Navigator.push(context, MaterialPageRoute(builder: (context) => LyricsPage(songLyrics: song.lyrics, songName: song.displayName, songFullName: song.name, songLink: song.songLink, releaseDate: song.releaseDate, songAlbumArt: song.albumArt, songArtistName: getArtistName(song.isSolo.soloName ?? ""),))) : checkAnswer(index),
                       ),
                     ),
                   ),

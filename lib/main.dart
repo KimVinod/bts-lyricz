@@ -10,13 +10,13 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await FirebaseService.setup(isRelease: true);
-  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme(), isMaterialYou: await SettingsService.loadMaterialYou()));
+  runApp(BTSLyricsApp(themeMode: await SettingsService.loadTheme(), isMaterialYou: await SettingsService.loadMaterialYou(), isDeprecated: await SettingsService.checkOSDeprecation()));
 }
 
 class BTSLyricsApp extends StatefulWidget {
   final ThemeMode themeMode;
-  final bool isMaterialYou;
-  const BTSLyricsApp({super.key, required this.themeMode, required this.isMaterialYou});
+  final bool isMaterialYou, isDeprecated;
+  const BTSLyricsApp({super.key, required this.themeMode, required this.isMaterialYou, required this.isDeprecated});
 
   @override
   State<BTSLyricsApp> createState() => BTSLyricsAppState();
@@ -26,11 +26,10 @@ class BTSLyricsApp extends StatefulWidget {
 
 class BTSLyricsAppState extends State<BTSLyricsApp> {
   late ThemeMode _themeMode;
-  late bool isMaterialYou;
+  late bool isMaterialYou, isDeprecated;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _initTheme();
     FirebaseService.init();
@@ -39,6 +38,7 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
   void _initTheme() {
     _themeMode = widget.themeMode;
     isMaterialYou = widget.isMaterialYou;
+    isDeprecated = widget.isDeprecated;
   }
 
   void changeTheme(ThemeMode themeMode) {
@@ -62,6 +62,7 @@ class BTSLyricsAppState extends State<BTSLyricsApp> {
           if (lightDynamic != null && darkDynamic != null) (lightScheme, darkScheme) = generateDynamicColourSchemes(lightDynamic, darkDynamic);
 
           return MaterialApp(
+              navigatorKey: navigatorKey,
               theme: getLightTheme(isMaterialYou: isMaterialYou, lightColorScheme: lightScheme),
               darkTheme: getDarkTheme(isMaterialYou: isMaterialYou, darkColorScheme: darkScheme),
               themeMode: _themeMode,

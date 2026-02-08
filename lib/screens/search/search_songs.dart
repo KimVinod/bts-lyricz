@@ -1,12 +1,43 @@
 import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
+import 'package:bts_lyricz/utils/debouncer.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
 import 'package:bts_lyricz/utils/widgets/search_widget.dart';
 import 'package:bts_lyricz/data/song_data.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+List<SearchableSong> processSongsInBackground(List<Song> rawSongs) {
+  final RegExp symbolRegex = RegExp(removeSymbolsRegexString);
+
+  String clean(String text) {
+    if (text.isEmpty) return "";
+    return text.toLowerCase().replaceAll(symbolRegex, "").trim();
+  }
+
+  // Filter unique songs
+  final seen = <String>{};
+  List<Song> uniqueSongs = rawSongs.where((e) => seen.add(e.name)).toList();
+
+  // Sort alphabetically
+  uniqueSongs.sort((s1, s2) => s1.name.compareTo(s2.name));
+
+  // Map to SearchableSong
+  return uniqueSongs.map((song) {
+    final fullLyrics = "${song.lyrics.eng ?? ''} ${song.lyrics.jp ?? ''} ${song.lyrics.kr ?? ''}";
+
+    return SearchableSong(
+      song: song,
+      cleanName: clean(song.name),
+      cleanAlbum: clean(song.album ?? ''),
+      cleanLyrics: clean(fullLyrics),
+    );
+  }).toList();
+}
 
 class SearchSongs extends StatefulWidget {
   const SearchSongs({super.key});
@@ -16,22 +47,50 @@ class SearchSongs extends StatefulWidget {
 }
 
 class SearchSongsState extends State<SearchSongs> {
-  List<Song> songs = [];
+  List<Song> displayedSongs = [];
+  List<SearchableSong> _searchableData = [];
   String query = "";
   late String bt21Asset;
+  final _debouncer = Debouncer(milliseconds: 250);
+  final RegExp _symbolRegex = RegExp(removeSymbolsRegexString);
+  bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
     bt21Asset = getBt21Pic();
-    loadSongs();
+    _loadSongs();
   }
 
-  void loadSongs() {
-    final seen = <String>{};
-    List<Song> uniqueList = allSongs.where((e) => seen.add(e.name)).toList();
-    uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
-    songs = uniqueList;
+  @override
+  void dispose() {
+    _debouncer.dispose();
+    super.dispose();
+  }
+
+  String _cleanInput(String text) => text.toLowerCase().replaceAll(_symbolRegex, "").trim();
+
+  Future<void> _loadSongs() async {
+    try {
+      final processedData = await compute(processSongsInBackground, allSongs);
+
+      // Check if user left the screen before calculation finished
+      if (!mounted) return;
+
+      setState(() {
+        _searchableData = processedData;
+        // Initial display is just the raw list of songs
+        displayedSongs = processedData.map((e) => e.song).toList();
+        _isLoading = false;
+      });
+    } catch(e, s) {
+      FirebaseService.logCustomError(e, s, "SearchSongsState - _loadSongs");
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+        displayedSongs = [];
+      });
+    }
   }
 
   @override
@@ -55,16 +114,18 @@ class SearchSongsState extends State<SearchSongs> {
                 preferredSize: const Size.fromHeight(kToolbarHeight + 32),
                 child: SearchWidget(
                   text: query,
-                  onChanged: searchSongs,
+                  onChanged: (value) => _debouncer.run(() => searchSongs(value)),
                   hintText: 'Search by song name, lyrics or album...',
                 ),
               ),
             ),
           ],
-          body: Column(
-            mainAxisAlignment: songs.isEmpty ? MainAxisAlignment.center : MainAxisAlignment.start,
+          body: _isLoading
+              ? SizedBox()
+              : Column(
+            mainAxisAlignment: displayedSongs.isEmpty ? MainAxisAlignment.center : MainAxisAlignment.start,
             children: [
-              if(songs.isEmpty)...[
+              if(displayedSongs.isEmpty)...[
                 GestureDetector(
                   onTap: ()=> setState(() {}),
                   child: Image.asset(bt21Asset, height: MediaQuery.sizeOf(context).height * 0.25),
@@ -75,11 +136,12 @@ class SearchSongsState extends State<SearchSongs> {
                 Expanded(
                   child: AnimationLimiter(
                     child: ListView.builder(
+                      key: ValueKey(query),
                       padding: const EdgeInsets.only(top: 16),
                       physics: const BouncingScrollPhysics(),
-                      itemCount: songs.length,
+                      itemCount: displayedSongs.length,
                       itemBuilder: (context, index) {
-                        final song = songs[index];
+                        final song = displayedSongs[index];
                         return AnimationConfiguration.staggeredList(
                           position: index,
                           duration: const Duration(milliseconds: 500),
@@ -105,92 +167,55 @@ class SearchSongsState extends State<SearchSongs> {
     );
   }
 
-  void searchSongs(String query) {
-    final seen = <String>{};
-    List<Song> uniqueList = allSongs.where((e) => seen.add(e.name)).toList();
-    uniqueList.sort((s1, s2) => s1.name.compareTo(s2.name));
+  void searchSongs(String rawQuery) {
+    if (_isLoading) return;
 
-    final matchedSongs = query.isEmpty
-        ? uniqueList // Show all songs if the query is empty
-        : uniqueList.where((song) {
-      final songName = song.name.replaceAll(RegExp(r"['’]"), "").toLowerCase();
-      final albumName = song.album?.replaceAll(RegExp(r"['’]"), "").toLowerCase() ?? '';
-      final searchLower = query.replaceAll(RegExp(r"['’]"), "").toLowerCase();
-      final lowercaseEngLyrics = song.lyrics.eng?.toLowerCase() ?? '';
-      final lowercaseJpLyrics = song.lyrics.jp?.toLowerCase() ?? '';
-      final lowercaseKrLyrics = song.lyrics.kr?.toLowerCase() ?? '';
+    if (rawQuery.isEmpty) {
+      setState(() {
+        query = rawQuery;
+        displayedSongs = _searchableData.map((e) => e.song).toList();
+      });
+      return;
+    }
 
-      return songName.contains(searchLower) ||
-          albumName.contains(searchLower) ||
-          lowercaseEngLyrics.contains(searchLower) ||
-          lowercaseJpLyrics.contains(searchLower) ||
-          lowercaseKrLyrics.contains(searchLower);
-    }).toList();
+    final cleanQuery = _cleanInput(rawQuery);
 
-    matchedSongs.sort((a, b) {
-      final songNameA = a.name.toLowerCase();
-      final songNameB = b.name.toLowerCase();
-      final albumNameA = a.album?.toLowerCase() ?? '';
-      final albumNameB = b.album?.toLowerCase() ?? '';
-      final lowercaseEngLyricsA = a.lyrics.eng?.toLowerCase() ?? '';
-      final lowercaseEngLyricsB = b.lyrics.eng?.toLowerCase() ?? '';
-      final lowercaseJpLyricsA = a.lyrics.jp?.toLowerCase() ?? '';
-      final lowercaseJpLyricsB = b.lyrics.jp?.toLowerCase() ?? '';
-      final lowercaseKrLyricsA = a.lyrics.kr?.toLowerCase() ?? '';
-      final lowercaseKrLyricsB = b.lyrics.kr?.toLowerCase() ?? '';
+    // 1. Create a temporary list of matches with a 'rank' score
+    final List<({Song song, int rank})> rankedMatches = [];
 
-      // Check if there's an exact match in the song name
-      final exactMatchA = songNameA == query.toLowerCase();
-      final exactMatchB = songNameB == query.toLowerCase();
+    for (var item in _searchableData) {
+      int rank = -1;
 
-      // If there's an exact match in song name, it should come first
-      if (exactMatchA && !exactMatchB) {
-        return -1;
-      } else if (!exactMatchA && exactMatchB) {
-        return 1;
+      // Check priority and assign a rank (Higher number = better match)
+      if (item.cleanName == cleanQuery) {
+        rank = 4; // Exact name match (Best)
+      } else if (item.cleanName.contains(cleanQuery)) {
+        rank = 3; // Name contains query
+      } else if (item.cleanAlbum.contains(cleanQuery)) {
+        rank = 2; // Album contains query
+      } else if (cleanQuery.length >= 3 && item.cleanLyrics.contains(cleanQuery)) { // check lyrics only if query length >= 3 to avoid increase in cpu usage
+        rank = 1; // Lyrics contains query
       }
 
-      // Compare song names first
-      if (songNameA.contains(query) && !songNameB.contains(query)) {
-        return -1; // songNameA should come before songNameB
-      } else if (!songNameA.contains(query) && songNameB.contains(query)) {
-        return 1; // songNameA should come after songNameB
+      // If it matches anything, add it to the results
+      if (rank != -1) {
+        rankedMatches.add((song: item.song, rank: rank));
       }
+    }
 
-      // If song names have equal priority or both don't match the query,
-      // then compare the presence of the query in the lyrics
-      final containsQueryLyricsA =
-          lowercaseEngLyricsA.contains(query) ||
-              lowercaseJpLyricsA.contains(query) ||
-              lowercaseKrLyricsA.contains(query);
-      final containsQueryLyricsB =
-          lowercaseEngLyricsB.contains(query) ||
-              lowercaseJpLyricsB.contains(query) ||
-              lowercaseKrLyricsB.contains(query);
+    // 2. Sort the list based on the RANK
+    rankedMatches.sort((a, b) {
+      // Sort by rank descending (4 comes before 3)
+      int res = b.rank.compareTo(a.rank);
+      if (res != 0) return res;
 
-      if (containsQueryLyricsA && !containsQueryLyricsB) {
-        return -1; // lowercaseEngLyricsA should come before lowercaseEngLyricsB
-      } else if (!containsQueryLyricsA && containsQueryLyricsB) {
-        return 1; // lowercaseEngLyricsA should come after lowercaseEngLyricsB
-      }
-
-      // Add the comparison for album names
-      final containsQueryAlbumA = albumNameA.contains(query);
-      final containsQueryAlbumB = albumNameB.contains(query);
-
-      if (containsQueryAlbumA && !containsQueryAlbumB) {
-        return -1; // albumNameA should come before albumNameB
-      } else if (!containsQueryAlbumA && containsQueryAlbumB) {
-        return 1; // albumNameA should come after albumNameB
-      }
-
-      // If neither song names nor lyrics nor album names match the query, maintain the original order
-      return 0;
+      // Fallback: If ranks are equal, sort alphabetically by name
+      return a.song.name.compareTo(b.song.name);
     });
 
     setState(() {
-      this.query = query;
-      songs = matchedSongs;
+      query = rawQuery;
+      displayedSongs = rankedMatches.map((e) => e.song).toList();
     });
   }
 

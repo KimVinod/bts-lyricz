@@ -36,3 +36,17 @@ class SongLink {
 
   const SongLink({this.spotify, this.soundcloud, this.youtube});
 }
+
+class SearchableSong {
+  final Song song;
+  final String cleanName;
+  final String cleanAlbum;
+  final String cleanLyrics;
+
+  SearchableSong({
+    required this.song,
+    required this.cleanName,
+    required this.cleanAlbum,
+    required this.cleanLyrics,
+  });
+}

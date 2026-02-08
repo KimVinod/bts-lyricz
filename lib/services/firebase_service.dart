@@ -1,8 +1,11 @@
 import 'package:bts_lyricz/firebase_options.dart';
+import 'package:bts_lyricz/services/settings_service.dart';
+import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
@@ -15,6 +18,7 @@ const AndroidNotificationChannel channel = AndroidNotificationChannel(
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
+@pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform
@@ -24,16 +28,34 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 class FirebaseService {
   static void _setupCrashlytics(bool isRelease) {
     if(isRelease) {
-      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+      // Pass all uncaught "fatal" errors from the framework to Crashlytics
+      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+      // Pass all uncaught asynchronous errors that aren't handled by the Flutter framework to Crashlytics
+      PlatformDispatcher.instance.onError = (error, stack) {
+        FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+        return true;
+      };
     } else {
       FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
       FirebaseCrashlytics.instance.deleteUnsentReports();
     }
   }
 
+  static void logCustomError(Object e, StackTrace s, String? name, {bool fatal = false}) { // name semantics: className - functionName
+    if(kReleaseMode) {
+      FirebaseCrashlytics.instance.recordError(
+        e,
+        s,
+        fatal: true,
+        reason: name != null ? 'Error in $name' : null,
+      );
+    }
+  }
+
   static void _setupAnalytics(bool isRelease) => FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(isRelease);
 
   static Future<void> _setupMessaging() async {
+    // this is called when app is in background (bg or killed state)
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
     await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
@@ -64,18 +86,23 @@ class FirebaseService {
     const initializationSettingsAndroid = AndroidInitializationSettings("@mipmap/ic_launcher");
     const initializationSettingsDarwin = DarwinInitializationSettings();
     const initializationSettings = InitializationSettings(android: initializationSettingsAndroid, iOS: initializationSettingsDarwin);
-    flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
+    // this is called when app is in foreground (opened) and then user clicks on notification
+    // void onDidReceiveNotificationResponse(NotificationResponse notificationResponse) {}
+
+    flutterLocalNotificationsPlugin.initialize(settings: initializationSettings);
+
+    // this is called when app is in foreground (opened)
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
       AppleNotification? ios = message.notification?.apple;
       if(notification != null && (android != null || ios != null)) {
         flutterLocalNotificationsPlugin.show(
-          notification.hashCode,
-          notification.title,
-          notification.body,
-          NotificationDetails(
+          id: notification.hashCode,
+          title: notification.title,
+          body: notification.body,
+          notificationDetails: NotificationDetails(
             android: android != null ? AndroidNotificationDetails(
               channel.id,
               channel.name,
@@ -84,10 +111,20 @@ class FirebaseService {
             iOS: ios != null ? DarwinNotificationDetails() : null,
           ),
         );
+
+        if(notification.title?.toLowerCase().contains("update") == true && navigatorKey.currentContext != null && Navigator.of(navigatorKey.currentContext!).mounted) SettingsService.checkForUpdates(Navigator.of(navigatorKey.currentContext!).context);
       }
     });
 
+    // this is called when app is in background (app not removed from recent apps or killed) and then user clicks on notification
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      if (message.notification?.title?.toLowerCase().contains("update") == true && navigatorKey.currentContext != null && Navigator.of(navigatorKey.currentContext!).mounted) SettingsService.checkForUpdates(Navigator.of(navigatorKey.currentContext!).context);
     });
+  }
+
+  // this is called when app is in killed state and then user clicks on notification
+  static Future<void> runIfAppStartsFromNotification(BuildContext context) async {
+    final msg = await FirebaseMessaging.instance.getInitialMessage();
+    if(msg?.notification?.title?.toLowerCase().contains("update") == true && context.mounted && Navigator.of(context).mounted) SettingsService.checkForUpdates(Navigator.of(context).context);
   }
 }

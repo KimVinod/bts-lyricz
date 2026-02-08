@@ -7,7 +7,7 @@ class SettingsCard extends StatelessWidget {
   final IconData icon;
   final String title;
   final String subtitle;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   const SettingsCard({super.key,
     required this.icon,
@@ -19,7 +19,7 @@ class SettingsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Bounceable(
-      onTap: () {},
+      onTap: onTap != null ? () {} : null,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Material(

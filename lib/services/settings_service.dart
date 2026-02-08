@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyricz/main.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
+import 'package:bts_lyricz/utils/widgets/settings_card.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -87,6 +89,9 @@ class SettingsService {
                           title: const Text("Google Material You"),
                           subtitle: const Text("Uses your wallpaper to identify source color"),
                           onChanged: (value) => onChangedMaterialYou(value),
+                          inactiveTrackColor: Theme.of(context).colorScheme.surfaceContainer,
+                          inactiveThumbColor: Theme.of(context).colorScheme.tertiary,
+                          trackOutlineColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.tertiary),
                         ),
                       ],
                       RadioListTile<String>(
@@ -122,9 +127,24 @@ class SettingsService {
     return userGameBox.get('language', defaultValue: 'eng');
   }
 
+  static Future<int> loadGameScore(String languageMode) async {
+    Box userGameBox = await Hive.openBox('userGame');
+    return userGameBox.get('highScore-$languageMode', defaultValue: 0);
+  }
+
   static Future saveGameLanguage(String language) async {
     Box userGameBox = await Hive.openBox('userGame');
     userGameBox.put('language', language);
+  }
+
+  static Future saveGameScore(int highScore, String languageMode) async {
+    Box userGameBox = await Hive.openBox('userGame');
+    userGameBox.put('highScore-$languageMode', highScore);
+  }
+
+  static Future clearGameScore() async {
+    Box userGameBox = await Hive.openBox('userGame');
+    userGameBox.delete('highScore');
   }
 
   static Future<void> openGameLanguageDialog(BuildContext context, Function onDialogClosed) async {
@@ -178,13 +198,65 @@ class SettingsService {
     });
   }
 
+  static void _showShareLyricsWalkthrough(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Quick Guide", style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w500)),
+                const SizedBox(height: 20),
+
+                SettingsCard(icon: Icons.format_color_text, title: "Text color", subtitle: "Tap to switch between black or white lyrics.", onTap: null),
+                SettingsCard(icon: Icons.crop_free_rounded, title: "Story mode", subtitle: "Perfect for full-screen Instagram stories.\nTurn OFF to share as a sticker.", onTap: null),
+                SettingsCard(icon: Icons.verified_outlined, title: "App logo", subtitle: "Show or hide the app logo.", onTap: null),
+                SettingsCard(icon: Icons.zoom_out_map, title: "Resize card", subtitle: "Pinch to resize the card.\nAvailable in story mode only.", onTap: null),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, bottom: 20),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25))),
+                      onPressed: () async {
+                        Navigator.pop(ctx);
+                        Box userPrefsBox = await Hive.openBox('userPrefs');
+                        userPrefsBox.put('showShareLyricsWalkthrough', false);
+                      },
+                      child: const Text("Don't show again", style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static Future<void> openShareLyricsWalkthrough(BuildContext context) async {
+    Box userPrefsBox = await Hive.openBox('userPrefs');
+    if(userPrefsBox.get('showShareLyricsWalkthrough', defaultValue: true) && context.mounted) {
+      _showShareLyricsWalkthrough(context);
+    }
+  }
+
   static void openNotifications() => AppSettings.openAppSettings(type: AppSettingsType.notification);
 
   static void openBatteryOptimization() => AppSettings.openAppSettings(type: AppSettingsType.batteryOptimization);
 
   static void checkForUpdates(BuildContext context) {
     Fluttertoast.showToast(msg: "Checking for updates...", toastLength: Toast.LENGTH_SHORT);
-    NativeUpdater.displayUpdateAlert(context, forceUpdate: true);
+    NativeUpdater.displayUpdateAlert(context, forceUpdate: true, playStoreUrl: playStoreUrl);
   }
 
   static void openVersionNotes() async {
@@ -361,6 +433,17 @@ class SettingsService {
         ),
       ),
     );
+    }
+  }
+
+  static Future<bool> checkOSDeprecation() async {
+    try {
+      final deviceInfoPlugin = DeviceInfoPlugin();
+      final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
+      return deviceInfo.version.sdkInt < 23;
+    } catch(e, s) {
+      FirebaseService.logCustomError(e, s, "SettingsService - checkOSDeprecation");
+      return false;
     }
   }
 }

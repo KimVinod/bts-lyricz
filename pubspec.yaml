@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 2.3.8+66
+version: 2.4.0+67
 
 environment:
   sdk: ^3.8.1 # flutter 3.32.8
@@ -45,14 +45,14 @@ dependencies:
   fluttertoast: ^9.0.0
   flutter_bounceable: ^1.2.0
   google_fonts: ^6.3.2 # don't change cuz of flutter constraints
+  flex_color_picker: ^3.7.1 # don't change cuz of flutter constraints
 
   #util
   app_settings: ^7.0.0
-  flutter_local_notifications: ^19.5.0
+  flutter_local_notifications: ^20.0.0
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
-
 
   share_plus: ^12.0.1
   url_launcher: ^6.3.2
@@ -60,6 +60,10 @@ dependencies:
   dynamic_color: ^1.8.1
   device_info_plus: ^12.3.0
   package_info_plus: ^9.0.0
+  palette_generator: ^0.3.3+7
+  path_provider: ^2.1.5
+  screenshot: ^3.0.0
+  image: ^4.7.2
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:bts_lyricz/data/song_data.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/widgets/custom_song_mini_card.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
           centerTitle: true,
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           title: Text("Favorites", style: GoogleFonts.openSans(fontSize: 22, fontWeight: FontWeight.bold)),
-          actions: userFavLyrics.isNotEmpty ? [
+          actions: isBoxInit && userFavLyrics.isNotEmpty ? [
             IconButton(
               icon: const Icon(Icons.close),
               tooltip: "Remove all",
@@ -73,7 +74,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
                 });
               },
             )
-          ] : [],
+          ] : null,
         ),
       ],
       body: isBoxInit
@@ -118,8 +119,12 @@ class _FavoritesTabState extends State<FavoritesTab> {
                           ),
                         ),
                       );
-                    } catch(e) {
-                      userFavLyrics = [];
+                    } catch(e, s) {
+                      FirebaseService.logCustomError(e, s, "_FavoritesTabState - build - ListView.builder");
+                      if(!mounted) return null;
+                      setState(() {
+                        userFavLyrics = [];
+                      });
                       userFavLyricsBox.put("favouritesList", userFavLyrics);
                     }
                     return null;

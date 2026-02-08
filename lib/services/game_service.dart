@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:bts_lyricz/data/song_model.dart';
+import 'package:bts_lyricz/services/firebase_service.dart';
 
 class GameService {
   static final Random _random = Random();
@@ -56,7 +57,8 @@ class GameService {
         jp: lang == 'jp' ? finalLyrics : null,
       );
 
-    } catch (e) {
+    } catch (e, s) {
+      FirebaseService.logCustomError(e, s, "GameService - getRandomLyrics");
       return const Lyrics(eng: "error");
     }
   }
