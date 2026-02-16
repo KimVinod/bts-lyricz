@@ -89,6 +89,7 @@ class _GameTabState extends State<GameTab> {
   Future<void> _loadLanguagePreference() async {
      final language = await SettingsService.loadGameLanguage();
      final highScore = await SettingsService.loadGameScore(language);
+     if(!mounted) return;
     setState(() {
     _selectedLanguage = language;
     _highScore = highScore;

@@ -27,6 +27,7 @@ class _LyricsPageState extends State<LyricsPage> {
   void loadData() async {
     userFavLyricsBox = await Hive.openBox('userFavourites');
     userFavLyrics = userFavLyricsBox.get('favouritesList', defaultValue: []);
+    if(!mounted) return;
     setState(() {
       if (userFavLyrics.contains(widget.songFullName)) isFav = true;
       isBoxInit = true;

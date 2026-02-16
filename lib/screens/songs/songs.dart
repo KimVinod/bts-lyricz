@@ -50,6 +50,8 @@ class _SongsState extends State<Songs> {
       totalLuminance += luminance;
     }
 
+    if(!mounted) return;
+
     setState(() {
       averageLuminance = totalLuminance / (image.width * image.height);
       appBarForegroundColor = averageLuminance > 0.5 ? Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onSurface : Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface;

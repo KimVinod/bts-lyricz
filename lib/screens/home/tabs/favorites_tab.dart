@@ -23,6 +23,7 @@ class _FavoritesTabState extends State<FavoritesTab> {
   Future loadData() async {
     userFavLyricsBox = await Hive.openBox('userFavourites');
     userFavLyrics = userFavLyricsBox.get('favouritesList',defaultValue: []);
+    if(!mounted) return;
     setState(() {
       userFavLyrics = userFavLyrics.reversed.toList();
       isBoxInit = true;

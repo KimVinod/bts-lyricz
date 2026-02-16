@@ -71,8 +71,10 @@ class SettingsService {
 
                 onChangedMaterialYou(bool newIsMaterialYou) {
                   _saveMaterialYou(newIsMaterialYou).then((value) async {
-                    setState(() => isMaterialYou = newIsMaterialYou);
-                    if(context.mounted) BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                    if(context.mounted) {
+                      setState(() => isMaterialYou = newIsMaterialYou);
+                      BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                    }
                   });
                 }
 
