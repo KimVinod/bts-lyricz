@@ -3426,6 +3426,17 @@ const List<Song> allSongs = [
     lyrics: getBeautiful,
   ),
   Song(
+    name: "Perfect Christmas (Jo Kwon (조권), Lim Jeong Hee (임정희), Joo Hee (주희), Rap Monster, Jungkook",
+    displayName: "Perfect Christmas",
+    isSolo: IsSolo(isSolo: true, isUnofficial: true),
+    album: null,
+    albumArt: "images/songs-uo/bts-perfect-christams.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=BR0kpleAD4A"),
+    releaseDate: "21 Dec 2013",
+    lyrics: getPerfectChristmas,
+  ),
+  Song(
     name: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
     displayName: "흔한 아이돌의 크리스마스 (A Typical Idol’s Christmas)",
     isSolo: IsSolo(isSolo: true, isUnofficial: true),
