@@ -117,7 +117,7 @@ class _SongsState extends State<Songs> {
                 IconButton(
                   onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SongLyricsGenerator(
                     songTitle: widget.albumName,
-                    artistName: songs.firstOrNull != null ? getArtistName(songs.firstOrNull!.isSolo.soloName ?? "") : "",
+                    artistName: getArtistName(songs.firstOrNull),
                     albumArt: AssetImage(widget.albumArt),
                     lyrics: "",
                     mode: GenerationMode.song,
@@ -219,7 +219,7 @@ class _SongsState extends State<Songs> {
                               songLink: songs[index].songLink,
                               releaseDate: songs[index].releaseDate,
                               songAlbumArt: songs[index].albumArt,
-                              songArtistName: getArtistName(songs[index].isSolo.soloName ?? ""),
+                              songArtistName: getArtistName(songs[index]),
                             ))),
                           );
                         },
