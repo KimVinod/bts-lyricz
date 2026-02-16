@@ -13,9 +13,10 @@ Bangtan Lyricz is completely free, offline, open-source, and ad-free, putting yo
 <p align = "center">
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/home.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/mini-game.png" width="16%" unselectable="on"/>
-   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/settings.png" width="16%" unselectable="on"/>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/share.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/search.png" width="16%" unselectable="on"/>
    <br>
+   <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/settings.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/album.png" width="16%" unselectable="on"/>
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/lyrics.png" width="16%" unselectable="on"/> 
    <img src="https://github.com/KimVinod/bts-lyricz/blob/main/screenshots/dark-mode.png" width="16%" unselectable="on"/> 
