@@ -442,7 +442,7 @@ class SettingsService {
     try {
       final deviceInfoPlugin = DeviceInfoPlugin();
       final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
-      return deviceInfo.version.sdkInt < 23;
+      return deviceInfo.version.sdkInt < 24;
     } catch(e, s) {
       FirebaseService.logCustomError(e, s, "SettingsService - checkOSDeprecation");
       return false;
