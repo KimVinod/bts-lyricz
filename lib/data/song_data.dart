@@ -1979,6 +1979,17 @@ const List<Song> allSongs = [
     lyrics: getYoongiBlueberryEyes,
   ),
   Song(
+    name: "Blueberry Eyes (MAX ft. Lil Mosey & SUGA)",
+    displayName: "BLUEBERRY EYES REMIX",
+    isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
+    album: null,
+    albumArt: "images/albums-solo/suga/suga-blueberryeyes.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/track/2uYd9NblsDfDePyEJp2GrM"),
+    releaseDate: "22 Jan 2021",
+    lyrics: getYoongiBlueberryEyesRemix,
+  ),
+  Song(
     name: "ØMI - You (Prod. SUGA of BTS)",
     displayName: "YOU",
     isSolo: IsSolo(isSolo: true, soloName: "yoongi"),
