@@ -49,7 +49,7 @@ dependencies:
 
   #util
   app_settings: ^7.0.0
-  flutter_local_notifications: ^20.0.0
+  flutter_local_notifications: ^20.1.0 # don't change cuz of flutter constraints
   flutter_staggered_animations: ^1.1.1
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
@@ -63,7 +63,7 @@ dependencies:
   palette_generator: ^0.3.3+7
   path_provider: ^2.1.5
   screenshot: ^3.0.0
-  image: ^4.7.2
+  image: ^4.8.0
 
 dev_dependencies:
   flutter_test:
