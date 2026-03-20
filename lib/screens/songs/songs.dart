@@ -50,6 +50,8 @@ class _SongsState extends State<Songs> {
       totalLuminance += luminance;
     }
 
+    if(!mounted) return;
+
     setState(() {
       averageLuminance = totalLuminance / (image.width * image.height);
       appBarForegroundColor = averageLuminance > 0.5 ? Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onSurface : Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).brightness == Brightness.light ? Theme.of(context).colorScheme.onInverseSurface : Theme.of(context).colorScheme.onSurface;
@@ -115,7 +117,7 @@ class _SongsState extends State<Songs> {
                 IconButton(
                   onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SongLyricsGenerator(
                     songTitle: widget.albumName,
-                    artistName: songs.firstOrNull != null ? getArtistName(songs.firstOrNull!.isSolo.soloName ?? "") : "",
+                    artistName: getArtistName(songs.firstOrNull),
                     albumArt: AssetImage(widget.albumArt),
                     lyrics: "",
                     mode: GenerationMode.song,
@@ -217,7 +219,7 @@ class _SongsState extends State<Songs> {
                               songLink: songs[index].songLink,
                               releaseDate: songs[index].releaseDate,
                               songAlbumArt: songs[index].albumArt,
-                              songArtistName: getArtistName(songs[index].isSolo.soloName ?? ""),
+                              songArtistName: getArtistName(songs[index]),
                             ))),
                           );
                         },

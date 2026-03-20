@@ -99,6 +99,8 @@ class StoryEditorCanvasState extends State<StoryEditorCanvas> {
       },
     );
 
+    if(!mounted) return;
+
     setState(() {
       _currentColor = newColor;
       _lightText = !(_currentColor.computeLuminance() > 0.4);

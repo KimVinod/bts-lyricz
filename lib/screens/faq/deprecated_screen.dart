@@ -21,12 +21,12 @@ class DeprecatedScreen extends StatelessWidget {
             child: Column(
               spacing: 30,
               children: [
-                Text("This was a very tough decision. I'm really sorry but devices running on Android Lollipop 5.0 and 5.1 won't receive future updates.\n\n"
+                Text("This was a very tough decision. I'm really sorry but devices running on Android Lollipop 5 and Marshmallow 6 won't receive future updates.\n\n"
                   "This app is developed using Flutter, and they stopped supporting these on August 2025. This is a normal practice in the IT industry every year to stop supporting older versions.\n""Reason: More focus towards newer technologies, better security and support, etc.\n\n"
                   "I'll continue supporting these devices till end of 2026 (hopefully).\n\n"
                   "What can you do?\n"
                   "Check Android OS updates for your device.\n"
-                  "Devices running Android 6.0 and newer are supported.",
+                  "Devices running Android 7.0 and newer are supported.",
                   style: GoogleFonts.openSans(fontSize: 15, fontWeight: FontWeight.w500),
                 ),
                 Text("Once again, I'm really sorry :'(")

@@ -71,8 +71,10 @@ class SettingsService {
 
                 onChangedMaterialYou(bool newIsMaterialYou) {
                   _saveMaterialYou(newIsMaterialYou).then((value) async {
-                    setState(() => isMaterialYou = newIsMaterialYou);
-                    if(context.mounted) BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                    if(context.mounted) {
+                      setState(() => isMaterialYou = newIsMaterialYou);
+                      BTSLyricsApp.of(context).changeMaterialYou(await loadMaterialYou());
+                    }
                   });
                 }
 
@@ -440,7 +442,7 @@ class SettingsService {
     try {
       final deviceInfoPlugin = DeviceInfoPlugin();
       final deviceInfo = await deviceInfoPlugin.androidInfo; //IMPLEMENTED ONLY FOR ANDROID.
-      return deviceInfo.version.sdkInt < 23;
+      return deviceInfo.version.sdkInt < 24;
     } catch(e, s) {
       FirebaseService.logCustomError(e, s, "SettingsService - checkOSDeprecation");
       return false;

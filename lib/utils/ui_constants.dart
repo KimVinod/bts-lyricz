@@ -1,3 +1,4 @@
+import 'package:bts_lyricz/data/song_model.dart';
 import 'package:bts_lyricz/screens/discography/albums_screen.dart';
 import 'package:bts_lyricz/screens/discography/digital_singles.dart';
 import 'package:bts_lyricz/screens/member/member_screen.dart';
@@ -114,7 +115,12 @@ String getBt21Pic() {
   return bt21Pics.first;
 }
 
-String getArtistName(String name) {
+String getArtistName(Song? song) {
+  if (song == null) return "BTS";
+  if (song.isArmy == true) return "BTS ARMY";
+
+  final name = song.isSolo.soloName?.toLowerCase();
+
   switch(name) {
     case "namjoon":
       return "RM";
@@ -327,6 +333,10 @@ const List<Map<String, dynamic>> krAlbums = [
   {
     'album': "PERMISSION TO DANCE ON STAGE - LIVE",
     'imageAsset':'images/bts-ptd-live.jpg',
+  },
+  {
+    'album': "ARIRANG",
+    'imageAsset':'images/arirang.jpg',
   },
 ];
 
