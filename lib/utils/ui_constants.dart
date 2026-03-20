@@ -334,6 +334,10 @@ const List<Map<String, dynamic>> krAlbums = [
     'album': "PERMISSION TO DANCE ON STAGE - LIVE",
     'imageAsset':'images/bts-ptd-live.jpg',
   },
+  {
+    'album': "ARIRANG",
+    'imageAsset':'images/arirang.jpg',
+  },
 ];
 
 const List<Map<String, dynamic>> jpAlbums = [
