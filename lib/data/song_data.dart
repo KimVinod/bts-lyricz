@@ -8053,6 +8053,17 @@ const List<Song> allSongs = [
     lyrics: getArirangNormal,
   ),
   Song(
+    name: "NORMAL (Clean Ver.)",
+    displayName: "NORMAL (Clean Ver.)",
+    isSolo: IsSolo(isSolo: false),
+    album: "ARIRANG",
+    albumArt: "images/arirang.jpg",
+    lang: "eng",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/3ukkRHDHbN8tNRPKsGZR1h"),
+    releaseDate: "20 Mar 2026",
+    lyrics: getArirangNormalCleanVer,
+  ),
+  Song(
     name: "Like Animals",
     displayName: "Like Animals",
     isSolo: IsSolo(isSolo: false),
