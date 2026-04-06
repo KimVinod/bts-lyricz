@@ -154,14 +154,14 @@ class _SongLyricsGeneratorState extends State<SongLyricsGenerator> {
       if (_selectedLineIndices.contains(index)) {
         _selectedLineIndices.remove(index);
       } else {
-        if (_selectedLineIndices.length < 5) {
+        if (_selectedLineIndices.length < 8) {
           _selectedLineIndices.add(index);
         } else {
           ScaffoldMessenger.of(context).clearSnackBars();
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               duration: Duration(seconds: 3),
-              content: Text("Maximum 5 lines are allowed.", style: GoogleFonts.openSans(color: Theme.of(context).colorScheme.onPrimaryContainer, fontWeight: FontWeight.w500)),
+              content: Text("Maximum 8 lines are allowed.", style: GoogleFonts.openSans(color: Theme.of(context).colorScheme.onPrimaryContainer, fontWeight: FontWeight.w500)),
               backgroundColor: Theme.of(context).colorScheme.primaryContainer,
             ),
           );
