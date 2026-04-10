@@ -8118,4 +8118,15 @@ const List<Song> allSongs = [
     releaseDate: "20 Mar 2026",
     lyrics: getArirangIntoTheSun,
   ),
+  Song(
+    name: "Come Over",
+    displayName: "Come Over",
+    isSolo: IsSolo(isSolo: false),
+    album: "ARIRANG",
+    albumArt: "images/arirang.jpg",
+    lang: "kr",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=JCTVkKXQBx4"),
+    releaseDate: "3 Apr 2026",
+    lyrics: getArirangComeOver,
+  ),
 ];

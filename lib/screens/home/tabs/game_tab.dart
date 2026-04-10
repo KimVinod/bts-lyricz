@@ -40,17 +40,31 @@ class _GameTabState extends State<GameTab> {
   void startGame(List<Song> songs) {
     setState(() {
       gameState = GameState.playing;
-      int randomIndex = _random.nextInt(songs.length);
-      Song song = songs[randomIndex];
-      currentLyrics = GameService.getRandomLyrics(song.lyrics, 4, _selectedLanguage, 10);
-      if(currentLyrics.eng == "error") startGame(songs);
-      correctAnswer = song;
+      Song? selectedSong;
+      Lyrics? generatedLyrics;
 
+      while (true) {
+        int randomIndex = _random.nextInt(songs.length);
+        selectedSong = songs[randomIndex];
+        generatedLyrics = GameService.getRandomLyrics(selectedSong.lyrics, 4, _selectedLanguage, 10);
+
+        // If the lyrics are good, break out of the loop and show them to the user
+        if (generatedLyrics.eng != "error") {
+          break;
+        }
+        // If it's an error, the loop just restarts instantly and checks a new song
+      }
+
+      currentLyrics = generatedLyrics;
+      correctAnswer = selectedSong;
+
+      // Filter out the correct song from the options pool
       List<Song> filteredSongs = songs.where((song) => song.name != correctAnswer!.name).toList();
       filteredSongs.shuffle();
 
+      // Insert the correct song at a random position (0 to 3)
       int correctAnswerIndex = _random.nextInt(4);
-      filteredSongs.insert(correctAnswerIndex, song);
+      filteredSongs.insert(correctAnswerIndex, selectedSong);
 
       options = filteredSongs.take(4).toList();
     });
