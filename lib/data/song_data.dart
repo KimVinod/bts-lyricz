@@ -13,7 +13,7 @@ const List<Song> newReleaseSongs = [
     albumArt: "images/bts-come-over.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2xXG0abKT34biU7L9siPde"),
-    releaseDate: "12 June 2026",
+    releaseDate: "12 Jun 2026",
     lyrics: getArirangComeOver,
   ),
   Song(
@@ -8064,6 +8064,17 @@ const List<Song> allSongs = [
     lyrics: getArirangNormalCleanVer,
   ),
   Song(
+    name: "NORMAL (Korean Ver.)",
+    displayName: "NORMAL (Korean Ver.)",
+    isSolo: IsSolo(isSolo: false),
+    album: "ARIRANG",
+    albumArt: "images/arirang.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=2DDutCCEvV4"),
+    releaseDate: "12 Jun 2026",
+    lyrics: getArirangNormalKoreanVer,
+  ),
+  Song(
     name: "Like Animals",
     displayName: "Like Animals",
     isSolo: IsSolo(isSolo: false),
@@ -8139,7 +8150,7 @@ const List<Song> allSongs = [
     albumArt: "images/bts-come-over.jpg",
     lang: "kr",
     songLink: SongLink(spotify: "https://open.spotify.com/album/2xXG0abKT34biU7L9siPde"),
-    releaseDate: "12 June 2026",
+    releaseDate: "12 Jun 2026",
     lyrics: getArirangComeOver,
   ),
 ];
