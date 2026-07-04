@@ -42,7 +42,7 @@ dependencies:
   hive_flutter: ^1.1.0
 
   #ui
-  fluttertoast: ^9.0.0
+  fluttertoast: ^9.0.0 # don't change cuz of flutter constraints
   flutter_bounceable: ^1.2.0
   google_fonts: ^6.3.2 # don't change cuz of flutter constraints
   flex_color_picker: ^3.7.1 # don't change cuz of flutter constraints
@@ -54,16 +54,16 @@ dependencies:
   native_updater:
     git: https://github.com/KimVinod/native_updater.git
 
-  share_plus: ^12.0.2
+  share_plus: ^12.0.2 # don't change cuz of flutter constraints
   url_launcher: ^6.3.2
   font_awesome_flutter: ^10.9.1 # don't change cuz of flutter constraints
   dynamic_color: ^1.8.1
-  device_info_plus: ^12.4.0
-  package_info_plus: ^9.0.1
+  device_info_plus: ^12.4.0 # don't change cuz of flutter constraints
+  package_info_plus: ^9.0.1 # don't change cuz of flutter constraints
   palette_generator: ^0.3.3+7
-  path_provider: ^2.1.5
+  path_provider: ^2.1.5 # don't change cuz of flutter constraints
   screenshot: ^3.0.0
-  image: ^4.8.0
+  image: ^4.8.0 # don't change cuz of flutter constraints
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +75,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
-  flutter_native_splash: ^2.4.7
+  flutter_native_splash: ^2.4.7 # don't change cuz of flutter constraints
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
