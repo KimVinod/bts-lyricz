@@ -6,6 +6,17 @@ const List<Song> newReleaseSongs = [
   //max 4 songs
   //recheck display name as logic is diff here
   Song(
+    name: "Come Over",
+    displayName: "Come Over",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/bts-come-over.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/2xXG0abKT34biU7L9siPde"),
+    releaseDate: "12 Jun 2026",
+    lyrics: getArirangComeOver,
+  ),
+  Song(
     name: "Body to Body",
     displayName: "ARIRANG",
     isSolo: IsSolo(isSolo: false),
@@ -48,17 +59,6 @@ const List<Song> newReleaseSongs = [
     songLink: SongLink(spotify: "https://open.spotify.com/album/7xLhqoM0ilHRKUg2irVSDI"),
     releaseDate: "18 July 2025",
     lyrics: getPTDLiveOn,
-  ),
-  Song(
-    name: "Killin' It Girl (feat. GloRilla)",
-    displayName: "Killin' It Girl",
-    isSolo: IsSolo(isSolo: true, soloName: "hoseok"),
-    album: null,
-    albumArt: "images/albums-solo/jhope/jhope-killin-it-girl.jpg",
-    lang: "eng",
-    songLink: SongLink(spotify: "https://open.spotify.com/album/0SSznW46Qvf6PHvO58aPNs"),
-    releaseDate: "13 Jun 2025",
-    lyrics: getHoseokKillinItGirl,
   ),
 ];
 
@@ -8064,6 +8064,17 @@ const List<Song> allSongs = [
     lyrics: getArirangNormalCleanVer,
   ),
   Song(
+    name: "NORMAL (Korean Ver.)",
+    displayName: "NORMAL (Korean Ver.)",
+    isSolo: IsSolo(isSolo: false),
+    album: "ARIRANG",
+    albumArt: "images/arirang.jpg",
+    lang: "eng",
+    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=2DDutCCEvV4"),
+    releaseDate: "12 Jun 2026",
+    lyrics: getArirangNormalKoreanVer,
+  ),
+  Song(
     name: "Like Animals",
     displayName: "Like Animals",
     isSolo: IsSolo(isSolo: false),
@@ -8125,8 +8136,21 @@ const List<Song> allSongs = [
     album: "ARIRANG",
     albumArt: "images/arirang.jpg",
     lang: "kr",
-    songLink: SongLink(youtube: "https://www.youtube.com/watch?v=JCTVkKXQBx4"),
+    songLink: SongLink(spotify: "https://open.spotify.com/album/2xXG0abKT34biU7L9siPde"),
     releaseDate: "3 Apr 2026",
+    lyrics: getArirangComeOver,
+  ),
+
+  //come over
+  Song(
+    name: "Come Over",
+    displayName: "Come Over",
+    isSolo: IsSolo(isSolo: true, soloName: "bts"),
+    album: null,
+    albumArt: "images/bts-come-over.jpg",
+    lang: "kr",
+    songLink: SongLink(spotify: "https://open.spotify.com/album/2xXG0abKT34biU7L9siPde"),
+    releaseDate: "12 Jun 2026",
     lyrics: getArirangComeOver,
   ),
 ];
