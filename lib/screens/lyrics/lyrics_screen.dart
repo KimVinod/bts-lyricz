@@ -22,14 +22,17 @@ class LyricsPage extends StatefulWidget {
 class _LyricsPageState extends State<LyricsPage> {
   late Box userFavLyricsBox;
   List userFavLyrics = [];
+  int userFontSize = 16;
   bool isFav = false, isBoxInit = false;
 
   void loadData() async {
     userFavLyricsBox = await Hive.openBox('userFavourites');
     userFavLyrics = userFavLyricsBox.get('favouritesList', defaultValue: []);
+    int getUserFontSize = await SettingsService.loadLyricsFontSize();
     if(!mounted) return;
     setState(() {
       if (userFavLyrics.contains(widget.songFullName)) isFav = true;
+      userFontSize = getUserFontSize;
       isBoxInit = true;
     });
   }
@@ -157,10 +160,10 @@ class _LyricsPageState extends State<LyricsPage> {
                 ],
                 body: TabBarView(
                   children: [
-                    if (widget.songLyrics.kr != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr, releaseDate: widget.releaseDate),
-                    if (widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp, releaseDate: widget.releaseDate),
-                    if (widget.songLyrics.eng != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng, releaseDate: widget.releaseDate),
-                    if (widget.songLyrics.kr != null || widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom, releaseDate: widget.releaseDate),
+                    if (widget.songLyrics.kr != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.kr, releaseDate: widget.releaseDate, fontSize: userFontSize.toDouble()),
+                    if (widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.jp, releaseDate: widget.releaseDate, fontSize: userFontSize.toDouble()),
+                    if (widget.songLyrics.eng != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.eng, releaseDate: widget.releaseDate, fontSize: userFontSize.toDouble()),
+                    if (widget.songLyrics.kr != null || widget.songLyrics.jp != null) buildTabContent(context: context, name: widget.songName, lyrics: widget.songLyrics.rom, releaseDate: widget.releaseDate, fontSize: userFontSize.toDouble()),
                   ],
                 ),
               ),
