@@ -220,7 +220,7 @@ Container buildNA(BuildContext context) {
   );
 }
 
-Widget buildTabContent({required BuildContext context, required String name, String? lyrics, required String releaseDate}) {
+Widget buildTabContent({required BuildContext context, required String name, String? lyrics, required String releaseDate, double fontSize = 16.0}) {
   return SizedBox(
     width: double.infinity,
     child: Padding(
@@ -245,7 +245,7 @@ Widget buildTabContent({required BuildContext context, required String name, Str
               const SizedBox(height: 24.0),
               Text(
                   lyrics,
-                  style: GoogleFonts.openSans(fontSize: 16.0),
+                  style: GoogleFonts.openSans(fontSize: fontSize),
               ),
               const SizedBox(height: 16.0),
                       ],
@@ -337,6 +337,10 @@ const List<Map<String, dynamic>> krAlbums = [
   {
     'album': "ARIRANG",
     'imageAsset':'images/arirang.jpg',
+  },
+  {
+    'album': "NORMAL",
+    'imageAsset':'images/bts-normal.jpg',
   },
 ];
 

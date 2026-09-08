@@ -54,6 +54,12 @@ class SettingsTab extends StatelessWidget {
                   onTap: () => SettingsService.checkForUpdates(Navigator.of(context).context),
                 ),
                 SettingsCard(
+                  icon: Icons.format_size,
+                  title: "Set lyrics size",
+                  subtitle: "Change the text size of the song lyrics",
+                  onTap: () => SettingsService.openLyricsFontSizeDialog(Navigator.of(context).context),
+                ),
+                SettingsCard(
                   icon: Icons.menu_book,
                   title: "Guide to BTS",
                   subtitle: "Special thanks to @ARMYBTSguide on Twitter",

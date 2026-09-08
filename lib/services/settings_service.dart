@@ -3,6 +3,7 @@ import 'package:app_settings/app_settings.dart';
 import 'package:bts_lyricz/main.dart';
 import 'package:bts_lyricz/services/firebase_service.dart';
 import 'package:bts_lyricz/utils/ui_constants.dart';
+import 'package:bts_lyricz/utils/widgets/numeric_stepper.dart';
 import 'package:bts_lyricz/utils/widgets/settings_card.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
@@ -124,6 +125,11 @@ class SettingsService {
     });
   }
 
+  static Future<int> loadLyricsFontSize() async {
+    Box userLyricsFontBox = await Hive.openBox('userLyricsFont');
+    return userLyricsFontBox.get('size', defaultValue: 16);
+  }
+
   static Future<String> loadGameLanguage() async {
     Box userGameBox = await Hive.openBox('userGame');
     return userGameBox.get('language', defaultValue: 'eng');
@@ -132,6 +138,11 @@ class SettingsService {
   static Future<int> loadGameScore(String languageMode) async {
     Box userGameBox = await Hive.openBox('userGame');
     return userGameBox.get('highScore-$languageMode', defaultValue: 0);
+  }
+
+  static Future saveLyricsFontSize(int fontSize) async {
+    Box userLyricsFontBox = await Hive.openBox('userLyricsFont');
+    userLyricsFontBox.put('size', fontSize);
   }
 
   static Future saveGameLanguage(String language) async {
@@ -191,6 +202,46 @@ class SettingsService {
                       title: Text("Japanese", style: GoogleFonts.openSans()),
                       onChanged: (value) => onChanged(value!),
                     ),
+                  ],
+                ),
+              );
+            }
+        ));
+      }
+    });
+  }
+
+  static Future<void> openLyricsFontSizeDialog(BuildContext context) async {
+    await loadLyricsFontSize().then((savedFontSize) {
+      if(context.mounted) {
+        showDialog(context: context, builder: (context) => StatefulBuilder(
+            builder: (context, setState) {
+              void onChanged(int fontSize) {
+                saveLyricsFontSize(fontSize).then((_) {
+                  setState(() => savedFontSize = fontSize);
+                });
+              }
+
+              return AlertDialog(
+                title: const Text("Set lyrics size"),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                contentPadding: const EdgeInsets.all(16),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(
+                        "I'm the one I should love in this world\n"
+                            "Shining me, precious soul of mine\n"
+                            "I finally realized so I love me\n"
+                            "Not so perfect but so beautiful\n"
+                            "I'm the one I should love\n",
+                        style: GoogleFonts.openSans(fontSize: savedFontSize.toDouble()),
+                      ),
+                    ),
+                    NumericStepper(initialValue: savedFontSize, onChanged: onChanged)
                   ],
                 ),
               );
